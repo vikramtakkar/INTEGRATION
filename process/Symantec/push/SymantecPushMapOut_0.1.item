@@ -1,0 +1,1792 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default">
+  <context confirmationNeeded="false" name="Default">
+    <contextParameter comment="" name="batchID" prompt="batchID?" promptNeeded="false" type="id_String" value="&quot;1278469312184928&quot;"/>
+    <contextParameter comment="" name="xmlString" prompt="xmlString?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="xmlStringBuffer" prompt="xmlStringBuffer?" promptNeeded="false" type="id_Object" value=""/>
+    <contextParameter comment="" name="MVS_Integration_shared_connection_name" prompt="MVS_Integration_shared_connection_name?" promptNeeded="false" type="id_String" value="MVS_Integration"/>
+    <contextParameter comment="" name="Vartopia_MVS_shared_connection_Name" prompt="Vartopia_MVS_shared_connection_Name?" promptNeeded="false" type="id_String" value="Vartopia_MVS"/>
+    <contextParameter comment="" name="MVS_Integration_AdditionalParams" prompt="MVS_Integration_AdditionalParams?" promptNeeded="false" repositoryContextId="_rVrMEBFFEeGi4aT5ksT0WA" type="id_String" value=""/>
+    <contextParameter comment="" name="MVS_Integration_Database" prompt="MVS_Integration_Database?" promptNeeded="false" repositoryContextId="_rVrMEBFFEeGi4aT5ksT0WA" type="id_String" value="MVS_Integration"/>
+    <contextParameter comment="" name="MVS_Integration_Login" prompt="MVS_Integration_Login?" promptNeeded="false" repositoryContextId="_rVrMEBFFEeGi4aT5ksT0WA" type="id_String" value="TOS"/>
+    <contextParameter comment="" name="MVS_Integration_Password" prompt="MVS_Integration_Password?" promptNeeded="false" repositoryContextId="_rVrMEBFFEeGi4aT5ksT0WA" type="id_Password" value="KvVDkApeoab096uhdGeE6g=="/>
+    <contextParameter comment="" name="MVS_Integration_Port" prompt="MVS_Integration_Port?" promptNeeded="false" repositoryContextId="_rVrMEBFFEeGi4aT5ksT0WA" type="id_String" value="1433"/>
+    <contextParameter comment="" name="MVS_Integration_Schema" prompt="MVS_Integration_Schema?" promptNeeded="false" repositoryContextId="_rVrMEBFFEeGi4aT5ksT0WA" type="id_String" value="dbo"/>
+    <contextParameter comment="" name="MVS_Integration_Server" prompt="MVS_Integration_Server?" promptNeeded="false" repositoryContextId="_rVrMEBFFEeGi4aT5ksT0WA" type="id_String" value="localhost"/>
+  </context>
+  <parameters>
+    <elementParameter field="TEXT" name="JOB_RUN_VM_ARGUMENTS" value=" -Xms256M -Xmx1024M"/>
+    <elementParameter field="CHECK" name="JOB_RUN_VM_ARGUMENTS_OPTION" value="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="64"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="32"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPTIONS" value="none"/>
+    <elementParameter field="TEXT" name="OEM_CUSTOM_ATTRIBUTE" value=""/>
+    <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" value="true"/>
+    <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" value="true"/>
+    <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" value=""/>
+    <elementParameter field="CHECK" name="DISABLE_WARNINGS" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_INFO" value="false"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" value="&quot;C:/Users/Vikram Takkar/Google Drive/freelance_jobs/Vartopia/talend_workspace/.metadata&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_10"/>
+    <elementParameter field="CHECK" name="UPDATE_COMPONENTS" value="false"/>
+    <elementParameter field="CHECK" name="STATS_DEFAULT_PROJECTSETTING" value="true"/>
+    <elementParameter field="CHECK" name="ON_STATCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_LOGCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_FILES_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_DATABASE_FLAG" value="false"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR"/>
+    <elementParameter field="CHECK" name="CATCH_RUNTIME_ERRORS" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_USER_ERRORS" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_USER_WARNING" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_REALTIME_STATS" value="false"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE:PROPERTY_TYPE" value="BUILT_IN"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE:REPOSITORY_PROPERTY_TYPE" value=""/>
+    <elementParameter field="CHECK" name="IMPLICIT_TCONTEXTLOAD" value="false"/>
+    <elementParameter field="CHECK" name="IMPLICT_DEFAULT_PROJECTSETTING" value="true"/>
+    <elementParameter field="RADIO" name="FROM_FILE_FLAG_IMPLICIT_CONTEXT" value="false"/>
+    <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" value=""/>
+    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" value=""/>
+    <elementParameter field="CHECK" name="PRINT_OPERATIONS" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_ERROR" value="false"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE_IMPLICIT_CONTEXT:PROPERTY_TYPE" value=""/>
+    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE_IMPLICIT_CONTEXT:REPOSITORY_PROPERTY_TYPE" value=""/>
+    <routinesParameter id="_G_OhAOLuEeCmRLaSPRvmXQ" name="DataOperation"/>
+    <routinesParameter id="_HCAIMOLuEeCmRLaSPRvmXQ" name="Mathematical"/>
+    <routinesParameter id="_HCJSIOLuEeCmRLaSPRvmXQ" name="Numeric"/>
+    <routinesParameter id="_HCJSJOLuEeCmRLaSPRvmXQ" name="Relational"/>
+    <routinesParameter id="_HCJSKOLuEeCmRLaSPRvmXQ" name="StringHandling"/>
+    <routinesParameter id="_HCTDI-LuEeCmRLaSPRvmXQ" name="TalendDataGenerator"/>
+    <routinesParameter id="_HCcNE-LuEeCmRLaSPRvmXQ" name="TalendDate"/>
+    <routinesParameter id="_HCvvE-LuEeCmRLaSPRvmXQ" name="TalendString"/>
+    <routinesParameter id="_52xTEIibEeG4O7tWobvoyQ" name="SQLike"/>
+  </parameters>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="0" posY="352">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="context.xmlString = new StringBuffer();"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" name="tJava_1"/>
+  </node>
+  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="224" posY="352">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMSSqlInput_7"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tMSSqlConnection_1"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_IJllsBEtEeGKM-5f_ElFBQ"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;LocalHost&quot;"/>
+    <elementParameter field="TEXT" name="TYPE" value="MSSQL"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;1433&quot;"/>
+    <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;dbo&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;MVS_Integration&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;TOS&quot;"/>
+    <elementParameter field="TEXT" name="PASS" value="&quot;VarTos11&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;OppRegistration_Push&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT dbo.OppRegistration_Push.\&quot;Id\&quot;,&#xA;&#x9;&#x9;dbo.OppRegistration_Push.VendorId,&#xA;&#x9;&#x9;dbo.OppRegistration_Push.DealName,&#xA;&#x9;&#x9;dbo.OppRegistration_Push.ExpectedRevenue,&#xA;&#x9;&#x9;dbo.OppRegistration_Push.VartopiaTransactionId,&#xA;&#x9;&#x9;dbo.OppRegistration_Push.VendorDealId,&#xA;&#x9;&#x9;dbo.OppRegistration_Push.VartopiaStatus,&#xA;&#x9;&#x9;dbo.OppRegistration_Push.VendorStatus,&#xA;&#x9;&#x9;dbo.OppRegistration_Push.SubmitDate,&#xA;&#x9;&#x9;dbo.OppRegistration_Push.ExpirationDate,&#xA;&#x9;&#x9;dbo.OppRegistration_Push.ExpectedCloseDate,&#xA;&#x9;&#x9;dbo.OppRegistration_Push.SalesRepName,&#xA;&#x9;&#x9;dbo.OppRegistration_Push.SalesRepEmail,&#xA;&#x9;&#x9;dbo.OppRegistration_Push.SubmittedByUserName,&#xA;&#x9;&#x9;dbo.OppRegistration_Push.SubmittedByUserEmail,&#xA;&#x9;&#x9;dbo.OppRegistration_Push.CustCompanyName,&#xA;&#x9;&#x9;dbo.OppRegistration_Push.CustAddress1,&#xA;&#x9;&#x9;dbo.OppRegistration_Push.CustCity,&#xA;&#x9;&#x9;dbo.OppRegistration_Push.CustState,&#xA;&#x9;&#x9;dbo.OppRegistration_Push.CustPostalCode,&#xA;&#x9;&#x9;dbo.OppRegistration_Push.CustCountry,&#xA;&#x9;&#x9;dbo.OppRegistration_Push.CustContactFirstName,&#xA;&#x9;&#x9;dbo.OppRegistration_Push.CustContactLastName,&#xA;&#x9;&#x9;dbo.OppRegistration_Push.CustContactEmail,&#xA;&#x9;&#x9;dbo.OppRegistration_Push.CustContactTitle,&#xA;&#x9;&#x9;dbo.OppRegistration_Push.CustContactPhone,&#xA;&#x9;&#x9;dbo.OppRegistration_Push.CustContactFax,&#xA;&#x9;&#x9;dbo.OppRegistration_Push.CustContactMobile,&#xA;&#x9;&#x9;dbo.OppRegistration_Push.CustContactWebsite,&#xA;&#x9;&#x9;dbo.OppRegistration_Push.CurrencyCode,&#xA;&#x9;&#x9;dbo.OppRegistration_Push.PartnerId,&#xA;&#x9;&#x9;dbo.OppRegistration_Push.BatchId,&#xA;&#x9;&#x9;dbo.OppRegistration_Push.CreatedOn,&#xA;&#x9;&#x9;dbo.OppRegistration_Push.OpportunityDescription,&#xA;&#x9;&#x9;dbo.OppRegistration_Push.SubmittedByUserId&#xA;FROM&#x9;dbo.OppRegistration_Push&#xD;&#xA;where batchID = '&quot;+context.batchID+&quot;'&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="id_MSSQL"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="Id"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="VendorId"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DealName"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ExpectedRevenue"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="VartopiaTransactionId"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="VendorDealId"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="VartopiaStatus"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="VendorStatus"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SubmitDate"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ExpirationDate"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ExpectedCloseDate"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SalesRepName"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SalesRepEmail"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SubmittedByUserName"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SubmittedByUserEmail"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CustCompanyName"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CustAddress1"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CustCity"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CustState"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CustPostalCode"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CustCountry"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CustContactFirstName"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CustContactLastName"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CustContactEmail"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CustContactTitle"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CustContactPhone"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CustContactFax"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CustContactMobile"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CustContactWebsite"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CurrencyCode"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PartnerId"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="BatchId"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CreatedOn"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="OpportunityDescription"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SubmittedByUserId"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="LABEL" value="__TABLE__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" label="OppRegistration_Push" name="tMSSqlInput_7">
+      <column comment="" key="true" length="1" name="Id" nullable="false" pattern="" precision="1" sourceType="INT IDENTITY" type="id_Integer"/>
+      <column comment="" key="false" length="10" name="VendorId" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer"/>
+      <column comment="" key="false" length="256" name="DealName" nullable="false" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
+      <column comment="" key="false" length="19" name="ExpectedRevenue" nullable="false" pattern="" precision="4" sourceType="MONEY" type="id_Object"/>
+      <column comment="" key="false" length="36" name="VartopiaTransactionId" nullable="false" pattern="" precision="0" sourceType="UNIQUEIDENTIFIER" type="id_Object"/>
+      <column comment="" key="false" length="40" name="VendorDealId" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
+      <column comment="" key="false" length="128" name="VartopiaStatus" nullable="false" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
+      <column comment="" key="false" length="50" name="VendorStatus" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
+      <column comment="" key="false" length="23" name="SubmitDate" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date"/>
+      <column comment="" key="false" length="23" name="ExpirationDate" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date"/>
+      <column comment="" key="false" length="23" name="ExpectedCloseDate" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date"/>
+      <column comment="" key="false" length="1000" name="SalesRepName" nullable="false" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
+      <column comment="" key="false" length="256" name="SalesRepEmail" nullable="false" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
+      <column comment="" key="false" length="1000" name="SubmittedByUserName" nullable="false" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
+      <column comment="" key="false" length="256" name="SubmittedByUserEmail" nullable="false" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
+      <column comment="" key="false" length="256" name="CustCompanyName" nullable="false" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
+      <column comment="" key="false" length="256" name="CustAddress1" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
+      <column comment="" key="false" length="40" name="CustCity" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
+      <column comment="" key="false" length="20" name="CustState" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
+      <column comment="" key="false" length="50" name="CustPostalCode" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
+      <column comment="" key="false" length="50" name="CustCountry" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
+      <column comment="" key="false" length="50" name="CustContactFirstName" nullable="false" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
+      <column comment="" key="false" length="80" name="CustContactLastName" nullable="false" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
+      <column comment="" key="false" length="256" name="CustContactEmail" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
+      <column comment="" key="false" length="100" name="CustContactTitle" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
+      <column comment="" key="false" length="50" name="CustContactPhone" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
+      <column comment="" key="false" length="50" name="CustContactFax" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
+      <column comment="" key="false" length="50" name="CustContactMobile" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
+      <column comment="" key="false" length="256" name="CustContactWebsite" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
+      <column comment="" key="false" length="3" name="CurrencyCode" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" length="50" name="PartnerId" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
+      <column comment="" key="false" length="20" name="BatchId" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" defaultValue="&quot;(getdate())&quot;" key="false" length="23" name="CreatedOn" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date"/>
+      <column comment="" key="false" length="1073741823" name="OpportunityDescription" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
+      <column comment="" key="false" length="36" name="SubmittedByUserId" nullable="true" pattern="" precision="0" sourceType="UNIQUEIDENTIFIER" type="id_Object"/>
+    </metadata>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="640" posY="352">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_1"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_AgHkwFi8EeGj4tjZNicfaQ-tMap_1-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" name="out1">
+      <column key="false" length="256" name="DealName" nullable="false" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
+      <column comment="" key="false" name="DealNameNull" nullable="true" pattern="" sourceType="" type="id_Boolean"/>
+      <column key="false" length="19" name="ExpectedRevenue" nullable="false" pattern="" precision="4" sourceType="MONEY" type="id_Object"/>
+      <column comment="" key="false" name="ExpectedRevenueNull" nullable="true" pattern="" sourceType="" type="id_Boolean"/>
+      <column key="false" length="23" name="ExpectedCloseDate" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="3" sourceType="DATETIME" type="id_Date"/>
+      <column comment="" key="false" name="ExpectedCloseDateNull" nullable="true" pattern="" sourceType="" type="id_Boolean"/>
+      <column comment="" key="false" length="23" name="SubmitDate" nullable="false" pattern="&quot;yyyy-MM-dd&quot;" precision="3" sourceType="DATETIME" type="id_Date"/>
+      <column comment="" key="false" name="SubmitDateNull" nullable="true" pattern="" sourceType="" type="id_Boolean"/>
+      <column comment="" key="false" length="23" name="ExpirationDate" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="3" sourceType="DATETIME" type="id_Date"/>
+      <column comment="" key="false" name="ExpirationDateNull" nullable="true" pattern="" sourceType="" type="id_Boolean"/>
+      <column key="false" length="1000" name="SalesRepName" nullable="false" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
+      <column comment="" key="false" name="SalesRepNameNull" nullable="true" pattern="" sourceType="" type="id_Boolean"/>
+      <column comment="" key="false" length="50" name="PartnerId" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
+      <column comment="" key="false" length="50" name="PartnerIdNull" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_Boolean"/>
+      <column key="false" length="256" name="SubmittedByUserName" nullable="false" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
+      <column comment="" key="false" name="SubmittedByUserNameNull" nullable="true" pattern="" sourceType="" type="id_Boolean"/>
+      <column key="false" length="3" name="CurrencyCode" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" name="CurrencyCodeNull" nullable="true" pattern="" sourceType="" type="id_Boolean"/>
+      <column key="false" length="256" name="CustCompanyName" nullable="false" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
+      <column comment="" key="false" name="CustCompanyNameNull" nullable="true" pattern="" sourceType="" type="id_Boolean"/>
+      <column key="false" length="256" name="CustAddress1" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
+      <column comment="" key="false" name="CustAddress1Null" nullable="true" pattern="" sourceType="" type="id_Boolean"/>
+      <column key="false" length="40" name="CustCity" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
+      <column comment="" key="false" name="CustCityNull" nullable="true" pattern="" sourceType="" type="id_Boolean"/>
+      <column key="false" length="20" name="CustState" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
+      <column comment="" key="false" name="CustStateNull" nullable="true" pattern="" sourceType="" type="id_Boolean"/>
+      <column key="false" length="50" name="CustCountry" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
+      <column comment="" key="false" name="CustCountryNull" nullable="true" pattern="" sourceType="" type="id_Boolean"/>
+      <column key="false" length="50" name="CustPostalCode" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
+      <column comment="" key="false" name="CustPostalCodeNull" nullable="true" pattern="" sourceType="" type="id_Boolean"/>
+      <column key="false" length="36" name="VartopiaTransactionId" nullable="false" pattern="" precision="0" sourceType="UNIQUEIDENTIFIER" type="id_Object"/>
+      <column comment="" key="false" name="VartopiaTransactionIdNull" nullable="true" pattern="" sourceType="" type="id_Boolean"/>
+      <column comment="" key="false" length="50" name="End_User_Name__c" nullable="false" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
+      <column comment="" key="false" length="50" name="End_User_Name__c_Null" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_Boolean"/>
+      <column comment="" key="false" length="256" name="CustContactEmail" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
+      <column comment="" key="false" length="256" name="CustContactEmailNull" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_Boolean"/>
+      <column comment="" key="false" length="100" name="CustContactTitle" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
+      <column comment="" key="false" length="100" name="CustContactTitleNull" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_Boolean"/>
+      <column comment="" key="false" length="50" name="CustContactPhone" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
+      <column comment="" key="false" length="50" name="CustContactPhoneNull" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_Boolean"/>
+      <column comment="" key="false" length="50" name="CustContactFax" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
+      <column comment="" key="false" length="50" name="CustContactFaxNull" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_Boolean"/>
+      <column comment="" key="false" length="50" name="CustContactMobile" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
+      <column comment="" key="false" length="50" name="CustContactMobileNull" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_Boolean"/>
+      <column comment="" key="false" length="256" name="CustContactWebsite" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
+      <column comment="" key="false" length="256" name="CustContactWebsiteNull" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_Boolean"/>
+      <column comment="" key="false" length="50" name="ProductId" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" length="50" name="ProductIdNull" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_Boolean"/>
+      <column comment="" key="false" length="10" name="Quantity" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer"/>
+      <column key="false" length="19" name="TotalPrice" nullable="false" pattern="" precision="4" sourceType="MONEY" type="id_Object"/>
+      <column comment="" key="false" length="50" name="StageName" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" length="50" name="StageNameNull" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_Boolean"/>
+      <column comment="" key="false" length="50" name="PrimaryCompetitorName" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" length="50" name="PrimaryCompetitorNameNull" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_Boolean"/>
+      <column comment="" key="false" length="100" name="OtherCompetitorName" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" length="100" name="OtherCompetitorNameNull" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_Boolean"/>
+      <column comment="" key="false" length="100" name="SymantecSalesRepName" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" length="100" name="SymantecSalesRepNameNull" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_Boolean"/>
+      <column comment="" key="false" length="100" name="SymantecSEName" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" length="100" name="SymantecSENameNull" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_Boolean"/>
+      <column comment="" key="false" length="30" name="MarketSegmentName" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" length="30" name="MarketSegmentNameNull" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_Boolean"/>
+      <column comment="" key="false" length="100" name="IndustryName" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" length="100" name="IndustryNameNull" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_Boolean"/>
+      <column comment="" key="false" length="30" name="DistributorName" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" length="30" name="DistributorNameNull" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_Boolean"/>
+      <column comment="" key="false" length="10" name="ComputerCount" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer"/>
+      <column comment="" key="false" length="10" name="ComputerCountNull" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Boolean"/>
+      <column comment="" key="false" length="50" name="OppRegPromotionName" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" length="50" name="OppRegPromotionNameNull" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_Boolean"/>
+      <column comment="" key="false" length="2147483647" name="NextStepDescription" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" length="2147483647" name="NextStepDescriptionNull" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_Boolean"/>
+      <column comment="" key="false" length="2147483647" name="ProductServiceInterestDescription" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" length="2147483647" name="ProductServiceInterestDescriptionNull" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_Boolean"/>
+      <column comment="" key="false" length="100" name="MarketingAssistedOpptyFlag" nullable="true" pattern="" precision="0" sourceType="BIT" type="id_String"/>
+      <column comment="" key="false" length="1" name="MarketingAssistedOpptyFlagNull" nullable="true" pattern="" precision="0" sourceType="BIT" type="id_Boolean"/>
+      <column comment="" key="false" length="2147483647" name="MarketingActivityDescription" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" length="2147483647" name="MarketingActivityDescriptionNull" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_Boolean"/>
+      <column comment="" key="false" length="100" name="NoteTitle" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" length="100" name="NoteTitleNull" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_Boolean"/>
+      <column comment="" key="false" length="1073741823" name="NoteBody" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
+      <column comment="" key="false" length="1073741823" name="NoteBodyNull" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_Boolean"/>
+    </metadata>
+    <nodeData xsi:type="MapperData">
+      <uiProperties/>
+      <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
+      <outputTables sizeState="INTERMEDIATE" name="out1">
+        <mapperTableEntries name="DealName" expression="(cleanedFname_Lane.DealName == null || cleanedFname_Lane.DealName.equals(&quot;&quot;)) ? null : cleanedFname_Lane.DealName" type="id_String"/>
+        <mapperTableEntries name="DealNameNull" expression="cleanedFname_Lane.DealName == null || cleanedFname_Lane.DealName.equals(&quot;&quot;)" type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="ExpectedRevenue" expression="(cleanedFname_Lane.ExpectedRevenue == null) ? null : cleanedFname_Lane.ExpectedRevenue " type="id_Object"/>
+        <mapperTableEntries name="ExpectedRevenueNull" expression="cleanedFname_Lane.ExpectedRevenue == null || cleanedFname_Lane.ExpectedRevenue.equals(&quot;&quot;) " type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="ExpectedCloseDate" expression="(cleanedFname_Lane.ExpectedCloseDate == null || cleanedFname_Lane.ExpectedCloseDate.equals(&quot;&quot;)) ? null : cleanedFname_Lane.ExpectedCloseDate" type="id_Date" nullable="true"/>
+        <mapperTableEntries name="ExpectedCloseDateNull" expression="cleanedFname_Lane.ExpectedCloseDate == null || cleanedFname_Lane.ExpectedCloseDate.equals(&quot;&quot;)" type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="SubmitDate" expression="(cleanedFname_Lane.SubmitDate  == null || cleanedFname_Lane.SubmitDate .equals(&quot;&quot;)) ? null : cleanedFname_Lane.SubmitDate  " type="id_Date"/>
+        <mapperTableEntries name="SubmitDateNull" expression="cleanedFname_Lane.SubmitDate == null || cleanedFname_Lane.SubmitDate.equals(&quot;&quot;) " type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="ExpirationDate" expression="(cleanedFname_Lane.ExpirationDate  == null || cleanedFname_Lane.ExpirationDate .equals(&quot;&quot;)) ? null : cleanedFname_Lane.ExpirationDate   " type="id_Date" nullable="true"/>
+        <mapperTableEntries name="ExpirationDateNull" expression="cleanedFname_Lane.ExpirationDate == null || cleanedFname_Lane.ExpirationDate.equals(&quot;&quot;) " type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="SalesRepName" expression="(cleanedFname_Lane.SalesRepName == null || cleanedFname_Lane.SalesRepName.equals(&quot;&quot;)) ? null : cleanedFname_Lane.SalesRepName" type="id_String"/>
+        <mapperTableEntries name="SalesRepNameNull" expression="cleanedFname_Lane.SalesRepName == null || cleanedFname_Lane.SalesRepName.equals(&quot;&quot;)" type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="PartnerId" expression="(cleanedFname_Lane.PartnerId == null || cleanedFname_Lane.PartnerId.equals(&quot;&quot;)) ? null : cleanedFname_Lane.PartnerId " type="id_String" nullable="true"/>
+        <mapperTableEntries name="PartnerIdNull" expression="cleanedFname_Lane.PartnerId == null || cleanedFname_Lane.PartnerId.equals(&quot;&quot;) " type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="SubmittedByUserName" expression="(cleanedFname_Lane.SubmittedByUserName == null || cleanedFname_Lane.SubmittedByUserName.equals(&quot;&quot;)) ? null : cleanedFname_Lane.SubmittedByUserName  " type="id_String"/>
+        <mapperTableEntries name="SubmittedByUserNameNull" expression="cleanedFname_Lane.SubmittedByUserName == null || cleanedFname_Lane.SubmittedByUserName.equals(&quot;&quot;)  " type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="CurrencyCode" expression="(cleanedFname_Lane.CurrencyCode == null || cleanedFname_Lane.CurrencyCode.equals(&quot;&quot;)) ? null : cleanedFname_Lane.CurrencyCode " type="id_String"/>
+        <mapperTableEntries name="CurrencyCodeNull" expression="cleanedFname_Lane.CurrencyCode == null || cleanedFname_Lane.CurrencyCode.equals(&quot;&quot;)" type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="CustCompanyName" expression="(cleanedFname_Lane.CustCompanyName == null || cleanedFname_Lane.CustCompanyName.equals(&quot;&quot;)) ? null : cleanedFname_Lane.CustCompanyName" type="id_String"/>
+        <mapperTableEntries name="CustCompanyNameNull" expression="cleanedFname_Lane.CustCompanyName == null || cleanedFname_Lane.CustCompanyName.equals(&quot;&quot;)" type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="CustAddress1" expression="(cleanedFname_Lane.CustAddress1 == null || cleanedFname_Lane.CustAddress1.equals(&quot;&quot;)) ? null : cleanedFname_Lane.CustAddress1" type="id_String" nullable="true"/>
+        <mapperTableEntries name="CustAddress1Null" expression="cleanedFname_Lane.CustAddress1 == null || cleanedFname_Lane.CustAddress1.equals(&quot;&quot;)" type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="CustCity" expression="(cleanedFname_Lane.CustCity == null || cleanedFname_Lane.CustCity.equals(&quot;&quot;)) ? null : cleanedFname_Lane.CustCity" type="id_String" nullable="true"/>
+        <mapperTableEntries name="CustCityNull" expression="cleanedFname_Lane.CustCity == null || cleanedFname_Lane.CustCity.equals(&quot;&quot;)" type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="CustState" expression="(cleanedFname_Lane.CustState == null || cleanedFname_Lane.CustState.equals(&quot;&quot;)) ? null : cleanedFname_Lane.CustState" type="id_String" nullable="true"/>
+        <mapperTableEntries name="CustStateNull" expression="cleanedFname_Lane.CustState == null || cleanedFname_Lane.CustState.equals(&quot;&quot;)" type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="CustCountry" expression="(cleanedFname_Lane.CustCountry == null || cleanedFname_Lane.CustCountry.equals(&quot;&quot;)) ? null : cleanedFname_Lane.CustCountry" type="id_String" nullable="true"/>
+        <mapperTableEntries name="CustCountryNull" expression="cleanedFname_Lane.CustCountry == null || cleanedFname_Lane.CustCountry.equals(&quot;&quot;)" type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="CustPostalCode" expression="(cleanedFname_Lane.CustPostalCode == null || cleanedFname_Lane.CustPostalCode.equals(&quot;&quot;)) ? null : cleanedFname_Lane.CustPostalCode " type="id_String" nullable="true"/>
+        <mapperTableEntries name="CustPostalCodeNull" expression="cleanedFname_Lane.CustPostalCode == null || cleanedFname_Lane.CustPostalCode.equals(&quot;&quot;)" type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="VartopiaTransactionId" expression="(cleanedFname_Lane.VartopiaTransactionId == null || cleanedFname_Lane.VartopiaTransactionId.equals(&quot;&quot;) )? null : cleanedFname_Lane.VartopiaTransactionId     " type="id_Object"/>
+        <mapperTableEntries name="VartopiaTransactionIdNull" expression="(cleanedFname_Lane.VartopiaTransactionId == null) || cleanedFname_Lane.VartopiaTransactionId.equals(&quot;&quot;)    " type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="End_User_Name__c" expression="(cleanedFname_Lane.End_User_Name__c == null || cleanedFname_Lane.End_User_Name__c.equals(&quot;&quot;)) ? null : cleanedFname_Lane.End_User_Name__c " type="id_String"/>
+        <mapperTableEntries name="End_User_Name__c_Null" expression="cleanedFname_Lane.End_User_Name__c == null || cleanedFname_Lane.End_User_Name__c.equals(&quot;&quot;)  " type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="CustContactEmail" expression="(cleanedFname_Lane.CustContactEmail == null || cleanedFname_Lane.CustContactEmail.equals(&quot;&quot;)) ? null : cleanedFname_Lane.CustContactEmail  " type="id_String" nullable="true"/>
+        <mapperTableEntries name="CustContactEmailNull" expression="cleanedFname_Lane.CustContactEmail == null || cleanedFname_Lane.CustContactEmail.equals(&quot;&quot;) " type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="CustContactTitle" expression="(cleanedFname_Lane.CustContactTitle == null || cleanedFname_Lane.CustContactTitle.equals(&quot;&quot;)) ? null : cleanedFname_Lane.CustContactTitle  " type="id_String" nullable="true"/>
+        <mapperTableEntries name="CustContactTitleNull" expression="cleanedFname_Lane.CustContactTitle == null || cleanedFname_Lane.CustContactTitle.equals(&quot;&quot;)  " type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="CustContactPhone" expression="(cleanedFname_Lane.CustContactPhone == null || cleanedFname_Lane.CustContactPhone.equals(&quot;&quot;)) ? null : cleanedFname_Lane.CustContactPhone  " type="id_String" nullable="true"/>
+        <mapperTableEntries name="CustContactPhoneNull" expression="cleanedFname_Lane.CustContactPhone == null || cleanedFname_Lane.CustContactPhone.equals(&quot;&quot;)  " type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="CustContactFax" expression="(cleanedFname_Lane.CustContactFax == null || cleanedFname_Lane.CustContactFax.equals(&quot;&quot;)) ? null : cleanedFname_Lane.CustContactFax  " type="id_String" nullable="true"/>
+        <mapperTableEntries name="CustContactFaxNull" expression="cleanedFname_Lane.CustContactFax == null || cleanedFname_Lane.CustContactFax.equals(&quot;&quot;)  " type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="CustContactMobile" expression="(cleanedFname_Lane.CustContactMobile == null || cleanedFname_Lane.CustContactMobile.equals(&quot;&quot;)) ? null : cleanedFname_Lane.CustContactMobile  " type="id_String" nullable="true"/>
+        <mapperTableEntries name="CustContactMobileNull" expression="cleanedFname_Lane.CustContactMobile == null || cleanedFname_Lane.CustContactMobile.equals(&quot;&quot;)  " type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="CustContactWebsite" expression="(cleanedFname_Lane.CustContactWebsite == null || cleanedFname_Lane.CustContactWebsite.equals(&quot;&quot;)) ? null : cleanedFname_Lane.CustContactWebsite " type="id_String" nullable="true"/>
+        <mapperTableEntries name="CustContactWebsiteNull" expression="cleanedFname_Lane.CustContactWebsite == null || cleanedFname_Lane.CustContactWebsite.equals(&quot;&quot;)    " type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="ProductId" expression="(row4.ProductId == null || row4.ProductId.equals(&quot;&quot;)) ? null : row4.ProductId  " type="id_String" nullable="true"/>
+        <mapperTableEntries name="ProductIdNull" expression="row4.ProductId == null || row4.ProductId.equals(&quot;&quot;)   " type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="Quantity" expression="row4.Quantity   " type="id_Integer"/>
+        <mapperTableEntries name="TotalPrice" expression="row4.TotalPrice " type="id_Object"/>
+        <mapperTableEntries name="StageName" expression="(row2.StageName == null || row2.StageName.equals(&quot;&quot;)) ? null : row2.StageName    " type="id_String" nullable="true"/>
+        <mapperTableEntries name="StageNameNull" expression="row2.StageName == null || row2.StageName.equals(&quot;&quot;)  " type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="PrimaryCompetitorName" expression="(row2.PrimaryCompetitorName == null || row2.PrimaryCompetitorName.equals(&quot;&quot;)) ? null : row2.PrimaryCompetitorName  " type="id_String" nullable="true"/>
+        <mapperTableEntries name="PrimaryCompetitorNameNull" expression="row2.PrimaryCompetitorName == null || row2.PrimaryCompetitorName.equals(&quot;&quot;)  " type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="OtherCompetitorName" expression="(row2.OtherCompetitorName == null || row2.OtherCompetitorName.equals(&quot;&quot;)) ? null : row2.OtherCompetitorName  " type="id_String" nullable="true"/>
+        <mapperTableEntries name="OtherCompetitorNameNull" expression="row2.OtherCompetitorName == null || row2.OtherCompetitorName.equals(&quot;&quot;) " type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="SymantecSalesRepName" expression="(row2.SymantecSalesRepName == null || row2.SymantecSalesRepName.equals(&quot;&quot;)) ? null : row2.SymantecSalesRepName  " type="id_String" nullable="true"/>
+        <mapperTableEntries name="SymantecSalesRepNameNull" expression="row2.SymantecSalesRepName == null || row2.SymantecSalesRepName.equals(&quot;&quot;)   " type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="SymantecSEName" expression="(row2.SymantecSEName == null || row2.SymantecSEName.equals(&quot;&quot;)) ? null : row2.SymantecSEName  " type="id_String" nullable="true"/>
+        <mapperTableEntries name="SymantecSENameNull" expression="row2.SymantecSEName == null || row2.SymantecSEName.equals(&quot;&quot;)  " type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="MarketSegmentName" expression="(row2.MarketSegmentName == null || row2.MarketSegmentName.equals(&quot;&quot;)) ? null : row2.MarketSegmentName  " type="id_String" nullable="true"/>
+        <mapperTableEntries name="MarketSegmentNameNull" expression="row2.MarketSegmentName == null || row2.MarketSegmentName.equals(&quot;&quot;)  " type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="IndustryName" expression="(row2.IndustryName == null || row2.IndustryName.equals(&quot;&quot;)) ? null : row2.IndustryName  " type="id_String" nullable="true"/>
+        <mapperTableEntries name="IndustryNameNull" expression="row2.IndustryName == null || row2.IndustryName.equals(&quot;&quot;)  " type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="DistributorName" expression="(row2.DistributorName == null || row2.DistributorName.equals(&quot;&quot;)) ? null :row2.DistributorName " type="id_String" nullable="true"/>
+        <mapperTableEntries name="DistributorNameNull" expression="row2.DistributorName == null || row2.DistributorName.equals(&quot;&quot;)  " type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="ComputerCount" expression="(row2.ComputerCount == null || row2.ComputerCount.equals(&quot;&quot;)) ? null : row2.ComputerCount " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="ComputerCountNull" expression="row2.ComputerCount == null || row2.ComputerCount.equals(&quot;&quot;)  " type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="OppRegPromotionName" expression="(row2.OppRegPromotionName == null || row2.OppRegPromotionName.equals(&quot;&quot;)) ? null : row2.OppRegPromotionName    " type="id_String" nullable="true"/>
+        <mapperTableEntries name="OppRegPromotionNameNull" expression="row2.OppRegPromotionName == null || row2.OppRegPromotionName.equals(&quot;&quot;)   " type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="NextStepDescription" expression="(row2.NextStepDescription == null || row2.NextStepDescription.equals(&quot;&quot;)) ? null : row2.NextStepDescription  " type="id_String" nullable="true"/>
+        <mapperTableEntries name="NextStepDescriptionNull" expression="row2.NextStepDescription == null || row2.NextStepDescription.equals(&quot;&quot;)  " type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="ProductServiceInterestDescription" expression="(row2.ProductServiceInterestDescription == null || row2.ProductServiceInterestDescription.equals(&quot;&quot;)) ? null : row2.ProductServiceInterestDescription  " type="id_String" nullable="true"/>
+        <mapperTableEntries name="ProductServiceInterestDescriptionNull" expression="row2.ProductServiceInterestDescription == null || row2.ProductServiceInterestDescription.equals(&quot;&quot;)  " type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="MarketingAssistedOpptyFlag" expression="(row2.MarketingAssistedOpptyFlag == null || row2.MarketingAssistedOpptyFlag.equals(&quot;&quot;)) ? null : row2.MarketingAssistedOpptyFlag  " type="id_String" nullable="true"/>
+        <mapperTableEntries name="MarketingAssistedOpptyFlagNull" expression="row2.MarketingAssistedOpptyFlag == null || row2.MarketingAssistedOpptyFlag.equals(&quot;&quot;)  " type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="MarketingActivityDescription" expression="(row2.MarketingActivityDescription == null || row2.MarketingActivityDescription.equals(&quot;&quot;)) ? null : row2.MarketingActivityDescription   " type="id_String" nullable="true"/>
+        <mapperTableEntries name="MarketingActivityDescriptionNull" expression="row2.MarketingActivityDescription == null || row2.MarketingActivityDescription.equals(&quot;&quot;)  " type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="NoteTitle" expression="(row2.NoteTitle == null || row2.NoteTitle.equals(&quot;&quot;)) ? null : row2.NoteTitle  " type="id_String" nullable="true"/>
+        <mapperTableEntries name="NoteTitleNull" expression="row2.NoteTitle == null || row2.NoteTitle.equals(&quot;&quot;)  " type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="NoteBody" expression="(row2.NoteBody == null || row2.NoteBody.equals(&quot;&quot;)) ? null : row2.NoteBody  " type="id_String" nullable="true"/>
+        <mapperTableEntries name="NoteBodyNull" expression="row2.NoteBody == null || row2.NoteBody.equals(&quot;&quot;)  " type="id_Boolean" nullable="true"/>
+      </outputTables>
+      <inputTables sizeState="INTERMEDIATE" name="cleanedFname_Lane" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="Id" type="id_Integer"/>
+        <mapperTableEntries name="VendorId" type="id_Integer"/>
+        <mapperTableEntries name="DealName" type="id_String"/>
+        <mapperTableEntries name="ExpectedRevenue" type="id_Object"/>
+        <mapperTableEntries name="VartopiaTransactionId" type="id_Object"/>
+        <mapperTableEntries name="VendorDealId" type="id_String" nullable="true"/>
+        <mapperTableEntries name="VartopiaStatus" type="id_String"/>
+        <mapperTableEntries name="VendorStatus" type="id_String" nullable="true"/>
+        <mapperTableEntries name="SubmitDate" type="id_Date"/>
+        <mapperTableEntries name="ExpirationDate" type="id_Date" nullable="true"/>
+        <mapperTableEntries name="ExpectedCloseDate" type="id_Date" nullable="true"/>
+        <mapperTableEntries name="SalesRepName" type="id_String"/>
+        <mapperTableEntries name="SalesRepEmail" type="id_String"/>
+        <mapperTableEntries name="SubmittedByUserName" type="id_String"/>
+        <mapperTableEntries name="SubmittedByUserEmail" type="id_String"/>
+        <mapperTableEntries name="CustCompanyName" type="id_String"/>
+        <mapperTableEntries name="CustAddress1" type="id_String" nullable="true"/>
+        <mapperTableEntries name="CustCity" type="id_String" nullable="true"/>
+        <mapperTableEntries name="CustState" type="id_String" nullable="true"/>
+        <mapperTableEntries name="CustPostalCode" type="id_String" nullable="true"/>
+        <mapperTableEntries name="CustCountry" type="id_String" nullable="true"/>
+        <mapperTableEntries name="End_User_Name__c" type="id_String"/>
+        <mapperTableEntries name="CustContactEmail" type="id_String" nullable="true"/>
+        <mapperTableEntries name="CustContactTitle" type="id_String" nullable="true"/>
+        <mapperTableEntries name="CustContactPhone" type="id_String" nullable="true"/>
+        <mapperTableEntries name="CustContactFax" type="id_String" nullable="true"/>
+        <mapperTableEntries name="CustContactMobile" type="id_String" nullable="true"/>
+        <mapperTableEntries name="CustContactWebsite" type="id_String" nullable="true"/>
+        <mapperTableEntries name="CurrencyCode" type="id_String"/>
+        <mapperTableEntries name="PartnerId" type="id_String" nullable="true"/>
+        <mapperTableEntries name="BatchId" type="id_String"/>
+        <mapperTableEntries name="CreatedOn" type="id_Date"/>
+        <mapperTableEntries name="OpportunityDescription" type="id_String" nullable="true"/>
+        <mapperTableEntries name="SubmittedByUserId" type="id_Object" nullable="true"/>
+      </inputTables>
+      <inputTables sizeState="INTERMEDIATE" name="row2" activateCondensedTool="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE" innerJoin="true">
+        <mapperTableEntries name="Id" type="id_Integer"/>
+        <mapperTableEntries name="VartopiaTransactionId" expression="cleanedFname_Lane.VartopiaTransactionId " type="id_Object"/>
+        <mapperTableEntries name="StageName" type="id_String" nullable="true"/>
+        <mapperTableEntries name="PrimaryCompetitorName" type="id_String" nullable="true"/>
+        <mapperTableEntries name="OtherCompetitorName" type="id_String" nullable="true"/>
+        <mapperTableEntries name="SymantecSalesRepName" type="id_String" nullable="true"/>
+        <mapperTableEntries name="SymantecSEName" type="id_String" nullable="true"/>
+        <mapperTableEntries name="MarketSegmentName" type="id_String" nullable="true"/>
+        <mapperTableEntries name="IndustryName" type="id_String" nullable="true"/>
+        <mapperTableEntries name="DistributorName" type="id_String" nullable="true"/>
+        <mapperTableEntries name="ComputerCount" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="OppRegPromotionName" type="id_String" nullable="true"/>
+        <mapperTableEntries name="NextStepDescription" type="id_String" nullable="true"/>
+        <mapperTableEntries name="ProductServiceInterestDescription" type="id_String" nullable="true"/>
+        <mapperTableEntries name="MarketingAssistedOpptyFlag" type="id_String" nullable="true"/>
+        <mapperTableEntries name="MarketingActivityDescription" type="id_String" nullable="true"/>
+        <mapperTableEntries name="NoteTitle" type="id_String" nullable="true"/>
+        <mapperTableEntries name="NoteBody" type="id_String" nullable="true"/>
+        <mapperTableEntries name="CreatedOn" type="id_Date"/>
+      </inputTables>
+      <inputTables sizeState="INTERMEDIATE" name="row4" activateCondensedTool="true" matchingMode="ALL_MATCHES" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="Id" type="id_Integer"/>
+        <mapperTableEntries name="VartopiaTransactionId" expression="cleanedFname_Lane.VartopiaTransactionId " type="id_Object"/>
+        <mapperTableEntries name="ProductId" type="id_String"/>
+        <mapperTableEntries name="Quantity" type="id_Integer"/>
+        <mapperTableEntries name="TotalPrice" type="id_Object"/>
+        <mapperTableEntries name="CreatedOn" type="id_Date"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="800" posY="128">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMSSqlInput_6"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tMSSqlConnection_1"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;LocalHost&quot;"/>
+    <elementParameter field="TEXT" name="TYPE" value="MSSQL"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;1433&quot;"/>
+    <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;dbo&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;MVS_Integration&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;TOS&quot;"/>
+    <elementParameter field="TEXT" name="PASS" value="&quot;VarTos11&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;Symantec_OppRegistration_Push&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT dbo.Symantec_OppRegistration_Push.\&quot;Id\&quot;,&#xA;&#x9;&#x9;&quot;+&#xA;&quot; dbo.Symantec_OppRegistration_Push.VartopiaTransactionId,&#xA;&#x9;&#x9;&quot;+&#xA;&quot; dbo.Symantec_OppRegistration_Push.StageName,&#xA;&#x9;&#x9;&quot;+&#xA;&quot; dbo.Symantec_OppRegistration_Push.PrimaryCompetitorName,&#xA;&#x9;&#x9;&quot;+&#xA;&quot; dbo.Symantec_OppRegistration_Push.OtherCompetitorName,&#xA;&#x9;&#x9;&quot;+&#xA;&quot; dbo.Symantec_OppRegistration_Push.SymantecSalesRepName,&#xA;&#x9;&#x9;&quot;+&#xA;&quot; dbo.Symantec_OppRegistration_Push.SymantecSEName,&#xA;&#x9;&#x9;&quot;+&#xA;&quot; dbo.Symantec_OppRegistration_Push.MarketSegmentName,&#xA;&#x9;&#x9;&quot;+&#xA;&quot; dbo.Symantec_OppRegistration_Push.IndustryName,&#xA;&#x9;&#x9;dbo.Symantec_OppRegistration_Push.DistributorName,&#xA;&#x9;&#x9;&quot;+&#xA;&quot; dbo.Symantec_OppRegistration_Push.ComputerCount,&#xA;&#x9;&#x9;&quot;+&#xA;&quot; dbo.Symantec_OppRegistration_Push.OppRegPromotionName,&#xA;&#x9;&#x9;&quot;+&#xA;&quot; dbo.Symantec_OppRegistration_Push.NextStepDescription,&#xA;&#x9;&#x9;&quot;+&#xA;&quot; dbo.Symantec_OppRegistration_Push.ProductServiceInterestDescription,&#xA;&#x9;&#x9;&quot;+&#xA;&quot; dbo.Symantec_OppRegistration_Push.MarketingAssistedOpptyFlag,&#xA;&#x9;&#x9;&quot;+&#xA;&quot; dbo.Symantec_OppRegistration_Push.MarketingActivityDescription,&#xA;&#x9;&#x9;&quot;+&#xA;&quot; dbo.Symantec_OppRegistration_Push.NoteTitle,&#xA;&#x9;&#x9;dbo.Symantec_OppRegistration_Push.NoteBody,&#xA;&#x9;&#x9;&quot;+&#xA;&quot; dbo.Symantec_OppRegistration_Push.CreatedOn&#xA;FROM&#x9;dbo.Symantec_OppRegistration_Push&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="id_MSSQL"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="Id"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="VartopiaTransactionId"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="StageName"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PrimaryCompetitorName"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="OtherCompetitorName"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SymantecSalesRepName"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SymantecSEName"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="MarketSegmentName"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="IndustryName"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DistributorName"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ComputerCount"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="OppRegPromotionName"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="NextStepDescription"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ProductServiceInterestDescription"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="MarketingAssistedOpptyFlag"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="MarketingActivityDescription"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="NoteTitle"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="NoteBody"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CreatedOn"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="LABEL" value="__TABLE__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" label="Symantec_OppRegistration_Push" name="tMSSqlInput_6">
+      <column comment="" key="true" length="1" name="Id" nullable="false" pattern="" precision="1" sourceType="INT IDENTITY" type="id_Integer"/>
+      <column comment="" key="false" length="36" name="VartopiaTransactionId" nullable="false" pattern="" precision="0" sourceType="UNIQUEIDENTIFIER" type="id_Object"/>
+      <column comment="" key="false" length="50" name="StageName" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" length="50" name="PrimaryCompetitorName" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" length="100" name="OtherCompetitorName" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" length="100" name="SymantecSalesRepName" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" length="100" name="SymantecSEName" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" length="30" name="MarketSegmentName" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" length="100" name="IndustryName" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" length="30" name="DistributorName" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" length="10" name="ComputerCount" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer"/>
+      <column comment="" key="false" length="50" name="OppRegPromotionName" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" length="2147483647" name="NextStepDescription" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" length="2147483647" name="ProductServiceInterestDescription" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" length="100" name="MarketingAssistedOpptyFlag" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" length="2147483647" name="MarketingActivityDescription" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" length="100" name="NoteTitle" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" length="1073741823" name="NoteBody" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
+      <column comment="" defaultValue="&quot;(getdate())&quot;" key="false" length="23" name="CreatedOn" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date"/>
+    </metadata>
+  </node>
+  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="512" posY="128">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMSSqlInput_5"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tMSSqlConnection_1"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;LocalHost&quot;"/>
+    <elementParameter field="TEXT" name="TYPE" value="MSSQL"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;1433&quot;"/>
+    <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;dbo&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;MVS_Integration&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;TOS&quot;"/>
+    <elementParameter field="TEXT" name="PASS" value="&quot;VarTos11&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;Symantec_OppRegistration_Product_Push&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT dbo.Symantec_OppRegistration_Product_Push.\&quot;Id\&quot;,&#xA;&#x9;&#x9;&quot;+&#xA;&quot; dbo.Symantec_OppRegistration_Product_Push.VartopiaTransactionId,&#xA;&#x9;&#x9;&quot;+&#xA;&quot; dbo.Symantec_OppRegistration_Product_Push.ProductId,&#xA;&#x9;&#x9;&quot;+&#xA;&quot; dbo.Symantec_OppRegistration_Product_Push.Quantity,&#xA;&#x9;&#x9;&quot;+&#xA;&quot; dbo.Symantec_OppRegistration_Product_Push.TotalPrice,&#xA;&#x9;&#x9;&quot;+&#xA;&quot; dbo.Symantec_OppRegistration_Product_Push.CreatedOn&#xA;FROM&#x9;dbo.Symantec_OppRegistration_Product_Push&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="id_MSSQL"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="Id"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="VartopiaTransactionId"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ProductId"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Quantity"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TotalPrice"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CreatedOn"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="LABEL" value="__TABLE__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" label="Symantec_OppRegistration_Product_Push" name="tMSSqlInput_5">
+      <column key="true" length="1" name="Id" nullable="false" pattern="" precision="1" sourceType="INT IDENTITY" type="id_Integer"/>
+      <column key="false" length="36" name="VartopiaTransactionId" nullable="false" pattern="" precision="0" sourceType="UNIQUEIDENTIFIER" type="id_Object"/>
+      <column key="false" length="50" name="ProductId" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String"/>
+      <column key="false" length="10" name="Quantity" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer"/>
+      <column key="false" length="19" name="TotalPrice" nullable="false" pattern="" precision="4" sourceType="MONEY" type="id_Object"/>
+      <column defaultValue="&quot;(getdate())&quot;" key="false" length="23" name="CreatedOn" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date"/>
+    </metadata>
+  </node>
+  <node componentName="tWriteXMLField" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="800" posY="352">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWriteXMLField_2"/>
+    <elementParameter field="COLUMN_LIST" name="XMLFIELD" value="request"/>
+    <elementParameter field="TABLE" name="ROOT">
+      <elementValue elementRef="PATH" value="/SymantecRegObject"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="main"/>
+      <elementValue elementRef="ORDER" value="1"/>
+      <elementValue elementRef="PATH" value="xsi"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value="http://www.w3.org/2001/XMLSchema-instance"/>
+      <elementValue elementRef="ATTRIBUTE" value="ns"/>
+      <elementValue elementRef="ORDER" value="2"/>
+      <elementValue elementRef="PATH" value="/SymantecRegObject/Name"/>
+      <elementValue elementRef="COLUMN" value="DealName"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="3"/>
+      <elementValue elementRef="PATH" value="xsi:nil"/>
+      <elementValue elementRef="COLUMN" value="DealNameNull"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="attri"/>
+      <elementValue elementRef="ORDER" value="4"/>
+      <elementValue elementRef="PATH" value="/SymantecRegObject/Amount"/>
+      <elementValue elementRef="COLUMN" value="ExpectedRevenue"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="5"/>
+      <elementValue elementRef="PATH" value="xsi:nil"/>
+      <elementValue elementRef="COLUMN" value="ExpectedRevenueNull"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="attri"/>
+      <elementValue elementRef="ORDER" value="6"/>
+      <elementValue elementRef="PATH" value="/SymantecRegObject/Deal_ID__c"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="7"/>
+      <elementValue elementRef="PATH" value="xsi:nil"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value="true"/>
+      <elementValue elementRef="ATTRIBUTE" value="attri"/>
+      <elementValue elementRef="ORDER" value="8"/>
+      <elementValue elementRef="PATH" value="/SymantecRegObject/End_User_Company__c"/>
+      <elementValue elementRef="COLUMN" value="CustCompanyName"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="9"/>
+      <elementValue elementRef="PATH" value="xsi:nil"/>
+      <elementValue elementRef="COLUMN" value="CustCompanyNameNull"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="attri"/>
+      <elementValue elementRef="ORDER" value="10"/>
+      <elementValue elementRef="PATH" value="/SymantecRegObject/End_User_Company_Street__c"/>
+      <elementValue elementRef="COLUMN" value="CustAddress1"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="11"/>
+      <elementValue elementRef="PATH" value="xsi:nil"/>
+      <elementValue elementRef="COLUMN" value="CustAddress1Null"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="attri"/>
+      <elementValue elementRef="ORDER" value="12"/>
+      <elementValue elementRef="PATH" value="/SymantecRegObject/End_User_Company_City__c"/>
+      <elementValue elementRef="COLUMN" value="CustCity"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="13"/>
+      <elementValue elementRef="PATH" value="xsi:nil"/>
+      <elementValue elementRef="COLUMN" value="CustCityNull"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="attri"/>
+      <elementValue elementRef="ORDER" value="14"/>
+      <elementValue elementRef="PATH" value="/SymantecRegObject/End_User_Company_State_Province__c"/>
+      <elementValue elementRef="COLUMN" value="CustState"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="15"/>
+      <elementValue elementRef="PATH" value="xsi:nil"/>
+      <elementValue elementRef="COLUMN" value="CustStateNull"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="attri"/>
+      <elementValue elementRef="ORDER" value="16"/>
+      <elementValue elementRef="PATH" value="/SymantecRegObject/End_User_Company_Postal_Code__c"/>
+      <elementValue elementRef="COLUMN" value="CustPostalCode"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="17"/>
+      <elementValue elementRef="PATH" value="xsi:nil"/>
+      <elementValue elementRef="COLUMN" value="CustPostalCodeNull"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="attri"/>
+      <elementValue elementRef="ORDER" value="18"/>
+      <elementValue elementRef="PATH" value="/SymantecRegObject/End_User_Company_Country__c"/>
+      <elementValue elementRef="COLUMN" value="CustCountry"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="19"/>
+      <elementValue elementRef="PATH" value="xsi:nil"/>
+      <elementValue elementRef="COLUMN" value="CustCountryNull"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="attri"/>
+      <elementValue elementRef="ORDER" value="20"/>
+      <elementValue elementRef="PATH" value="/SymantecRegObject/Partner_Sales_Representative__c"/>
+      <elementValue elementRef="COLUMN" value="SalesRepName"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="21"/>
+      <elementValue elementRef="PATH" value="xsi:nil"/>
+      <elementValue elementRef="COLUMN" value="SalesRepNameNull"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="attri"/>
+      <elementValue elementRef="ORDER" value="22"/>
+      <elementValue elementRef="PATH" value="/SymantecRegObject/End_User_Name__c"/>
+      <elementValue elementRef="COLUMN" value="End_User_Name__c"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="23"/>
+      <elementValue elementRef="PATH" value="xsi:nil"/>
+      <elementValue elementRef="COLUMN" value="End_User_Name__c_Null"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="attri"/>
+      <elementValue elementRef="ORDER" value="24"/>
+      <elementValue elementRef="PATH" value="/SymantecRegObject/End_User_Email__c"/>
+      <elementValue elementRef="COLUMN" value="CustContactEmail"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="25"/>
+      <elementValue elementRef="PATH" value="xsi:nil"/>
+      <elementValue elementRef="COLUMN" value="CustContactEmailNull"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="attri"/>
+      <elementValue elementRef="ORDER" value="26"/>
+      <elementValue elementRef="PATH" value="/SymantecRegObject/End_User_Phone__c"/>
+      <elementValue elementRef="COLUMN" value="CustContactPhone"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="27"/>
+      <elementValue elementRef="PATH" value="xsi:nil"/>
+      <elementValue elementRef="COLUMN" value="CustContactPhoneNull"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="attri"/>
+      <elementValue elementRef="ORDER" value="28"/>
+      <elementValue elementRef="PATH" value="/SymantecRegObject/End_User_Fax__c"/>
+      <elementValue elementRef="COLUMN" value="CustContactFax"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="29"/>
+      <elementValue elementRef="PATH" value="xsi:nil"/>
+      <elementValue elementRef="COLUMN" value="CustContactFaxNull"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="attri"/>
+      <elementValue elementRef="ORDER" value="30"/>
+      <elementValue elementRef="PATH" value="/SymantecRegObject/End_User_Title__c"/>
+      <elementValue elementRef="COLUMN" value="CustContactTitle"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="31"/>
+      <elementValue elementRef="PATH" value="xsi:nil"/>
+      <elementValue elementRef="COLUMN" value="CustContactTitleNull"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="attri"/>
+      <elementValue elementRef="ORDER" value="32"/>
+      <elementValue elementRef="PATH" value="/SymantecRegObject/End_User_Mobile__c"/>
+      <elementValue elementRef="COLUMN" value="CustContactMobile"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="33"/>
+      <elementValue elementRef="PATH" value="xsi:nil"/>
+      <elementValue elementRef="COLUMN" value="CustContactMobileNull"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="attri"/>
+      <elementValue elementRef="ORDER" value="34"/>
+      <elementValue elementRef="PATH" value="/SymantecRegObject/End_User_Company_Website__c"/>
+      <elementValue elementRef="COLUMN" value="CustContactWebsite"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="35"/>
+      <elementValue elementRef="PATH" value="xsi:nil"/>
+      <elementValue elementRef="COLUMN" value="CustContactWebsiteNull"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="attri"/>
+      <elementValue elementRef="ORDER" value="36"/>
+      <elementValue elementRef="PATH" value="/SymantecRegObject/StageName"/>
+      <elementValue elementRef="COLUMN" value="StageName"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="37"/>
+      <elementValue elementRef="PATH" value="xsi:nil"/>
+      <elementValue elementRef="COLUMN" value="StageNameNull"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="attri"/>
+      <elementValue elementRef="ORDER" value="38"/>
+      <elementValue elementRef="PATH" value="/SymantecRegObject/CloseDate"/>
+      <elementValue elementRef="COLUMN" value="ExpectedCloseDate"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="39"/>
+      <elementValue elementRef="PATH" value="xsi:nil"/>
+      <elementValue elementRef="COLUMN" value="ExpectedCloseDateNull"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="attri"/>
+      <elementValue elementRef="ORDER" value="40"/>
+      <elementValue elementRef="PATH" value="/SymantecRegObject/Symantec_Sales_Rep__c"/>
+      <elementValue elementRef="COLUMN" value="SymantecSalesRepName"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="41"/>
+      <elementValue elementRef="PATH" value="xsi:nil"/>
+      <elementValue elementRef="COLUMN" value="SymantecSalesRepNameNull"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="attri"/>
+      <elementValue elementRef="ORDER" value="42"/>
+      <elementValue elementRef="PATH" value="/SymantecRegObject/Symantec_SE__c"/>
+      <elementValue elementRef="COLUMN" value="SymantecSEName"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="43"/>
+      <elementValue elementRef="PATH" value="xsi:nil"/>
+      <elementValue elementRef="COLUMN" value="SymantecSENameNull"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="attri"/>
+      <elementValue elementRef="ORDER" value="44"/>
+      <elementValue elementRef="PATH" value="/SymantecRegObject/Number_of_Computers__c"/>
+      <elementValue elementRef="COLUMN" value="ComputerCount"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="45"/>
+      <elementValue elementRef="PATH" value="xsi:nil"/>
+      <elementValue elementRef="COLUMN" value="ComputerCountNull"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="attri"/>
+      <elementValue elementRef="ORDER" value="46"/>
+      <elementValue elementRef="PATH" value="/SymantecRegObject/Resellers__c"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="47"/>
+      <elementValue elementRef="PATH" value="xsi:nil"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="attri"/>
+      <elementValue elementRef="ORDER" value="48"/>
+      <elementValue elementRef="PATH" value="/SymantecRegObject/End_User_Department__c"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="49"/>
+      <elementValue elementRef="PATH" value="xsi:nil"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="attri"/>
+      <elementValue elementRef="ORDER" value="50"/>
+      <elementValue elementRef="PATH" value="/SymantecRegObject/Tax_ID__c"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="51"/>
+      <elementValue elementRef="PATH" value="xsi:nil"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="attri"/>
+      <elementValue elementRef="ORDER" value="52"/>
+      <elementValue elementRef="PATH" value="/SymantecRegObject/Opp_Reg_Promotion_Order_ID__c"/>
+      <elementValue elementRef="COLUMN" value="OppRegPromotionName"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="53"/>
+      <elementValue elementRef="PATH" value="xsi:nil"/>
+      <elementValue elementRef="COLUMN" value="OppRegPromotionNameNull"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="attri"/>
+      <elementValue elementRef="ORDER" value="54"/>
+      <elementValue elementRef="PATH" value="/SymantecRegObject/Next_Step_to_Win__c"/>
+      <elementValue elementRef="COLUMN" value="NextStepDescription"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="55"/>
+      <elementValue elementRef="PATH" value="xsi:nil"/>
+      <elementValue elementRef="COLUMN" value="NextStepDescriptionNull"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="attri"/>
+      <elementValue elementRef="ORDER" value="56"/>
+      <elementValue elementRef="PATH" value="/SymantecRegObject/Project_Description__c"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="57"/>
+      <elementValue elementRef="PATH" value="xsi:nil"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="attri"/>
+      <elementValue elementRef="ORDER" value="58"/>
+      <elementValue elementRef="PATH" value="/SymantecRegObject/Primary_Competitor__c"/>
+      <elementValue elementRef="COLUMN" value="PrimaryCompetitorName"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="59"/>
+      <elementValue elementRef="PATH" value="xsi:nil"/>
+      <elementValue elementRef="COLUMN" value="PrimaryCompetitorNameNull"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="attri"/>
+      <elementValue elementRef="ORDER" value="60"/>
+      <elementValue elementRef="PATH" value="/SymantecRegObject/Other_Competitor__c"/>
+      <elementValue elementRef="COLUMN" value="OtherCompetitorName"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="61"/>
+      <elementValue elementRef="PATH" value="xsi:nil"/>
+      <elementValue elementRef="COLUMN" value="OtherCompetitorNameNull"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="attri"/>
+      <elementValue elementRef="ORDER" value="62"/>
+      <elementValue elementRef="PATH" value="/SymantecRegObject/CurrencyIsoCode"/>
+      <elementValue elementRef="COLUMN" value="CurrencyCode"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="63"/>
+      <elementValue elementRef="PATH" value="xsi:nil"/>
+      <elementValue elementRef="COLUMN" value="CurrencyCodeNull"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="attri"/>
+      <elementValue elementRef="ORDER" value="64"/>
+      <elementValue elementRef="PATH" value="/SymantecRegObject/Market_Segment__c"/>
+      <elementValue elementRef="COLUMN" value="MarketSegmentName"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="65"/>
+      <elementValue elementRef="PATH" value="xsi:nil"/>
+      <elementValue elementRef="COLUMN" value="MarketSegmentNameNull"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="attri"/>
+      <elementValue elementRef="ORDER" value="66"/>
+      <elementValue elementRef="PATH" value="/SymantecRegObject/Distributor__c"/>
+      <elementValue elementRef="COLUMN" value="DistributorName"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="67"/>
+      <elementValue elementRef="PATH" value="xsi:nil"/>
+      <elementValue elementRef="COLUMN" value="DistributorNameNull"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="attri"/>
+      <elementValue elementRef="ORDER" value="68"/>
+      <elementValue elementRef="PATH" value="/SymantecRegObject/Product_Service_Interest__c"/>
+      <elementValue elementRef="COLUMN" value="ProductServiceInterestDescription"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="69"/>
+      <elementValue elementRef="PATH" value="xsi:nil"/>
+      <elementValue elementRef="COLUMN" value="ProductServiceInterestDescriptionNull"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="attri"/>
+      <elementValue elementRef="ORDER" value="70"/>
+      <elementValue elementRef="PATH" value="/SymantecRegObject/Industry__c"/>
+      <elementValue elementRef="COLUMN" value="IndustryName"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="71"/>
+      <elementValue elementRef="PATH" value="xsi:nil"/>
+      <elementValue elementRef="COLUMN" value="IndustryNameNull"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="attri"/>
+      <elementValue elementRef="ORDER" value="72"/>
+      <elementValue elementRef="PATH" value="/SymantecRegObject/Marketing_Assisted_Oppty__c"/>
+      <elementValue elementRef="COLUMN" value="MarketingAssistedOpptyFlag"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="78"/>
+      <elementValue elementRef="PATH" value="xsi:nil"/>
+      <elementValue elementRef="COLUMN" value="MarketingAssistedOpptyFlagNull"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="attri"/>
+      <elementValue elementRef="ORDER" value="79"/>
+      <elementValue elementRef="PATH" value="/SymantecRegObject/Associated_Mktg_Activity__c"/>
+      <elementValue elementRef="COLUMN" value="MarketingActivityDescription"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="80"/>
+      <elementValue elementRef="PATH" value="xsi:nil"/>
+      <elementValue elementRef="COLUMN" value="MarketingActivityDescriptionNull"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="attri"/>
+      <elementValue elementRef="ORDER" value="81"/>
+    </elementParameter>
+    <elementParameter field="TABLE" name="GROUP">
+      <elementValue elementRef="PATH" value="/SymantecRegObject/ProductArray"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="main"/>
+      <elementValue elementRef="ORDER" value="73"/>
+    </elementParameter>
+    <elementParameter field="TABLE" name="LOOP">
+      <elementValue elementRef="PATH" value="/SymantecRegObject/ProductArray/Product"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="main"/>
+      <elementValue elementRef="ORDER" value="74"/>
+      <elementValue elementRef="PATH" value="/SymantecRegObject/ProductArray/Product/PriceBookEntryId"/>
+      <elementValue elementRef="COLUMN" value="ProductId"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="75"/>
+      <elementValue elementRef="PATH" value="/SymantecRegObject/ProductArray/Product/Quantity"/>
+      <elementValue elementRef="COLUMN" value="Quantity"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="76"/>
+      <elementValue elementRef="PATH" value="/SymantecRegObject/ProductArray/Product/TotalPrice"/>
+      <elementValue elementRef="COLUMN" value="TotalPrice"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="77"/>
+    </elementParameter>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="TABLE" name="GROUPBYS">
+      <elementValue elementRef="INPUT_COLUMN" value="VartopiaTransactionId"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="REMOVE_HEADER" value="false"/>
+    <elementParameter field="CHECK" name="CREATE" value="true"/>
+    <elementParameter field="CHECK" name="CREATE_EMPTY_ELEMENT" value="true"/>
+    <elementParameter field="CHECK" name="EXPAND_EMPTY_ELM" value="false"/>
+    <elementParameter field="CHECK" name="OUTPUT_AS_XSD" value="false"/>
+    <elementParameter field="FILE" name="XSD_FILE" value="&quot;C:/Users/JDarby/TalendWorkspace/file.xsd&quot;"/>
+    <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
+    <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" value="&quot;,&quot;"/>
+    <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" value="&quot;.&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="GENERATION_MODE" value="Dom4j"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" name="tWriteXMLField_2">
+      <column comment="" key="false" name="request" nullable="true" pattern="" sourceType="" type="id_String"/>
+    </metadata>
+  </node>
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1024" posY="352">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_1"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="if(context.xmlStringBuffer != null &amp;&amp; context.xmlStringBuffer instanceof StringBuffer) ((StringBuffer)context.xmlStringBuffer).append(row3.request);&#xA;context.xmlString = row3.request;&#xA;//System.out.println(((StringBuffer)context.xmlString).toString());&#xA;System.out.println(context.xmlString);&#xA;&#xA;"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" name="tJavaRow_1"/>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="416" posY="352">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_2"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_AgHkwFi8EeGj4tjZNicfaQ-tMap_2-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" label="cleanedFname_Lane" name="cleanedFname_Lane">
+      <column comment="" key="true" length="1" name="Id" nullable="false" pattern="" precision="1" sourceType="INT IDENTITY" type="id_Integer"/>
+      <column comment="" key="false" length="10" name="VendorId" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer"/>
+      <column comment="" key="false" length="256" name="DealName" nullable="false" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
+      <column comment="" key="false" length="19" name="ExpectedRevenue" nullable="false" pattern="" precision="4" sourceType="MONEY" type="id_Object"/>
+      <column comment="" key="false" length="36" name="VartopiaTransactionId" nullable="false" pattern="" precision="0" sourceType="UNIQUEIDENTIFIER" type="id_Object"/>
+      <column comment="" key="false" length="40" name="VendorDealId" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
+      <column comment="" key="false" length="128" name="VartopiaStatus" nullable="false" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
+      <column comment="" key="false" length="50" name="VendorStatus" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
+      <column comment="" key="false" length="23" name="SubmitDate" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date"/>
+      <column comment="" key="false" length="23" name="ExpirationDate" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date"/>
+      <column comment="" key="false" length="23" name="ExpectedCloseDate" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date"/>
+      <column comment="" key="false" length="1000" name="SalesRepName" nullable="false" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
+      <column comment="" key="false" length="256" name="SalesRepEmail" nullable="false" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
+      <column comment="" key="false" length="1000" name="SubmittedByUserName" nullable="false" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
+      <column comment="" key="false" length="256" name="SubmittedByUserEmail" nullable="false" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
+      <column comment="" key="false" length="256" name="CustCompanyName" nullable="false" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
+      <column comment="" key="false" length="256" name="CustAddress1" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
+      <column comment="" key="false" length="40" name="CustCity" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
+      <column comment="" key="false" length="20" name="CustState" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
+      <column comment="" key="false" length="50" name="CustPostalCode" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
+      <column comment="" key="false" length="50" name="CustCountry" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
+      <column comment="" key="false" length="50" name="End_User_Name__c" nullable="false" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
+      <column comment="" key="false" length="256" name="CustContactEmail" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
+      <column comment="" key="false" length="100" name="CustContactTitle" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
+      <column comment="" key="false" length="50" name="CustContactPhone" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
+      <column comment="" key="false" length="50" name="CustContactFax" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
+      <column comment="" key="false" length="50" name="CustContactMobile" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
+      <column comment="" key="false" length="256" name="CustContactWebsite" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
+      <column comment="" key="false" length="3" name="CurrencyCode" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" length="50" name="PartnerId" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
+      <column comment="" key="false" length="20" name="BatchId" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" defaultValue="&quot;(getdate())&quot;" key="false" length="23" name="CreatedOn" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date"/>
+      <column comment="" key="false" length="1073741823" name="OpportunityDescription" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
+      <column comment="" key="false" length="36" name="SubmittedByUserId" nullable="true" pattern="" precision="0" sourceType="UNIQUEIDENTIFIER" type="id_Object"/>
+    </metadata>
+    <nodeData xsi:type="MapperData">
+      <uiProperties/>
+      <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
+      <outputTables sizeState="INTERMEDIATE" name="cleanedFname_Lane">
+        <mapperTableEntries name="Id" expression="row1.Id" type="id_Integer"/>
+        <mapperTableEntries name="VendorId" expression="row1.VendorId" type="id_Integer"/>
+        <mapperTableEntries name="DealName" expression="row1.DealName" type="id_String"/>
+        <mapperTableEntries name="ExpectedRevenue" expression="row1.ExpectedRevenue" type="id_Object"/>
+        <mapperTableEntries name="VartopiaTransactionId" expression="row1.VartopiaTransactionId" type="id_Object"/>
+        <mapperTableEntries name="VendorDealId" expression="row1.VendorDealId" type="id_String" nullable="true"/>
+        <mapperTableEntries name="VartopiaStatus" expression="row1.VartopiaStatus" type="id_String"/>
+        <mapperTableEntries name="VendorStatus" expression="row1.VendorStatus" type="id_String" nullable="true"/>
+        <mapperTableEntries name="SubmitDate" expression="row1.SubmitDate" type="id_Date"/>
+        <mapperTableEntries name="ExpirationDate" expression="row1.ExpirationDate" type="id_Date" nullable="true"/>
+        <mapperTableEntries name="ExpectedCloseDate" expression="row1.ExpectedCloseDate" type="id_Date" nullable="true"/>
+        <mapperTableEntries name="SalesRepName" expression="row1.SalesRepName" type="id_String"/>
+        <mapperTableEntries name="SalesRepEmail" expression="row1.SalesRepEmail" type="id_String"/>
+        <mapperTableEntries name="SubmittedByUserName" expression="row1.SubmittedByUserName" type="id_String"/>
+        <mapperTableEntries name="SubmittedByUserEmail" expression="row1.SubmittedByUserEmail" type="id_String"/>
+        <mapperTableEntries name="CustCompanyName" expression="row1.CustCompanyName" type="id_String"/>
+        <mapperTableEntries name="CustAddress1" expression="row1.CustAddress1" type="id_String" nullable="true"/>
+        <mapperTableEntries name="CustCity" expression="row1.CustCity" type="id_String" nullable="true"/>
+        <mapperTableEntries name="CustState" expression="row1.CustState" type="id_String" nullable="true"/>
+        <mapperTableEntries name="CustPostalCode" expression="row1.CustPostalCode" type="id_String" nullable="true"/>
+        <mapperTableEntries name="CustCountry" expression="row1.CustCountry" type="id_String" nullable="true"/>
+        <mapperTableEntries name="End_User_Name__c" expression="row1.CustContactFirstName+' '+ row1.CustContactLastName   " type="id_String"/>
+        <mapperTableEntries name="CustContactEmail" expression="row1.CustContactEmail" type="id_String" nullable="true"/>
+        <mapperTableEntries name="CustContactTitle" expression="row1.CustContactTitle" type="id_String" nullable="true"/>
+        <mapperTableEntries name="CustContactPhone" expression="row1.CustContactPhone" type="id_String" nullable="true"/>
+        <mapperTableEntries name="CustContactFax" expression="row1.CustContactFax" type="id_String" nullable="true"/>
+        <mapperTableEntries name="CustContactMobile" expression="row1.CustContactMobile" type="id_String" nullable="true"/>
+        <mapperTableEntries name="CustContactWebsite" expression="row1.CustContactWebsite" type="id_String" nullable="true"/>
+        <mapperTableEntries name="CurrencyCode" expression="row1.CurrencyCode" type="id_String"/>
+        <mapperTableEntries name="PartnerId" expression="row1.PartnerId" type="id_String" nullable="true"/>
+        <mapperTableEntries name="BatchId" expression="row1.BatchId" type="id_String"/>
+        <mapperTableEntries name="CreatedOn" expression="row1.CreatedOn" type="id_Date"/>
+        <mapperTableEntries name="OpportunityDescription" expression="row1.OpportunityDescription" type="id_String" nullable="true"/>
+        <mapperTableEntries name="SubmittedByUserId" expression="row1.SubmittedByUserId" type="id_Object" nullable="true"/>
+      </outputTables>
+      <inputTables sizeState="INTERMEDIATE" name="row1" matchingMode="ALL_ROWS" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="Id" type="id_Integer"/>
+        <mapperTableEntries name="VendorId" type="id_Integer"/>
+        <mapperTableEntries name="DealName" type="id_String"/>
+        <mapperTableEntries name="ExpectedRevenue" type="id_Object"/>
+        <mapperTableEntries name="VartopiaTransactionId" type="id_Object"/>
+        <mapperTableEntries name="VendorDealId" type="id_String" nullable="true"/>
+        <mapperTableEntries name="VartopiaStatus" type="id_String"/>
+        <mapperTableEntries name="VendorStatus" type="id_String" nullable="true"/>
+        <mapperTableEntries name="SubmitDate" type="id_Date"/>
+        <mapperTableEntries name="ExpirationDate" type="id_Date" nullable="true"/>
+        <mapperTableEntries name="ExpectedCloseDate" type="id_Date" nullable="true"/>
+        <mapperTableEntries name="SalesRepName" type="id_String"/>
+        <mapperTableEntries name="SalesRepEmail" type="id_String"/>
+        <mapperTableEntries name="SubmittedByUserName" type="id_String"/>
+        <mapperTableEntries name="SubmittedByUserEmail" type="id_String"/>
+        <mapperTableEntries name="CustCompanyName" type="id_String"/>
+        <mapperTableEntries name="CustAddress1" type="id_String" nullable="true"/>
+        <mapperTableEntries name="CustCity" type="id_String" nullable="true"/>
+        <mapperTableEntries name="CustState" type="id_String" nullable="true"/>
+        <mapperTableEntries name="CustPostalCode" type="id_String" nullable="true"/>
+        <mapperTableEntries name="CustCountry" type="id_String" nullable="true"/>
+        <mapperTableEntries name="CustContactFirstName" type="id_String"/>
+        <mapperTableEntries name="CustContactLastName" type="id_String"/>
+        <mapperTableEntries name="CustContactEmail" type="id_String" nullable="true"/>
+        <mapperTableEntries name="CustContactTitle" type="id_String" nullable="true"/>
+        <mapperTableEntries name="CustContactPhone" type="id_String" nullable="true"/>
+        <mapperTableEntries name="CustContactFax" type="id_String" nullable="true"/>
+        <mapperTableEntries name="CustContactMobile" type="id_String" nullable="true"/>
+        <mapperTableEntries name="CustContactWebsite" type="id_String" nullable="true"/>
+        <mapperTableEntries name="CurrencyCode" type="id_String"/>
+        <mapperTableEntries name="PartnerId" type="id_String" nullable="true"/>
+        <mapperTableEntries name="BatchId" type="id_String"/>
+        <mapperTableEntries name="CreatedOn" type="id_Date"/>
+        <mapperTableEntries name="OpportunityDescription" type="id_String" nullable="true"/>
+        <mapperTableEntries name="SubmittedByUserId" type="id_Object" nullable="true"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tMSSqlConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="224" posY="32">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMSSqlConnection_1"/>
+    <elementParameter field="CHECK" name="START" value="true"/>
+    <elementParameter field="TEXT" name="HOST" value="context.MVS_Integration_Server"/>
+    <elementParameter field="TEXT" name="TYPE" value="MSSQL"/>
+    <elementParameter field="TEXT" name="PORT" value="context.MVS_Integration_Port"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="context.MVS_Integration_Schema"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.MVS_Integration_Database"/>
+    <elementParameter field="TEXT" name="USER" value="context.MVS_Integration_Login"/>
+    <elementParameter field="TEXT" name="PASS" value="context.MVS_Integration_Password"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="context.MVS_Integration_AdditionalParams"/>
+    <elementParameter field="CHECK" name="USE_SHARED_CONNECTION" value="true"/>
+    <elementParameter field="TEXT" name="SHARED_CONNECTION_NAME" value="context.MVS_Integration_shared_connection_name"/>
+    <elementParameter field="CHECK" name="AUTO_COMMIT" value="true"/>
+    <elementParameter field="CHECK" name="SHARE_IDENTITY_SETTING" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="MVS_Integration"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+  </node>
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tMSSqlInput_7" offsetLabelX="0" offsetLabelY="0" source="tMSSqlInput_7" target="tMap_2">
+    <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
+      <elementValue elementRef="TRACE_COLUMN" value="Id"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="VendorId"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="DealName"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ExpectedRevenue"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="VartopiaTransactionId"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="VendorDealId"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="VartopiaStatus"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="VendorStatus"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="SubmitDate"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ExpirationDate"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ExpectedCloseDate"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="SalesRepName"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="SalesRepEmail"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="SubmittedByUserName"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="SubmittedByUserEmail"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CustCompanyName"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CustAddress1"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CustCity"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CustState"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CustPostalCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CustCountry"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CustContactFirstName"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CustContactLastName"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CustContactEmail"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CustContactTitle"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CustContactPhone"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CustContactFax"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CustContactMobile"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CustContactWebsite"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CurrencyCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="PartnerId"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="BatchId"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CreatedOn"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="OpportunityDescription"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="SubmittedByUserId"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
+    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
+    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
+    <elementParameter field="TABLE" name="THRESHLODS"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1"/>
+    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
+    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+    <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
+    <elementParameter field="TABLE" name="CONDITIONS"/>
+    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
+    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;"/>
+  </connection>
+  <connection connectorName="FLOW" label="out1" lineStyle="0" metaname="out1" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tWriteXMLField_2">
+    <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
+      <elementValue elementRef="TRACE_COLUMN" value="DealName"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="DealNameNull"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ExpectedRevenue"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ExpectedRevenueNull"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ExpectedCloseDate"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ExpectedCloseDateNull"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="SubmitDate"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="SubmitDateNull"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ExpirationDate"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ExpirationDateNull"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="SalesRepName"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="SalesRepNameNull"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="PartnerId"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="PartnerIdNull"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="SubmittedByUserName"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="SubmittedByUserNameNull"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CurrencyCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CurrencyCodeNull"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CustCompanyName"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CustCompanyNameNull"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CustAddress1"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CustAddress1Null"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CustCity"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CustCityNull"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CustState"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CustStateNull"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CustCountry"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CustCountryNull"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CustPostalCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CustPostalCodeNull"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="VartopiaTransactionId"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="VartopiaTransactionIdNull"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CustContactFirstName"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="End_User_Name__c_Null"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CustContactLastName"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CustContactLastNameNull"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CustContactEmail"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CustContactEmailNull"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CustContactTitle"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CustContactTitleNull"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CustContactPhone"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CustContactPhoneNull"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CustContactFax"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CustContactFaxNull"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CustContactMobile"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CustContactMobileNull"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CustContactWebsite"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CustContactWebsiteNull"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ProductId"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ProductIdNull"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Quantity"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="TotalPrice"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="StageName"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="StageNameNull"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="PrimaryCompetitorName"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="PrimaryCompetitorNameNull"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="OtherCompetitorName"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="OtherCompetitorNameNull"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="SymantecSalesRepName"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="SymantecSalesRepNameNull"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="SymantecSEName"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="SymantecSENameNull"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="MarketSegmentName"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="MarketSegmentNameNull"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="IndustryName"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="IndustryNameNull"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="DistributorName"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="DistributorNameNull"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ComputerCount"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ComputerCountNull"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="OppRegPromotionName"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="OppRegPromotionNameNull"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NextStepDescription"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NextStepDescriptionNull"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ProductServiceInterestDescription"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ProductServiceInterestDescriptionNull"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="MarketingAssistedOpptyFlag"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="MarketingAssistedOpptyFlagNull"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="MarketingActivityDescription"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="MarketingActivityDescriptionNull"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NoteTitle"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NoteTitleNull"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NoteBody"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NoteBodyNull"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="End_User_Name__c"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
+    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
+    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
+    <elementParameter field="TABLE" name="THRESHLODS"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="out1"/>
+    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
+    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+    <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
+    <elementParameter field="TABLE" name="CONDITIONS"/>
+    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
+    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;"/>
+  </connection>
+  <connection connectorName="FLOW" label="row2" lineStyle="8" metaname="tMSSqlInput_6" offsetLabelX="0" offsetLabelY="0" source="tMSSqlInput_6" target="tMap_1">
+    <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
+      <elementValue elementRef="TRACE_COLUMN" value="Id"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="VartopiaTransactionId"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="StageName"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="PrimaryCompetitorName"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="OtherCompetitorName"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="SymantecSalesRepName"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="SymantecSEName"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="MarketSegmentName"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="IndustryName"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="DistributorName"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ComputerCount"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="OppRegPromotionName"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NextStepDescription"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ProductServiceInterestDescription"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="MarketingAssistedOpptyFlag"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="MarketingActivityDescription"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NoteTitle"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NoteBody"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CreatedOn"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
+    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
+    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
+    <elementParameter field="TABLE" name="THRESHLODS"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row2"/>
+    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
+    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+    <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
+    <elementParameter field="TABLE" name="CONDITIONS"/>
+    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
+    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;"/>
+  </connection>
+  <connection connectorName="FLOW" label="row4" lineStyle="8" metaname="tMSSqlInput_5" offsetLabelX="0" offsetLabelY="0" source="tMSSqlInput_5" target="tMap_1">
+    <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
+      <elementValue elementRef="TRACE_COLUMN" value="Id"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="VartopiaTransactionId"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ProductId"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Quantity"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="TotalPrice"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CreatedOn"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
+    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
+    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
+    <elementParameter field="TABLE" name="THRESHLODS"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row4"/>
+    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
+    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+    <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
+    <elementParameter field="TABLE" name="CONDITIONS"/>
+    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
+    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;"/>
+  </connection>
+  <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tWriteXMLField_2" offsetLabelX="0" offsetLabelY="0" source="tWriteXMLField_2" target="tJavaRow_1">
+    <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
+      <elementValue elementRef="TRACE_COLUMN" value="request"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
+    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
+    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
+    <elementParameter field="TABLE" name="THRESHLODS"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row3"/>
+    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
+    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+    <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
+    <elementParameter field="TABLE" name="CONDITIONS"/>
+    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
+    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;"/>
+  </connection>
+  <connection connectorName="FLOW" label="cleanedFname_Lane" lineStyle="0" metaname="cleanedFname_Lane" offsetLabelX="0" offsetLabelY="0" source="tMap_2" target="tMap_1">
+    <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER"/>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
+    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
+    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
+    <elementParameter field="TABLE" name="THRESHLODS"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="cleanedFname_Lane"/>
+    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
+    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+    <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
+    <elementParameter field="TABLE" name="CONDITIONS"/>
+    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
+    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tMSSqlConnection_1" offsetLabelX="0" offsetLabelY="0" source="tMSSqlConnection_1" target="tMSSqlInput_7">
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk1"/>
+    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
+    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMSSqlInput_7"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMSSqlConnection_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+</talendfile:ProcessType>

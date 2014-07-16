@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" confirmationNeeded="false" name="Default">
+  <contextParameter comment="" name="Prep_AdditionalParams" prompt="Prep_AdditionalParams?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter comment="" name="Prep_Login" prompt="Prep_Login?" promptNeeded="false" type="id_String" value="TOS"/>
+  <contextParameter comment="" name="Prep_Password" prompt="Prep_Password?" promptNeeded="false" type="id_Password" value="KvVDkApeoab096uhdGeE6g=="/>
+  <contextParameter comment="" name="Prep_Port" prompt="Prep_Port?" promptNeeded="false" type="id_String" value="1433"/>
+  <contextParameter comment="" name="Prep_Database" prompt="Prep_Database?" promptNeeded="false" type="id_String" value="Prep"/>
+  <contextParameter comment="" name="Prep_Server" prompt="Prep_Server?" promptNeeded="false" type="id_String" value="localhost"/>
+  <contextParameter comment="" name="Prep_Schema" prompt="Prep_Schema?" promptNeeded="false" type="id_String" value=""/>
+</talendfile:ContextType>

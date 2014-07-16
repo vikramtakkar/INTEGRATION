@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default">
+  <context confirmationNeeded="false" name="Default">
+    <contextParameter comment="" name="TransportToMap" prompt="TransportToMap?" promptNeeded="false" type="id_String" value="&quot;bla&quot;"/>
+    <contextParameter comment="" name="SFDC_USERNAME" prompt="SFDC_USERNAME?" promptNeeded="false" type="id_String" value="&quot;vartopia.intg@netapp.com.esit&quot;"/>
+    <contextParameter comment="" name="SFDC_PASSWORD" prompt="SFDC_PASSWORD?" promptNeeded="false" type="id_String" value="&quot;vartopia123&quot;"/>
+    <contextParameter comment="" name="CMATAddressId" prompt="CMATAddressId?" promptNeeded="false" type="id_String" value="&quot;6021424&quot;"/>
+    <contextParameter comment="" name="lastModifiedDateFrom" prompt="lastModifiedDateFrom?" promptNeeded="false" type="id_String" value="&quot;2011-01-01&quot;"/>
+    <contextParameter comment="" name="lastModifiedDateTo" prompt="lastModifiedDateTo?" promptNeeded="false" type="id_String" value="&quot;2012-03-22&quot;"/>
+    <contextParameter comment="" name="NetAppWSDLLocation" prompt="NetAppWSDLLocation?" promptNeeded="false" type="id_String" value="&quot;C:/Users/JDarby/Desktop/Misc/wsdl/NetApp.wsdl&quot;"/>
+    <contextParameter comment="" name="SFDCWSDLLocation" prompt="SFDCWSDLLocation?" promptNeeded="false" type="id_String" value="&quot;C:/Users/JDarby/Desktop/Misc/wsdl/SalesForcePartnerWSDL.wsdl&quot;"/>
+    <contextParameter comment="" name="fetchDealsEndpoint" prompt="fetchDealsEndpoint?" promptNeeded="false" type="id_String" value="&quot;http://localhost:8080&quot;"/>
+    <contextParameter comment="" name="MVS_Integration_Database" prompt="MVS_Integration_Database?" promptNeeded="false" type="id_String" value="MVS_Integration"/>
+    <contextParameter comment="" name="MVS_Integration_Server" prompt="MVS_Integration_Server?" promptNeeded="false" type="id_String" value="localhost"/>
+    <contextParameter comment="" name="MVS_Integration_Port" prompt="MVS_Integration_Port?" promptNeeded="false" type="id_String" value="1433"/>
+    <contextParameter comment="" name="MVS_Integration_Schema" prompt="MVS_Integration_Schema?" promptNeeded="false" type="id_String" value="dbo"/>
+    <contextParameter comment="" name="MVS_Integration_Username" prompt="MVS_Integration_Username?" promptNeeded="false" type="id_String" value="TOS"/>
+    <contextParameter comment="" name="MVS_Integration_Password" prompt="MVS_Integration_Password?" promptNeeded="false" type="id_String" value="VarTos11"/>
+    <contextParameter comment="" name="Vartopia_MVS_Database" prompt="Vartopia_MVS_Database?" promptNeeded="false" type="id_String" value="Vartopia_MVS"/>
+    <contextParameter comment="" name="Vartopia_MVS_Password" prompt="Vartopia_MVS_Password?" promptNeeded="false" type="id_String" value="VarTos11"/>
+    <contextParameter comment="" name="Vartopia_MVS_Port" prompt="Vartopia_MVS_Port?" promptNeeded="false" type="id_String" value="1433"/>
+    <contextParameter comment="" name="Vartopia_MVS_Schema" prompt="Vartopia_MVS_Schema?" promptNeeded="false" type="id_String" value="dbo"/>
+    <contextParameter comment="" name="Vartopia_MVS_Server" prompt="Vartopia_MVS_Server?" promptNeeded="false" type="id_String" value="localhost"/>
+    <contextParameter comment="" name="Vartopia_MVS_Username" prompt="Vartopia_MVS_Username?" promptNeeded="false" type="id_String" value="TOS"/>
+    <contextParameter comment="" name="MVS_VARId" prompt="MVS_VARId?" promptNeeded="false" type="id_String" value="10020"/>
+    <contextParameter comment="" name="startTime" prompt="startTime?" promptNeeded="false" type="id_Long" value=""/>
+    <contextParameter comment="" name="transportEndTime" prompt="transportEndTime?" promptNeeded="false" type="id_Long" value=""/>
+    <contextParameter comment="" name="mapEndTime" prompt="mapEndTime?" promptNeeded="false" type="id_Long" value=""/>
+    <contextParameter comment="" name="endTime" prompt="endTime?" promptNeeded="false" type="id_Long" value=""/>
+    <contextParameter comment="" name="FilePathLocation" prompt="FilePathLocation?" promptNeeded="false" type="id_String" value="&quot;c:/etl/common/&quot;"/>
+    <contextParameter comment="" name="MVS_Integration_Login" prompt="MVS_Integration_Login?" promptNeeded="false" type="id_String" value="TOS"/>
+    <contextParameter comment="" name="MVS_Integration_AdditionalParams" prompt="MVS_Integration_AdditionalParams?" promptNeeded="false" type="id_String" value=""/>
+  </context>
+  <context confirmationNeeded="false" name="QA">
+    <contextParameter comment="" name="TransportToMap" prompt="TransportToMap?" promptNeeded="false" type="id_String" value="&quot;bla&quot;"/>
+    <contextParameter comment="" name="SFDC_USERNAME" prompt="SFDC_USERNAME?" promptNeeded="false" type="id_String" value="&quot;vartopia.intg@netapp.com&quot;"/>
+    <contextParameter comment="" name="SFDC_PASSWORD" prompt="SFDC_PASSWORD?" promptNeeded="false" type="id_String" value="&quot;DT$temp99Th4ccGjq07iJYAtl5loGsqNT&quot;"/>
+    <contextParameter comment="" name="CMATAddressId" prompt="CMATAddressId?" promptNeeded="false" type="id_String" value="&quot;5006546&quot;"/>
+    <contextParameter comment="" name="lastModifiedDateFrom" prompt="lastModifiedDateFrom?" promptNeeded="false" type="id_String" value="&quot;2012-01-01&quot;"/>
+    <contextParameter comment="" name="lastModifiedDateTo" prompt="lastModifiedDateTo?" promptNeeded="false" type="id_String" value="&quot;2012-08-22&quot;"/>
+    <contextParameter comment="" name="NetAppWSDLLocation" prompt="NetAppWSDLLocation?" promptNeeded="false" type="id_String" value="&quot;C:/Users/JDarby/Desktop/Misc/wsdl/NetApp.wsdl&quot;"/>
+    <contextParameter comment="" name="SFDCWSDLLocation" prompt="SFDCWSDLLocation?" promptNeeded="false" type="id_String" value="&quot;C:/Users/JDarby/Desktop/Misc/wsdl/SalesForcePartnerWSDL.wsdl&quot;"/>
+    <contextParameter comment="" name="fetchDealsEndpoint" prompt="fetchDealsEndpoint?" promptNeeded="false" type="id_String" value="&quot;https://cs7-api.salesforce.com/services/Soap/class/DR_VI_CreateNewDR_WS&quot;"/>
+    <contextParameter comment="" name="MVS_Integration_Database" prompt="MVS_Integration_Database?" promptNeeded="false" type="id_String" value="MVS_Integration"/>
+    <contextParameter comment="" name="MVS_Integration_Server" prompt="MVS_Integration_Server?" promptNeeded="false" type="id_String" value="localhost"/>
+    <contextParameter comment="" name="MVS_Integration_Port" prompt="MVS_Integration_Port?" promptNeeded="false" type="id_String" value="1433"/>
+    <contextParameter comment="" name="MVS_Integration_Schema" prompt="MVS_Integration_Schema?" promptNeeded="false" type="id_String" value="dbo"/>
+    <contextParameter comment="" name="MVS_Integration_Username" prompt="MVS_Integration_Username?" promptNeeded="false" type="id_String" value="TOS"/>
+    <contextParameter comment="" name="MVS_Integration_Password" prompt="MVS_Integration_Password?" promptNeeded="false" type="id_String" value="VarTos11"/>
+    <contextParameter comment="" name="Vartopia_MVS_Database" prompt="Vartopia_MVS_Database?" promptNeeded="false" type="id_String" value="Vartopia_MVS"/>
+    <contextParameter comment="" name="Vartopia_MVS_Password" prompt="Vartopia_MVS_Password?" promptNeeded="false" type="id_String" value="VarTos11"/>
+    <contextParameter comment="" name="Vartopia_MVS_Port" prompt="Vartopia_MVS_Port?" promptNeeded="false" type="id_String" value="1433"/>
+    <contextParameter comment="" name="Vartopia_MVS_Schema" prompt="Vartopia_MVS_Schema?" promptNeeded="false" type="id_String" value="dbo"/>
+    <contextParameter comment="" name="Vartopia_MVS_Server" prompt="Vartopia_MVS_Server?" promptNeeded="false" type="id_String" value="10.122.147.248"/>
+    <contextParameter comment="" name="Vartopia_MVS_Username" prompt="Vartopia_MVS_Username?" promptNeeded="false" type="id_String" value="TOS"/>
+    <contextParameter comment="" name="MVS_VARId" prompt="MVS_VARId?" promptNeeded="false" type="id_String" value="10020"/>
+    <contextParameter comment="" name="startTime" prompt="startTime?" promptNeeded="false" type="id_Long" value=""/>
+    <contextParameter comment="" name="transportEndTime" prompt="transportEndTime?" promptNeeded="false" type="id_Long" value=""/>
+    <contextParameter comment="" name="mapEndTime" prompt="mapEndTime?" promptNeeded="false" type="id_Long" value=""/>
+    <contextParameter comment="" name="endTime" prompt="endTime?" promptNeeded="false" type="id_Long" value=""/>
+    <contextParameter comment="" name="FilePathLocation" prompt="FilePathLocation?" promptNeeded="false" type="id_String" value="null"/>
+    <contextParameter comment="" name="MVS_Integration_Login" prompt="MVS_Integration_Login?" promptNeeded="false" type="id_String" value="TOS"/>
+    <contextParameter comment="" name="MVS_Integration_AdditionalParams" prompt="MVS_Integration_AdditionalParams?" promptNeeded="false" type="id_String" value=""/>
+  </context>
+  <parameters>
+    <elementParameter field="TEXT" name="JOB_RUN_VM_ARGUMENTS" value=" -Xms256M -Xmx1024M"/>
+    <elementParameter field="CHECK" name="JOB_RUN_VM_ARGUMENTS_OPTION" value="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPTIONS" value="none"/>
+    <elementParameter field="TEXT" name="OEM_CUSTOM_ATTRIBUTE" value=""/>
+    <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" value="true"/>
+    <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" value="true"/>
+    <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" value="false"/>
+    <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" value=""/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" value=""/>
+    <elementParameter field="TEXT" name="HOST_IMPLICIT_CONTEXT" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PORT_IMPLICIT_CONTEXT" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME_IMPLICIT_CONTEXT" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PASS_IMPLICIT_CONTEXT" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="DISABLE_WARNINGS" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_INFO" value="false"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" value="&quot;C:/Users/Vikram Takkar/Google Drive/freelance_jobs/Vartopia/talend_workspace/.metadata&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="ISO-8859-15"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE" value="tJDBCOutput"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_10"/>
+    <elementParameter field="TEXT" name="URL" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PASS" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_METER" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="CATCH_RUNTIME_ERRORS" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_USER_ERRORS" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_USER_WARNING" value="true"/>
+    <elementParameter field="CHECK" name="UPDATE_COMPONENTS" value="false"/>
+    <elementParameter field="CHECK" name="STATS_DEFAULT_PROJECTSETTING" value="true"/>
+    <elementParameter field="CHECK" name="ON_STATCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_LOGCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_FILES_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_DATABASE_FLAG" value="false"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR"/>
+    <elementParameter field="CHECK" name="CATCH_REALTIME_STATS" value="false"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE:PROPERTY_TYPE" value="BUILT_IN"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE:REPOSITORY_PROPERTY_TYPE" value=""/>
+    <elementParameter field="CHECK" name="IMPLICIT_TCONTEXTLOAD" value="false"/>
+    <elementParameter field="CHECK" name="IMPLICT_DEFAULT_PROJECTSETTING" value="true"/>
+    <elementParameter field="RADIO" name="FROM_FILE_FLAG_IMPLICIT_CONTEXT" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" value=""/>
+    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" value=""/>
+    <elementParameter field="CHECK" name="PRINT_OPERATIONS" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_ERROR" value="false"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE_IMPLICIT_CONTEXT:PROPERTY_TYPE" value=""/>
+    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE_IMPLICIT_CONTEXT:REPOSITORY_PROPERTY_TYPE" value=""/>
+    <routinesParameter id="_U6wFkEN2EeGP3ZwDz3rEUA" name="DataOperation"/>
+    <routinesParameter id="_U7ynYEN2EeGP3ZwDz3rEUA" name="Mathematical"/>
+    <routinesParameter id="_U7ynZEN2EeGP3ZwDz3rEUA" name="Numeric"/>
+    <routinesParameter id="_U7ynaEN2EeGP3ZwDz3rEUA" name="Relational"/>
+    <routinesParameter id="_U7ynbEN2EeGP3ZwDz3rEUA" name="StringHandling"/>
+    <routinesParameter id="_U77xUEN2EeGP3ZwDz3rEUA" name="TalendDataGenerator"/>
+    <routinesParameter id="_U77xVEN2EeGP3ZwDz3rEUA" name="TalendDate"/>
+    <routinesParameter id="_U77xWEN2EeGP3ZwDz3rEUA" name="TalendString"/>
+    <routinesParameter id="_52xTEIibEeG4O7tWobvoyQ" name="SQLike"/>
+  </parameters>
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="288" posY="352">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_3"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="try {&#xA;&#xA;netappmapandtranslate.netapppulltransport_0_1.NetAppPullTransport transport = new netappmapandtranslate.netapppulltransport_0_1.NetAppPullTransport();&#xA;&#xA;String[] args = new String[]{&#xA;&#x9;&quot;--context_param SFDC_USERNAME=&quot;+context.SFDC_USERNAME,&#xA;&#x9;&quot;--context_param SFDC_PASSWORD=&quot;+context.SFDC_PASSWORD,&#xA;&#x9;&quot;--context_param CMATAddressId=&quot;+context.CMATAddressId,&#xA;&#x9;&quot;--context_param lastModifiedDateFrom=&quot;+context.lastModifiedDateFrom,&#xA;&#x9;&quot;--context_param lastModifiedDateTo=&quot;+context.lastModifiedDateTo,&#xA;&#x9;&quot;--context_param batchID=&quot;+row1.batchID,&#xA;&#x9;&quot;--context_param wsdlLocation=&quot;+context.NetAppWSDLLocation,&#xA;&#x9;&quot;--context_param SFDCwsdlLocation=&quot;+context.SFDCWSDLLocation,&#xA;&#x9;&quot;--context_param fetchDealsEndpoint=&quot;+context.fetchDealsEndpoint&#xA;};&#xA;System.out.println(&quot;Calling transport&quot;);&#xA;transport.runJob(args);&#xA;&#xA;System.out.println(transport.getContext().xmlString);&#xA;System.out.println(&quot;End&quot;);&#xA;&#xA;} catch(Throwable t) {&#xA;&#x9;System.out.println(&quot;Caught exception!&quot;);&#xA;&#x9;t.printStackTrace();&#xA;}"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="import netappmapandtranslate.netapppulltransport_0_1.*;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" name="tJavaRow_3"/>
+  </node>
+  <node componentName="tJavaFlex" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="96" posY="224">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaFlex_1"/>
+    <elementParameter field="CHECK" name="START" value="true"/>
+    <elementParameter field="CHECK" name="DATA_AUTO_PROPAGATE" value="true"/>
+    <elementParameter field="MEMO_JAVA" name="CODE_START" value="for(int i = 0; i &lt; 1; i++) {"/>
+    <elementParameter field="MEMO_JAVA" name="CODE_MAIN" value="row1.batchID = System.nanoTime()+&quot;&quot;;&#xA;row1.xmlStringBuilder = new StringBuilder();&#xA;context.startTime = System.nanoTime();&#xA;System.out.println(&quot;Using batchID &quot;+row1.batchID);"/>
+    <elementParameter field="MEMO_JAVA" name="CODE_END" value="}"/>
+    <elementParameter field="CHECK" name="Version_V2_0" value="false"/>
+    <elementParameter field="CHECK" name="Version_V3_2" value="false"/>
+    <elementParameter field="CHECK" name="Version_V4.0" value="true"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="import java.util.concurrent.TimeUnit;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" name="tJavaFlex_1">
+      <column comment="" key="false" name="batchID" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" name="xmlStringBuilder" nullable="true" pattern="" sourceType="" type="id_Object"/>
+    </metadata>
+  </node>
+  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="256" posY="224">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_1"/>
+    <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
+    <elementParameter field="TEXT" name="CONTEXT_JOB" value=""/>
+    <elementParameter field="PROCESS_TYPE" name="PROCESS" value="NetAppPullTransport"/>
+    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_PROCESS" value="_UkKqkDxwEeGbNZh7TQPDFA"/>
+    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_VERSION" value="Latest"/>
+    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="Default"/>
+    <elementParameter field="TEXT" name="CONTEXT_NAME" value="Default"/>
+    <elementParameter field="CHECK" name="USE_INDEPENDENT_PROCESS" value="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_CHILD_ERROR" value="true"/>
+    <elementParameter field="CHECK" name="TRANSMIT_WHOLE_CONTEXT" value="false"/>
+    <elementParameter field="TABLE" name="CONTEXTPARAMS">
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="SFDC_USERNAME"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.SFDC_USERNAME"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="SFDC_PASSWORD"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.SFDC_PASSWORD"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="CMATId"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.CMATId"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="lastModifiedDateFrom"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.lastModifiedDateFrom"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="lastModifiedDateTo"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.lastModifiedDateTo"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="batchID"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="row1.batchID"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="wsdlLocation"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.NetAppWSDLLocation"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="SFDCwsdlLocation"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.SFDCWSDLLocation"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="fetchDealsEndpoint"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.fetchDealsEndpoint"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="xmlString"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.TransportToMap"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="xmlStringBuilder"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="row1.xmlStringBuilder"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="PRINT_PARAMETER" value="false"/>
+    <elementParameter field="CHECK" name="TRANSMIT_ORIGINAL_CONTEXT" value="true"/>
+    <elementParameter field="TEXT" name="LABEL" value="__PROCESS__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" name="tRunJob_1">
+      <column comment="" key="false" name="batchID" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" name="xmlStringBuilder" nullable="true" pattern="" sourceType="" type="id_Object"/>
+    </metadata>
+  </node>
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="448" posY="224">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_1"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="//System.out.println(&quot;XMLString: &quot;+row2.xmlStringBuilder.toString()+&quot;\nFin&quot;);&#xA;row3.xmlString = row2.xmlStringBuilder.toString();&#xA;row3.batchID = row2.batchID;&#xA;context.transportEndTime = System.nanoTime();&#xA;&#xA;&#xA;//System.out.println(&quot;Completed transport for batchID &quot;+row3.batchID+&quot;, calling map with message:\n\n\n&quot;+row3.xmlString+&quot;\n\n\n__________________________________________________________________&quot;);"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" name="tJavaRow_1">
+      <column comment="" key="false" name="batchID" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" name="xmlString" nullable="true" pattern="" sourceType="" type="id_String"/>
+    </metadata>
+  </node>
+  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="608" posY="224">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_2"/>
+    <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
+    <elementParameter field="TEXT" name="CONTEXT_JOB" value=""/>
+    <elementParameter field="PROCESS_TYPE" name="PROCESS" value="NetApp_Map_Part"/>
+    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_PROCESS" value="_4YFMYCDxEeGiitIvWNS1wQ"/>
+    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_VERSION" value="Latest"/>
+    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="Default"/>
+    <elementParameter field="TEXT" name="CONTEXT_NAME" value="Default"/>
+    <elementParameter field="CHECK" name="USE_INDEPENDENT_PROCESS" value="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_CHILD_ERROR" value="true"/>
+    <elementParameter field="CHECK" name="TRANSMIT_WHOLE_CONTEXT" value="false"/>
+    <elementParameter field="TABLE" name="CONTEXTPARAMS">
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="FirstName"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;Not Available&quot;"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="LastName"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;Not Available&quot;"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="Vartopia_MVS_Server"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.Vartopia_MVS_Server"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="Vartopia_MVS_Database"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.Vartopia_MVS_Database"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="Vartopia_MVS_Schema"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.Vartopia_MVS_Schema"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="Vartopia_MVS_Port"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.Vartopia_MVS_Port"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="Vartopia_MVS_Login"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.Vartopia_MVS_Username"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="Vartopia_MVS_Password"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.Vartopia_MVS_Password"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="MVS_Integration_Server"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.MVS_Integration_Server"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="MVS_Integration_Database"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.MVS_Integration_Database"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="MVS_Integration_Schema"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.MVS_Integration_Schema"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="MVS_Integration_Port"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.MVS_Integration_Port"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="MVS_Integration_Login"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.MVS_Integration_Username"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="MVS_Integration_Password"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.MVS_Integration_Password"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="xmlString"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="row3.xmlString"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="Email"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;NotAvailable@ NotAvailable.Com&quot;"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="PRINT_PARAMETER" value="false"/>
+    <elementParameter field="CHECK" name="TRANSMIT_ORIGINAL_CONTEXT" value="true"/>
+    <elementParameter field="TEXT" name="LABEL" value="__PROCESS__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" name="tRunJob_2">
+      <column comment="" key="false" name="batchID" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" name="xmlString" nullable="true" pattern="" sourceType="" type="id_String"/>
+    </metadata>
+  </node>
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="768" posY="224">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_4"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="row5.batchID = row4.batchID;&#xA;row5.xmlString = row4.xmlString;&#xA;context.mapEndTime = System.nanoTime();"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" name="tJavaRow_4">
+      <column comment="" key="false" name="batchID" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" name="xmlString" nullable="true" pattern="" sourceType="" type="id_String"/>
+    </metadata>
+  </node>
+  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="992" posY="224">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_3"/>
+    <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
+    <elementParameter field="TEXT" name="CONTEXT_JOB" value=""/>
+    <elementParameter field="PROCESS_TYPE" name="PROCESS" value="NetApp_Pull_ParentJob_Common_Custom"/>
+    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_PROCESS" value="_Qbwq8CG6EeGsJsV0-I-aXA"/>
+    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_VERSION" value="Latest"/>
+    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="Default"/>
+    <elementParameter field="TEXT" name="CONTEXT_NAME" value="Default"/>
+    <elementParameter field="CHECK" name="USE_INDEPENDENT_PROCESS" value="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_CHILD_ERROR" value="true"/>
+    <elementParameter field="CHECK" name="TRANSMIT_WHOLE_CONTEXT" value="false"/>
+    <elementParameter field="TABLE" name="CONTEXTPARAMS">
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="BATCH_ID"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="row5.batchID"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="VENDOR_ID"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;67&quot;"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="MVS_Integration_Database"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.MVS_Integration_Database"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="MVS_Integration_Login"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.MVS_Integration_Username"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="MVS_Integration_Password"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.MVS_Integration_Password"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="MVS_Integration_Port"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.MVS_Integration_Port"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="MVS_Integration_Schema"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.MVS_Integration_Schema"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="MVS_Integration_Server"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.MVS_Integration_Server"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="Vartopia_MVS_Database"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.Vartopia_MVS_Database"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="Vartopia_MVS_Login"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.Vartopia_MVS_Username"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="Vartopia_MVS_Password"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.Vartopia_MVS_Password"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="Vartopia_MVS_Port"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.Vartopia_MVS_Port"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="Vartopia_MVS_Schema"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.Vartopia_MVS_Schema"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="Vartopia_MVS_Server"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.Vartopia_MVS_Server"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="MVS_Integration_shared_connection_name"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;i&quot;"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="Vartopia_MVS_shared_connection_Name"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;v&quot;"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="MVS_VARId"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.MVS_VARId"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="FilePathLocation"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.FilePathLocation"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="PRINT_PARAMETER" value="false"/>
+    <elementParameter field="CHECK" name="TRANSMIT_ORIGINAL_CONTEXT" value="true"/>
+    <elementParameter field="TEXT" name="LABEL" value="__PROCESS__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" name="tRunJob_3">
+      <column comment="" key="false" name="batchID" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" name="xmlString" nullable="true" pattern="" sourceType="" type="id_String"/>
+    </metadata>
+  </node>
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1216" posY="224">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_6"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="System.out.println(&quot;Pull completed for batchID &quot;+row6.batchID);&#xA;&#xA;context.endTime = System.nanoTime();&#xA;&#xA;System.out.println(&quot;NetAppPullTransport &quot;+TimeUnit.NANOSECONDS.toMillis(context.transportEndTime-context.startTime)+&quot; ms&quot;);&#xA;System.out.println(&quot;NetApp_Map_Part &quot;+TimeUnit.NANOSECONDS.toMillis(context.mapEndTime-context.transportEndTime)+&quot; ms&quot;);&#xA;System.out.println(&quot;NetApp_Pull_ParentJob_Common_Custom &quot;+TimeUnit.NANOSECONDS.toMillis(context.endTime-context.mapEndTime)+&quot; ms&quot;);&#xA;System.out.println(&quot;NetApp_Total_Time &quot;+TimeUnit.NANOSECONDS.toMillis(context.endTime-context.startTime)+&quot; ms&quot;);"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" name="tJavaRow_6"/>
+  </node>
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tJavaFlex_1" offsetLabelX="0" offsetLabelY="0" source="tJavaFlex_1" target="tRunJob_1">
+    <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
+      <elementValue elementRef="TRACE_COLUMN" value="batchID"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="xmlStringBuilder"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
+    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
+    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
+    <elementParameter field="TABLE" name="THRESHLODS"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1"/>
+    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
+    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+    <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
+    <elementParameter field="TABLE" name="CONDITIONS"/>
+    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
+    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;"/>
+  </connection>
+  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tRunJob_1" offsetLabelX="0" offsetLabelY="0" source="tRunJob_1" target="tJavaRow_1">
+    <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
+      <elementValue elementRef="TRACE_COLUMN" value="batchID"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
+    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
+    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
+    <elementParameter field="TABLE" name="THRESHLODS"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row2"/>
+    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
+    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+    <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
+    <elementParameter field="TABLE" name="CONDITIONS"/>
+    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
+    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;"/>
+  </connection>
+  <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tJavaRow_1" offsetLabelX="0" offsetLabelY="0" source="tJavaRow_1" target="tRunJob_2">
+    <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
+      <elementValue elementRef="TRACE_COLUMN" value="batchID"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="xmlString"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
+    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
+    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
+    <elementParameter field="TABLE" name="THRESHLODS"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row3"/>
+    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
+    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+    <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
+    <elementParameter field="TABLE" name="CONDITIONS"/>
+    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
+    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;"/>
+  </connection>
+  <connection connectorName="FLOW" label="row4" lineStyle="0" metaname="tRunJob_2" offsetLabelX="0" offsetLabelY="0" source="tRunJob_2" target="tJavaRow_4">
+    <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
+      <elementValue elementRef="TRACE_COLUMN" value="batchID"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="xmlString"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
+    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
+    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
+    <elementParameter field="TABLE" name="THRESHLODS"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row4"/>
+    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
+    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+    <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
+    <elementParameter field="TABLE" name="CONDITIONS"/>
+    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
+    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;"/>
+  </connection>
+  <connection connectorName="FLOW" label="row5" lineStyle="0" metaname="tJavaRow_4" offsetLabelX="0" offsetLabelY="0" source="tJavaRow_4" target="tRunJob_3">
+    <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
+      <elementValue elementRef="TRACE_COLUMN" value="batchID"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="xmlString"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
+    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
+    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
+    <elementParameter field="TABLE" name="THRESHLODS"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row5"/>
+    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
+    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+    <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
+    <elementParameter field="TABLE" name="CONDITIONS"/>
+    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
+    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;"/>
+  </connection>
+  <connection connectorName="FLOW" label="row6" lineStyle="0" metaname="tRunJob_3" offsetLabelX="0" offsetLabelY="0" source="tRunJob_3" target="tJavaRow_6">
+    <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
+      <elementValue elementRef="TRACE_COLUMN" value="batchID"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="xmlString"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
+    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
+    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
+    <elementParameter field="TABLE" name="THRESHLODS"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row6"/>
+    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
+    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+    <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
+    <elementParameter field="TABLE" name="CONDITIONS"/>
+    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
+    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;"/>
+  </connection>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_3"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaFlex_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+</talendfile:ProcessType>

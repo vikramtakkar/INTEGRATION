@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" confirmationNeeded="false" name="Default">
+  <contextParameter comment="" name="deal_load" prompt="deal_load?" promptNeeded="false" type="id_Integer" value="0"/>
+  <contextParameter comment="" name="deal_reject" prompt="deal_reject?" promptNeeded="false" type="id_Integer" value="0"/>
+  <contextParameter comment="" name="deal_processed" prompt="deal_processed?" promptNeeded="false" type="id_Integer" value="0"/>
+</talendfile:ContextType>

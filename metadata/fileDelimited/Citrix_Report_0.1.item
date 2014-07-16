@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendMetadata:DelimitedFileConnection xmi:id="_2n1lkwF1EeSkCo7smxmCxg" name="Citrix_Report" dataPackage="_2n1llAF1EeSkCo7smxmCxg" ContextMode="true" ContextId="_k1QywIpJEeGAJPNW_pjRUg" contextName="Default" Server="Localhost 127.0.0.1" FilePath="context.Citrix_Report_File" Encoding="context.Citrix_Report_Encoding" FieldSeparatorValue="context.Citrix_Report_FieldSeparator" RowSeparatorValue="context.Citrix_Report_RowSeparator" UseHeader="true" HeaderValue="context.Citrix_Report_Header" FirstLineCaption="true" FieldSeparatorType="Custom UTF8"/>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_2n1llAF1EeSkCo7smxmCxg" name="default" dataManager="_2n1lkwF1EeSkCo7smxmCxg">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_2n1llQF1EeSkCo7smxmCxg" id="_XM6twIpJEeGAJPNW_pjRUg" label="Citrix_Report">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2n1llgF1EeSkCo7smxmCxg" label="Citrix_Advisor_Reward__Reward_ID" length="11" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_2n1llwF1EeSkCo7smxmCxg"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2n1lmAF1EeSkCo7smxmCxg" label="Citrix_Lead_ID" length="8" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_2n1lmQF1EeSkCo7smxmCxg"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2n1lmgF1EeSkCo7smxmCxg" label="Account_Name" length="18" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_2n1lmwF1EeSkCo7smxmCxg"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2n1lnAF1EeSkCo7smxmCxg" label="Reward_Status" length="9" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_2n1lnQF1EeSkCo7smxmCxg"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2n1lngF1EeSkCo7smxmCxg" label="Reward_Rejection_Reason" length="16" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_2n1lnwF1EeSkCo7smxmCxg"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2n1loAF1EeSkCo7smxmCxg" label="Last_Modified_Date" length="10" talendType="id_Date" pattern="&quot;d/MM/yyyy&quot;">
+        <initialValue xmi:id="_2n1loQF1EeSkCo7smxmCxg"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2n1logF1EeSkCo7smxmCxg" label="Partner_Org_ID" length="8" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_2n1lowF1EeSkCo7smxmCxg"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2n1lpAF1EeSkCo7smxmCxg" label="Citrix_Advisor_Reward__Created_By" length="18" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_2n1lpQF1EeSkCo7smxmCxg"/>
+      </feature>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd">
+  <talendfile:ContextType confirmationNeeded="false" name="Dev">
+    <contextParameter comment="" name="Vartopia_DataMartStage_AdditionalParams" prompt="Vartopia_DataMartStage_AdditionalParams?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="Vartopia_DataMartStage_Port" prompt="Vartopia_DataMartStage_Port?" promptNeeded="false" type="id_String" value="1433"/>
+    <contextParameter comment="" name="Vartopia_DataMartStage_Password" prompt="Vartopia_DataMartStage_Password?" promptNeeded="false" type="id_Password" value="KvVDkApeoab096uhdGeE6g=="/>
+    <contextParameter comment="" name="Vartopia_DataMartStage_Login" prompt="Vartopia_DataMartStage_Login?" promptNeeded="false" type="id_String" value="TOS"/>
+    <contextParameter comment="" name="Vartopia_DataMartStage_Server" prompt="Vartopia_DataMartStage_Server?" promptNeeded="false" type="id_String" value="127.0.0.1"/>
+    <contextParameter comment="" name="Vartopia_DataMartStage_Database" prompt="Vartopia_DataMartStage_Database?" promptNeeded="false" type="id_String" value="Vartopia_MVS_DataMartStage"/>
+    <contextParameter comment="" name="Vartopia_DataMartStage_Schema" prompt="Vartopia_DataMartStage_Schema?" promptNeeded="false" type="id_String" value="dbo"/>
+  </talendfile:ContextType>
+  <talendfile:ContextType confirmationNeeded="false" name="Prod">
+    <contextParameter comment="" name="Vartopia_DataMartStage_AdditionalParams" prompt="Vartopia_DataMartStage_AdditionalParams?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="Vartopia_DataMartStage_Port" prompt="Vartopia_DataMartStage_Port?" promptNeeded="false" type="id_String" value="1433"/>
+    <contextParameter comment="" name="Vartopia_DataMartStage_Password" prompt="Vartopia_DataMartStage_Password?" promptNeeded="false" type="id_Password" value="KvVDkApeoab096uhdGeE6g=="/>
+    <contextParameter comment="" name="Vartopia_DataMartStage_Login" prompt="Vartopia_DataMartStage_Login?" promptNeeded="false" type="id_String" value="TOS"/>
+    <contextParameter comment="" name="Vartopia_DataMartStage_Server" prompt="Vartopia_DataMartStage_Server?" promptNeeded="false" type="id_String" value="10.122.147.248"/>
+    <contextParameter comment="" name="Vartopia_DataMartStage_Database" prompt="Vartopia_DataMartStage_Database?" promptNeeded="false" type="id_String" value="Vartopia_MVS_DataMartStage"/>
+    <contextParameter comment="" name="Vartopia_DataMartStage_Schema" prompt="Vartopia_DataMartStage_Schema?" promptNeeded="false" type="id_String" value="dbo"/>
+  </talendfile:ContextType>
+  <talendfile:ContextType confirmationNeeded="false" name="Test">
+    <contextParameter comment="" name="Vartopia_DataMartStage_AdditionalParams" prompt="Vartopia_DataMartStage_AdditionalParams?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="Vartopia_DataMartStage_Port" prompt="Vartopia_DataMartStage_Port?" promptNeeded="false" type="id_String" value="1433"/>
+    <contextParameter comment="" name="Vartopia_DataMartStage_Password" prompt="Vartopia_DataMartStage_Password?" promptNeeded="false" type="id_Password" value="KvVDkApeoab096uhdGeE6g=="/>
+    <contextParameter comment="" name="Vartopia_DataMartStage_Login" prompt="Vartopia_DataMartStage_Login?" promptNeeded="false" type="id_String" value="TOS"/>
+    <contextParameter comment="" name="Vartopia_DataMartStage_Server" prompt="Vartopia_DataMartStage_Server?" promptNeeded="false" type="id_String" value="10.122.147.249"/>
+    <contextParameter comment="" name="Vartopia_DataMartStage_Database" prompt="Vartopia_DataMartStage_Database?" promptNeeded="false" type="id_String" value="Vartopia_MVS_DataMartStage"/>
+    <contextParameter comment="" name="Vartopia_DataMartStage_Schema" prompt="Vartopia_DataMartStage_Schema?" promptNeeded="false" type="id_String" value="dbo"/>
+  </talendfile:ContextType>
+</xmi:XMI>

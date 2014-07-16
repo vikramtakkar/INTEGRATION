@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010">
+  <TalendMetadata:WSDLSchemaConnection xmi:id="_3UWGQwF1EeSkCo7smxmCxg" name="repository.metadataWSDLSchema" dataPackage="_3UWGTAF1EeSkCo7smxmCxg" WSDL="&quot;http://localhost:8088/mockDotnetDailyFactSoap?wsdl&quot;" methodName="GetDotnetDailyFact(parameters):string" timeOut="20" isInputModel="false" serverNameSpace="http://xmlme.com/WebServices" serverName="DotnetDailyFact" portNameSpace="http://xmlme.com/WebServices" portName="DotnetDailyFactSoap">
+    <parameterValue xmi:id="_3UWGRAF1EeSkCo7smxmCxg" Element="parameters"/>
+    <parameterValue xmi:id="_3UWGRQF1EeSkCo7smxmCxg" ParameterInfo="parameters" ParameterInfoParent=""/>
+    <outputParameter xmi:id="_3UWGRgF1EeSkCo7smxmCxg" Element="parameters"/>
+    <outputParameter xmi:id="_3UWGRwF1EeSkCo7smxmCxg" Element="parameters.GetDotnetDailyFactResult"/>
+    <outputParameter xmi:id="_3UWGSAF1EeSkCo7smxmCxg" ParameterInfo="parameters" ParameterInfoParent=""/>
+    <outputParameter xmi:id="_3UWGSQF1EeSkCo7smxmCxg" ParameterInfo="GetDotnetDailyFactResult" ParameterInfoParent="parameters"/>
+    <outputParameter xmi:id="_3UWGSgF1EeSkCo7smxmCxg" Column="GetDotnetDailyFactResult" Expression="parameters.GetDotnetDailyFactResult"/>
+    <outputParameter xmi:id="_3UWGSwF1EeSkCo7smxmCxg" source="parameters.GetDotnetDailyFactResult"/>
+  </TalendMetadata:WSDLSchemaConnection>
+  <TalendMetadata:GenericPackage xmi:id="_3UWGTAF1EeSkCo7smxmCxg" name="repository.metadataWSDLSchema" dataManager="_3UWGQwF1EeSkCo7smxmCxg">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_3UWGTQF1EeSkCo7smxmCxg" id="_qgBogIJ6EeGEzrt3giZhNg" label="Output">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_3UWGTgF1EeSkCo7smxmCxg" name="GetDotnetDailyFactResult" label="GetDotnetDailyFactResult" talendType="id_String">
+        <initialValue xmi:id="_3UWGTwF1EeSkCo7smxmCxg"/>
+      </feature>
+    </ownedElement>
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_3UWGUAF1EeSkCo7smxmCxg" id="_sBeNIIJ6EeGEzrt3giZhNg" label="Input"/>
+  </TalendMetadata:GenericPackage>
+</xmi:XMI>

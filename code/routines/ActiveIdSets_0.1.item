@@ -1,0 +1,150 @@
+package routines;
+
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
+
+/*
+ * user specification: the function's comment should contain keys as follows: 1. write about the function's comment.but
+ * it must be before the "{talendTypes}" key.
+ * 
+ * 2. {talendTypes} 's value must be talend Type, it is required . its value should be one of: String, char | Character,
+ * long | Long, int | Integer, boolean | Boolean, byte | Byte, Date, double | Double, float | Float, Object, short |
+ * Short
+ * 
+ * 3. {Category} define a category for the Function. it is required. its value is user-defined .
+ * 
+ * 4. {param} 's format is: {param} <type>[(<default value or closed list values>)] <name>[ : <comment>]
+ * 
+ * <type> 's value should be one of: string, int, list, double, object, boolean, long, char, date. <name>'s value is the
+ * Function's parameter name. the {param} is optional. so if you the Function without the parameters. the {param} don't
+ * added. you can have many parameters for the Function.
+ * 
+ * 5. {example} gives a example for the Function. it is optional.
+ */
+public class ActiveIdSets {
+
+	public static final String	PARTNER_ID = "PartnerId";
+	public static final String	ACCOUNT_ID = "AccountId";
+	public static final String	VENDOR_ID = "VendorId";
+	public static final String	ACCOUNTS_WITH_DEALS = "AccountsWithDeals";
+	public static final String	CONTACTS_WITH_DEALS = "ContactsWithDeals";
+	
+	private static Map<String, Set<String>>	set_map = new HashMap<String, Set<String>>();
+
+    /**
+     * addId: Add an ID to a set.
+     * Note that the predefined set names should be used.
+     * 
+     * 
+     * {talendTypes} void
+     * 
+     * {Category} User Defined
+     * 
+     * {param} string set_name: The name of the set the ID is added to.
+     * {param} string id: The ID to be added.
+     * 
+     * {example} addId ("PartnerId", "22")
+     */
+    public static void
+    addId(String set_name, String id)
+    {
+        Set<String>		id_set = set_map.get(set_name);
+
+        if (id_set == null) {
+        	id_set = new HashSet<String>();
+        	set_map.put(set_name, id_set);
+        }
+
+        id_set.add(id);
+    }
+
+    /**
+     * addId: Add an ID to a set.
+     * Note that the predefined set names should be used.
+     * This is a convenience function, and converts the ID to a string.
+     * 
+     * {talendTypes} void
+     * 
+     * {Category} User Defined
+     * 
+     * {param} string set_name: The name of the set the ID is added to.
+     * {param} int|Integer id: The ID to be added.
+     * 
+     * {example} addId ("PartnerId", 14)
+     */
+    public static void
+    addId(String set_name, Integer id)
+    {
+        addId(set_name, id.toString());
+    }
+
+    /**
+     * idSetContains: Test whether an ID is in a set.
+     * Note that the predefined set names should be used.
+     * 
+     * 
+     * {talendTypes} boolean
+     * 
+     * {Category} User Defined
+     * 
+     * {param} string set_name: The name of the set the ID is to be tested against.
+     * {param} string id: The ID to be added.
+     * 
+     * {example} idSetContains ("PartnerId", "22")
+     */
+    public static boolean
+    idSetContains(String set_name, String id)
+    {
+    	Set<String>	id_set = set_map.get(set_name);
+
+    	if (id_set == null)
+    		throw new IllegalArgumentException("Undefined set_name " + set_name);
+
+    	return(id_set.contains(id));
+    }
+
+    /**
+     * idSetContains: Test whether an ID is in a set.
+     * Note that the predefined set names should be used.
+     * This is a convenience function, and converts the ID to a string.
+     * 
+     * {talendTypes} boolean
+     * 
+     * {Category} User Defined
+     * 
+     * {param} string set_name: The name of the set the ID is to be tested against.
+     * {param} int|Integer id: The ID to be added.
+     * 
+     * {example} idSetContains ("PartnerId", 14)
+     */
+    public static boolean
+    idSetContains(String set_name, Integer id)
+    {
+    	return(idSetContains(set_name, id.toString()));
+    }
+
+    /**
+     * getIdSet: Get the set of IDs.
+     * Note that the predefined set names should be used.
+     * 
+     * {talendTypes} Object
+     * 
+     * {Category} User Defined
+     * 
+     * {param} string set_name: The name of the set the ID is to be tested against.
+     * 
+     * {example} getIdSet ("PartnerId")
+     */
+    public static Set<String>
+    getIdSet(String set_name)
+    {
+    	Set<String>	id_set = set_map.get(set_name);
+
+    	if (id_set == null)
+    		throw new IllegalArgumentException("Undefined set_name " + set_name);
+
+    	return(id_set);
+    }
+}

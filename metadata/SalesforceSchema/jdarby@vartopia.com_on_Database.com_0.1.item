@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TalendMetadata:SalesforceSchemaConnection xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmi:id="_2FnCQwF1EeSkCo7smxmCxg" name="repository.metadataSalesforceSchema" webServiceUrl="https://www.salesforce.com/services/Soap/u/24.0" userName="jdarby@vartopia.com" password="jd127278xfcug8ZUYdVzTlRd2MLaMlcz" moduleName="Vendor__c" batchSize="250" timeOut="60000"/>

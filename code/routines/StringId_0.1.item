@@ -1,0 +1,204 @@
+package routines;
+
+import java.util.HashMap;
+import java.util.Map;
+
+/*
+ * user specification: the function's comment should contain keys as follows: 1. write about the function's comment.but
+ * it must be before the "{talendTypes}" key.
+ * 
+ * 2. {talendTypes} 's value must be talend Type, it is required . its value should be one of: String, char | Character,
+ * long | Long, int | Integer, boolean | Boolean, byte | Byte, Date, double | Double, float | Float, Object, short |
+ * Short
+ * 
+ * 3. {Category} define a category for the Function. it is required. its value is user-defined .
+ * 
+ * 4. {param} 's format is: {param} <type>[(<default value or closed list values>)] <name>[ : <comment>]
+ * 
+ * <type> 's value should be one of: string, int, list, double, object, boolean, long, char, date. <name>'s value is the
+ * Function's parameter name. the {param} is optional. so if you the Function without the parameters. the {param} don't
+ * added. you can have many parameters for the Function.
+ * 
+ * 5. {example} gives a example for the Function. it is optional.
+ */
+public class StringId {
+
+	public static String	SALES_REP_ID = "SALES_REP_ID";
+	public static String	USER_ID = "USER_ID";
+	public static String	SALES_TERRITORY_NAME = "SALES_TERRITORY_NAME";
+	public static String	VENDOR_REG_STATUS_NAME = "VENDOR_REG_STATUS";
+
+	private static class Namespace {
+		protected int					next_id;
+		protected int					highest_used_id;
+		protected Map<String,Integer>	map;
+		protected
+		Namespace()
+		{
+			this.map = new HashMap<String, Integer>();
+			this.next_id = 1;
+			this.highest_used_id = 0;
+		}
+	}
+
+	private static Map<String, Namespace>	namespace_map;
+
+	static {
+		namespace_map = new HashMap<String, Namespace>();
+	}
+
+    /**
+     * stringToId: convert strings to IDs in a namespace.  Acts as a symbol table.
+     * 
+     * {talendTypes} int | Integer
+     * 
+     * {Category} User Defined
+     * 
+     * {param} string namespace_name : The name of the namespace of this set
+     * of string <=> ID mappings.
+     * {param} string text : The string for which a unique ID is needed.
+     * {param} int (1) first_id : The first ID assigned.  Successive IDs will be
+     * monotonically increasing integers.
+     * 
+     * {example} stringToId(StringId.SALES_REP_ID, "June|Jones")
+     */
+
+    public static Integer
+    stringToId(String namespace_name, String text)
+    {
+    	if (text == null)
+    		return(null);
+
+        Namespace	namespace = getNamespace(namespace_name);
+
+        Integer		v = namespace.map.get(text);
+        if (v != null) {
+        	return(v.intValue());
+        }
+        else
+        {
+        	int		id = namespace.next_id++;
+        	namespace.map.put(text, id);
+        	return(id);
+        }
+    }
+
+    /**
+     * lookupId: get ID for a string in a namespace.  Acts as a symbol table.
+     * This is very similar to stringToId, but returns null if the string
+     * isn't found.
+     * 
+     * {talendTypes} int | Integer
+     * 
+     * {Category} User Defined
+     * 
+     * {param} string namespace_name : The name of the namespace of this set
+     * of string <=> ID mappings.
+     * {param} string text : The string for which a unique ID is needed.
+     * {param} int (1) first_id : The first ID assigned.  Successive IDs will be
+     * monotonically increasing integers.
+     * 
+     * {example} lookupId(StringId.SALES_REP_ID, "June|Jones")
+     */
+
+    public static Integer
+    lookupId(String namespace_name, String text)
+    {
+    	if (text == null)
+    		return(null);
+
+        Namespace	namespace = getNamespace(namespace_name);
+
+        return(namespace.map.get(text));
+    }
+
+
+    /**
+     * noteId: Note a string-ID mapping.
+     * 
+     * {talendTypes} void
+     * 
+     * {Category} User Defined
+     * 
+     * {param} string namespace_name : The name of the namespace of this set
+     * of string <=> ID mappings.
+     * {param} string text : The string to map.
+     * {param} int id : The ID to map.
+     * 
+     * {example} noteId(StringId.SALES_REP_ID, "fred", 2)
+     */
+
+    public static void
+    noteId(String namespace_name, String text, int id)
+    {
+        Namespace	namespace = getNamespace(namespace_name);
+
+    	if (text == null)
+    		throw new IllegalArgumentException("Null text ");
+
+    	namespace.map.put(text, id);
+
+        namespace.highest_used_id = Math.max(namespace.highest_used_id, id);
+    }
+
+    /**
+     * getHighestUsedId: Get the highest ID currently used in a namespace.
+     * 
+     * {talendTypes} int|Integer
+     * 
+     * {Category} User Defined
+     * 
+     * {param} string namespace_name : The name of the namespace of this set
+     * of string <=> ID mappings.
+     * 
+     * {example} getHighestUsedId(StringId.SALES_REP_ID)
+     */
+
+    public static int
+    getHighestUsedId(String namespace_name)
+    {
+        Namespace	namespace = getNamespace(namespace_name);
+
+        return(namespace.highest_used_id);
+    }
+
+    /**
+     * setNextUsedId: Set the next ID to be used in a namespace.
+     * 
+     * {talendTypes} void
+     * 
+     * {Category} User Defined
+     * 
+     * {param} string namespace_name : The name of the namespace of this set
+     * of string <=> ID mappings.
+     * {param} int next_id : The next ID to be assigned.  Successive IDs will be
+     * monotonically increasing integers.
+     * 
+     * {example} setNextUsedId(StringId.SALES_REP_ID,
+     * 				getHighestUsedId(StringId.SALES_REP_ID))
+     */
+
+    public static void
+    setNextUsedId(String namespace_name, int next_id)
+    {
+        Namespace	namespace = namespace_map.get(namespace_name);
+
+        if (namespace == null)
+        	throw new IllegalArgumentException("Unknown namespace " + namespace);
+
+        namespace.next_id = next_id;
+    }
+
+	private static Namespace
+	getNamespace(String namespace_name)
+	{
+		Namespace	namespace = namespace_map.get(namespace_name);
+
+		if (namespace == null) {
+			namespace = new Namespace();
+			namespace_map.put(namespace_name, namespace);
+		}
+
+		return(namespace);
+	}
+}

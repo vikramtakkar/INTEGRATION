@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" confirmationNeeded="false" name="Default">
+  <contextParameter comment="" name="Test_MVS_Integration_Login" prompt="Test_MVS_Integration_Login?" promptNeeded="false" type="id_String" value="TOS"/>
+  <contextParameter comment="" name="Test_MVS_Integration_Database" prompt="Test_MVS_Integration_Database?" promptNeeded="false" type="id_String" value="MVS_Integration"/>
+  <contextParameter comment="" name="Test_MVS_Integration_Server" prompt="Test_MVS_Integration_Server?" promptNeeded="false" type="id_String" value="localhost"/>
+  <contextParameter comment="" name="Test_MVS_Integration_Password" prompt="Test_MVS_Integration_Password?" promptNeeded="false" type="id_Password" value="KvVDkApeoab096uhdGeE6g=="/>
+  <contextParameter comment="" name="Test_MVS_Integration_Port" prompt="Test_MVS_Integration_Port?" promptNeeded="false" type="id_String" value="1433"/>
+  <contextParameter comment="" name="Test_MVS_Integration_AdditionalParams" prompt="Test_MVS_Integration_AdditionalParams?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter comment="" name="Test_MVS_Integration_Schema" prompt="Test_MVS_Integration_Schema?" promptNeeded="false" type="id_String" value="dbo"/>
+</talendfile:ContextType>

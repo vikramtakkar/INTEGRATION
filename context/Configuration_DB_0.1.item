@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" confirmationNeeded="false" name="Default">
+  <contextParameter comment="" name="Configuration_Port" prompt="Configuration_Port?" promptNeeded="false" type="id_String" value="1433"/>
+  <contextParameter comment="" name="Configuration_Server" prompt="Configuration_Server?" promptNeeded="false" type="id_String" value="localhost"/>
+  <contextParameter comment="" name="Configuration_Password" prompt="Configuration_Password?" promptNeeded="false" type="id_Password" value="KvVDkApeoab096uhdGeE6g=="/>
+  <contextParameter comment="" name="Configuration_AdditionalParams" prompt="Configuration_AdditionalParams?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter comment="" name="Configuration_Database" prompt="Configuration_Database?" promptNeeded="false" type="id_String" value="Vartopia_MVS"/>
+  <contextParameter comment="" name="Configuration_Schema" prompt="Configuration_Schema?" promptNeeded="false" type="id_String" value="dbo"/>
+  <contextParameter comment="" name="Configuration_Login" prompt="Configuration_Login?" promptNeeded="false" type="id_String" value="TOS"/>
+  <contextParameter comment="" name="Configuration_shared_connection_name" prompt="Configuration_shared_connection_name?" promptNeeded="false" type="id_String" value="vmvs"/>
+</talendfile:ContextType>

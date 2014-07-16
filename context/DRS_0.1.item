@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" confirmationNeeded="false" name="Default">
+  <contextParameter comment="" name="DRS_Password" prompt="DRS_Password?" promptNeeded="false" type="id_Password" value="KvVDkApeoab096uhdGeE6g=="/>
+  <contextParameter comment="" name="DRS_Server" prompt="DRS_Server?" promptNeeded="false" type="id_String" value="localhost"/>
+  <contextParameter comment="" name="DRS_Schema" prompt="DRS_Schema?" promptNeeded="false" type="id_String" value="dbo"/>
+  <contextParameter comment="" name="DRS_Database" prompt="DRS_Database?" promptNeeded="false" type="id_String" value="Vartopia"/>
+  <contextParameter comment="" name="DRS_Login" prompt="DRS_Login?" promptNeeded="false" type="id_String" value="TOS"/>
+  <contextParameter comment="" name="DRS_Port" prompt="DRS_Port?" promptNeeded="false" type="id_String" value="1433"/>
+  <contextParameter comment="" name="DRS_AdditionalParams" prompt="DRS_AdditionalParams?" promptNeeded="false" type="id_String" value=""/>
+</talendfile:ContextType>

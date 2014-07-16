@@ -1,0 +1,1229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default">
+  <context confirmationNeeded="false" name="Default">
+    <contextParameter comment="" name="DRS_Schema" prompt="DRS_Schema?" promptNeeded="false" repositoryContextId="_afnecKOAEeGQMdj4UkA-oA" type="id_String" value="dbo"/>
+    <contextParameter comment="" name="DRS_Login" prompt="DRS_Login?" promptNeeded="false" repositoryContextId="_afnecKOAEeGQMdj4UkA-oA" type="id_String" value="TOS"/>
+    <contextParameter comment="" name="DRS_Server" prompt="DRS_Server?" promptNeeded="false" repositoryContextId="_afnecKOAEeGQMdj4UkA-oA" type="id_String" value="localhost"/>
+    <contextParameter comment="" name="DRS_Database" prompt="DRS_Database?" promptNeeded="false" repositoryContextId="_afnecKOAEeGQMdj4UkA-oA" type="id_String" value="Vartopia"/>
+    <contextParameter comment="" name="DRS_Password" prompt="DRS_Password?" promptNeeded="false" repositoryContextId="_afnecKOAEeGQMdj4UkA-oA" type="id_Password" value="KvVDkApeoab096uhdGeE6g=="/>
+    <contextParameter comment="" name="DRS_AdditionalParams" prompt="DRS_AdditionalParams?" promptNeeded="false" repositoryContextId="_afnecKOAEeGQMdj4UkA-oA" type="id_String" value=""/>
+    <contextParameter comment="" name="DRS_Port" prompt="DRS_Port?" promptNeeded="false" repositoryContextId="_afnecKOAEeGQMdj4UkA-oA" type="id_String" value="1433"/>
+    <contextParameter comment="" name="SFDC_USERNAME" prompt="SFDC_USERNAME?" promptNeeded="false" type="id_String" value="dealreg@wyse.com"/>
+    <contextParameter comment="" name="SFDC_PASSWORD" prompt="SFDC_PASSWORD?" promptNeeded="false" type="id_String" value="WyseRegistration11n9xvjqXiDfbqbhzaFAlmF4pa3"/>
+    <contextParameter comment="" name="SFDC_COMMON_ENDPOINT" prompt="SFDC_COMMON_ENDPOINT?" promptNeeded="false" type="id_String" value="https://login.salesforce.com/services/Soap/u/19.0"/>
+    <contextParameter comment="" name="opportunityID" prompt="opportunityID?" promptNeeded="false" type="id_String" value="null"/>
+    <contextParameter comment="" name="accountID" prompt="accountID?" promptNeeded="false" type="id_String" value="null"/>
+    <contextParameter comment="" name="contactID" prompt="contactID?" promptNeeded="false" type="id_String" value="null"/>
+  </context>
+  <parameters>
+    <elementParameter field="TEXT" name="JOB_RUN_VM_ARGUMENTS" value=" -Xms256M -Xmx1024M"/>
+    <elementParameter field="CHECK" name="JOB_RUN_VM_ARGUMENTS_OPTION" value="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="32"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPTIONS" value="none"/>
+    <elementParameter field="TEXT" name="OEM_CUSTOM_ATTRIBUTE" value=""/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" value="ORACLE_10"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_10"/>
+    <routinesParameter id="_52ZfoIibEeG4O7tWobvoyQ" name="DataOperation"/>
+    <routinesParameter id="_52e_MIibEeG4O7tWobvoyQ" name="Mathematical"/>
+    <routinesParameter id="_52iCgIibEeG4O7tWobvoyQ" name="Numeric"/>
+    <routinesParameter id="_52kewIibEeG4O7tWobvoyQ" name="Relational"/>
+    <routinesParameter id="_52xTEIibEeG4O7tWobvoyQ" name="SQLike"/>
+    <routinesParameter id="_52m7AIibEeG4O7tWobvoyQ" name="StringHandling"/>
+    <routinesParameter id="_52pXQIibEeG4O7tWobvoyQ" name="TalendDataGenerator"/>
+    <routinesParameter id="_52rzgIibEeG4O7tWobvoyQ" name="TalendDate"/>
+    <routinesParameter id="_52uPwIibEeG4O7tWobvoyQ" name="TalendString"/>
+    <routinesParameter id="_Ff4CQIx3EeC8wqHA4D4c-Q" name="ActiveIdSets"/>
+    <routinesParameter id="_NkZ6AJEEEeC4zfWT--Xipg" name="BRules"/>
+    <routinesParameter id="_8qwkYFjNEdyj6eiqDt60Og" name="DemoRoutines"/>
+    <routinesParameter id="_HKXfQGIZEd26GZmhFZLTPA" name="GetRandomPhoneNum"/>
+    <routinesParameter id="_6zR_YJULEeCTXJog9NYiQA" name="ObjectId"/>
+    <routinesParameter id="_OqIRQMKvEeC_Dalu0QQgxA" name="ParentSort"/>
+    <routinesParameter id="_AOEnEBVTEeG-MPI9uzJyiQ" name="StringFunctions"/>
+    <routinesParameter id="_3QTesIuFEeCTp5FyF0JIKg" name="StringId"/>
+    <routinesParameter id="_1uvZwIuPEeCTp5FyF0JIKg" name="TerritoryParentMap"/>
+  </parameters>
+  <node componentName="tMSSqlConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="192" posY="224">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMSSqlConnection_1"/>
+    <elementParameter field="CHECK" name="START" value="true"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_c30E4KOAEeGQMdj4UkA-oA"/>
+    <elementParameter field="TEXT" name="HOST" value="context.DRS_Server"/>
+    <elementParameter field="TEXT" name="TYPE" value="MSSQL"/>
+    <elementParameter field="TEXT" name="PORT" value="context.DRS_Port"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="context.DRS_Schema"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.DRS_Database"/>
+    <elementParameter field="TEXT" name="USER" value="context.DRS_Login"/>
+    <elementParameter field="TEXT" name="PASS" value="context.DRS_Password"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="context.DRS_AdditionalParams"/>
+    <elementParameter field="CHECK" name="USE_SHARED_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="SHARED_CONNECTION_NAME" value=""/>
+    <elementParameter field="CHECK" name="AUTO_COMMIT" value="false"/>
+    <elementParameter field="CHECK" name="SHARE_IDENTITY_SETTING" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="DRS"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+  </node>
+  <node componentName="tSalesforceConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="192" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSalesforceConnection_1"/>
+    <elementParameter field="TEXT" name="ENDPOINT" value="context.SFDC_COMMON_ENDPOINT"/>
+    <elementParameter field="TEXT" name="USER" value="context.SFDC_USERNAME"/>
+    <elementParameter field="TEXT" name="PASS" value="context.SFDC_PASSWORD"/>
+    <elementParameter field="TEXT" name="TIMEOUT" value="60000"/>
+    <elementParameter field="CHECK" name="BULK_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="API_VERSION" value="&quot;19.0&quot;"/>
+    <elementParameter field="CHECK" name="NEED_COMPRESSION" value="false"/>
+    <elementParameter field="CHECK" name="USE_PROXY" value="false"/>
+    <elementParameter field="TEXT" name="PROXY_HOST" value="&quot;61.163.92.4&quot;"/>
+    <elementParameter field="TEXT" name="PROXY_PORT" value="&quot;1080&quot;"/>
+    <elementParameter field="TEXT" name="PROXY_USERNAME" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROXY_PASSWORD" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="CLIENT_ID" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+  </node>
+  <node componentName="tSalesforceOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="576" posY="416">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSalesforceOutput_1"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_ptL00KOAEeGQMdj4UkA-oA"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tSalesforceConnection_1"/>
+    <elementParameter field="TEXT" name="ENDPOINT" value="&quot;https://www.salesforce.com/services/Soap/u/19.0&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;dealreg@wyse.com&quot;"/>
+    <elementParameter field="TEXT" name="PASS" value="&quot;WyseRegistration11n9xvjqXiDfbqbhzaFAlmF4pa3&quot;"/>
+    <elementParameter field="TEXT" name="TIMEOUT" value="60000"/>
+    <elementParameter field="CLOSED_LIST" name="ACTION" value="upsert"/>
+    <elementParameter field="PREV_COLUMN_LIST" name="UPSERT_KEY_COLUMN" value=""/>
+    <elementParameter field="CLOSED_LIST" name="MODULENAME" value="Account"/>
+    <elementParameter field="TEXT" name="CUSTOM_MODULE_NAME" value="&quot;customModuleName&quot;"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_ptL00KOAEeGQMdj4UkA-oA - Account"/>
+    <elementParameter field="CHECK" name="EXTENDINSERT" value="true"/>
+    <elementParameter field="TEXT" name="COMMIT_LEVEL" value="200"/>
+    <elementParameter field="CHECK" name="CEASE_FOR_ERROR" value="true"/>
+    <elementParameter field="FILE" name="LOGFILENAME" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="USE_PROXY" value="false"/>
+    <elementParameter field="TEXT" name="PROXY_HOST" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROXY_PORT" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROXY_USERNAME" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROXY_PASSWORD" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="NEED_COMPRESSION" value="false"/>
+    <elementParameter field="CHECK" name="RETREIVE_INSERT_ID" value="false"/>
+    <elementParameter field="TEXT" name="CLIENT_ID" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="LABEL" value="Account"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" label="Account" name="tSalesforceOutput_1">
+      <column comment="" key="false" length="18" name="Id" nullable="false" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="IsDeleted" nullable="false" pattern="" precision="0" type="id_Boolean"/>
+      <column comment="" key="false" length="18" name="MasterRecordId" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column key="false" length="255" name="Name" nullable="false" precision="0" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="40" name="Type" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="18" name="RecordTypeId" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="18" name="ParentId" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="BillingStreet" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="BillingCity" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="BillingState" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="BillingPostalCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="BillingCountry" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="ShippingStreet" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="ShippingCity" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="ShippingState" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="ShippingPostalCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="ShippingCountry" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="Phone" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="Fax" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="AccountNumber" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="Website" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="Sic" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="80" name="Industry" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="AnnualRevenue" nullable="true" pattern="" precision="18" type="id_String"/>
+      <column comment="" key="false" length="0" name="NumberOfEmployees" nullable="true" pattern="" precision="0" type="id_Integer"/>
+      <column comment="" key="false" length="40" name="Ownership" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="TickerSymbol" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="32000" name="Description" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="Rating" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="80" name="Site" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="3" name="CurrencyIsoCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="18" name="OwnerId" nullable="false" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="CreatedDate" nullable="false" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss'.000Z'&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="18" name="CreatedById" nullable="false" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="LastModifiedDate" nullable="false" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss'.000Z'&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="18" name="LastModifiedById" nullable="false" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="SystemModstamp" nullable="false" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss'.000Z'&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="0" name="LastActivityDate" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="30" name="MicrosoftPartnerLevel__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="30" name="CitrixPartnerLevel__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="DateCompanyFounded__c" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="255" name="PartnerStatus__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="10" name="ContractStartDate__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="VarDBCountry__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="VarDBStateProvince__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="HQAddress__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="HQCity__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="HQState__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="HQCountry__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="VerticalMarkets__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="80" name="CompanyEmail__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="HQZip__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="150" name="DBA__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="13" name="GSANumber__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="GSAExpiration__c" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="40" name="TollFree__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="GSASchedule__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="SourceofInterest__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="ResellersPrimaryBusiness__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="ServerBasedComputing__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="ServerSoftwareInstalled__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="ServersInstalled__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="DesktopDevices__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="WirelessNetwork__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="TotalTCstoDeploy__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="UserLicenses__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="Remote_Locations__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="Product_Authorization__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="Fortune_500__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="SIC_Description__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="15" name="DUNS_Number__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="PartnerLink_Xfer__c" nullable="false" pattern="" precision="0" type="id_Boolean"/>
+      <column comment="" key="false" length="255" name="Account_Status__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="Target_Account_Category__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="Preferred_Storage_Vendor__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="Server_Hardware_Vendor__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="Middleware_Datacenter__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="Considering_Desktop_Virtualisation__c" nullable="false" pattern="" precision="0" type="id_Boolean"/>
+      <column comment="" key="false" length="255" name="Virtualization_Deployment_Timeframe__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="Named_Account__c" nullable="false" pattern="" precision="0" type="id_Boolean"/>
+      <column comment="" key="false" length="4099" name="Wyse_Hardware__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="30" name="VMware_Partner_Level__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="4099" name="PR_Type__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="32000" name="PR_Notes__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="6" name="Total_Hardware_Units__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="1300" name="AccountID__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="Wyse_Partner_Level__c" nullable="true" pattern="" precision="0" type="id_String"/>
+    </metadata>
+    <metadata connector="MAIN" label="Account" name="MAIN">
+      <column comment="" key="false" length="18" name="Id" nullable="false" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="IsDeleted" nullable="false" pattern="" precision="0" type="id_Boolean"/>
+      <column comment="" key="false" length="18" name="MasterRecordId" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="Name" nullable="false" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="Type" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="18" name="RecordTypeId" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="18" name="ParentId" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="BillingStreet" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="BillingCity" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="BillingState" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="BillingPostalCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="BillingCountry" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="ShippingStreet" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="ShippingCity" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="ShippingState" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="ShippingPostalCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="ShippingCountry" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="Phone" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="Fax" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="AccountNumber" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="Website" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="Sic" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="80" name="Industry" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="AnnualRevenue" nullable="true" pattern="" precision="18" type="id_String"/>
+      <column comment="" key="false" length="0" name="NumberOfEmployees" nullable="true" pattern="" precision="0" type="id_Integer"/>
+      <column comment="" key="false" length="40" name="Ownership" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="TickerSymbol" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="32000" name="Description" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="Rating" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="80" name="Site" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="3" name="CurrencyIsoCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="18" name="OwnerId" nullable="false" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="CreatedDate" nullable="false" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss'.000Z'&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="18" name="CreatedById" nullable="false" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="LastModifiedDate" nullable="false" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss'.000Z'&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="18" name="LastModifiedById" nullable="false" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="SystemModstamp" nullable="false" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss'.000Z'&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="0" name="LastActivityDate" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="30" name="MicrosoftPartnerLevel__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="30" name="CitrixPartnerLevel__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="DateCompanyFounded__c" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="255" name="PartnerStatus__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="10" name="ContractStartDate__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="VarDBCountry__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="VarDBStateProvince__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="HQAddress__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="HQCity__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="HQState__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="HQCountry__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="VerticalMarkets__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="80" name="CompanyEmail__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="HQZip__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="150" name="DBA__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="13" name="GSANumber__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="GSAExpiration__c" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="40" name="TollFree__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="GSASchedule__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="SourceofInterest__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="ResellersPrimaryBusiness__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="ServerBasedComputing__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="ServerSoftwareInstalled__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="ServersInstalled__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="DesktopDevices__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="WirelessNetwork__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="TotalTCstoDeploy__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="UserLicenses__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="Remote_Locations__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="Product_Authorization__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="Fortune_500__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="SIC_Description__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="15" name="DUNS_Number__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="PartnerLink_Xfer__c" nullable="false" pattern="" precision="0" type="id_Boolean"/>
+      <column comment="" key="false" length="255" name="Account_Status__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="Target_Account_Category__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="Preferred_Storage_Vendor__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="Server_Hardware_Vendor__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="Middleware_Datacenter__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="Considering_Desktop_Virtualisation__c" nullable="false" pattern="" precision="0" type="id_Boolean"/>
+      <column comment="" key="false" length="255" name="Virtualization_Deployment_Timeframe__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="Named_Account__c" nullable="false" pattern="" precision="0" type="id_Boolean"/>
+      <column comment="" key="false" length="4099" name="Wyse_Hardware__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="30" name="VMware_Partner_Level__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="4099" name="PR_Type__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="32000" name="PR_Notes__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="6" name="Total_Hardware_Units__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="1300" name="AccountID__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="Wyse_Partner_Level__c" nullable="true" pattern="" precision="0" type="id_String"/>
+    </metadata>
+    <metadata connector="REJECT" label="Account" name="REJECT">
+      <column comment="" key="false" length="18" name="Id" nullable="false" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="IsDeleted" nullable="false" pattern="" precision="0" type="id_Boolean"/>
+      <column comment="" key="false" length="18" name="MasterRecordId" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="Name" nullable="false" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="Type" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="18" name="RecordTypeId" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="18" name="ParentId" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="BillingStreet" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="BillingCity" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="BillingState" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="BillingPostalCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="BillingCountry" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="ShippingStreet" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="ShippingCity" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="ShippingState" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="ShippingPostalCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="ShippingCountry" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="Phone" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="Fax" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="AccountNumber" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="Website" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="Sic" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="80" name="Industry" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="AnnualRevenue" nullable="true" pattern="" precision="18" type="id_String"/>
+      <column comment="" key="false" length="0" name="NumberOfEmployees" nullable="true" pattern="" precision="0" type="id_Integer"/>
+      <column comment="" key="false" length="40" name="Ownership" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="TickerSymbol" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="32000" name="Description" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="Rating" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="80" name="Site" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="3" name="CurrencyIsoCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="18" name="OwnerId" nullable="false" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="CreatedDate" nullable="false" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss'.000Z'&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="18" name="CreatedById" nullable="false" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="LastModifiedDate" nullable="false" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss'.000Z'&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="18" name="LastModifiedById" nullable="false" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="SystemModstamp" nullable="false" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss'.000Z'&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="0" name="LastActivityDate" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="30" name="MicrosoftPartnerLevel__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="30" name="CitrixPartnerLevel__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="DateCompanyFounded__c" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="255" name="PartnerStatus__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="10" name="ContractStartDate__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="VarDBCountry__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="VarDBStateProvince__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="HQAddress__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="HQCity__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="HQState__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="HQCountry__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="VerticalMarkets__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="80" name="CompanyEmail__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="HQZip__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="150" name="DBA__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="13" name="GSANumber__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="GSAExpiration__c" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="40" name="TollFree__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="GSASchedule__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="SourceofInterest__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="ResellersPrimaryBusiness__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="ServerBasedComputing__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="ServerSoftwareInstalled__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="ServersInstalled__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="DesktopDevices__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="WirelessNetwork__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="TotalTCstoDeploy__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="UserLicenses__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="Remote_Locations__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="Product_Authorization__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="Fortune_500__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="SIC_Description__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="15" name="DUNS_Number__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="PartnerLink_Xfer__c" nullable="false" pattern="" precision="0" type="id_Boolean"/>
+      <column comment="" key="false" length="255" name="Account_Status__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="Target_Account_Category__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="Preferred_Storage_Vendor__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="Server_Hardware_Vendor__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="Middleware_Datacenter__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="Considering_Desktop_Virtualisation__c" nullable="false" pattern="" precision="0" type="id_Boolean"/>
+      <column comment="" key="false" length="255" name="Virtualization_Deployment_Timeframe__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="Named_Account__c" nullable="false" pattern="" precision="0" type="id_Boolean"/>
+      <column comment="" key="false" length="4099" name="Wyse_Hardware__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="30" name="VMware_Partner_Level__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="4099" name="PR_Type__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="32000" name="PR_Notes__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="6" name="Total_Hardware_Units__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="1300" name="AccountID__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="Wyse_Partner_Level__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String"/>
+      <column defaultValue="" key="false" length="255" name="errorFields" nullable="true" precision="0" sourceType="" type="id_String"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String"/>
+    </metadata>
+  </node>
+  <node componentName="tSalesforceOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="576" posY="512">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSalesforceOutput_2"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_ptL00KOAEeGQMdj4UkA-oA"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tSalesforceConnection_1"/>
+    <elementParameter field="TEXT" name="ENDPOINT" value="&quot;https://www.salesforce.com/services/Soap/u/19.0&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;dealreg@wyse.com&quot;"/>
+    <elementParameter field="TEXT" name="PASS" value="&quot;WyseRegistration11n9xvjqXiDfbqbhzaFAlmF4pa3&quot;"/>
+    <elementParameter field="TEXT" name="TIMEOUT" value="60000"/>
+    <elementParameter field="CLOSED_LIST" name="ACTION" value="upsert"/>
+    <elementParameter field="PREV_COLUMN_LIST" name="UPSERT_KEY_COLUMN" value=""/>
+    <elementParameter field="CLOSED_LIST" name="MODULENAME" value="Contact"/>
+    <elementParameter field="TEXT" name="CUSTOM_MODULE_NAME" value="&quot;customModuleName&quot;"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_ptL00KOAEeGQMdj4UkA-oA - Contact"/>
+    <elementParameter field="CHECK" name="EXTENDINSERT" value="true"/>
+    <elementParameter field="TEXT" name="COMMIT_LEVEL" value="200"/>
+    <elementParameter field="CHECK" name="CEASE_FOR_ERROR" value="true"/>
+    <elementParameter field="FILE" name="LOGFILENAME" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="USE_PROXY" value="false"/>
+    <elementParameter field="TEXT" name="PROXY_HOST" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROXY_PORT" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROXY_USERNAME" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROXY_PASSWORD" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="NEED_COMPRESSION" value="false"/>
+    <elementParameter field="CHECK" name="RETREIVE_INSERT_ID" value="false"/>
+    <elementParameter field="TEXT" name="CLIENT_ID" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="LABEL" value="Contact"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" label="Contact" name="tSalesforceOutput_2">
+      <column comment="" key="false" length="18" name="Id" nullable="false" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="IsDeleted" nullable="false" pattern="" precision="0" type="id_Boolean"/>
+      <column comment="" key="false" length="18" name="MasterRecordId" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="18" name="AccountId" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="80" name="LastName" nullable="false" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="FirstName" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="Salutation" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="121" name="Name" nullable="false" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="OtherStreet" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="OtherCity" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="OtherState" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="OtherPostalCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="OtherCountry" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="MailingStreet" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="MailingCity" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="MailingState" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="MailingPostalCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="MailingCountry" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="Phone" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="Fax" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="MobilePhone" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="80" name="Email" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="80" name="Title" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="LeadSource" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="32000" name="Description" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="3" name="CurrencyIsoCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="18" name="OwnerId" nullable="false" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="HasOptedOutOfEmail" nullable="false" pattern="" precision="0" type="id_Boolean"/>
+      <column comment="" key="false" length="0" name="CreatedDate" nullable="false" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss'.000Z'&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="18" name="CreatedById" nullable="false" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="LastModifiedDate" nullable="false" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss'.000Z'&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="18" name="LastModifiedById" nullable="false" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="SystemModstamp" nullable="false" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss'.000Z'&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="0" name="LastActivityDate" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="0" name="LastCURequestDate" nullable="true" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss'.000Z'&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="0" name="LastCUUpdateDate" nullable="true" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss'.000Z'&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="255" name="EmailBouncedReason" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="EmailBouncedDate" nullable="true" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss'.000Z'&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="255" name="MailingList__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="ContactType__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="CMSXREFField__c" nullable="true" pattern="" precision="5" type="id_Double"/>
+      <column comment="" key="false" length="255" name="VARDBPrimaryContact__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="InvalidEmail__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="InvalidMailAddress__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="5" name="ProctorsCampainID__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="10" name="ProctorsContactID__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="PartnerLink_Xfer__c" nullable="false" pattern="" precision="0" type="id_Boolean"/>
+      <column comment="" key="false" length="255" name="Contact_Status__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="Call_Result__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="1300" name="ContactId__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="pi__campaign__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="32000" name="pi__comments__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="pi__created_date__c" nullable="true" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss'.000Z'&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="0" name="pi__first_activity__c" nullable="true" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss'.000Z'&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="255" name="pi__first_search_term__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="pi__first_search_type__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="1024" name="pi__first_touch_url__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="10" name="pi__grade__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="pi__last_activity__c" nullable="true" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss'.000Z'&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="32000" name="pi__notes__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="pi__score__c" nullable="true" pattern="" precision="18" type="id_Double"/>
+      <column comment="" key="false" length="255" name="pi__url__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="pi__utm_campaign__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="pi__utm_content__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="pi__utm_medium__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="pi__utm_source__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="pi__utm_term__c" nullable="true" pattern="" precision="0" type="id_String"/>
+    </metadata>
+    <metadata connector="MAIN" label="Contact" name="MAIN">
+      <column comment="" key="false" length="18" name="Id" nullable="false" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="IsDeleted" nullable="false" pattern="" precision="0" type="id_Boolean"/>
+      <column comment="" key="false" length="18" name="MasterRecordId" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="18" name="AccountId" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="80" name="LastName" nullable="false" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="FirstName" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="Salutation" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="121" name="Name" nullable="false" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="OtherStreet" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="OtherCity" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="OtherState" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="OtherPostalCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="OtherCountry" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="MailingStreet" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="MailingCity" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="MailingState" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="MailingPostalCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="MailingCountry" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="Phone" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="Fax" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="MobilePhone" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="80" name="Email" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="80" name="Title" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="LeadSource" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="32000" name="Description" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="3" name="CurrencyIsoCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="18" name="OwnerId" nullable="false" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="HasOptedOutOfEmail" nullable="false" pattern="" precision="0" type="id_Boolean"/>
+      <column comment="" key="false" length="0" name="CreatedDate" nullable="false" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss'.000Z'&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="18" name="CreatedById" nullable="false" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="LastModifiedDate" nullable="false" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss'.000Z'&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="18" name="LastModifiedById" nullable="false" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="SystemModstamp" nullable="false" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss'.000Z'&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="0" name="LastActivityDate" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="0" name="LastCURequestDate" nullable="true" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss'.000Z'&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="0" name="LastCUUpdateDate" nullable="true" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss'.000Z'&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="255" name="EmailBouncedReason" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="EmailBouncedDate" nullable="true" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss'.000Z'&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="255" name="MailingList__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="ContactType__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="CMSXREFField__c" nullable="true" pattern="" precision="5" type="id_Double"/>
+      <column comment="" key="false" length="255" name="VARDBPrimaryContact__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="InvalidEmail__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="InvalidMailAddress__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="5" name="ProctorsCampainID__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="10" name="ProctorsContactID__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="PartnerLink_Xfer__c" nullable="false" pattern="" precision="0" type="id_Boolean"/>
+      <column comment="" key="false" length="255" name="Contact_Status__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="Call_Result__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="1300" name="ContactId__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="pi__campaign__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="32000" name="pi__comments__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="pi__created_date__c" nullable="true" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss'.000Z'&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="0" name="pi__first_activity__c" nullable="true" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss'.000Z'&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="255" name="pi__first_search_term__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="pi__first_search_type__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="1024" name="pi__first_touch_url__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="10" name="pi__grade__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="pi__last_activity__c" nullable="true" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss'.000Z'&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="32000" name="pi__notes__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="pi__score__c" nullable="true" pattern="" precision="18" type="id_Double"/>
+      <column comment="" key="false" length="255" name="pi__url__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="pi__utm_campaign__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="pi__utm_content__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="pi__utm_medium__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="pi__utm_source__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="pi__utm_term__c" nullable="true" pattern="" precision="0" type="id_String"/>
+    </metadata>
+    <metadata connector="REJECT" label="Contact" name="REJECT">
+      <column comment="" key="false" length="18" name="Id" nullable="false" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="IsDeleted" nullable="false" pattern="" precision="0" type="id_Boolean"/>
+      <column comment="" key="false" length="18" name="MasterRecordId" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="18" name="AccountId" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="80" name="LastName" nullable="false" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="FirstName" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="Salutation" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="121" name="Name" nullable="false" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="OtherStreet" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="OtherCity" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="OtherState" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="OtherPostalCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="OtherCountry" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="MailingStreet" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="MailingCity" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="MailingState" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="MailingPostalCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="MailingCountry" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="Phone" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="Fax" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="MobilePhone" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="80" name="Email" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="80" name="Title" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="LeadSource" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="32000" name="Description" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="3" name="CurrencyIsoCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="18" name="OwnerId" nullable="false" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="HasOptedOutOfEmail" nullable="false" pattern="" precision="0" type="id_Boolean"/>
+      <column comment="" key="false" length="0" name="CreatedDate" nullable="false" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss'.000Z'&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="18" name="CreatedById" nullable="false" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="LastModifiedDate" nullable="false" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss'.000Z'&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="18" name="LastModifiedById" nullable="false" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="SystemModstamp" nullable="false" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss'.000Z'&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="0" name="LastActivityDate" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="0" name="LastCURequestDate" nullable="true" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss'.000Z'&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="0" name="LastCUUpdateDate" nullable="true" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss'.000Z'&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="255" name="EmailBouncedReason" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="EmailBouncedDate" nullable="true" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss'.000Z'&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="255" name="MailingList__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="ContactType__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="CMSXREFField__c" nullable="true" pattern="" precision="5" type="id_Double"/>
+      <column comment="" key="false" length="255" name="VARDBPrimaryContact__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="InvalidEmail__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="InvalidMailAddress__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="5" name="ProctorsCampainID__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="10" name="ProctorsContactID__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="PartnerLink_Xfer__c" nullable="false" pattern="" precision="0" type="id_Boolean"/>
+      <column comment="" key="false" length="255" name="Contact_Status__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="Call_Result__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="1300" name="ContactId__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="pi__campaign__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="32000" name="pi__comments__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="pi__created_date__c" nullable="true" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss'.000Z'&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="0" name="pi__first_activity__c" nullable="true" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss'.000Z'&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="255" name="pi__first_search_term__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="pi__first_search_type__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="1024" name="pi__first_touch_url__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="10" name="pi__grade__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="pi__last_activity__c" nullable="true" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss'.000Z'&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="32000" name="pi__notes__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="pi__score__c" nullable="true" pattern="" precision="18" type="id_Double"/>
+      <column comment="" key="false" length="255" name="pi__url__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="pi__utm_campaign__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="pi__utm_content__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="pi__utm_medium__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="pi__utm_source__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="pi__utm_term__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String"/>
+      <column defaultValue="" key="false" length="255" name="errorFields" nullable="true" precision="0" sourceType="" type="id_String"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String"/>
+    </metadata>
+  </node>
+  <node componentName="tSalesforceOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="576" posY="608">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSalesforceOutput_3"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_ptL00KOAEeGQMdj4UkA-oA"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tSalesforceConnection_1"/>
+    <elementParameter field="TEXT" name="ENDPOINT" value="&quot;https://www.salesforce.com/services/Soap/u/19.0&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;dealreg@wyse.com&quot;"/>
+    <elementParameter field="TEXT" name="PASS" value="&quot;WyseRegistration11n9xvjqXiDfbqbhzaFAlmF4pa3&quot;"/>
+    <elementParameter field="TEXT" name="TIMEOUT" value="60000"/>
+    <elementParameter field="CLOSED_LIST" name="ACTION" value="upsert"/>
+    <elementParameter field="PREV_COLUMN_LIST" name="UPSERT_KEY_COLUMN" value=""/>
+    <elementParameter field="CLOSED_LIST" name="MODULENAME" value="Opportunity"/>
+    <elementParameter field="TEXT" name="CUSTOM_MODULE_NAME" value="&quot;customModuleName&quot;"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_ptL00KOAEeGQMdj4UkA-oA - Opportunity"/>
+    <elementParameter field="CHECK" name="EXTENDINSERT" value="true"/>
+    <elementParameter field="TEXT" name="COMMIT_LEVEL" value="200"/>
+    <elementParameter field="CHECK" name="CEASE_FOR_ERROR" value="true"/>
+    <elementParameter field="FILE" name="LOGFILENAME" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="USE_PROXY" value="false"/>
+    <elementParameter field="TEXT" name="PROXY_HOST" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROXY_PORT" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROXY_USERNAME" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROXY_PASSWORD" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="NEED_COMPRESSION" value="false"/>
+    <elementParameter field="CHECK" name="RETREIVE_INSERT_ID" value="false"/>
+    <elementParameter field="TEXT" name="CLIENT_ID" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="LABEL" value="Opportunity"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" label="Opportunity" name="tSalesforceOutput_3">
+      <column comment="" key="false" length="18" name="Id" nullable="false" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="IsDeleted" nullable="false" pattern="" precision="0" type="id_Boolean"/>
+      <column comment="" key="false" length="18" name="AccountId" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="18" name="RecordTypeId" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="120" name="Name" nullable="false" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="StageName" nullable="false" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="Amount" nullable="true" pattern="" precision="18" type="id_String"/>
+      <column comment="" key="false" length="0" name="Probability" nullable="true" pattern="" precision="3" type="id_String"/>
+      <column comment="" key="false" length="0" name="CloseDate" nullable="false" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="40" name="Type" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="LeadSource" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="IsClosed" nullable="false" pattern="" precision="0" type="id_Boolean"/>
+      <column comment="" key="false" length="0" name="IsWon" nullable="false" pattern="" precision="0" type="id_Boolean"/>
+      <column comment="" key="false" length="40" name="ForecastCategory" nullable="false" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="ForecastCategoryName" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="3" name="CurrencyIsoCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="18" name="CampaignId" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="HasOpportunityLineItem" nullable="false" pattern="" precision="0" type="id_Boolean"/>
+      <column comment="" key="false" length="18" name="Pricebook2Id" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="18" name="OwnerId" nullable="false" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="CreatedDate" nullable="false" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss'.000Z'&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="18" name="CreatedById" nullable="false" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="LastModifiedDate" nullable="false" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss'.000Z'&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="18" name="LastModifiedById" nullable="false" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="SystemModstamp" nullable="false" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss'.000Z'&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="0" name="LastActivityDate" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="0" name="FiscalQuarter" nullable="true" pattern="" precision="0" type="id_Integer"/>
+      <column comment="" key="false" length="0" name="FiscalYear" nullable="true" pattern="" precision="0" type="id_Integer"/>
+      <column comment="" key="false" length="6" name="Fiscal" nullable="false" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="CampaignNumber__c" nullable="true" pattern="" precision="12" type="id_Double"/>
+      <column comment="" key="false" length="0" name="DateRegistrationGranted__c" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="255" name="CompetitorTC__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="1300" name="OpportunityId__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="18" name="Registered_Partner_Account__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="50" name="Opp_Reg_Dealid__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="Date_Registration_Expired__c" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="255" name="Mobile_Device_types__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="Sales_Channel__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="MDM_Partner__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="1300" name="Opp_Account_ID__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="Dell_Opportunity_Type__c" nullable="true" pattern="" precision="0" type="id_String"/>
+    </metadata>
+    <metadata connector="MAIN" label="Opportunity" name="MAIN">
+      <column comment="" key="false" length="18" name="Id" nullable="false" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="IsDeleted" nullable="false" pattern="" precision="0" type="id_Boolean"/>
+      <column comment="" key="false" length="18" name="AccountId" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="18" name="RecordTypeId" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="120" name="Name" nullable="false" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="StageName" nullable="false" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="Amount" nullable="true" pattern="" precision="18" type="id_String"/>
+      <column comment="" key="false" length="0" name="Probability" nullable="true" pattern="" precision="3" type="id_String"/>
+      <column comment="" key="false" length="0" name="CloseDate" nullable="false" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="40" name="Type" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="LeadSource" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="IsClosed" nullable="false" pattern="" precision="0" type="id_Boolean"/>
+      <column comment="" key="false" length="0" name="IsWon" nullable="false" pattern="" precision="0" type="id_Boolean"/>
+      <column comment="" key="false" length="40" name="ForecastCategory" nullable="false" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="ForecastCategoryName" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="3" name="CurrencyIsoCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="18" name="CampaignId" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="HasOpportunityLineItem" nullable="false" pattern="" precision="0" type="id_Boolean"/>
+      <column comment="" key="false" length="18" name="Pricebook2Id" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="18" name="OwnerId" nullable="false" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="CreatedDate" nullable="false" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss'.000Z'&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="18" name="CreatedById" nullable="false" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="LastModifiedDate" nullable="false" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss'.000Z'&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="18" name="LastModifiedById" nullable="false" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="SystemModstamp" nullable="false" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss'.000Z'&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="0" name="LastActivityDate" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="0" name="FiscalQuarter" nullable="true" pattern="" precision="0" type="id_Integer"/>
+      <column comment="" key="false" length="0" name="FiscalYear" nullable="true" pattern="" precision="0" type="id_Integer"/>
+      <column comment="" key="false" length="6" name="Fiscal" nullable="false" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="CampaignNumber__c" nullable="true" pattern="" precision="12" type="id_Double"/>
+      <column comment="" key="false" length="0" name="DateRegistrationGranted__c" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="255" name="CompetitorTC__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="1300" name="OpportunityId__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="18" name="Registered_Partner_Account__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="50" name="Opp_Reg_Dealid__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="Date_Registration_Expired__c" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="255" name="Mobile_Device_types__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="Sales_Channel__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="MDM_Partner__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="1300" name="Opp_Account_ID__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="Dell_Opportunity_Type__c" nullable="true" pattern="" precision="0" type="id_String"/>
+    </metadata>
+    <metadata connector="REJECT" label="Opportunity" name="REJECT">
+      <column comment="" key="false" length="18" name="Id" nullable="false" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="IsDeleted" nullable="false" pattern="" precision="0" type="id_Boolean"/>
+      <column comment="" key="false" length="18" name="AccountId" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="18" name="RecordTypeId" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="120" name="Name" nullable="false" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="StageName" nullable="false" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="Amount" nullable="true" pattern="" precision="18" type="id_String"/>
+      <column comment="" key="false" length="0" name="Probability" nullable="true" pattern="" precision="3" type="id_String"/>
+      <column comment="" key="false" length="0" name="CloseDate" nullable="false" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="40" name="Type" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="LeadSource" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="IsClosed" nullable="false" pattern="" precision="0" type="id_Boolean"/>
+      <column comment="" key="false" length="0" name="IsWon" nullable="false" pattern="" precision="0" type="id_Boolean"/>
+      <column comment="" key="false" length="40" name="ForecastCategory" nullable="false" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="40" name="ForecastCategoryName" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="3" name="CurrencyIsoCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="18" name="CampaignId" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="HasOpportunityLineItem" nullable="false" pattern="" precision="0" type="id_Boolean"/>
+      <column comment="" key="false" length="18" name="Pricebook2Id" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="18" name="OwnerId" nullable="false" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="CreatedDate" nullable="false" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss'.000Z'&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="18" name="CreatedById" nullable="false" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="LastModifiedDate" nullable="false" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss'.000Z'&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="18" name="LastModifiedById" nullable="false" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="SystemModstamp" nullable="false" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss'.000Z'&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="0" name="LastActivityDate" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="0" name="FiscalQuarter" nullable="true" pattern="" precision="0" type="id_Integer"/>
+      <column comment="" key="false" length="0" name="FiscalYear" nullable="true" pattern="" precision="0" type="id_Integer"/>
+      <column comment="" key="false" length="6" name="Fiscal" nullable="false" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="CampaignNumber__c" nullable="true" pattern="" precision="12" type="id_Double"/>
+      <column comment="" key="false" length="0" name="DateRegistrationGranted__c" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="255" name="CompetitorTC__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="1300" name="OpportunityId__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="18" name="Registered_Partner_Account__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="50" name="Opp_Reg_Dealid__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="Date_Registration_Expired__c" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="255" name="Mobile_Device_types__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="Sales_Channel__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="MDM_Partner__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="1300" name="Opp_Account_ID__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="Dell_Opportunity_Type__c" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String"/>
+      <column defaultValue="" key="false" length="255" name="errorFields" nullable="true" precision="0" sourceType="" type="id_String"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String"/>
+    </metadata>
+  </node>
+  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="416">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMSSqlInput_1"/>
+    <elementParameter field="CHECK" name="START" value="true"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tMSSqlConnection_1"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_c30E4KOAEeGQMdj4UkA-oA"/>
+    <elementParameter field="TEXT" name="HOST" value="context.DRS_Server"/>
+    <elementParameter field="TEXT" name="TYPE" value="MSSQL"/>
+    <elementParameter field="TEXT" name="PORT" value="context.DRS_Port"/>
+    <elementParameter field="TEXT" name="DB_SCHEMA" value="context.DRS_Schema"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.DRS_Database"/>
+    <elementParameter field="TEXT" name="USER" value="context.DRS_Login"/>
+    <elementParameter field="TEXT" name="PASS" value="context.DRS_Password"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_c30E4KOAEeGQMdj4UkA-oA - Deal"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;Deal&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT \&quot;&quot;+context.DRS_Schema+&quot;\&quot;.Deal.\&quot;Id\&quot;,&#xA;&#x9;&#x9;\&quot;&quot;+context.DRS_Schema+&quot;\&quot;.Deal.VendorDealId,&#xA;&#x9;&#x9;\&quot;&quot;+context.DRS_Schema+&quot;\&quot;.Deal.DealName,&#xA;&#x9;&#x9;\&quot;&quot;+context.DRS_Schema+&quot;\&quot;.Deal.ExpectedRevenue,&#xA;&#x9;&#x9;\&quot;&quot;+context.DRS_Schema+&quot;\&quot;.Deal.DealRegistrationStatusId,&#xA;&#x9;&#x9;\&quot;&quot;+context.DRS_Schema+&quot;\&quot;.Deal.CreatedBy,&#xA;&#x9;&#x9;\&quot;&quot;+context.DRS_Schema+&quot;\&quot;.Deal.CreatedOn,&#xA;&#x9;&#x9;\&quot;&quot;+context.DRS_Schema+&quot;\&quot;.Deal.LastModifiedBy,&#xA;&#x9;&#x9;\&quot;&quot;+context.DRS_Schema+&quot;\&quot;.Deal.LastModifiedOn,&#xA;&#x9;&#x9;\&quot;&quot;+context.DRS_Schema+&quot;\&quot;.Deal.CompanyId,&#xA;&#x9;&#x9;\&quot;&quot;+context.DRS_Schema+&quot;\&quot;.Deal.VendorId,&#xA;&#x9;&#x9;\&quot;&quot;+context.DRS_Schema+&quot;\&quot;.Deal.OwnerUserId,&#xA;&#x9;&#x9;\&quot;&quot;+context.DRS_Schema+&quot;\&quot;.Deal.ContactId,&#xA;&#x9;&#x9;\&quot;&quot;+context.DRS_Schema+&quot;\&quot;.Deal.InternalStatusId,&#xA;&#x9;&#x9;\&quot;&quot;+context.DRS_Schema+&quot;\&quot;.Deal.AccountId,&#xA;&#x9;&#x9;\&quot;&quot;+context.DRS_Schema+&quot;\&quot;.Deal.ExpirationDate,&#xA;&#x9;&#x9;\&quot;&quot;+context.DRS_Schema+&quot;\&quot;.Deal.OwnerUserName,&#xA;&#x9;&#x9;\&quot;&quot;+context.DRS_Schema+&quot;\&quot;.Deal.DealCreatedOn,&#xA;&#x9;&#x9;\&quot;&quot;+context.DRS_Schema+&quot;\&quot;.Deal.OpportunityId,&#xA;&#x9;&#x9;\&quot;&quot;+context.DRS_Schema+&quot;\&quot;.Deal.Active,&#xA;&#x9;&#x9;\&quot;&quot;+context.DRS_Schema+&quot;\&quot;.Deal.VendorStatus,&#xA;&#x9;&#x9;\&quot;&quot;+context.DRS_Schema+&quot;\&quot;.Deal.ActiveByVartopia,&#xA;&#x9;&#x9;\&quot;&quot;+context.DRS_Schema+&quot;\&quot;.Deal.ExceptionMessage,&#xA;&#x9;&#x9;\&quot;&quot;+context.DRS_Schema+&quot;\&quot;.Deal.Visible,&#xA;&#x9;&#x9;\&quot;&quot;+context.DRS_Schema+&quot;\&quot;.Deal.DealKey,&#xA;&#x9;&#x9;\&quot;&quot;+context.DRS_Schema+&quot;\&quot;.Deal.ParentVendorDealId,&#xA;&#x9;&#x9;\&quot;&quot;+context.DRS_Schema+&quot;\&quot;.Deal.ApprovalId,&#xA;&#x9;&#x9;\&quot;&quot;+context.DRS_Schema+&quot;\&quot;.Deal.SubmittedOn,&#xA;&#x9;&#x9;\&quot;&quot;+context.DRS_Schema+&quot;\&quot;.Deal.IsDataValidToSubmit,&#xA;&#x9;&#x9;\&quot;&quot;+context.DRS_Schema+&quot;\&quot;.Deal.Offline,&#xA;&#x9;&#x9;\&quot;&quot;+context.DRS_Schema+&quot;\&quot;.Deal.VartopiaInitiated,&#xA;&#x9;&#x9;\&quot;&quot;+context.DRS_Schema+&quot;\&quot;.Deal.Stub,&#xA;&#x9;&#x9;\&quot;&quot;+context.DRS_Schema+&quot;\&quot;.Deal.VartopiaManaged,&#xA;&#x9;&#x9;\&quot;&quot;+context.DRS_Schema+&quot;\&quot;.Deal.CurrencyId,&#xA;&#x9;&#x9;\&quot;&quot;+context.DRS_Schema+&quot;\&quot;.Deal.VartopiaTransactionId,&#xA;&#x9;&#x9;\&quot;&quot;+context.DRS_Schema+&quot;\&quot;.Deal.VendorStatusMessage,&#xA;&#x9;&#x9;\&quot;&quot;+context.DRS_Schema+&quot;\&quot;.Deal.IsOwnerOverride,&#xA;&#x9;&#x9;\&quot;&quot;+context.DRS_Schema+&quot;\&quot;.Deal.DistributionGroupId,&#xA;&#x9;&#x9;\&quot;&quot;+context.DRS_Schema+&quot;\&quot;.Deal.ExpectedClose,&#xA;&#x9;&#x9;\&quot;&quot;+context.DRS_Schema+&quot;\&quot;.Deal.ExternalId,&#xA;&#x9;&#x9;\&quot;&quot;+context.DRS_Schema+&quot;\&quot;.Deal.DealPushStatusId,&#xA;&#x9;&#x9;\&quot;&quot;+context.DRS_Schema+&quot;\&quot;.Deal.SalesTerritoryId,&#xA;&#x9;&#x9;\&quot;&quot;+context.DRS_Schema+&quot;\&quot;.Deal.SubmittedBy,&#xA;&#x9;&#x9;\&quot;&quot;+context.DRS_Schema+&quot;\&quot;.Deal.CompanyDealId&quot;&#xA;+&quot;&#xA;FROM&#x9;\&quot;&quot;+context.DRS_Schema+&quot;\&quot;.Deal where Id = &quot;+context.opportunityID"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="id_MSSQL"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="context.DRS_AdditionalParams"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="Id"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="VendorDealId"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DealName"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ExpectedRevenue"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DealRegistrationStatusId"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CreatedBy"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CreatedOn"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="LastModifiedBy"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="LastModifiedOn"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CompanyId"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="VendorId"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="OwnerUserId"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ContactId"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="InternalStatusId"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="AccountId"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ExpirationDate"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="OwnerUserName"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DealCreatedOn"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="OpportunityId"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Active"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="VendorStatus"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ActiveByVartopia"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ExceptionMessage"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Visible"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DealKey"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ParentVendorDealId"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ApprovalId"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SubmittedOn"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="IsDataValidToSubmit"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Offline"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="VartopiaInitiated"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Stub"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="VartopiaManaged"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CurrencyId"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="VartopiaTransactionId"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="VendorStatusMessage"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="IsOwnerOverride"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DistributionGroupId"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ExpectedClose"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ExternalId"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DealPushStatusId"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SalesTerritoryId"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SubmittedBy"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CompanyDealId"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="LABEL" value="__TABLE__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" label="Deal" name="tMSSqlInput_1">
+      <column comment="" key="true" length="10" name="Id" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer"/>
+      <column comment="" key="false" length="256" name="VendorDealId" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" length="256" name="DealName" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" length="19" name="ExpectedRevenue" nullable="true" pattern="" precision="0" sourceType="VARBINARY" type="id_Object"/>
+      <column comment="" key="true" length="10" name="DealRegistrationStatusId" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer"/>
+      <column comment="" key="false" length="36" name="CreatedBy" nullable="true" pattern="" precision="0" sourceType="VARBINARY" type="id_Object"/>
+      <column comment="" key="false" length="23" name="CreatedOn" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date"/>
+      <column comment="" key="false" length="36" name="LastModifiedBy" nullable="true" pattern="" precision="0" sourceType="VARBINARY" type="id_Object"/>
+      <column comment="" key="false" length="23" name="LastModifiedOn" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date"/>
+      <column comment="" key="true" length="10" name="CompanyId" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer"/>
+      <column comment="" key="true" length="10" name="VendorId" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer"/>
+      <column comment="" key="true" length="36" name="OwnerUserId" nullable="true" pattern="" precision="0" sourceType="VARBINARY" type="id_Object"/>
+      <column comment="" key="true" length="10" name="ContactId" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer"/>
+      <column comment="" key="true" length="10" name="InternalStatusId" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer"/>
+      <column comment="" key="true" length="10" name="AccountId" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer"/>
+      <column comment="" key="false" length="23" name="ExpirationDate" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date"/>
+      <column comment="" key="false" length="1000" name="OwnerUserName" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" length="23" name="DealCreatedOn" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date"/>
+      <column comment="" key="true" length="10" name="OpportunityId" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer"/>
+      <column comment="" key="false" length="1" name="Active" nullable="true" pattern="" precision="0" sourceType="BIT" type="id_Boolean"/>
+      <column comment="" key="false" length="256" name="VendorStatus" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" length="1" name="ActiveByVartopia" nullable="true" pattern="" precision="0" sourceType="BIT" type="id_Boolean"/>
+      <column comment="" key="false" length="1073741823" name="ExceptionMessage" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" length="1" name="Visible" nullable="false" pattern="" precision="0" sourceType="BIT" type="id_Boolean"/>
+      <column comment="" key="false" length="500" name="DealKey" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" length="500" name="ParentVendorDealId" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" length="500" name="ApprovalId" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" length="23" name="SubmittedOn" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date"/>
+      <column comment="" key="false" length="1" name="IsDataValidToSubmit" nullable="true" pattern="" precision="0" sourceType="BIT" type="id_Boolean"/>
+      <column comment="" key="false" length="1" name="Offline" nullable="true" pattern="" precision="0" sourceType="BIT" type="id_Boolean"/>
+      <column comment="" key="false" length="1" name="VartopiaInitiated" nullable="true" pattern="" precision="0" sourceType="BIT" type="id_Boolean"/>
+      <column comment="" key="false" length="1" name="Stub" nullable="true" pattern="" precision="0" sourceType="BIT" type="id_Boolean"/>
+      <column comment="" key="false" length="1" name="VartopiaManaged" nullable="true" pattern="" precision="0" sourceType="BIT" type="id_Boolean"/>
+      <column comment="" key="true" length="10" name="CurrencyId" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer"/>
+      <column comment="" key="false" length="36" name="VartopiaTransactionId" nullable="false" pattern="" precision="0" sourceType="VARBINARY" type="id_Object"/>
+      <column comment="" key="false" length="1073741823" name="VendorStatusMessage" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" length="1" name="IsOwnerOverride" nullable="true" pattern="" precision="0" sourceType="BIT" type="id_Boolean"/>
+      <column comment="" key="true" length="10" name="DistributionGroupId" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer"/>
+      <column comment="" key="false" length="23" name="ExpectedClose" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date"/>
+      <column comment="" key="false" length="50" name="ExternalId" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="true" length="10" name="DealPushStatusId" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer"/>
+      <column comment="" key="true" length="10" name="SalesTerritoryId" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer"/>
+      <column comment="" key="false" length="1000" name="SubmittedBy" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" length="256" name="CompanyDealId" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String"/>
+    </metadata>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="288" posY="416">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_1"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_BNnEIKN_EeGQMdj4UkA-oA-tMap_1-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <nodeData xsi:type="MapperData">
+      <uiProperties/>
+      <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
+      <inputTables sizeState="INTERMEDIATE" name="row1" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="Id" type="id_Integer"/>
+        <mapperTableEntries name="VendorDealId" type="id_String" nullable="true"/>
+        <mapperTableEntries name="DealName" type="id_String" nullable="true"/>
+        <mapperTableEntries name="ExpectedRevenue" type="id_Object" nullable="true"/>
+        <mapperTableEntries name="DealRegistrationStatusId" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="CreatedBy" type="id_Object" nullable="true"/>
+        <mapperTableEntries name="CreatedOn" type="id_Date" nullable="true"/>
+        <mapperTableEntries name="LastModifiedBy" type="id_Object" nullable="true"/>
+        <mapperTableEntries name="LastModifiedOn" type="id_Date" nullable="true"/>
+        <mapperTableEntries name="CompanyId" type="id_Integer"/>
+        <mapperTableEntries name="VendorId" type="id_Integer"/>
+        <mapperTableEntries name="OwnerUserId" type="id_Object" nullable="true"/>
+        <mapperTableEntries name="ContactId" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="InternalStatusId" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="AccountId" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="ExpirationDate" type="id_Date" nullable="true"/>
+        <mapperTableEntries name="OwnerUserName" type="id_String" nullable="true"/>
+        <mapperTableEntries name="DealCreatedOn" type="id_Date" nullable="true"/>
+        <mapperTableEntries name="OpportunityId" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="Active" type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="VendorStatus" type="id_String" nullable="true"/>
+        <mapperTableEntries name="ActiveByVartopia" type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="ExceptionMessage" type="id_String" nullable="true"/>
+        <mapperTableEntries name="Visible" type="id_Boolean"/>
+        <mapperTableEntries name="DealKey" type="id_String" nullable="true"/>
+        <mapperTableEntries name="ParentVendorDealId" type="id_String" nullable="true"/>
+        <mapperTableEntries name="ApprovalId" type="id_String" nullable="true"/>
+        <mapperTableEntries name="SubmittedOn" type="id_Date" nullable="true"/>
+        <mapperTableEntries name="IsDataValidToSubmit" type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="Offline" type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="VartopiaInitiated" type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="Stub" type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="VartopiaManaged" type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="CurrencyId" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="VartopiaTransactionId" type="id_Object"/>
+        <mapperTableEntries name="VendorStatusMessage" type="id_String" nullable="true"/>
+        <mapperTableEntries name="IsOwnerOverride" type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="DistributionGroupId" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="ExpectedClose" type="id_Date" nullable="true"/>
+        <mapperTableEntries name="ExternalId" type="id_String" nullable="true"/>
+        <mapperTableEntries name="DealPushStatusId" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="SalesTerritoryId" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="SubmittedBy" type="id_String" nullable="true"/>
+        <mapperTableEntries name="CompanyDealId" type="id_String" nullable="true"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tMSSqlConnection_1" offsetLabelX="0" offsetLabelY="0" source="tMSSqlConnection_1" target="tSalesforceConnection_1">
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk1"/>
+    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
+    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tMSSqlInput_1" offsetLabelX="0" offsetLabelY="0" source="tMSSqlInput_1" target="tMap_1">
+    <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
+      <elementValue elementRef="TRACE_COLUMN" value="Id"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="VendorDealId"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="DealName"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ExpectedRevenue"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="DealRegistrationStatusId"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CreatedBy"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CreatedOn"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="LastModifiedBy"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="LastModifiedOn"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CompanyId"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="VendorId"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="OwnerUserId"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ContactId"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="InternalStatusId"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AccountId"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ExpirationDate"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="OwnerUserName"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="DealCreatedOn"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="OpportunityId"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Active"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="VendorStatus"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ActiveByVartopia"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ExceptionMessage"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Visible"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="DealKey"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ParentVendorDealId"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ApprovalId"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="SubmittedOn"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="IsDataValidToSubmit"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Offline"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="VartopiaInitiated"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Stub"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="VartopiaManaged"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CurrencyId"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="VartopiaTransactionId"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="VendorStatusMessage"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="IsOwnerOverride"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="DistributionGroupId"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ExpectedClose"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ExternalId"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="DealPushStatusId"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="SalesTerritoryId"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="SubmittedBy"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CompanyDealId"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
+    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
+    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
+    <elementParameter field="TABLE" name="THRESHLODS"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1"/>
+    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
+    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+    <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
+    <elementParameter field="TABLE" name="CONDITIONS"/>
+    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
+    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;"/>
+  </connection>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMSSqlConnection_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSalesforceConnection_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSalesforceOutput_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSalesforceOutput_2"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSalesforceOutput_3"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMSSqlInput_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+</talendfile:ProcessType>

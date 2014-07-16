@@ -1,0 +1,813 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendXMLMap="http://www.talend.org/xmlmap" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default">
+  <context confirmationNeeded="false" name="Default"/>
+  <parameters>
+    <elementParameter field="TEXT" name="JOB_RUN_VM_ARGUMENTS" value=" -Xms256M -Xmx1024M"/>
+    <elementParameter field="CHECK" name="JOB_RUN_VM_ARGUMENTS_OPTION" value="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="96"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPTIONS" value="none"/>
+    <elementParameter field="TEXT" name="OEM_CUSTOM_ATTRIBUTE" value=""/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" value="ORACLE_10"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_10"/>
+    <routinesParameter id="_52ZfoIibEeG4O7tWobvoyQ" name="DataOperation"/>
+    <routinesParameter id="_52e_MIibEeG4O7tWobvoyQ" name="Mathematical"/>
+    <routinesParameter id="_52iCgIibEeG4O7tWobvoyQ" name="Numeric"/>
+    <routinesParameter id="_52kewIibEeG4O7tWobvoyQ" name="Relational"/>
+    <routinesParameter id="_52xTEIibEeG4O7tWobvoyQ" name="SQLike"/>
+    <routinesParameter id="_52m7AIibEeG4O7tWobvoyQ" name="StringHandling"/>
+    <routinesParameter id="_52pXQIibEeG4O7tWobvoyQ" name="TalendDataGenerator"/>
+    <routinesParameter id="_52rzgIibEeG4O7tWobvoyQ" name="TalendDate"/>
+    <routinesParameter id="_52uPwIibEeG4O7tWobvoyQ" name="TalendString"/>
+    <routinesParameter id="_Ff4CQIx3EeC8wqHA4D4c-Q" name="ActiveIdSets"/>
+    <routinesParameter id="_NkZ6AJEEEeC4zfWT--Xipg" name="BRules"/>
+    <routinesParameter id="_8qwkYFjNEdyj6eiqDt60Og" name="DemoRoutines"/>
+    <routinesParameter id="_HKXfQGIZEd26GZmhFZLTPA" name="GetRandomPhoneNum"/>
+    <routinesParameter id="_6zR_YJULEeCTXJog9NYiQA" name="ObjectId"/>
+    <routinesParameter id="_OqIRQMKvEeC_Dalu0QQgxA" name="ParentSort"/>
+    <routinesParameter id="_AOEnEBVTEeG-MPI9uzJyiQ" name="StringFunctions"/>
+    <routinesParameter id="_3QTesIuFEeCTp5FyF0JIKg" name="StringId"/>
+    <routinesParameter id="_1uvZwIuPEeCTp5FyF0JIKg" name="TerritoryParentMap"/>
+  </parameters>
+  <node componentName="tFileInputExcel" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-32" posY="224">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileInputExcel_1"/>
+    <elementParameter field="CHECK" name="START" value="true"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_uyCAcN2kEeGsqZT-9iBmlA"/>
+    <elementParameter field="CHECK" name="VERSION_2007" value="true"/>
+    <elementParameter field="FILE" name="FILENAME" value="&quot;C:/Users/JDarby/Desktop/NetAppExcel.xlsx&quot;"/>
+    <elementParameter field="CHECK" name="ALL_SHEETS" value="false"/>
+    <elementParameter field="TABLE" name="SHEETLIST">
+      <elementValue elementRef="SHEETNAME" value="&quot;Sheet1&quot;"/>
+      <elementValue elementRef="USE_REGEX" value=""/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="HEADER" value="1"/>
+    <elementParameter field="TEXT" name="FOOTER" value="7"/>
+    <elementParameter field="TEXT" name="LIMIT" value=""/>
+    <elementParameter field="CHECK" name="AFFECT_EACH_SHEET" value="false"/>
+    <elementParameter field="TEXT" name="FIRST_COLUMN" value="1"/>
+    <elementParameter field="TEXT" name="LAST_COLUMN" value=""/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_uyCAcN2kEeGsqZT-9iBmlA - metadata"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA_REJECT:SCHEMA_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA_REJECT:REPOSITORY_SCHEMA_TYPE" value="_uyCAcN2kEeGsqZT-9iBmlA - metadata"/>
+    <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
+    <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" value="&quot;,&quot;"/>
+    <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" value="&quot;.&quot;"/>
+    <elementParameter field="CHECK" name="TRIMALL" value="false"/>
+    <elementParameter field="TABLE" name="TRIMSELECT">
+      <elementValue elementRef="SCHEMA_COLUMN" value="accountAddressLine1"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="accountAddressLine2"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="accountCity"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="accountCountry"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="accountName"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="accountState"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="accountZipCode"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="cmatAddressId"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="dealRegistrationCreateDate"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="dealRegistrationCloseDate"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="dealRegistrationExpiryDate"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="dealRegistrationId"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="dealRegistrationName"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="dealRegistrationStatus"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="distributorName"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="estimatedBookingAmountCurrency"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="estimatedBookingAmount"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="estimatedCloseDate"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="netAppChannelManager"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="netAppSalesRep"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="orderBookDate"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="platformType"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="primaryCompetitor"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="resellingPartnerName"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="secondaryCompetitor"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SFDCFederationID"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="VARSalesRepresentative"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="VARSalesRepresentativeEmail"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="vartopiaDealRegistrationId"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="resellerRole"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;UTF-8&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="CUSTOM"/>
+    <elementParameter field="CHECK" name="READ_REAL_VALUE" value="false"/>
+    <elementParameter field="CHECK" name="STOPREAD_ON_EMPTYROW" value="false"/>
+    <elementParameter field="CHECK" name="NOVALIDATE_ON_CELL" value="false"/>
+    <elementParameter field="CHECK" name="SUPPRESS_WARN" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="NetAppExcel"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" label="metadata" name="tFileInputExcel_1">
+      <column comment="" key="false" length="27" name="accountAddressLine1" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="15" name="accountAddressLine2" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="14" name="accountCity" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="13" name="accountCountry" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="62" name="accountName" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="2" name="accountState" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="5" name="accountZipCode" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="7" name="cmatAddressId" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="28" name="dealRegistrationCreateDate" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="28" name="dealRegistrationCloseDate" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="28" name="dealRegistrationExpiryDate" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="10" name="dealRegistrationId" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="47" name="dealRegistrationName" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="dealRegistrationStatus" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="41" name="distributorName" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="3" name="estimatedBookingAmountCurrency" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="7" name="estimatedBookingAmount" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="28" name="estimatedCloseDate" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="16" name="netAppChannelManager" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="29" name="netAppSalesRep" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="28" name="orderBookDate" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="8" name="platformType" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="29" name="primaryCompetitor" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="21" name="resellingPartnerName" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="34" name="secondaryCompetitor" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="SFDCFederationID" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="VARSalesRepresentative" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="VARSalesRepresentativeEmail" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="vartopiaDealRegistrationId" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="8" name="resellerRole" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+    </metadata>
+    <metadata connector="REJECT" label="metadata" name="REJECT">
+      <column comment="" key="false" length="27" name="accountAddressLine1" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="15" name="accountAddressLine2" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="14" name="accountCity" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="13" name="accountCountry" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="62" name="accountName" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="2" name="accountState" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="5" name="accountZipCode" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="7" name="cmatAddressId" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="28" name="dealRegistrationCreateDate" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="28" name="dealRegistrationCloseDate" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="28" name="dealRegistrationExpiryDate" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="10" name="dealRegistrationId" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="47" name="dealRegistrationName" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="dealRegistrationStatus" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="41" name="distributorName" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="3" name="estimatedBookingAmountCurrency" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="7" name="estimatedBookingAmount" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="28" name="estimatedCloseDate" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="16" name="netAppChannelManager" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="29" name="netAppSalesRep" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="28" name="orderBookDate" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="8" name="platformType" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="29" name="primaryCompetitor" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="21" name="resellingPartnerName" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="34" name="secondaryCompetitor" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="SFDCFederationID" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="VARSalesRepresentative" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="VARSalesRepresentativeEmail" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="vartopiaDealRegistrationId" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="8" name="resellerRole" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String"/>
+    </metadata>
+  </node>
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="96" posY="224">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogRow_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
+    <elementParameter field="CHECK" name="DUMMY" value="true"/>
+    <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
+    <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
+    <elementParameter field="RADIO" name="VERTICAL" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE" value="true"/>
+    <elementParameter field="RADIO" name="PRINT_LABEL" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" value="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;|&quot;"/>
+    <elementParameter field="CHECK" name="PRINT_HEADER" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_COLNAMES" value="false"/>
+    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" value="false"/>
+    <elementParameter field="TABLE" name="LENGTHS">
+      <elementValue elementRef="SCHEMA_COLUMN" value="accountAddressLine1"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="accountAddressLine2"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="accountCity"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="accountCountry"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="accountName"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="accountState"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="accountZipCode"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="cmatAddressId"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="dealRegistrationCreateDate"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="dealRegistrationCloseDate"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="dealRegistrationExpiryDate"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="dealRegistrationId"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="dealRegistrationName"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="dealRegistrationStatus"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="distributorName"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="estimatedBookingAmountCurrency"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="estimatedBookingAmount"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="estimatedCloseDate"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="netAppChannelManager"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="netAppSalesRep"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="orderBookDate"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="platformType"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="primaryCompetitor"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="resellingPartnerName"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="secondaryCompetitor"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SFDCFederationID"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="VARSalesRepresentative"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="VARSalesRepresentativeEmail"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="vartopiaDealRegistrationId"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="resellerRole"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" label="metadata" name="tLogRow_1">
+      <column comment="" key="false" length="27" name="accountAddressLine1" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="15" name="accountAddressLine2" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="14" name="accountCity" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="13" name="accountCountry" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="62" name="accountName" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="2" name="accountState" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="5" name="accountZipCode" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="7" name="cmatAddressId" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="28" name="dealRegistrationCreateDate" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="28" name="dealRegistrationCloseDate" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="28" name="dealRegistrationExpiryDate" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="10" name="dealRegistrationId" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="47" name="dealRegistrationName" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="dealRegistrationStatus" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="41" name="distributorName" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="3" name="estimatedBookingAmountCurrency" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="7" name="estimatedBookingAmount" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="28" name="estimatedCloseDate" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="16" name="netAppChannelManager" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="29" name="netAppSalesRep" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="28" name="orderBookDate" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Date"/>
+      <column comment="" key="false" length="8" name="platformType" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="29" name="primaryCompetitor" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="21" name="resellingPartnerName" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="34" name="secondaryCompetitor" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="SFDCFederationID" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="VARSalesRepresentative" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="VARSalesRepresentativeEmail" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="0" name="vartopiaDealRegistrationId" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="8" name="resellerRole" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+    </metadata>
+  </node>
+  <node componentName="tXMLMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="256" posY="224">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tXMLMap_1"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" label="out1" name="out1">
+      <column comment="" key="false" name="newColumn" nullable="true" pattern="" sourceType="" type="id_Document"/>
+    </metadata>
+    <nodeData xsi:type="TalendXMLMap:XmlMapData">
+      <inputTrees name="row2" matchingMode="ALL_ROWS" lookupMode="LOAD_ONCE">
+        <nodes name="accountAddressLine1" type="id_String" outgoingConnections="//@node.2/@nodeData/@connections.0 //@node.2/@nodeData/@connections.1" xpath="row2/accountAddressLine1"/>
+        <nodes name="accountAddressLine2" type="id_String" outgoingConnections="//@node.2/@nodeData/@connections.2 //@node.2/@nodeData/@connections.3" xpath="row2/accountAddressLine2"/>
+        <nodes name="accountCity" type="id_String" outgoingConnections="//@node.2/@nodeData/@connections.4 //@node.2/@nodeData/@connections.5" xpath="row2/accountCity"/>
+        <nodes name="accountCountry" type="id_String" outgoingConnections="//@node.2/@nodeData/@connections.6 //@node.2/@nodeData/@connections.7" xpath="row2/accountCountry"/>
+        <nodes name="accountName" type="id_String" outgoingConnections="//@node.2/@nodeData/@connections.8 //@node.2/@nodeData/@connections.9" xpath="row2/accountName"/>
+        <nodes name="accountState" type="id_String" outgoingConnections="//@node.2/@nodeData/@connections.10 //@node.2/@nodeData/@connections.11" xpath="row2/accountState"/>
+        <nodes name="accountZipCode" type="id_String" outgoingConnections="//@node.2/@nodeData/@connections.12 //@node.2/@nodeData/@connections.13" xpath="row2/accountZipCode"/>
+        <nodes name="cmatAddressId" type="id_String" outgoingConnections="//@node.2/@nodeData/@connections.14" xpath="row2/cmatAddressId"/>
+        <nodes name="dealRegistrationCreateDate" type="id_Date" outgoingConnections="//@node.2/@nodeData/@connections.17" xpath="row2/dealRegistrationCreateDate"/>
+        <nodes name="dealRegistrationCloseDate" type="id_Date" outgoingConnections="//@node.2/@nodeData/@connections.15 //@node.2/@nodeData/@connections.16" xpath="row2/dealRegistrationCloseDate"/>
+        <nodes name="dealRegistrationExpiryDate" type="id_Date" outgoingConnections="//@node.2/@nodeData/@connections.18" xpath="row2/dealRegistrationExpiryDate"/>
+        <nodes name="dealRegistrationId" type="id_String" outgoingConnections="//@node.2/@nodeData/@connections.19" xpath="row2/dealRegistrationId"/>
+        <nodes name="dealRegistrationName" type="id_String" outgoingConnections="//@node.2/@nodeData/@connections.20 //@node.2/@nodeData/@connections.21" xpath="row2/dealRegistrationName"/>
+        <nodes name="dealRegistrationStatus" type="id_String" outgoingConnections="//@node.2/@nodeData/@connections.22" xpath="row2/dealRegistrationStatus"/>
+        <nodes name="distributorName" type="id_String" outgoingConnections="//@node.2/@nodeData/@connections.23" xpath="row2/distributorName"/>
+        <nodes name="estimatedBookingAmountCurrency" type="id_String" outgoingConnections="//@node.2/@nodeData/@connections.26" xpath="row2/estimatedBookingAmountCurrency"/>
+        <nodes name="estimatedBookingAmount" type="id_String" outgoingConnections="//@node.2/@nodeData/@connections.24 //@node.2/@nodeData/@connections.27" xpath="row2/estimatedBookingAmount"/>
+        <nodes name="estimatedCloseDate" type="id_Date" outgoingConnections="//@node.2/@nodeData/@connections.25" xpath="row2/estimatedCloseDate"/>
+        <nodes name="netAppChannelManager" type="id_String" outgoingConnections="//@node.2/@nodeData/@connections.28 //@node.2/@nodeData/@connections.29" xpath="row2/netAppChannelManager"/>
+        <nodes name="netAppSalesRep" type="id_String" outgoingConnections="//@node.2/@nodeData/@connections.30 //@node.2/@nodeData/@connections.31" xpath="row2/netAppSalesRep"/>
+        <nodes name="orderBookDate" type="id_Date" outgoingConnections="//@node.2/@nodeData/@connections.32 //@node.2/@nodeData/@connections.33" xpath="row2/orderBookDate"/>
+        <nodes name="platformType" type="id_String" outgoingConnections="//@node.2/@nodeData/@connections.34 //@node.2/@nodeData/@connections.35" xpath="row2/platformType"/>
+        <nodes name="primaryCompetitor" type="id_String" outgoingConnections="//@node.2/@nodeData/@connections.36 //@node.2/@nodeData/@connections.37" xpath="row2/primaryCompetitor"/>
+        <nodes name="resellingPartnerName" type="id_String" outgoingConnections="//@node.2/@nodeData/@connections.39" xpath="row2/resellingPartnerName"/>
+        <nodes name="secondaryCompetitor" type="id_String" outgoingConnections="//@node.2/@nodeData/@connections.40 //@node.2/@nodeData/@connections.41" xpath="row2/secondaryCompetitor"/>
+        <nodes name="SFDCFederationID" type="id_String" outgoingConnections="//@node.2/@nodeData/@connections.42 //@node.2/@nodeData/@connections.43" xpath="row2/SFDCFederationID"/>
+        <nodes name="VARSalesRepresentative" type="id_String" outgoingConnections="//@node.2/@nodeData/@connections.44 //@node.2/@nodeData/@connections.45" xpath="row2/VARSalesRepresentative"/>
+        <nodes name="VARSalesRepresentativeEmail" type="id_String" outgoingConnections="//@node.2/@nodeData/@connections.46 //@node.2/@nodeData/@connections.47" xpath="row2/VARSalesRepresentativeEmail"/>
+        <nodes name="vartopiaDealRegistrationId" type="id_String" outgoingConnections="//@node.2/@nodeData/@connections.48 //@node.2/@nodeData/@connections.49" xpath="row2/vartopiaDealRegistrationId"/>
+        <nodes name="resellerRole" type="id_String" outgoingConnections="//@node.2/@nodeData/@connections.38" xpath="row2/resellerRole"/>
+      </inputTrees>
+      <outputTrees activateCondensedTool="true" name="out1" allInOne="true">
+        <nodes name="newColumn" expression="" type="id_Document" xpath="out1/newColumn" pattern="">
+          <children xsi:type="TalendXMLMap:OutputTreeNode" name="soapenv:Envelope" type="id_String" xpath="out1.newColumn:/soapenv:Envelope" main="true">
+            <children xsi:type="TalendXMLMap:OutputTreeNode" name="soapenv" type="id_String" xpath="out1.newColumn:/soapenv:Envelope/xmlns:soapenv" nodeType="NAME_SPACE" defaultValue="http://schemas.xmlsoap.org/soap/envelope/"/>
+            <children xsi:type="TalendXMLMap:OutputTreeNode" name="xsi" type="id_String" xpath="out1.newColumn:/soapenv:Envelope/xmlns:xsi" nodeType="NAME_SPACE" defaultValue="http://www.w3.org/2001/XMLSchema-instance"/>
+            <children xsi:type="TalendXMLMap:OutputTreeNode" name="soapenv:Body" type="id_String" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body" main="true">
+              <children xsi:type="TalendXMLMap:OutputTreeNode" name="fetchDealRegResponse" type="id_String" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse" main="true">
+                <children xsi:type="TalendXMLMap:OutputTreeNode" name="(default)" type="id_String" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/xmlns:(default)" nodeType="NAME_SPACE" defaultValue="http://soap.sforce.com/schemas/class/DR_VI_CreateNewDR_WS"/>
+                <children xsi:type="TalendXMLMap:OutputTreeNode" name="result" type="id_String" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result" loop="true" main="true">
+                  <children xsi:type="TalendXMLMap:OutputTreeNode" name="(default)" type="id_String" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/xmlns:(default)" nodeType="NAME_SPACE" defaultValue="http://soap.sforce.com/schemas/class/DR_VI_CreateNewDR_WS"/>
+                  <children xsi:type="TalendXMLMap:OutputTreeNode" name="accountAddressLine1" expression="row2.accountAddressLine1" type="id_String" incomingConnections="//@node.2/@nodeData/@connections.0" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/accountAddressLine1">
+                    <children xsi:type="TalendXMLMap:OutputTreeNode" name="xsi:nil" expression="row2.accountAddressLine1 == null || row2.accountAddressLine1.equals(&quot;&quot;)" type="id_String" incomingConnections="//@node.2/@nodeData/@connections.1" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/accountAddressLine1/@xsi:nil" nodeType="ATTRIBUT"/>
+                    <children xsi:type="TalendXMLMap:OutputTreeNode" name="(default)" type="id_String" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/accountAddressLine1/xmlns:(default)" nodeType="NAME_SPACE" defaultValue="http://soap.sforce.com/schemas/class/DR_VI_CreateNewDR_WS"/>
+                  </children>
+                  <children xsi:type="TalendXMLMap:OutputTreeNode" name="accountAddressLine2" expression="row2.accountAddressLine2" type="id_String" incomingConnections="//@node.2/@nodeData/@connections.2" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/accountAddressLine2">
+                    <children xsi:type="TalendXMLMap:OutputTreeNode" name="xsi:nil" expression="row2.accountAddressLine2 == null || row2.accountAddressLine2.equals(&quot;&quot;)" type="id_String" incomingConnections="//@node.2/@nodeData/@connections.3" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/accountAddressLine2/@xsi:nil" nodeType="ATTRIBUT"/>
+                    <children xsi:type="TalendXMLMap:OutputTreeNode" name="(default)" type="id_String" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/accountAddressLine2/xmlns:(default)" nodeType="NAME_SPACE" defaultValue="http://soap.sforce.com/schemas/class/DR_VI_CreateNewDR_WS"/>
+                  </children>
+                  <children xsi:type="TalendXMLMap:OutputTreeNode" name="accountCity" expression="row2.accountCity" type="id_String" incomingConnections="//@node.2/@nodeData/@connections.4" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/accountCity">
+                    <children xsi:type="TalendXMLMap:OutputTreeNode" name="xsi:nil" expression="row2.accountCity == null || row2.accountCity.equals(&quot;&quot;)" type="id_String" incomingConnections="//@node.2/@nodeData/@connections.5" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/accountCity/@xsi:nil" nodeType="ATTRIBUT"/>
+                    <children xsi:type="TalendXMLMap:OutputTreeNode" name="(default)" type="id_String" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/accountCity/xmlns:(default)" nodeType="NAME_SPACE" defaultValue="http://soap.sforce.com/schemas/class/DR_VI_CreateNewDR_WS"/>
+                  </children>
+                  <children xsi:type="TalendXMLMap:OutputTreeNode" name="accountCountry" expression="row2.accountCountry" type="id_String" incomingConnections="//@node.2/@nodeData/@connections.6" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/accountCountry">
+                    <children xsi:type="TalendXMLMap:OutputTreeNode" name="xsi:nil" expression="row2.accountCountry == null || row2.accountCountry.equals(&quot;&quot;)" type="id_String" incomingConnections="//@node.2/@nodeData/@connections.7" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/accountCountry/@xsi:nil" nodeType="ATTRIBUT"/>
+                    <children xsi:type="TalendXMLMap:OutputTreeNode" name="(default)" type="id_String" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/accountCountry/xmlns:(default)" nodeType="NAME_SPACE" defaultValue="http://soap.sforce.com/schemas/class/DR_VI_CreateNewDR_WS"/>
+                  </children>
+                  <children xsi:type="TalendXMLMap:OutputTreeNode" name="accountName" expression="row2.accountName" type="id_String" incomingConnections="//@node.2/@nodeData/@connections.8" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/accountName">
+                    <children xsi:type="TalendXMLMap:OutputTreeNode" name="xsi:nil" expression="row2.accountName == null || row2.accountName.equals(&quot;&quot;)" type="id_String" incomingConnections="//@node.2/@nodeData/@connections.9" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/accountName/@xsi:nil" nodeType="ATTRIBUT"/>
+                    <children xsi:type="TalendXMLMap:OutputTreeNode" name="(default)" type="id_String" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/accountName/xmlns:(default)" nodeType="NAME_SPACE" defaultValue="http://soap.sforce.com/schemas/class/DR_VI_CreateNewDR_WS"/>
+                  </children>
+                  <children xsi:type="TalendXMLMap:OutputTreeNode" name="accountState" expression="row2.accountState" type="id_String" incomingConnections="//@node.2/@nodeData/@connections.10" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/accountState">
+                    <children xsi:type="TalendXMLMap:OutputTreeNode" name="xsi:nil" expression="row2.accountState == null || row2.accountState.equals(&quot;&quot;)" type="id_String" incomingConnections="//@node.2/@nodeData/@connections.11" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/accountState/@xsi:nil" nodeType="ATTRIBUT"/>
+                    <children xsi:type="TalendXMLMap:OutputTreeNode" name="(default)" type="id_String" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/accountState/xmlns:(default)" nodeType="NAME_SPACE" defaultValue="http://soap.sforce.com/schemas/class/DR_VI_CreateNewDR_WS"/>
+                  </children>
+                  <children xsi:type="TalendXMLMap:OutputTreeNode" name="accountZipCode" expression="row2.accountZipCode" type="id_String" incomingConnections="//@node.2/@nodeData/@connections.12" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/accountZipCode">
+                    <children xsi:type="TalendXMLMap:OutputTreeNode" name="xsi:nil" expression="row2.accountZipCode == null || row2.accountZipCode.equals(&quot;&quot;)" type="id_String" incomingConnections="//@node.2/@nodeData/@connections.13" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/accountZipCode/@xsi:nil" nodeType="ATTRIBUT"/>
+                    <children xsi:type="TalendXMLMap:OutputTreeNode" name="(default)" type="id_String" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/accountZipCode/xmlns:(default)" nodeType="NAME_SPACE" defaultValue="http://soap.sforce.com/schemas/class/DR_VI_CreateNewDR_WS"/>
+                  </children>
+                  <children xsi:type="TalendXMLMap:OutputTreeNode" name="cmatAddressId" expression="row2.cmatAddressId" type="id_String" incomingConnections="//@node.2/@nodeData/@connections.14" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/cmatAddressId">
+                    <children xsi:type="TalendXMLMap:OutputTreeNode" name="(default)" type="id_String" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/cmatAddressId/xmlns:(default)" nodeType="NAME_SPACE" defaultValue="http://soap.sforce.com/schemas/class/DR_VI_CreateNewDR_WS"/>
+                  </children>
+                  <children xsi:type="TalendXMLMap:OutputTreeNode" name="dealRegistrationCloseDate" expression="row2.dealRegistrationCloseDate" type="id_String" incomingConnections="//@node.2/@nodeData/@connections.15" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/dealRegistrationCloseDate">
+                    <children xsi:type="TalendXMLMap:OutputTreeNode" name="xsi:nil" expression="row2.dealRegistrationCloseDate == null || row2.dealRegistrationCloseDate.equals(&quot;&quot;)" type="id_String" incomingConnections="//@node.2/@nodeData/@connections.16" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/dealRegistrationCloseDate/@xsi:nil" nodeType="ATTRIBUT"/>
+                    <children xsi:type="TalendXMLMap:OutputTreeNode" name="(default)" type="id_String" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/dealRegistrationCloseDate/xmlns:(default)" nodeType="NAME_SPACE" defaultValue="http://soap.sforce.com/schemas/class/DR_VI_CreateNewDR_WS"/>
+                  </children>
+                  <children xsi:type="TalendXMLMap:OutputTreeNode" name="dealRegistrationCreateDate" expression="row2.dealRegistrationCreateDate" type="id_String" incomingConnections="//@node.2/@nodeData/@connections.17" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/dealRegistrationCreateDate">
+                    <children xsi:type="TalendXMLMap:OutputTreeNode" name="(default)" type="id_String" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/dealRegistrationCreateDate/xmlns:(default)" nodeType="NAME_SPACE" defaultValue="http://soap.sforce.com/schemas/class/DR_VI_CreateNewDR_WS"/>
+                  </children>
+                  <children xsi:type="TalendXMLMap:OutputTreeNode" name="dealRegistrationExpiryDate" expression="row2.dealRegistrationExpiryDate" type="id_String" incomingConnections="//@node.2/@nodeData/@connections.18" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/dealRegistrationExpiryDate">
+                    <children xsi:type="TalendXMLMap:OutputTreeNode" name="(default)" type="id_String" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/dealRegistrationExpiryDate/xmlns:(default)" nodeType="NAME_SPACE" defaultValue="http://soap.sforce.com/schemas/class/DR_VI_CreateNewDR_WS"/>
+                  </children>
+                  <children xsi:type="TalendXMLMap:OutputTreeNode" name="dealRegistrationId" expression="row2.dealRegistrationId" type="id_String" incomingConnections="//@node.2/@nodeData/@connections.19" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/dealRegistrationId">
+                    <children xsi:type="TalendXMLMap:OutputTreeNode" name="(default)" type="id_String" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/dealRegistrationId/xmlns:(default)" nodeType="NAME_SPACE" defaultValue="http://soap.sforce.com/schemas/class/DR_VI_CreateNewDR_WS"/>
+                  </children>
+                  <children xsi:type="TalendXMLMap:OutputTreeNode" name="dealRegistrationName" expression="row2.dealRegistrationName" type="id_String" incomingConnections="//@node.2/@nodeData/@connections.20" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/dealRegistrationName">
+                    <children xsi:type="TalendXMLMap:OutputTreeNode" name="xsi:nil" expression="row2.dealRegistrationName == null || row2.dealRegistrationName.equals(&quot;&quot;)" type="id_String" incomingConnections="//@node.2/@nodeData/@connections.21" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/dealRegistrationName/@xsi:nil" nodeType="ATTRIBUT"/>
+                    <children xsi:type="TalendXMLMap:OutputTreeNode" name="(default)" type="id_String" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/dealRegistrationName/xmlns:(default)" nodeType="NAME_SPACE" defaultValue="http://soap.sforce.com/schemas/class/DR_VI_CreateNewDR_WS"/>
+                  </children>
+                  <children xsi:type="TalendXMLMap:OutputTreeNode" name="dealRegistrationStatus" expression="row2.dealRegistrationStatus" type="id_String" incomingConnections="//@node.2/@nodeData/@connections.22" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/dealRegistrationStatus">
+                    <children xsi:type="TalendXMLMap:OutputTreeNode" name="(default)" type="id_String" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/dealRegistrationStatus/xmlns:(default)" nodeType="NAME_SPACE" defaultValue="http://soap.sforce.com/schemas/class/DR_VI_CreateNewDR_WS"/>
+                  </children>
+                  <children xsi:type="TalendXMLMap:OutputTreeNode" name="distributorName" expression="row2.distributorName" type="id_String" incomingConnections="//@node.2/@nodeData/@connections.23" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/distributorName">
+                    <children xsi:type="TalendXMLMap:OutputTreeNode" name="(default)" type="id_String" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/distributorName/xmlns:(default)" nodeType="NAME_SPACE" defaultValue="http://soap.sforce.com/schemas/class/DR_VI_CreateNewDR_WS"/>
+                  </children>
+                  <children xsi:type="TalendXMLMap:OutputTreeNode" name="estimatedBookingAmount" expression="row2.estimatedBookingAmount" type="id_String" incomingConnections="//@node.2/@nodeData/@connections.24" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/estimatedBookingAmount">
+                    <children xsi:type="TalendXMLMap:OutputTreeNode" name="xsi:nil" expression="row2.estimatedBookingAmount == null || row2.estimatedBookingAmount.equals(&quot;&quot;)" type="id_String" incomingConnections="//@node.2/@nodeData/@connections.27" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/estimatedBookingAmount/@xsi:nil" nodeType="ATTRIBUT"/>
+                    <children xsi:type="TalendXMLMap:OutputTreeNode" name="(default)" type="id_String" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/estimatedBookingAmount/xmlns:(default)" nodeType="NAME_SPACE" defaultValue="http://soap.sforce.com/schemas/class/DR_VI_CreateNewDR_WS"/>
+                  </children>
+                  <children xsi:type="TalendXMLMap:OutputTreeNode" name="estimatedBookingAmountCurrency" expression="row2.estimatedBookingAmountCurrency" type="id_String" incomingConnections="//@node.2/@nodeData/@connections.26" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/estimatedBookingAmountCurrency">
+                    <children xsi:type="TalendXMLMap:OutputTreeNode" name="(default)" type="id_String" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/estimatedBookingAmountCurrency/xmlns:(default)" nodeType="NAME_SPACE" defaultValue="http://soap.sforce.com/schemas/class/DR_VI_CreateNewDR_WS"/>
+                  </children>
+                  <children xsi:type="TalendXMLMap:OutputTreeNode" name="estimatedCloseDate" expression="row2.estimatedCloseDate" type="id_String" incomingConnections="//@node.2/@nodeData/@connections.25" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/estimatedCloseDate">
+                    <children xsi:type="TalendXMLMap:OutputTreeNode" name="(default)" type="id_String" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/estimatedCloseDate/xmlns:(default)" nodeType="NAME_SPACE" defaultValue="http://soap.sforce.com/schemas/class/DR_VI_CreateNewDR_WS"/>
+                  </children>
+                  <children xsi:type="TalendXMLMap:OutputTreeNode" name="netAppChannelManager" expression="row2.netAppChannelManager" type="id_String" incomingConnections="//@node.2/@nodeData/@connections.28" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/netAppChannelManager">
+                    <children xsi:type="TalendXMLMap:OutputTreeNode" name="xsi:nil" expression="row2.netAppChannelManager == null || row2.netAppChannelManager.equals(&quot;&quot;)" type="id_String" incomingConnections="//@node.2/@nodeData/@connections.29" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/netAppChannelManager/@xsi:nil" nodeType="ATTRIBUT"/>
+                    <children xsi:type="TalendXMLMap:OutputTreeNode" name="(default)" type="id_String" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/netAppChannelManager/xmlns:(default)" nodeType="NAME_SPACE" defaultValue="http://soap.sforce.com/schemas/class/DR_VI_CreateNewDR_WS"/>
+                  </children>
+                  <children xsi:type="TalendXMLMap:OutputTreeNode" name="netAppSalesRep" expression="row2.netAppSalesRep" type="id_String" incomingConnections="//@node.2/@nodeData/@connections.30" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/netAppSalesRep">
+                    <children xsi:type="TalendXMLMap:OutputTreeNode" name="xsi:nil" expression="row2.netAppSalesRep == null || row2.netAppSalesRep.equals(&quot;&quot;)" type="id_String" incomingConnections="//@node.2/@nodeData/@connections.31" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/netAppSalesRep/@xsi:nil" nodeType="ATTRIBUT"/>
+                    <children xsi:type="TalendXMLMap:OutputTreeNode" name="(default)" type="id_String" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/netAppSalesRep/xmlns:(default)" nodeType="NAME_SPACE" defaultValue="http://soap.sforce.com/schemas/class/DR_VI_CreateNewDR_WS"/>
+                  </children>
+                  <children xsi:type="TalendXMLMap:OutputTreeNode" name="orderBookDate" expression="row2.orderBookDate" type="id_String" incomingConnections="//@node.2/@nodeData/@connections.32" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/orderBookDate">
+                    <children xsi:type="TalendXMLMap:OutputTreeNode" name="xsi:nil" expression="row2.orderBookDate == null || row2.orderBookDate.equals(&quot;&quot;)" type="id_String" incomingConnections="//@node.2/@nodeData/@connections.33" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/orderBookDate/@xsi:nil" nodeType="ATTRIBUT"/>
+                    <children xsi:type="TalendXMLMap:OutputTreeNode" name="(default)" type="id_String" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/orderBookDate/xmlns:(default)" nodeType="NAME_SPACE" defaultValue="http://soap.sforce.com/schemas/class/DR_VI_CreateNewDR_WS"/>
+                  </children>
+                  <children xsi:type="TalendXMLMap:OutputTreeNode" name="platformType" expression="row2.platformType" type="id_String" incomingConnections="//@node.2/@nodeData/@connections.34" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/platformType">
+                    <children xsi:type="TalendXMLMap:OutputTreeNode" name="xsi:nil" expression="row2.platformType == null || row2.platformType.equals(&quot;&quot;)" type="id_String" incomingConnections="//@node.2/@nodeData/@connections.35" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/platformType/@xsi:nil" nodeType="ATTRIBUT"/>
+                    <children xsi:type="TalendXMLMap:OutputTreeNode" name="(default)" type="id_String" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/platformType/xmlns:(default)" nodeType="NAME_SPACE" defaultValue="http://soap.sforce.com/schemas/class/DR_VI_CreateNewDR_WS"/>
+                  </children>
+                  <children xsi:type="TalendXMLMap:OutputTreeNode" name="primaryCompetitor" expression="row2.primaryCompetitor" type="id_String" incomingConnections="//@node.2/@nodeData/@connections.36" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/primaryCompetitor">
+                    <children xsi:type="TalendXMLMap:OutputTreeNode" name="xsi:nil" expression="row2.primaryCompetitor == null || row2.primaryCompetitor.equals(&quot;&quot;)" type="id_String" incomingConnections="//@node.2/@nodeData/@connections.37" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/primaryCompetitor/@xsi:nil" nodeType="ATTRIBUT"/>
+                    <children xsi:type="TalendXMLMap:OutputTreeNode" name="(default)" type="id_String" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/primaryCompetitor/xmlns:(default)" nodeType="NAME_SPACE" defaultValue="http://soap.sforce.com/schemas/class/DR_VI_CreateNewDR_WS"/>
+                  </children>
+                  <children xsi:type="TalendXMLMap:OutputTreeNode" name="resellerRole" expression="row2.resellerRole" type="id_String" incomingConnections="//@node.2/@nodeData/@connections.38" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/resellerRole">
+                    <children xsi:type="TalendXMLMap:OutputTreeNode" name="(default)" type="id_String" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/resellerRole/xmlns:(default)" nodeType="NAME_SPACE" defaultValue="http://soap.sforce.com/schemas/class/DR_VI_CreateNewDR_WS"/>
+                  </children>
+                  <children xsi:type="TalendXMLMap:OutputTreeNode" name="resellingPartnerName" expression="row2.resellingPartnerName" type="id_String" incomingConnections="//@node.2/@nodeData/@connections.39" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/resellingPartnerName">
+                    <children xsi:type="TalendXMLMap:OutputTreeNode" name="(default)" type="id_String" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/resellingPartnerName/xmlns:(default)" nodeType="NAME_SPACE" defaultValue="http://soap.sforce.com/schemas/class/DR_VI_CreateNewDR_WS"/>
+                  </children>
+                  <children xsi:type="TalendXMLMap:OutputTreeNode" name="secondaryCompetitor" expression="row2.secondaryCompetitor" type="id_String" incomingConnections="//@node.2/@nodeData/@connections.40" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/secondaryCompetitor">
+                    <children xsi:type="TalendXMLMap:OutputTreeNode" name="xsi:nil" expression="row2.secondaryCompetitor == null || row2.secondaryCompetitor.equals(&quot;&quot;)" type="id_String" incomingConnections="//@node.2/@nodeData/@connections.41" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/secondaryCompetitor/@xsi:nil" nodeType="ATTRIBUT"/>
+                    <children xsi:type="TalendXMLMap:OutputTreeNode" name="(default)" type="id_String" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/secondaryCompetitor/xmlns:(default)" nodeType="NAME_SPACE" defaultValue="http://soap.sforce.com/schemas/class/DR_VI_CreateNewDR_WS"/>
+                  </children>
+                  <children xsi:type="TalendXMLMap:OutputTreeNode" name="SFDCFederationID" expression="row2.SFDCFederationID" type="id_String" incomingConnections="//@node.2/@nodeData/@connections.42" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/SFDCFederationID">
+                    <children xsi:type="TalendXMLMap:OutputTreeNode" name="xsi:nil" expression="row2.SFDCFederationID == null || row2.SFDCFederationID.equals(&quot;&quot;)" type="id_String" incomingConnections="//@node.2/@nodeData/@connections.43" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/SFDCFederationID/@xsi:nil" nodeType="ATTRIBUT"/>
+                    <children xsi:type="TalendXMLMap:OutputTreeNode" name="(default)" type="id_String" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/SFDCFederationID/xmlns:(default)" nodeType="NAME_SPACE" defaultValue="http://soap.sforce.com/schemas/class/DR_VI_CreateNewDR_WS"/>
+                  </children>
+                  <children xsi:type="TalendXMLMap:OutputTreeNode" name="VARSalesRepresentative" expression="row2.VARSalesRepresentative" type="id_String" incomingConnections="//@node.2/@nodeData/@connections.44" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/VARSalesRepresentative">
+                    <children xsi:type="TalendXMLMap:OutputTreeNode" name="xsi:nil" expression="row2.VARSalesRepresentative == null || row2.VARSalesRepresentative.equals(&quot;&quot;)" type="id_String" incomingConnections="//@node.2/@nodeData/@connections.45" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/VARSalesRepresentative/@xsi:nil" nodeType="ATTRIBUT"/>
+                    <children xsi:type="TalendXMLMap:OutputTreeNode" name="(default)" type="id_String" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/VARSalesRepresentative/xmlns:(default)" nodeType="NAME_SPACE" defaultValue="http://soap.sforce.com/schemas/class/DR_VI_CreateNewDR_WS"/>
+                  </children>
+                  <children xsi:type="TalendXMLMap:OutputTreeNode" name="VARSalesRepresentativeEmail" expression="row2.VARSalesRepresentativeEmail" type="id_String" incomingConnections="//@node.2/@nodeData/@connections.46" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/VARSalesRepresentativeEmail">
+                    <children xsi:type="TalendXMLMap:OutputTreeNode" name="xsi:nil" expression="row2.VARSalesRepresentativeEmail == null || row2.VARSalesRepresentativeEmail.equals(&quot;&quot;)" type="id_String" incomingConnections="//@node.2/@nodeData/@connections.47" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/VARSalesRepresentativeEmail/@xsi:nil" nodeType="ATTRIBUT"/>
+                    <children xsi:type="TalendXMLMap:OutputTreeNode" name="(default)" type="id_String" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/VARSalesRepresentativeEmail/xmlns:(default)" nodeType="NAME_SPACE" defaultValue="http://soap.sforce.com/schemas/class/DR_VI_CreateNewDR_WS"/>
+                  </children>
+                  <children xsi:type="TalendXMLMap:OutputTreeNode" name="vartopiaDealRegistrationId" expression="row2.vartopiaDealRegistrationId" type="id_String" incomingConnections="//@node.2/@nodeData/@connections.48" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/vartopiaDealRegistrationId">
+                    <children xsi:type="TalendXMLMap:OutputTreeNode" name="xsi:nil" expression="row2.vartopiaDealRegistrationId == null || row2.vartopiaDealRegistrationId.equals(&quot;&quot;)" type="id_String" incomingConnections="//@node.2/@nodeData/@connections.49" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/vartopiaDealRegistrationId/@xsi:nil" nodeType="ATTRIBUT"/>
+                    <children xsi:type="TalendXMLMap:OutputTreeNode" name="(default)" type="id_String" xpath="out1.newColumn:/soapenv:Envelope/soapenv:Body/fetchDealRegResponse/result/vartopiaDealRegistrationId/xmlns:(default)" nodeType="NAME_SPACE" defaultValue="http://soap.sforce.com/schemas/class/DR_VI_CreateNewDR_WS"/>
+                  </children>
+                </children>
+              </children>
+            </children>
+          </children>
+        </nodes>
+      </outputTrees>
+      <varTables name="Var" minimized="true"/>
+      <connections xsi:type="TalendXMLMap:Connection" source="//@node.2/@nodeData/@inputTrees.0/@nodes.0" target="//@node.2/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.2/@children.0/@children.1/@children.1"/>
+      <connections xsi:type="TalendXMLMap:Connection" source="//@node.2/@nodeData/@inputTrees.0/@nodes.0" target="//@node.2/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.2/@children.0/@children.1/@children.1/@children.0"/>
+      <connections xsi:type="TalendXMLMap:Connection" source="//@node.2/@nodeData/@inputTrees.0/@nodes.1" target="//@node.2/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.2/@children.0/@children.1/@children.2"/>
+      <connections xsi:type="TalendXMLMap:Connection" source="//@node.2/@nodeData/@inputTrees.0/@nodes.1" target="//@node.2/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.2/@children.0/@children.1/@children.2/@children.0"/>
+      <connections xsi:type="TalendXMLMap:Connection" source="//@node.2/@nodeData/@inputTrees.0/@nodes.2" target="//@node.2/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.2/@children.0/@children.1/@children.3"/>
+      <connections xsi:type="TalendXMLMap:Connection" source="//@node.2/@nodeData/@inputTrees.0/@nodes.2" target="//@node.2/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.2/@children.0/@children.1/@children.3/@children.0"/>
+      <connections xsi:type="TalendXMLMap:Connection" source="//@node.2/@nodeData/@inputTrees.0/@nodes.3" target="//@node.2/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.2/@children.0/@children.1/@children.4"/>
+      <connections xsi:type="TalendXMLMap:Connection" source="//@node.2/@nodeData/@inputTrees.0/@nodes.3" target="//@node.2/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.2/@children.0/@children.1/@children.4/@children.0"/>
+      <connections xsi:type="TalendXMLMap:Connection" source="//@node.2/@nodeData/@inputTrees.0/@nodes.4" target="//@node.2/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.2/@children.0/@children.1/@children.5"/>
+      <connections xsi:type="TalendXMLMap:Connection" source="//@node.2/@nodeData/@inputTrees.0/@nodes.4" target="//@node.2/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.2/@children.0/@children.1/@children.5/@children.0"/>
+      <connections xsi:type="TalendXMLMap:Connection" source="//@node.2/@nodeData/@inputTrees.0/@nodes.5" target="//@node.2/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.2/@children.0/@children.1/@children.6"/>
+      <connections xsi:type="TalendXMLMap:Connection" source="//@node.2/@nodeData/@inputTrees.0/@nodes.5" target="//@node.2/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.2/@children.0/@children.1/@children.6/@children.0"/>
+      <connections xsi:type="TalendXMLMap:Connection" source="//@node.2/@nodeData/@inputTrees.0/@nodes.6" target="//@node.2/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.2/@children.0/@children.1/@children.7"/>
+      <connections xsi:type="TalendXMLMap:Connection" source="//@node.2/@nodeData/@inputTrees.0/@nodes.6" target="//@node.2/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.2/@children.0/@children.1/@children.7/@children.0"/>
+      <connections xsi:type="TalendXMLMap:Connection" source="//@node.2/@nodeData/@inputTrees.0/@nodes.7" target="//@node.2/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.2/@children.0/@children.1/@children.8"/>
+      <connections xsi:type="TalendXMLMap:Connection" source="//@node.2/@nodeData/@inputTrees.0/@nodes.9" target="//@node.2/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.2/@children.0/@children.1/@children.9"/>
+      <connections xsi:type="TalendXMLMap:Connection" source="//@node.2/@nodeData/@inputTrees.0/@nodes.9" target="//@node.2/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.2/@children.0/@children.1/@children.9/@children.0"/>
+      <connections xsi:type="TalendXMLMap:Connection" source="//@node.2/@nodeData/@inputTrees.0/@nodes.8" target="//@node.2/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.2/@children.0/@children.1/@children.10"/>
+      <connections xsi:type="TalendXMLMap:Connection" source="//@node.2/@nodeData/@inputTrees.0/@nodes.10" target="//@node.2/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.2/@children.0/@children.1/@children.11"/>
+      <connections xsi:type="TalendXMLMap:Connection" source="//@node.2/@nodeData/@inputTrees.0/@nodes.11" target="//@node.2/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.2/@children.0/@children.1/@children.12"/>
+      <connections xsi:type="TalendXMLMap:Connection" source="//@node.2/@nodeData/@inputTrees.0/@nodes.12" target="//@node.2/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.2/@children.0/@children.1/@children.13"/>
+      <connections xsi:type="TalendXMLMap:Connection" source="//@node.2/@nodeData/@inputTrees.0/@nodes.12" target="//@node.2/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.2/@children.0/@children.1/@children.13/@children.0"/>
+      <connections xsi:type="TalendXMLMap:Connection" source="//@node.2/@nodeData/@inputTrees.0/@nodes.13" target="//@node.2/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.2/@children.0/@children.1/@children.14"/>
+      <connections xsi:type="TalendXMLMap:Connection" source="//@node.2/@nodeData/@inputTrees.0/@nodes.14" target="//@node.2/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.2/@children.0/@children.1/@children.15"/>
+      <connections xsi:type="TalendXMLMap:Connection" source="//@node.2/@nodeData/@inputTrees.0/@nodes.16" target="//@node.2/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.2/@children.0/@children.1/@children.16"/>
+      <connections xsi:type="TalendXMLMap:Connection" source="//@node.2/@nodeData/@inputTrees.0/@nodes.17" target="//@node.2/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.2/@children.0/@children.1/@children.18"/>
+      <connections xsi:type="TalendXMLMap:Connection" source="//@node.2/@nodeData/@inputTrees.0/@nodes.15" target="//@node.2/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.2/@children.0/@children.1/@children.17"/>
+      <connections xsi:type="TalendXMLMap:Connection" source="//@node.2/@nodeData/@inputTrees.0/@nodes.16" target="//@node.2/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.2/@children.0/@children.1/@children.16/@children.0"/>
+      <connections xsi:type="TalendXMLMap:Connection" source="//@node.2/@nodeData/@inputTrees.0/@nodes.18" target="//@node.2/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.2/@children.0/@children.1/@children.19"/>
+      <connections xsi:type="TalendXMLMap:Connection" source="//@node.2/@nodeData/@inputTrees.0/@nodes.18" target="//@node.2/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.2/@children.0/@children.1/@children.19/@children.0"/>
+      <connections xsi:type="TalendXMLMap:Connection" source="//@node.2/@nodeData/@inputTrees.0/@nodes.19" target="//@node.2/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.2/@children.0/@children.1/@children.20"/>
+      <connections xsi:type="TalendXMLMap:Connection" source="//@node.2/@nodeData/@inputTrees.0/@nodes.19" target="//@node.2/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.2/@children.0/@children.1/@children.20/@children.0"/>
+      <connections xsi:type="TalendXMLMap:Connection" source="//@node.2/@nodeData/@inputTrees.0/@nodes.20" target="//@node.2/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.2/@children.0/@children.1/@children.21"/>
+      <connections xsi:type="TalendXMLMap:Connection" source="//@node.2/@nodeData/@inputTrees.0/@nodes.20" target="//@node.2/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.2/@children.0/@children.1/@children.21/@children.0"/>
+      <connections xsi:type="TalendXMLMap:Connection" source="//@node.2/@nodeData/@inputTrees.0/@nodes.21" target="//@node.2/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.2/@children.0/@children.1/@children.22"/>
+      <connections xsi:type="TalendXMLMap:Connection" source="//@node.2/@nodeData/@inputTrees.0/@nodes.21" target="//@node.2/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.2/@children.0/@children.1/@children.22/@children.0"/>
+      <connections xsi:type="TalendXMLMap:Connection" source="//@node.2/@nodeData/@inputTrees.0/@nodes.22" target="//@node.2/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.2/@children.0/@children.1/@children.23"/>
+      <connections xsi:type="TalendXMLMap:Connection" source="//@node.2/@nodeData/@inputTrees.0/@nodes.22" target="//@node.2/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.2/@children.0/@children.1/@children.23/@children.0"/>
+      <connections xsi:type="TalendXMLMap:Connection" source="//@node.2/@nodeData/@inputTrees.0/@nodes.29" target="//@node.2/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.2/@children.0/@children.1/@children.24"/>
+      <connections xsi:type="TalendXMLMap:Connection" source="//@node.2/@nodeData/@inputTrees.0/@nodes.23" target="//@node.2/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.2/@children.0/@children.1/@children.25"/>
+      <connections xsi:type="TalendXMLMap:Connection" source="//@node.2/@nodeData/@inputTrees.0/@nodes.24" target="//@node.2/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.2/@children.0/@children.1/@children.26"/>
+      <connections xsi:type="TalendXMLMap:Connection" source="//@node.2/@nodeData/@inputTrees.0/@nodes.24" target="//@node.2/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.2/@children.0/@children.1/@children.26/@children.0"/>
+      <connections xsi:type="TalendXMLMap:Connection" source="//@node.2/@nodeData/@inputTrees.0/@nodes.25" target="//@node.2/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.2/@children.0/@children.1/@children.27"/>
+      <connections xsi:type="TalendXMLMap:Connection" source="//@node.2/@nodeData/@inputTrees.0/@nodes.25" target="//@node.2/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.2/@children.0/@children.1/@children.27/@children.0"/>
+      <connections xsi:type="TalendXMLMap:Connection" source="//@node.2/@nodeData/@inputTrees.0/@nodes.26" target="//@node.2/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.2/@children.0/@children.1/@children.28"/>
+      <connections xsi:type="TalendXMLMap:Connection" source="//@node.2/@nodeData/@inputTrees.0/@nodes.26" target="//@node.2/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.2/@children.0/@children.1/@children.28/@children.0"/>
+      <connections xsi:type="TalendXMLMap:Connection" source="//@node.2/@nodeData/@inputTrees.0/@nodes.27" target="//@node.2/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.2/@children.0/@children.1/@children.29"/>
+      <connections xsi:type="TalendXMLMap:Connection" source="//@node.2/@nodeData/@inputTrees.0/@nodes.27" target="//@node.2/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.2/@children.0/@children.1/@children.29/@children.0"/>
+      <connections xsi:type="TalendXMLMap:Connection" source="//@node.2/@nodeData/@inputTrees.0/@nodes.28" target="//@node.2/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.2/@children.0/@children.1/@children.30"/>
+      <connections xsi:type="TalendXMLMap:Connection" source="//@node.2/@nodeData/@inputTrees.0/@nodes.28" target="//@node.2/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.2/@children.0/@children.1/@children.30/@children.0"/>
+    </nodeData>
+  </node>
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="384" posY="224">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogRow_2"/>
+    <elementParameter field="RADIO" name="BASIC_MODE" value="true"/>
+    <elementParameter field="RADIO" name="TABLE_PRINT" value="false"/>
+    <elementParameter field="RADIO" name="VERTICAL" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE" value="true"/>
+    <elementParameter field="RADIO" name="PRINT_LABEL" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" value="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;|&quot;"/>
+    <elementParameter field="CHECK" name="PRINT_HEADER" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_COLNAMES" value="false"/>
+    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" value="false"/>
+    <elementParameter field="TABLE" name="LENGTHS">
+      <elementValue elementRef="SCHEMA_COLUMN" value="newColumn"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" label="out1" name="tLogRow_2">
+      <column comment="" key="false" name="newColumn" nullable="true" pattern="" sourceType="" type="id_Document"/>
+    </metadata>
+  </node>
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tFileInputExcel_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputExcel_1" target="tLogRow_1">
+    <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
+      <elementValue elementRef="TRACE_COLUMN" value="accountAddressLine1"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="accountAddressLine2"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="accountCity"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="accountCountry"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="accountName"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="accountState"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="accountZipCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="cmatAddressId"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="dealRegistrationCreateDate"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="dealRegistrationCloseDate"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="dealRegistrationExpiryDate"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="dealRegistrationId"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="dealRegistrationName"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="dealRegistrationStatus"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="distributorName"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="estimatedBookingAmountCurrency"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="estimatedBookingAmount"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="estimatedCloseDate"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="netAppChannelManager"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="netAppSalesRep"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="orderBookDate"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="platformType"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="primaryCompetitor"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="resellingPartnerName"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="secondaryCompetitor"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="SFDCFederationID"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="VARSalesRepresentative"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="VARSalesRepresentativeEmail"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="vartopiaDealRegistrationId"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="resellerRole"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
+    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
+    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
+    <elementParameter field="TABLE" name="THRESHLODS"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1"/>
+    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
+    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+    <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
+    <elementParameter field="TABLE" name="CONDITIONS"/>
+    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
+    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;"/>
+  </connection>
+  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tLogRow_1" offsetLabelX="0" offsetLabelY="0" source="tLogRow_1" target="tXMLMap_1">
+    <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
+      <elementValue elementRef="TRACE_COLUMN" value="accountAddressLine1"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="accountAddressLine2"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="accountCity"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="accountCountry"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="accountName"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="accountState"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="accountZipCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="cmatAddressId"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="dealRegistrationCreateDate"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="dealRegistrationCloseDate"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="dealRegistrationExpiryDate"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="dealRegistrationId"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="dealRegistrationName"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="dealRegistrationStatus"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="distributorName"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="estimatedBookingAmountCurrency"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="estimatedBookingAmount"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="estimatedCloseDate"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="netAppChannelManager"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="netAppSalesRep"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="orderBookDate"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="platformType"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="primaryCompetitor"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="resellingPartnerName"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="secondaryCompetitor"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="SFDCFederationID"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="VARSalesRepresentative"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="VARSalesRepresentativeEmail"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="vartopiaDealRegistrationId"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="resellerRole"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
+    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
+    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
+    <elementParameter field="TABLE" name="THRESHLODS"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row2"/>
+    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
+    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+    <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
+    <elementParameter field="TABLE" name="CONDITIONS"/>
+    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
+    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;"/>
+  </connection>
+  <connection connectorName="FLOW" label="out1" lineStyle="0" metaname="out1" offsetLabelX="0" offsetLabelY="0" source="tXMLMap_1" target="tLogRow_2">
+    <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
+      <elementValue elementRef="TRACE_COLUMN" value="newColumn"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
+    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
+    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
+    <elementParameter field="TABLE" name="THRESHLODS"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="out1"/>
+    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
+    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+    <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
+    <elementParameter field="TABLE" name="CONDITIONS"/>
+    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
+    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;"/>
+  </connection>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileInputExcel_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+</talendfile:ProcessType>

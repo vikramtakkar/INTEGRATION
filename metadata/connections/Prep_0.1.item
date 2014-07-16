@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.relational="http:///orgomg/cwm/resource/relational.ecore" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
+  <TalendMetadata:DatabaseConnection xmi:id="_1RRbQwF1EeSkCo7smxmCxg" name="Prep" label="Prep" dataPackage="_1RRbTAF1EeSkCo7smxmCxg" ContextMode="true" ContextId="_nIbdUIpLEeGAJPNW_pjRUg" contextName="Default" DatabaseType="Microsoft SQL Server" DriverClass="net.sourceforge.jtds.jdbc.Driver" URL="jdbc:jtds:sqlserver://localhost:1433/Prep;" Port="context.Prep_Port" Username="context.Prep_Login" Password="context.Prep_Password" ServerName="context.Prep_Server" DatasourceName="" FileFieldName="" SID="context.Prep_Database" SqlSynthax="SQL Syntax" DbmsId="id_MSSQL" ProductId="SQL_SERVER" AdditionalParams="context.Prep_AdditionalParams" StandardSQL="true" SQLMode="false" UiSchema="context.Prep_Schema">
+    <taggedValue xmi:id="_1RRbRAF1EeSkCo7smxmCxg" tag="Using URL" value="jdbc:jtds:sqlserver://localhost:1433/Prep;"/>
+    <taggedValue xmi:id="_1RRbRQF1EeSkCo7smxmCxg" tag="Status" value=""/>
+    <taggedValue xmi:id="_1RRbRgF1EeSkCo7smxmCxg" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_1RRbRwF1EeSkCo7smxmCxg" tag="Purpose" value=""/>
+    <taggedValue xmi:id="_1RRbSAF1EeSkCo7smxmCxg" tag="Description" value=""/>
+    <taggedValue xmi:id="_1RRbSQF1EeSkCo7smxmCxg" tag="Author" value=""/>
+    <taggedValue xmi:id="_1RRbSgF1EeSkCo7smxmCxg" tag="otherParameter" value=""/>
+    <taggedValue xmi:id="_1RRbSwF1EeSkCo7smxmCxg" tag="DB IdentifierQuoteString" value="&quot;"/>
+  </TalendMetadata:DatabaseConnection>
+  <orgomg.cwm.resource.relational:Catalog xmi:id="_1RRbTAF1EeSkCo7smxmCxg" name="Prep" dataManager="_1RRbQwF1EeSkCo7smxmCxg">
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_1RRbTQF1EeSkCo7smxmCxg" name="Prep_Citrix_Pull" id="_DIZvMIpMEeGAJPNW_pjRUg" label="Prep_Citrix_Pull" tableType="TABLE">
+      <taggedValue xmi:id="_1RRbTgF1EeSkCo7smxmCxg" tag="Comment" value=""/>
+      <feature xsi:type="relational:TdColumn" xmi:id="_1RRbTwF1EeSkCo7smxmCxg" name="Batch_ID" label="Batch_ID" length="20" sourceType="NVARCHAR" talendType="id_String">
+        <taggedValue xmi:id="_1RRbUAF1EeSkCo7smxmCxg" tag="Comment" value=""/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_1RRbUQF1EeSkCo7smxmCxg" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_1RRbUgF1EeSkCo7smxmCxg" name="NVARCHAR" javaDataType="12" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_1RRbUwF1EeSkCo7smxmCxg" name="CreationDate" label="CreationDate" length="23" precision="3" sourceType="DATETIME" talendType="id_Date" nullable="false" pattern="&quot;dd-MM-yyyy&quot;">
+        <taggedValue xmi:id="_1RRbVAF1EeSkCo7smxmCxg" tag="Comment" value=""/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_1RRbVQF1EeSkCo7smxmCxg" body="&quot;(getdate())&quot;" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_1RRbVgF1EeSkCo7smxmCxg" name="DATETIME" numericPrecision="3" javaDataType="93"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_1RRbVwF1EeSkCo7smxmCxg" name="Project_Name__c" label="Project_Name__c" length="80" sourceType="NCHAR" talendType="id_String">
+        <taggedValue xmi:id="_1RRbWAF1EeSkCo7smxmCxg" tag="Comment" value=""/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_1RRbWQF1EeSkCo7smxmCxg" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_1RRbWgF1EeSkCo7smxmCxg" name="NCHAR" javaDataType="1" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_1RRbWwF1EeSkCo7smxmCxg" name="Name" label="Name" length="50" sourceType="NCHAR" talendType="id_String">
+        <taggedValue xmi:id="_1RRbXAF1EeSkCo7smxmCxg" tag="Comment" value=""/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_1RRbXQF1EeSkCo7smxmCxg" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_1RRbXgF1EeSkCo7smxmCxg" name="NCHAR" javaDataType="1" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_1RRbXwF1EeSkCo7smxmCxg" name="Forecast_Status__c" label="Forecast_Status__c" length="255" sourceType="NCHAR" talendType="id_String">
+        <taggedValue xmi:id="_1RRbYAF1EeSkCo7smxmCxg" tag="Comment" value=""/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_1RRbYQF1EeSkCo7smxmCxg" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_1RRbYgF1EeSkCo7smxmCxg" name="NCHAR" javaDataType="1" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_1RRbYwF1EeSkCo7smxmCxg" name="Forecast_Rejection_Reason__c" label="Forecast_Rejection_Reason__c" length="255" sourceType="NCHAR" talendType="id_String">
+        <taggedValue xmi:id="_1RRbZAF1EeSkCo7smxmCxg" tag="Comment" value=""/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_1RRbZQF1EeSkCo7smxmCxg" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_1RRbZgF1EeSkCo7smxmCxg" name="NCHAR" javaDataType="1" nullable="columnNullable"/>
+      </feature>
+    </ownedElement>
+  </orgomg.cwm.resource.relational:Catalog>
+</xmi:XMI>

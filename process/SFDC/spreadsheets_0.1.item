@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default">
+  <context confirmationNeeded="false" name="Default"/>
+  <parameters>
+    <elementParameter field="TEXT" name="JOB_RUN_VM_ARGUMENTS" value=" -Xms256M -Xmx1024M"/>
+    <elementParameter field="CHECK" name="JOB_RUN_VM_ARGUMENTS_OPTION" value="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="32"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPTIONS" value="none"/>
+    <elementParameter field="TEXT" name="OEM_CUSTOM_ATTRIBUTE" value=""/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" value="ORACLE_10"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_10"/>
+    <routinesParameter id="_52ZfoIibEeG4O7tWobvoyQ" name="DataOperation"/>
+    <routinesParameter id="_52e_MIibEeG4O7tWobvoyQ" name="Mathematical"/>
+    <routinesParameter id="_52iCgIibEeG4O7tWobvoyQ" name="Numeric"/>
+    <routinesParameter id="_52kewIibEeG4O7tWobvoyQ" name="Relational"/>
+    <routinesParameter id="_52xTEIibEeG4O7tWobvoyQ" name="SQLike"/>
+    <routinesParameter id="_52m7AIibEeG4O7tWobvoyQ" name="StringHandling"/>
+    <routinesParameter id="_52pXQIibEeG4O7tWobvoyQ" name="TalendDataGenerator"/>
+    <routinesParameter id="_52rzgIibEeG4O7tWobvoyQ" name="TalendDate"/>
+    <routinesParameter id="_52uPwIibEeG4O7tWobvoyQ" name="TalendString"/>
+    <routinesParameter id="_Ff4CQIx3EeC8wqHA4D4c-Q" name="ActiveIdSets"/>
+    <routinesParameter id="_NkZ6AJEEEeC4zfWT--Xipg" name="BRules"/>
+    <routinesParameter id="_8qwkYFjNEdyj6eiqDt60Og" name="DemoRoutines"/>
+    <routinesParameter id="_HKXfQGIZEd26GZmhFZLTPA" name="GetRandomPhoneNum"/>
+    <routinesParameter id="_6zR_YJULEeCTXJog9NYiQA" name="ObjectId"/>
+    <routinesParameter id="_OqIRQMKvEeC_Dalu0QQgxA" name="ParentSort"/>
+    <routinesParameter id="_AOEnEBVTEeG-MPI9uzJyiQ" name="StringFunctions"/>
+    <routinesParameter id="_3QTesIuFEeCTp5FyF0JIKg" name="StringId"/>
+    <routinesParameter id="_1uvZwIuPEeCTp5FyF0JIKg" name="TerritoryParentMap"/>
+  </parameters>
+  <node componentName="tSalesforceInput_SID" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="32" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSalesforceInput_SID_1"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value=""/>
+    <elementParameter field="TEXT" name="ENDPOINT" value="&quot;https://www.salesforce.com/services/Soap/u/19.0&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;youremail@yourcompany.com&quot;"/>
+    <elementParameter field="TEXT" name="PASS" value="&quot;password&quot;"/>
+    <elementParameter field="TEXT" name="TIMEOUT" value="60000"/>
+    <elementParameter field="CLOSED_LIST" name="MODULENAME" value="Account"/>
+    <elementParameter field="TEXT" name="CUSTOM_MODULE" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="CONDITION" value="&quot;name='talend'&quot;"/>
+    <elementParameter field="CHECK" name="MANUAL_QUERY" value="false"/>
+    <elementParameter field="MEMO" name="QUERY" value="&quot;select FirstName, LastName from Contact&quot;"/>
+    <elementParameter field="CHECK" name="QUERY_ALL" value="false"/>
+    <elementParameter field="TEXT" name="BATCH_SIZE" value="250"/>
+    <elementParameter field="CHECK" name="USE_PROXY" value="false"/>
+    <elementParameter field="TEXT" name="PROXY_HOST" value="&quot;61.163.92.4&quot;"/>
+    <elementParameter field="TEXT" name="PROXY_PORT" value="&quot;1080&quot;"/>
+    <elementParameter field="TEXT" name="PROXY_USERNAME" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROXY_PASSWORD" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="LIMIT" value="-1"/>
+    <elementParameter field="TEXT" name="NORMALIZE_DELIMITER" value="&quot;;&quot;"/>
+    <elementParameter field="TEXT" name="COLUMNNAME_DELIMITER" value="&quot;_&quot;"/>
+    <elementParameter field="CHECK" name="NEED_COMPRESSION" value="false"/>
+    <elementParameter field="TEXT" name="CLIENT_ID" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" name="tSalesforceInput_SID_1">
+      <column defaultValue="" key="true" length="18" name="Id" nullable="true" precision="0" sourceType="" type="id_String"/>
+      <column defaultValue="" key="false" length="0" name="IsDeleted" nullable="true" precision="0" sourceType="" type="id_Boolean"/>
+      <column defaultValue="" key="false" length="18" name="MasterRecordId" nullable="true" precision="0" sourceType="" type="id_String"/>
+      <column defaultValue="" key="false" length="255" name="Name" nullable="true" precision="0" sourceType="" type="id_String"/>
+      <column defaultValue="" key="false" length="40" name="Type" nullable="true" precision="0" sourceType="" type="id_String"/>
+      <column defaultValue="" key="false" length="18" name="ParentId" nullable="true" precision="0" sourceType="" type="id_String"/>
+      <column defaultValue="" key="false" length="255" name="BillingStreet" nullable="true" precision="0" sourceType="" type="id_String"/>
+      <column defaultValue="" key="false" length="40" name="BillingCity" nullable="true" precision="0" sourceType="" type="id_String"/>
+      <column defaultValue="" key="false" length="20" name="BillingState" nullable="true" precision="0" sourceType="" type="id_String"/>
+      <column defaultValue="" key="false" length="20" name="BillingPostalCode" nullable="true" precision="0" sourceType="" type="id_String"/>
+      <column defaultValue="" key="false" length="40" name="BillingCountry" nullable="true" precision="0" sourceType="" type="id_String"/>
+      <column defaultValue="" key="false" length="255" name="ShippingStreet" nullable="true" precision="0" sourceType="" type="id_String"/>
+      <column defaultValue="" key="false" length="40" name="ShippingCity" nullable="true" precision="0" sourceType="" type="id_String"/>
+      <column defaultValue="" key="false" length="20" name="ShippingState" nullable="true" precision="0" sourceType="" type="id_String"/>
+      <column defaultValue="" key="false" length="20" name="ShippingPostalCode" nullable="true" precision="0" sourceType="" type="id_String"/>
+      <column defaultValue="" key="false" length="40" name="ShippingCountry" nullable="true" precision="0" sourceType="" type="id_String"/>
+      <column defaultValue="" key="false" length="40" name="Phone" nullable="true" precision="0" sourceType="" type="id_String"/>
+      <column defaultValue="" key="false" length="40" name="Fax" nullable="true" precision="0" sourceType="" type="id_String"/>
+      <column defaultValue="" key="false" length="40" name="AccountNumber" nullable="true" precision="0" sourceType="" type="id_String"/>
+      <column defaultValue="" key="false" length="255" name="Website" nullable="true" precision="0" sourceType="" type="id_String"/>
+      <column defaultValue="" key="false" length="20" name="Sic" nullable="true" precision="0" sourceType="" type="id_String"/>
+      <column defaultValue="" key="false" length="80" name="Industry" nullable="true" precision="0" sourceType="" type="id_String"/>
+      <column defaultValue="" key="false" length="0" name="AnnualRevenue" nullable="true" precision="0" sourceType="" type="id_String"/>
+      <column defaultValue="" key="false" length="0" name="NumberOfEmployees" nullable="true" precision="0" sourceType="" type="id_Integer"/>
+      <column defaultValue="" key="false" length="40" name="Ownership" nullable="true" precision="0" sourceType="" type="id_String"/>
+      <column defaultValue="" key="false" length="20" name="TickerSymbol" nullable="true" precision="0" sourceType="" type="id_String"/>
+      <column defaultValue="" key="false" length="32000" name="Description" nullable="true" precision="0" sourceType="" type="id_String"/>
+      <column defaultValue="" key="false" length="40" name="Rating" nullable="true" precision="0" sourceType="" type="id_String"/>
+      <column defaultValue="" key="false" length="80" name="Site" nullable="true" precision="0" sourceType="" type="id_String"/>
+      <column defaultValue="" key="false" length="18" name="OwnerId" nullable="true" precision="0" sourceType="" type="id_String"/>
+      <column defaultValue="" key="false" length="0" name="CreatedDate" nullable="true" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss'.000Z'&quot;" precision="0" sourceType="" type="id_Date"/>
+      <column defaultValue="" key="false" length="18" name="CreatedById" nullable="true" precision="0" sourceType="" type="id_String"/>
+      <column defaultValue="" key="false" length="0" name="LastModifiedDate" nullable="true" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss'.000Z'&quot;" precision="0" sourceType="" type="id_Date"/>
+      <column defaultValue="" key="false" length="18" name="LastModifiedById" nullable="true" precision="0" sourceType="" type="id_String"/>
+      <column defaultValue="" key="false" length="0" name="SystemModstamp" nullable="true" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss'.000Z'&quot;" precision="0" sourceType="" type="id_Date"/>
+      <column defaultValue="" key="false" length="0" name="LastActivityDate" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" sourceType="" type="id_Date"/>
+    </metadata>
+  </node>
+  <node componentName="tSalesforceConnection_SID" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="32" posY="96">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSalesforceConnection_SID_1"/>
+    <elementParameter field="CHECK" name="START" value="true"/>
+    <elementParameter field="TEXT" name="ENDPOINT" value="&quot;https://na3.salesforce.com/services/Soap/u/22.0&quot;"/>
+    <elementParameter field="TEXT" name="SID" value="&quot;00D300000000jPy!ASAAQPNPxTQs9owjh4StjLDsCjNUdreA8r65L6nHYY8Li9kBRNjBhYmml2hsiZZsShYR1_ax72h2dWBjllWQqrdnE8yomlAL&quot;"/>
+    <elementParameter field="TEXT" name="CLIENT_ID" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+  </node>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tSalesforceConnection_SID_1" offsetLabelX="0" offsetLabelY="0" source="tSalesforceConnection_SID_1" target="tSalesforceInput_SID_1">
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk1"/>
+    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
+    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
+  </connection>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSalesforceInput_SID_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSalesforceConnection_SID_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+</talendfile:ProcessType>

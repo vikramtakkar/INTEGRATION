@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" confirmationNeeded="false" name="Default">
+  <contextParameter comment="" name="System_credential_failure" prompt="System_credential_failure?" promptNeeded="false" type="id_Boolean" value="false"/>
+  <contextParameter comment="" name="Request_to_vendor" prompt="Request_to_vendor?" promptNeeded="false" type="id_String" value="null"/>
+  <contextParameter comment="" name="Response_body_from_vendor" prompt="Response_body_from_vendor?" promptNeeded="false" type="id_String" value="null"/>
+  <contextParameter comment="" name="Response_fault_from_vendor" prompt="Response_fault_from_vendor?" promptNeeded="false" type="id_String" value="null"/>
+  <contextParameter comment="" name="Push_connection_failure" prompt="Push_connection_failure?" promptNeeded="false" type="id_Boolean" value="false"/>
+  <contextParameter comment="" name="Push_fault" prompt="Push_fault?" promptNeeded="false" type="id_Boolean" value="false"/>
+  <contextParameter comment="" name="Request_validation_error" prompt="Request_validation_error?" promptNeeded="false" type="id_Boolean" value="false"/>
+  <contextParameter comment="" name="Request_validation_error_message" prompt="Request_validation_error_message?" promptNeeded="false" type="id_String" value="null"/>
+</talendfile:ContextType>

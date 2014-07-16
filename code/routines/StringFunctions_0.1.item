@@ -1,0 +1,17 @@
+package routines;
+
+
+public class StringFunctions {
+    
+    public static String clean(String toBeCleaned) {
+    	if(toBeCleaned == null) return null;
+    	else return toBeCleaned.trim().replaceAll(" +", " ").toLowerCase();
+    }
+    
+    public static boolean StringChanged(String from, String to) {
+    	if(from == null && to == null) return false;
+    	else if(from == null && to != null) return true;
+    	else if(!(from.equals(to))) return true;
+    	else return false;
+    }
+}
