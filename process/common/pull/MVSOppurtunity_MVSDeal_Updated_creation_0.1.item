@@ -29,6 +29,8 @@
     <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="32"/>
     <elementParameter field="TEXT" name="SCHEMA_OPTIONS" value="none"/>
     <elementParameter field="TEXT" name="OEM_CUSTOM_ATTRIBUTE" value=""/>
+    <elementParameter field="TEXT" name="HADOOP_APP_PATH" value=""/>
+    <elementParameter field="TEXT" name="JOBID_FOR_OOZIE" value=""/>
     <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" value="true"/>
     <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" value="true"/>
     <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" value="false"/>
@@ -323,7 +325,7 @@
       <column comment="" key="false" name="ProgramId" nullable="true" pattern="" sourceType="" type="id_Integer"/>
     </metadata>
   </node>
-  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="7" posX="96" posY="416">
+  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="7" posX="-96" posY="544">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMSSqlInput_24"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tMSSqlConnection_1"/>
@@ -339,7 +341,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT dbo.OppRegistration_Pull.\&quot;Id\&quot;,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.VendorId,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.DealName,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.ExpectedRevenue,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.VendorDealId,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.ParentVendorDealId,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.DealKey,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.ApprovalId,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.VendorStatus,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.VartopiaStatus,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.RejectReason,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.SubmitDate,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.ExpirationDate,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.ExpectedCloseDate,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.SalesRepName,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.SalesRepEmail,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.SubmittedByUserName,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.SubmittedByUserEmail,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.CustCompanyName,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.CustAddress1,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.CustAddress2,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.CustAddress3,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.CustCity,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.CustState,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.CustPostalCode,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.CustCountry,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.CustContactFirstName,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.CustContactLastName,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.CustContactEmail,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.CustContactTitle,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.CustContactPhone,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.CustContactFax,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.CustContactMobile,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.CustContactWebsite,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.CurrencyCode,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.PartnerId,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.BatchId,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.RecordOrder,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.LastModifiedOn,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.OpportunityDescription,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.CustWebsite,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.ProgramDescription,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.SubmittedByUserId,&#xD;&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.ReviewerName,&#xD;&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.ReviewerEmail,&#xD;&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.ReviewerComment,&#xD;&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.CampaignName&#xA;FROM&#x9;dbo.OppRegistration_Pull&#xD;&#xA;where BatchId = '&quot;+context.BATCH_ID+&quot;'&#xD;&#xA;and RecordOrder in (&quot;+context.InsertListString+&quot;)&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT dbo.OppRegistration_Pull.\&quot;Id\&quot;,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.VendorId,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.DealName,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.ExpectedRevenue,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.VendorDealId,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.ParentVendorDealId,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.DealKey,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.ApprovalId,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.VendorStatus,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.VartopiaStatus,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.RejectReason,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.SubmitDate,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.ExpirationDate,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.ExpectedCloseDate,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.SalesRepName,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.SalesRepEmail,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.SubmittedByUserName,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.SubmittedByUserEmail,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.CustCompanyName,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.CustAddress1,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.CustAddress2,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.CustAddress3,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.CustCity,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.CustState,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.CustPostalCode,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.CustCountry,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.CustContactFirstName,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.CustContactLastName,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.CustContactEmail,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.CustContactTitle,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.CustContactPhone,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.CustContactFax,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.CustContactMobile,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.CustContactWebsite,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.CurrencyCode,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.PartnerId,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.BatchId,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.RecordOrder,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.LastModifiedOn,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.OpportunityDescription,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.CustWebsite,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.ProgramDescription,&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.SubmittedByUserId,&#xD;&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.ReviewerName,&#xD;&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.ReviewerEmail,&#xD;&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.ReviewerComment,&#xD;&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.CampaignName,&#xD;&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.VendorDealOwnerName,&#xD;&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.VendorOpportunityStage,&#xD;&#xA;&#x9;&#x9;dbo.OppRegistration_Pull.DealType&#xA;FROM&#x9;dbo.OppRegistration_Pull&#xD;&#xA;where BatchId = '&quot;+context.BATCH_ID+&quot;'&#xD;&#xA;and RecordOrder in (&quot;+context.InsertListString+&quot;)&quot;"/>
     <elementParameter field="MAPPING_TYPE" name="MAPPING" value="id_MSSQL"/>
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
@@ -440,6 +442,12 @@
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="CampaignName"/>
       <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="VendorDealOwnerName"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="VendorOpportunityStage"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DealType"/>
+      <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="TEXT" name="LABEL" value="__TABLE__"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -494,9 +502,12 @@
       <column comment="" key="false" name="ReviewerEmail" nullable="true" pattern="" sourceType="" type="id_String"/>
       <column comment="" key="false" name="ReviewerComment" nullable="true" pattern="" sourceType="" type="id_String"/>
       <column comment="" key="false" name="CampaignName" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" name="VendorDealOwnerName" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" name="VendorOpportunityStage" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" name="DealType" nullable="true" pattern="" sourceType="" type="id_String"/>
     </metadata>
   </node>
-  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="928" posY="160">
+  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="736" posY="288">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMSSqlInput_2"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tMSSqlConnection_2"/>
@@ -555,7 +566,7 @@
       <column comment="" key="true" length="256" name="Address3" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="928" posY="416">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="736" posY="544">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_1"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
@@ -616,6 +627,9 @@
       <column comment="" key="false" name="ReviewerEmail" nullable="true" pattern="" sourceType="" type="id_String"/>
       <column comment="" key="false" name="ReviewerComment" nullable="true" pattern="" sourceType="" type="id_String"/>
       <column comment="" key="false" name="CampaignName" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" name="VendorDealOwnerName" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" name="VendorOpportunityStage" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" name="DealType" nullable="true" pattern="" sourceType="" type="id_String"/>
     </metadata>
     <nodeData xsi:type="MapperData">
       <uiProperties/>
@@ -668,6 +682,9 @@
         <mapperTableEntries name="ReviewerEmail" expression="row1.ReviewerEmail " type="id_String" nullable="true"/>
         <mapperTableEntries name="ReviewerComment" expression="row1.ReviewerComment " type="id_String" nullable="true"/>
         <mapperTableEntries name="CampaignName" expression="row1.CampaignName " type="id_String" nullable="true"/>
+        <mapperTableEntries name="VendorDealOwnerName" expression="row1.VendorDealOwnerName " type="id_String" nullable="true"/>
+        <mapperTableEntries name="VendorOpportunityStage" expression="row1.VendorOpportunityStage " type="id_String" nullable="true"/>
+        <mapperTableEntries name="DealType" expression="row1.DealType " type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row1" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="Id" type="id_Integer"/>
@@ -717,6 +734,9 @@
         <mapperTableEntries name="ReviewerEmail" type="id_String" nullable="true"/>
         <mapperTableEntries name="ReviewerComment" type="id_String" nullable="true"/>
         <mapperTableEntries name="CampaignName" type="id_String" nullable="true"/>
+        <mapperTableEntries name="VendorDealOwnerName" type="id_String" nullable="true"/>
+        <mapperTableEntries name="VendorOpportunityStage" type="id_String" nullable="true"/>
+        <mapperTableEntries name="DealType" type="id_String" nullable="true"/>
       </inputTables>
       <inputTables sizeState="INTERMEDIATE" name="Customer_Lookup" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="Id" type="id_Integer"/>
@@ -731,7 +751,7 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1152" posY="160">
+  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="960" posY="288">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMSSqlInput_3"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tMSSqlConnection_2"/>
@@ -778,7 +798,7 @@
       <column comment="" key="false" length="256" name="Email" nullable="true" pattern="" precision="0" sourceType="" type="id_String"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1152" posY="416">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="960" posY="544">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_3"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
@@ -840,6 +860,9 @@
       <column comment="" key="false" name="ReviewerEmail" nullable="true" pattern="" sourceType="" type="id_String"/>
       <column comment="" key="false" name="ReviewerComment" nullable="true" pattern="" sourceType="" type="id_String"/>
       <column comment="" key="false" name="CampaignName" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" name="VendorDealOwnerName" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" name="VendorOpportunityStage" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" name="DealType" nullable="true" pattern="" sourceType="" type="id_String"/>
     </metadata>
     <nodeData xsi:type="MapperData">
       <uiProperties/>
@@ -893,6 +916,9 @@
         <mapperTableEntries name="ReviewerEmail" expression="Deal_with_Customer.ReviewerEmail " type="id_String" nullable="true"/>
         <mapperTableEntries name="ReviewerComment" expression="Deal_with_Customer.ReviewerComment " type="id_String" nullable="true"/>
         <mapperTableEntries name="CampaignName" expression="Deal_with_Customer.CampaignName " type="id_String" nullable="true"/>
+        <mapperTableEntries name="VendorDealOwnerName" expression="Deal_with_Customer.VendorDealOwnerName " type="id_String" nullable="true"/>
+        <mapperTableEntries name="VendorOpportunityStage" expression="Deal_with_Customer.VendorOpportunityStage " type="id_String" nullable="true"/>
+        <mapperTableEntries name="DealType" expression="Deal_with_Customer.DealType " type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="Deal_with_Customer" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="VendorId" type="id_Integer"/>
@@ -942,6 +968,9 @@
         <mapperTableEntries name="ReviewerEmail" type="id_String" nullable="true"/>
         <mapperTableEntries name="ReviewerComment" type="id_String" nullable="true"/>
         <mapperTableEntries name="CampaignName" type="id_String" nullable="true"/>
+        <mapperTableEntries name="VendorDealOwnerName" type="id_String" nullable="true"/>
+        <mapperTableEntries name="VendorOpportunityStage" type="id_String" nullable="true"/>
+        <mapperTableEntries name="DealType" type="id_String" nullable="true"/>
       </inputTables>
       <inputTables sizeState="INTERMEDIATE" name="Customer_Contact_Lookup" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="Id" type="id_Integer" nullable="true"/>
@@ -952,7 +981,7 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1568" posY="416">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1376" posY="544">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_4"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
@@ -1016,6 +1045,9 @@
       <column comment="" key="false" name="ReviewerEmail" nullable="true" pattern="" sourceType="" type="id_String"/>
       <column comment="" key="false" name="ReviewerComment" nullable="true" pattern="" sourceType="" type="id_String"/>
       <column comment="" key="false" name="CampaignName" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" name="VendorDealOwnerName" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" name="VendorOpportunityStage" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" name="DealType" nullable="true" pattern="" sourceType="" type="id_String"/>
     </metadata>
     <metadata connector="FLOW" name="ProgramID_Exception">
       <column comment="" key="false" length="100" name="ProgramDescription" nullable="true" pattern="" precision="1" sourceType="" type="id_String"/>
@@ -1077,6 +1109,9 @@
         <mapperTableEntries name="ReviewerEmail" expression="Programme_Name.ReviewerEmail " type="id_String" nullable="true"/>
         <mapperTableEntries name="ReviewerComment" expression="Programme_Name.ReviewerComment " type="id_String" nullable="true"/>
         <mapperTableEntries name="CampaignName" expression="Programme_Name.CampaignName " type="id_String" nullable="true"/>
+        <mapperTableEntries name="VendorDealOwnerName" expression="Programme_Name.VendorDealOwnerName " type="id_String" nullable="true"/>
+        <mapperTableEntries name="VendorOpportunityStage" expression="Programme_Name.VendorOpportunityStage " type="id_String" nullable="true"/>
+        <mapperTableEntries name="DealType" expression="Programme_Name.DealType " type="id_String" nullable="true"/>
       </outputTables>
       <outputTables sizeState="INTERMEDIATE" name="ProgramID_Exception" expressionFilter="row10.Id == null" activateExpressionFilter="true">
         <mapperTableEntries name="ProgramDescription" expression="Programme_Name.ProgramDescription " type="id_String" nullable="true"/>
@@ -1133,6 +1168,9 @@
         <mapperTableEntries name="ReviewerEmail" type="id_String" nullable="true"/>
         <mapperTableEntries name="ReviewerComment" type="id_String" nullable="true"/>
         <mapperTableEntries name="CampaignName" type="id_String" nullable="true"/>
+        <mapperTableEntries name="VendorDealOwnerName" type="id_String" nullable="true"/>
+        <mapperTableEntries name="VendorOpportunityStage" type="id_String" nullable="true"/>
+        <mapperTableEntries name="DealType" type="id_String" nullable="true"/>
       </inputTables>
       <inputTables sizeState="INTERMEDIATE" name="SalesRepEmail" expressionFilter="Programme_Name.SalesRepEmail != null" activateExpressionFilter="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="Id" expression="" type="id_String" nullable="true"/>
@@ -1180,7 +1218,7 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="928" posY="288">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="736" posY="416">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_8"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
@@ -1231,7 +1269,7 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1152" posY="288">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="960" posY="416">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_10"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
@@ -1270,7 +1308,7 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1280" posY="544">
+  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1088" posY="672">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMSSqlInput_16"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tMSSqlConnection_2"/>
@@ -1314,7 +1352,7 @@
       <column comment="" key="false" length="2000" name="Description" nullable="true" pattern="" precision="0" sourceType="" type="id_String"/>
     </metadata>
   </node>
-  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1408" posY="640">
+  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1216" posY="768">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMSSqlInput_15"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tMSSqlConnection_2"/>
@@ -1361,7 +1399,7 @@
       <column comment="" key="false" name="UserInformationName" nullable="false" pattern="" sourceType="" type="id_String"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1376" posY="416">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1184" posY="544">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_12"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
@@ -1423,6 +1461,9 @@
       <column comment="" key="false" name="ReviewerEmail" nullable="true" pattern="" sourceType="" type="id_String"/>
       <column comment="" key="false" name="ReviewerComment" nullable="true" pattern="" sourceType="" type="id_String"/>
       <column comment="" key="false" name="CampaignName" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" name="VendorDealOwnerName" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" name="VendorOpportunityStage" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" name="DealType" nullable="true" pattern="" sourceType="" type="id_String"/>
     </metadata>
     <nodeData xsi:type="MapperData">
       <uiProperties/>
@@ -1476,6 +1517,9 @@
         <mapperTableEntries name="ReviewerEmail" expression="Deal_with_Contact.ReviewerEmail " type="id_String" nullable="true"/>
         <mapperTableEntries name="ReviewerComment" expression="Deal_with_Contact.ReviewerComment " type="id_String" nullable="true"/>
         <mapperTableEntries name="CampaignName" expression="Deal_with_Contact.CampaignName " type="id_String" nullable="true"/>
+        <mapperTableEntries name="VendorDealOwnerName" expression="Deal_with_Contact.VendorDealOwnerName " type="id_String" nullable="true"/>
+        <mapperTableEntries name="VendorOpportunityStage" expression="Deal_with_Contact.VendorOpportunityStage " type="id_String" nullable="true"/>
+        <mapperTableEntries name="DealType" expression="Deal_with_Contact.DealType " type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="Deal_with_Contact" matchingMode="ALL_ROWS" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="VendorId" type="id_Integer"/>
@@ -1526,10 +1570,13 @@
         <mapperTableEntries name="ReviewerEmail" type="id_String" nullable="true"/>
         <mapperTableEntries name="ReviewerComment" type="id_String" nullable="true"/>
         <mapperTableEntries name="CampaignName" type="id_String" nullable="true"/>
+        <mapperTableEntries name="VendorDealOwnerName" type="id_String" nullable="true"/>
+        <mapperTableEntries name="VendorOpportunityStage" type="id_String" nullable="true"/>
+        <mapperTableEntries name="DealType" type="id_String" nullable="true"/>
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1760" posY="288">
+  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1568" posY="416">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMSSqlInput_18"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tMSSqlConnection_2"/>
@@ -1573,7 +1620,7 @@
       <column comment="" key="false" length="2000" name="Description" nullable="true" pattern="" precision="0" sourceType="" type="id_String"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="2016" posY="416">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1824" posY="544">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_14"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
@@ -1638,6 +1685,9 @@
       <column comment="" key="false" name="ReviewerEmail" nullable="true" pattern="" sourceType="" type="id_String"/>
       <column comment="" key="false" name="ReviewerComment" nullable="true" pattern="" sourceType="" type="id_String"/>
       <column comment="" key="false" name="CampaignName" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" name="VendorDealOwnerName" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" name="VendorOpportunityStage" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" name="DealType" nullable="true" pattern="" sourceType="" type="id_String"/>
     </metadata>
     <nodeData xsi:type="MapperData">
       <uiProperties/>
@@ -1694,6 +1744,9 @@
         <mapperTableEntries name="ReviewerEmail" expression="Deal_with_UserId.ReviewerEmail " type="id_String" nullable="true"/>
         <mapperTableEntries name="ReviewerComment" expression="Deal_with_UserId.ReviewerComment " type="id_String" nullable="true"/>
         <mapperTableEntries name="CampaignName" expression="Deal_with_UserId.CampaignName " type="id_String" nullable="true"/>
+        <mapperTableEntries name="VendorDealOwnerName" expression="Deal_with_UserId.VendorDealOwnerName " type="id_String" nullable="true"/>
+        <mapperTableEntries name="VendorOpportunityStage" expression="Deal_with_UserId.VendorOpportunityStage " type="id_String" nullable="true"/>
+        <mapperTableEntries name="DealType" expression="Deal_with_UserId.DealType " type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="Deal_with_UserId" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="VendorId" type="id_Integer"/>
@@ -1746,6 +1799,9 @@
         <mapperTableEntries name="ReviewerEmail" type="id_String" nullable="true"/>
         <mapperTableEntries name="ReviewerComment" type="id_String" nullable="true"/>
         <mapperTableEntries name="CampaignName" type="id_String" nullable="true"/>
+        <mapperTableEntries name="VendorDealOwnerName" type="id_String" nullable="true"/>
+        <mapperTableEntries name="VendorOpportunityStage" type="id_String" nullable="true"/>
+        <mapperTableEntries name="DealType" type="id_String" nullable="true"/>
       </inputTables>
       <inputTables sizeState="INTERMEDIATE" name="SalesRepMapping_Email" expressionFilter="Deal_with_UserId.SalesRepEmail != null" activateExpressionFilter="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="Id" type="id_Integer"/>
@@ -1761,7 +1817,7 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="2368" posY="416">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="2176" posY="544">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_15"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
@@ -1826,6 +1882,9 @@
       <column comment="" key="false" name="ReviewerEmail" nullable="true" pattern="" sourceType="" type="id_String"/>
       <column comment="" key="false" name="ReviewerComment" nullable="true" pattern="" sourceType="" type="id_String"/>
       <column comment="" key="false" name="CampaignName" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" name="VendorDealOwnerName" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" name="VendorOpportunityStage" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" name="DealType" nullable="true" pattern="" sourceType="" type="id_String"/>
     </metadata>
     <metadata connector="FLOW" label="MVS_SalesRepresentativeException" name="MVS_SalesRepresentativeException">
       <column comment="" key="false" length="10" name="MVS_VARId" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer"/>
@@ -1886,6 +1945,9 @@
         <mapperTableEntries name="ReviewerEmail" expression="copyOfInsert_Deal.ReviewerEmail " type="id_String" nullable="true"/>
         <mapperTableEntries name="ReviewerComment" expression="copyOfInsert_Deal.ReviewerComment " type="id_String" nullable="true"/>
         <mapperTableEntries name="CampaignName" expression="copyOfInsert_Deal.CampaignName " type="id_String" nullable="true"/>
+        <mapperTableEntries name="VendorDealOwnerName" expression="copyOfInsert_Deal.VendorDealOwnerName " type="id_String" nullable="true"/>
+        <mapperTableEntries name="VendorOpportunityStage" expression="copyOfInsert_Deal.VendorOpportunityStage " type="id_String" nullable="true"/>
+        <mapperTableEntries name="DealType" expression="copyOfInsert_Deal.DealType " type="id_String" nullable="true"/>
       </outputTables>
       <outputTables sizeState="INTERMEDIATE" name="MVS_SalesRepresentativeException" expressionFilter="(copyOfInsert_Deal.SalesRepId == null) &amp;&amp; (copyOfInsert_Deal.SalesRepEmail != null || copyOfInsert_Deal.SalesRepName != null) &amp;&amp;  row14.Id == null" activateExpressionFilter="true">
         <mapperTableEntries name="MVS_VARId" expression="Integer.parseInt(context.MVS_VARId) " type="id_Integer"/>
@@ -1943,6 +2005,9 @@
         <mapperTableEntries name="ReviewerEmail" type="id_String" nullable="true"/>
         <mapperTableEntries name="ReviewerComment" type="id_String" nullable="true"/>
         <mapperTableEntries name="CampaignName" type="id_String" nullable="true"/>
+        <mapperTableEntries name="VendorDealOwnerName" type="id_String" nullable="true"/>
+        <mapperTableEntries name="VendorOpportunityStage" type="id_String" nullable="true"/>
+        <mapperTableEntries name="DealType" type="id_String" nullable="true"/>
       </inputTables>
       <inputTables sizeState="INTERMEDIATE" name="row14" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="Id" expression="copyOfInsert_Deal.SalesRepId " type="id_String" operator="="/>
@@ -1956,7 +2021,7 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="2368" posY="288">
+  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="2176" posY="416">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMSSqlInput_23"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tMSSqlConnection_2"/>
@@ -2012,7 +2077,7 @@
       <column comment="" key="false" length="50" name="Phone" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1504" posY="512">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1312" posY="640">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_17"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
@@ -2051,7 +2116,7 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1856" posY="544">
+  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1664" posY="672">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMSSqlInput_25"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tMSSqlConnection_2"/>
@@ -2098,7 +2163,7 @@
       <column comment="" key="false" length="50" name="LastName" nullable="false" pattern="" precision="0" sourceType="" type="id_String"/>
     </metadata>
   </node>
-  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1568" posY="640">
+  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1376" posY="768">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMSSqlInput_11"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tMSSqlConnection_2"/>
@@ -2145,7 +2210,7 @@
       <column comment="" key="false" length="50" name="LastName" nullable="false" pattern="" precision="0" sourceType="" type="id_String"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1472" posY="288">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1280" posY="416">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_18"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
@@ -2175,7 +2240,7 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1376" posY="160">
+  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1184" posY="288">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMSSqlInput_13"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tMSSqlConnection_2"/>
@@ -2213,7 +2278,7 @@
       <column key="false" length="256" name="Email" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1632" posY="256">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1440" posY="384">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_21"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
@@ -2252,7 +2317,7 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1632" posY="128">
+  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1440" posY="256">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMSSqlInput_17"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tMSSqlConnection_2"/>
@@ -2299,7 +2364,7 @@
       <column comment="" key="false" name="MVS_SalesRepresentativeName" nullable="false" pattern="" sourceType="" type="id_String"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1952" posY="320">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1760" posY="448">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_23"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
@@ -2335,7 +2400,7 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1888" posY="224">
+  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1696" posY="352">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMSSqlInput_21"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tMSSqlConnection_2"/>
@@ -2379,7 +2444,7 @@
       <column comment="" key="false" length="36" name="SalesRepId" nullable="false" pattern="" precision="0" sourceType="UNIQUEIDENTIFIER" type="id_String"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="2112" posY="320">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1920" posY="448">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_25"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
@@ -2415,7 +2480,7 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="2208" posY="224">
+  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="2016" posY="352">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMSSqlInput_22"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tMSSqlConnection_2"/>
@@ -2459,7 +2524,7 @@
       <column comment="" key="false" length="36" name="SalesRepId" nullable="false" pattern="" precision="0" sourceType="UNIQUEIDENTIFIER" type="id_String"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="3040" posY="416">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="2848" posY="544">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_6"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
@@ -2525,6 +2590,9 @@
       <column comment="" key="false" name="ReviewerEmail" nullable="true" pattern="" sourceType="" type="id_String"/>
       <column comment="" key="false" name="ReviewerComment" nullable="true" pattern="" sourceType="" type="id_String"/>
       <column comment="" key="false" name="CampaignName" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" name="VendorDealOwnerName" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" name="VendorOpportunityStage" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" name="DealType" nullable="true" pattern="" sourceType="" type="id_String"/>
     </metadata>
     <nodeData xsi:type="MapperData">
       <uiProperties/>
@@ -2582,6 +2650,9 @@
         <mapperTableEntries name="ReviewerEmail" expression="DefaultMapped.ReviewerEmail " type="id_String" nullable="true"/>
         <mapperTableEntries name="ReviewerComment" expression="DefaultMapped.ReviewerComment " type="id_String" nullable="true"/>
         <mapperTableEntries name="CampaignName" expression="DefaultMapped.CampaignName " type="id_String" nullable="true"/>
+        <mapperTableEntries name="VendorDealOwnerName" expression="DefaultMapped.VendorDealOwnerName " type="id_String" nullable="true"/>
+        <mapperTableEntries name="VendorOpportunityStage" expression="DefaultMapped.VendorOpportunityStage " type="id_String" nullable="true"/>
+        <mapperTableEntries name="DealType" expression="DefaultMapped.DealType " type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="DefaultMapped" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="OpportunityName" type="id_String"/>
@@ -2635,6 +2706,9 @@
         <mapperTableEntries name="ReviewerEmail" type="id_String" nullable="true"/>
         <mapperTableEntries name="ReviewerComment" type="id_String" nullable="true"/>
         <mapperTableEntries name="CampaignName" type="id_String" nullable="true"/>
+        <mapperTableEntries name="VendorDealOwnerName" type="id_String" nullable="true"/>
+        <mapperTableEntries name="VendorOpportunityStage" type="id_String" nullable="true"/>
+        <mapperTableEntries name="DealType" type="id_String" nullable="true"/>
       </inputTables>
       <inputTables sizeState="INTERMEDIATE" name="row6" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="Id" type="id_Integer"/>
@@ -2642,7 +2716,7 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="3040" posY="224">
+  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="2848" posY="352">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMSSqlInput_8"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tMSSqlConnection_2"/>
@@ -2680,7 +2754,7 @@
       <column comment="" key="false" length="128" name="Name" nullable="false" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
     </metadata>
   </node>
-  <node componentName="tMSSqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="3232" posY="416">
+  <node componentName="tMSSqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="3040" posY="544">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMSSqlOutput_2"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tMSSqlConnection_2"/>
@@ -2975,7 +3049,23 @@
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="false"/>
       <elementValue elementRef="INSERTABLE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="VendorDealOwnerName"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="false"/>
+      <elementValue elementRef="INSERTABLE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="VendorOpportunityStage"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="false"/>
+      <elementValue elementRef="INSERTABLE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DealType"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="false"/>
+      <elementValue elementRef="INSERTABLE" value="false"/>
     </elementParameter>
+    <elementParameter field="CHECK" name="IGNORE_DATE_OUTOF_RANGE" value="false"/>
     <elementParameter field="CHECK" name="ENABLE_DEBUG_MODE" value="false"/>
     <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false"/>
     <elementParameter field="CHECK" name="USE_BATCH_SIZE" value="false"/>
@@ -3034,10 +3124,13 @@
       <column comment="" key="false" name="ReassignedSalesRepId" nullable="true" pattern="" sourceType="VARCHAR" type="id_String"/>
       <column comment="" key="false" name="ProgramId" nullable="true" pattern="" sourceType="INT" type="id_Integer"/>
       <column key="false" length="256" name="CustWebsite" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
-      <column comment="" key="false" name="ReviewerName" nullable="true" pattern="" sourceType="" type="id_String"/>
-      <column comment="" key="false" name="ReviewerEmail" nullable="true" pattern="" sourceType="" type="id_String"/>
-      <column comment="" key="false" name="ReviewerComment" nullable="true" pattern="" sourceType="" type="id_String"/>
-      <column comment="" key="false" name="CampaignName" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" name="ReviewerName" nullable="true" pattern="" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" name="ReviewerEmail" nullable="true" pattern="" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" name="ReviewerComment" nullable="true" pattern="" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" name="CampaignName" nullable="true" pattern="" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" name="VendorDealOwnerName" nullable="true" pattern="" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" name="VendorOpportunityStage" nullable="true" pattern="" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" name="DealType" nullable="true" pattern="" sourceType="VARCHAR" type="id_String"/>
     </metadata>
     <metadata connector="REJECT" label="MVS_Opportunity" name="REJECT">
       <column comment="" key="false" length="256" name="OpportunityName" nullable="false" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
@@ -3088,15 +3181,18 @@
       <column comment="" key="false" name="ReassignedSalesRepId" nullable="true" pattern="" sourceType="VARCHAR" type="id_String"/>
       <column comment="" key="false" name="ProgramId" nullable="true" pattern="" sourceType="INT" type="id_Integer"/>
       <column key="false" length="256" name="CustWebsite" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
-      <column comment="" key="false" name="ReviewerName" nullable="true" pattern="" sourceType="" type="id_String"/>
-      <column comment="" key="false" name="ReviewerEmail" nullable="true" pattern="" sourceType="" type="id_String"/>
-      <column comment="" key="false" name="ReviewerComment" nullable="true" pattern="" sourceType="" type="id_String"/>
-      <column comment="" key="false" name="CampaignName" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" name="ReviewerName" nullable="true" pattern="" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" name="ReviewerEmail" nullable="true" pattern="" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" name="ReviewerComment" nullable="true" pattern="" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" name="CampaignName" nullable="true" pattern="" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" name="VendorDealOwnerName" nullable="true" pattern="" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" name="VendorOpportunityStage" nullable="true" pattern="" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" name="DealType" nullable="true" pattern="" sourceType="VARCHAR" type="id_String"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String"/>
     </metadata>
   </node>
-  <node componentName="tMSSqlLastInsertId" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="3424" posY="416">
+  <node componentName="tMSSqlLastInsertId" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="3232" posY="544">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMSSqlLastInsertId_3"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tMSSqlConnection_2"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -3152,14 +3248,17 @@
       <column comment="" key="false" name="ReassignedSalesRepId" nullable="true" pattern="" sourceType="VARCHAR" type="id_String"/>
       <column comment="" key="false" name="ProgramId" nullable="true" pattern="" sourceType="INT" type="id_Integer"/>
       <column key="false" length="256" name="CustWebsite" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
-      <column comment="" key="false" name="ReviewerName" nullable="true" pattern="" sourceType="" type="id_String"/>
-      <column comment="" key="false" name="ReviewerEmail" nullable="true" pattern="" sourceType="" type="id_String"/>
-      <column comment="" key="false" name="ReviewerComment" nullable="true" pattern="" sourceType="" type="id_String"/>
-      <column comment="" key="false" name="CampaignName" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" name="ReviewerName" nullable="true" pattern="" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" name="ReviewerEmail" nullable="true" pattern="" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" name="ReviewerComment" nullable="true" pattern="" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" name="CampaignName" nullable="true" pattern="" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" name="VendorDealOwnerName" nullable="true" pattern="" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" name="VendorOpportunityStage" nullable="true" pattern="" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" name="DealType" nullable="true" pattern="" sourceType="VARCHAR" type="id_String"/>
       <column defaultValue="" key="false" length="10" name="last_insert_id" nullable="true" precision="0" sourceType="" type="id_Integer"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="3648" posY="416">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="3456" posY="544">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_7"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
@@ -3209,9 +3308,12 @@
       <column comment="" key="false" name="ReviewerEmail" nullable="true" pattern="" sourceType="" type="id_String"/>
       <column comment="" key="false" name="ReviewerComment" nullable="true" pattern="" sourceType="" type="id_String"/>
       <column comment="" key="false" name="CampaignName" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" name="VendorDealOwnerName" nullable="true" pattern="" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" name="VendorOpportunityStage" nullable="true" pattern="" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" name="DealType" nullable="true" pattern="" sourceType="VARCHAR" type="id_String"/>
     </metadata>
     <nodeData xsi:type="MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="Insert_Deals">
         <mapperTableEntries name="DealName" expression="row5.OpportunityName " type="id_String"/>
@@ -3250,6 +3352,9 @@
         <mapperTableEntries name="ReviewerEmail" expression="row5.ReviewerEmail " type="id_String" nullable="true"/>
         <mapperTableEntries name="ReviewerComment" expression="row5.ReviewerComment " type="id_String" nullable="true"/>
         <mapperTableEntries name="CampaignName" expression="row5.CampaignName " type="id_String" nullable="true"/>
+        <mapperTableEntries name="VendorDealOwnerName" expression="row5.VendorDealOwnerName " type="id_String" nullable="true"/>
+        <mapperTableEntries name="VendorOpportunityStage" expression="row5.VendorOpportunityStage " type="id_String" nullable="true"/>
+        <mapperTableEntries name="DealType" expression="row5.DealType " type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row5" matchingMode="ALL_ROWS" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="OpportunityName" type="id_String"/>
@@ -3304,6 +3409,9 @@
         <mapperTableEntries name="ReviewerEmail" type="id_String" nullable="true"/>
         <mapperTableEntries name="ReviewerComment" type="id_String" nullable="true"/>
         <mapperTableEntries name="CampaignName" type="id_String" nullable="true"/>
+        <mapperTableEntries name="VendorDealOwnerName" type="id_String" nullable="true"/>
+        <mapperTableEntries name="VendorOpportunityStage" type="id_String" nullable="true"/>
+        <mapperTableEntries name="DealType" type="id_String" nullable="true"/>
         <mapperTableEntries name="last_insert_id" type="id_Integer" nullable="true"/>
       </inputTables>
       <inputTables sizeState="INTERMEDIATE" name="row7" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
@@ -3313,7 +3421,7 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="3648" posY="224">
+  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="3456" posY="352">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMSSqlInput_9"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tMSSqlConnection_2"/>
@@ -3354,7 +3462,7 @@
       <column comment="" key="false" length="3" name="Abbreviation" nullable="false" pattern="" precision="0" sourceType="CHAR" type="id_String"/>
     </metadata>
   </node>
-  <node componentName="tMSSqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="3872" posY="416">
+  <node componentName="tMSSqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="3680" posY="544">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMSSqlOutput_4"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tMSSqlConnection_2"/>
@@ -3584,7 +3692,23 @@
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="VendorDealOwnerName"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="VendorOpportunityStage"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DealType"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
     </elementParameter>
+    <elementParameter field="CHECK" name="IGNORE_DATE_OUTOF_RANGE" value="false"/>
     <elementParameter field="CHECK" name="ENABLE_DEBUG_MODE" value="false"/>
     <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false"/>
     <elementParameter field="CHECK" name="USE_BATCH_SIZE" value="false"/>
@@ -3627,10 +3751,13 @@
       <column key="false" length="256" name="CustWebsite" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
       <column comment="" key="false" length="256" name="SalesRepEmail" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
       <column comment="" key="false" length="256" name="SubmittedByUserEmail" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
-      <column comment="" key="false" name="ReviewerName" nullable="true" pattern="" sourceType="" type="id_String"/>
-      <column comment="" key="false" name="ReviewerEmail" nullable="true" pattern="" sourceType="" type="id_String"/>
-      <column comment="" key="false" name="ReviewerComment" nullable="true" pattern="" sourceType="" type="id_String"/>
-      <column comment="" key="false" name="CampaignName" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" name="ReviewerName" nullable="true" pattern="" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" name="ReviewerEmail" nullable="true" pattern="" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" name="ReviewerComment" nullable="true" pattern="" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" name="CampaignName" nullable="true" pattern="" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" name="VendorDealOwnerName" nullable="true" pattern="" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" name="VendorOpportunityStage" nullable="true" pattern="" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" name="DealType" nullable="true" pattern="" sourceType="VARCHAR" type="id_String"/>
     </metadata>
     <metadata connector="REJECT" label="MVS_Deal" name="REJECT">
       <column comment="" key="false" length="256" name="DealName" nullable="false" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
@@ -3665,15 +3792,18 @@
       <column key="false" length="256" name="CustWebsite" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
       <column comment="" key="false" length="256" name="SalesRepEmail" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
       <column comment="" key="false" length="256" name="SubmittedByUserEmail" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
-      <column comment="" key="false" name="ReviewerName" nullable="true" pattern="" sourceType="" type="id_String"/>
-      <column comment="" key="false" name="ReviewerEmail" nullable="true" pattern="" sourceType="" type="id_String"/>
-      <column comment="" key="false" name="ReviewerComment" nullable="true" pattern="" sourceType="" type="id_String"/>
-      <column comment="" key="false" name="CampaignName" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" name="ReviewerName" nullable="true" pattern="" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" name="ReviewerEmail" nullable="true" pattern="" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" name="ReviewerComment" nullable="true" pattern="" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" name="CampaignName" nullable="true" pattern="" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" name="VendorDealOwnerName" nullable="true" pattern="" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" name="VendorOpportunityStage" nullable="true" pattern="" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" name="DealType" nullable="true" pattern="" sourceType="VARCHAR" type="id_String"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String"/>
     </metadata>
   </node>
-  <node componentName="tMSSqlLastInsertId" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="4064" posY="416">
+  <node componentName="tMSSqlLastInsertId" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="3872" posY="544">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMSSqlLastInsertId_2"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tMSSqlConnection_2"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -3713,14 +3843,17 @@
       <column key="false" length="256" name="CustWebsite" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
       <column comment="" key="false" length="256" name="SalesRepEmail" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
       <column comment="" key="false" length="256" name="SubmittedByUserEmail" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
-      <column comment="" key="false" name="ReviewerName" nullable="true" pattern="" sourceType="" type="id_String"/>
-      <column comment="" key="false" name="ReviewerEmail" nullable="true" pattern="" sourceType="" type="id_String"/>
-      <column comment="" key="false" name="ReviewerComment" nullable="true" pattern="" sourceType="" type="id_String"/>
-      <column comment="" key="false" name="CampaignName" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" name="ReviewerName" nullable="true" pattern="" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" name="ReviewerEmail" nullable="true" pattern="" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" name="ReviewerComment" nullable="true" pattern="" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" name="CampaignName" nullable="true" pattern="" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" name="VendorDealOwnerName" nullable="true" pattern="" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" name="VendorOpportunityStage" nullable="true" pattern="" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" name="DealType" nullable="true" pattern="" sourceType="VARCHAR" type="id_String"/>
       <column defaultValue="" key="false" length="10" name="last_insert_id" nullable="true" precision="0" sourceType="" type="id_Integer"/>
     </metadata>
   </node>
-  <node componentName="tJavaFlex" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="4256" posY="416">
+  <node componentName="tJavaFlex" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="4064" posY="544">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaFlex_5"/>
     <elementParameter field="CHECK" name="DATA_AUTO_PROPAGATE" value="true"/>
     <elementParameter field="MEMO_JAVA" name="CODE_START" value="// start part of your Java code&#xA;&#xA;&#xA;"/>
@@ -3736,7 +3869,7 @@
     <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
     <metadata connector="FLOW" name="tJavaFlex_5"/>
   </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="3232" posY="544">
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="3040" posY="672">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogRow_2"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
@@ -3854,6 +3987,12 @@
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="CampaignName"/>
       <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="VendorDealOwnerName"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="VendorOpportunityStage"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DealType"/>
+      <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="errorCode"/>
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="errorMessage"/>
@@ -3913,15 +4052,18 @@
       <column comment="" key="false" name="ReassignedSalesRepId" nullable="true" pattern="" sourceType="VARCHAR" type="id_String"/>
       <column comment="" key="false" name="ProgramId" nullable="true" pattern="" sourceType="INT" type="id_Integer"/>
       <column key="false" length="256" name="CustWebsite" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
-      <column comment="" key="false" name="ReviewerName" nullable="true" pattern="" sourceType="" type="id_String"/>
-      <column comment="" key="false" name="ReviewerEmail" nullable="true" pattern="" sourceType="" type="id_String"/>
-      <column comment="" key="false" name="ReviewerComment" nullable="true" pattern="" sourceType="" type="id_String"/>
-      <column comment="" key="false" name="CampaignName" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" name="ReviewerName" nullable="true" pattern="" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" name="ReviewerEmail" nullable="true" pattern="" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" name="ReviewerComment" nullable="true" pattern="" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" name="CampaignName" nullable="true" pattern="" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" name="VendorDealOwnerName" nullable="true" pattern="" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" name="VendorOpportunityStage" nullable="true" pattern="" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" name="DealType" nullable="true" pattern="" sourceType="VARCHAR" type="id_String"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String"/>
     </metadata>
   </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="3872" posY="544">
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="3680" posY="672">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogRow_4"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
@@ -4007,6 +4149,12 @@
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="CampaignName"/>
       <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="VendorDealOwnerName"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="VendorOpportunityStage"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DealType"/>
+      <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="errorCode"/>
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="errorMessage"/>
@@ -4050,15 +4198,18 @@
       <column key="false" length="256" name="CustWebsite" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
       <column comment="" key="false" length="256" name="SalesRepEmail" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
       <column comment="" key="false" length="256" name="SubmittedByUserEmail" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String"/>
-      <column comment="" key="false" name="ReviewerName" nullable="true" pattern="" sourceType="" type="id_String"/>
-      <column comment="" key="false" name="ReviewerEmail" nullable="true" pattern="" sourceType="" type="id_String"/>
-      <column comment="" key="false" name="ReviewerComment" nullable="true" pattern="" sourceType="" type="id_String"/>
-      <column comment="" key="false" name="CampaignName" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" name="ReviewerName" nullable="true" pattern="" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" name="ReviewerEmail" nullable="true" pattern="" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" name="ReviewerComment" nullable="true" pattern="" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" name="CampaignName" nullable="true" pattern="" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" name="VendorDealOwnerName" nullable="true" pattern="" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" name="VendorOpportunityStage" nullable="true" pattern="" sourceType="VARCHAR" type="id_String"/>
+      <column comment="" key="false" name="DealType" nullable="true" pattern="" sourceType="VARCHAR" type="id_String"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String"/>
     </metadata>
   </node>
-  <node componentName="tMSSqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="2368" posY="544">
+  <node componentName="tMSSqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="2176" posY="672">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMSSqlOutput_3"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tMSSqlConnection_2"/>
@@ -4098,6 +4249,7 @@
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
     </elementParameter>
+    <elementParameter field="CHECK" name="IGNORE_DATE_OUTOF_RANGE" value="false"/>
     <elementParameter field="CHECK" name="ENABLE_DEBUG_MODE" value="false"/>
     <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false"/>
     <elementParameter field="CHECK" name="USE_BATCH_SIZE" value="true"/>
@@ -4118,7 +4270,7 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String"/>
     </metadata>
   </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1760" posY="608">
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1568" posY="736">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogRow_5"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
@@ -4153,7 +4305,7 @@
       <column comment="" key="false" name="message" nullable="true" pattern="" sourceType="" type="id_String"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="2688" posY="416">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="2496" posY="544">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_27"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
@@ -4218,6 +4370,9 @@
       <column comment="" key="false" name="ReviewerEmail" nullable="true" pattern="" sourceType="" type="id_String"/>
       <column comment="" key="false" name="ReviewerComment" nullable="true" pattern="" sourceType="" type="id_String"/>
       <column comment="" key="false" name="CampaignName" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" name="VendorDealOwnerName" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" name="VendorOpportunityStage" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" name="DealType" nullable="true" pattern="" sourceType="" type="id_String"/>
     </metadata>
     <nodeData xsi:type="MapperData">
       <uiProperties/>
@@ -4274,6 +4429,9 @@
         <mapperTableEntries name="ReviewerEmail" expression="Deal_withUserId.ReviewerEmail " type="id_String" nullable="true"/>
         <mapperTableEntries name="ReviewerComment" expression="Deal_withUserId.ReviewerComment " type="id_String" nullable="true"/>
         <mapperTableEntries name="CampaignName" expression="Deal_withUserId.CampaignName " type="id_String" nullable="true"/>
+        <mapperTableEntries name="VendorDealOwnerName" expression="Deal_withUserId.VendorDealOwnerName " type="id_String" nullable="true"/>
+        <mapperTableEntries name="VendorOpportunityStage" expression="Deal_withUserId.VendorOpportunityStage " type="id_String" nullable="true"/>
+        <mapperTableEntries name="DealType" expression="Deal_withUserId.DealType " type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="Deal_withUserId" matchingMode="ALL_ROWS" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="OpportunityName" type="id_String"/>
@@ -4327,6 +4485,9 @@
         <mapperTableEntries name="ReviewerEmail" type="id_String" nullable="true"/>
         <mapperTableEntries name="ReviewerComment" type="id_String" nullable="true"/>
         <mapperTableEntries name="CampaignName" type="id_String" nullable="true"/>
+        <mapperTableEntries name="VendorDealOwnerName" type="id_String" nullable="true"/>
+        <mapperTableEntries name="VendorOpportunityStage" type="id_String" nullable="true"/>
+        <mapperTableEntries name="DealType" type="id_String" nullable="true"/>
       </inputTables>
       <inputTables sizeState="INTERMEDIATE" name="row19" matchingMode="ALL_ROWS" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="Id" type="id_String"/>
@@ -4340,7 +4501,7 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="2688" posY="288">
+  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="2496" posY="416">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMSSqlInput_28"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tMSSqlConnection_2"/>
@@ -4399,23 +4560,14 @@
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tMSSqlConnection_1" offsetLabelX="0" offsetLabelY="0" source="tMSSqlConnection_1" target="tMSSqlConnection_2">
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk1"/>
-    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
-    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
-    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
   </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tMSSqlConnection_2" offsetLabelX="0" offsetLabelY="0" source="tMSSqlConnection_2" target="tMSSqlInput_24">
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk2"/>
-    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
-    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
-    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
   </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJava_1" offsetLabelX="0" offsetLabelY="0" source="tJava_1" target="tMSSqlConnection_1">
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk3"/>
-    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
-    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
-    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
   </connection>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tMSSqlInput_24" offsetLabelX="0" offsetLabelY="0" source="tMSSqlInput_24" target="tMap_1">
     <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
@@ -4561,6 +4713,15 @@
       <elementValue elementRef="TRACE_COLUMN" value="ReviewerEmail"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="VendorOpportunityStage"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="VendorDealOwnerName"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="DealType"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
@@ -4570,14 +4731,6 @@
     <elementParameter field="TABLE" name="THRESHLODS"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1"/>
-    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
-    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
-    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
-    <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
-    <elementParameter field="TABLE" name="CONDITIONS"/>
-    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
-    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;"/>
   </connection>
   <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tMSSqlInput_2" offsetLabelX="0" offsetLabelY="0" source="tMSSqlInput_2" target="tMap_8">
     <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
@@ -4618,14 +4771,6 @@
     <elementParameter field="TABLE" name="THRESHLODS"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row2"/>
-    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
-    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
-    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
-    <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
-    <elementParameter field="TABLE" name="CONDITIONS"/>
-    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
-    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;"/>
   </connection>
   <connection connectorName="FLOW" label="Deal_with_Customer" lineStyle="0" metaname="Deal_with_Customer" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tMap_3">
     <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
@@ -4777,6 +4922,15 @@
       <elementValue elementRef="TRACE_COLUMN" value="ReviewerEmail"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="VendorOpportunityStage"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="VendorDealOwnerName"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="DealType"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
@@ -4786,14 +4940,6 @@
     <elementParameter field="TABLE" name="THRESHLODS"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="Deal_with_Customer"/>
-    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
-    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
-    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
-    <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
-    <elementParameter field="TABLE" name="CONDITIONS"/>
-    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
-    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;"/>
   </connection>
   <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tMSSqlInput_3" offsetLabelX="0" offsetLabelY="0" source="tMSSqlInput_3" target="tMap_10">
     <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
@@ -4825,14 +4971,6 @@
     <elementParameter field="TABLE" name="THRESHLODS"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row3"/>
-    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
-    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
-    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
-    <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
-    <elementParameter field="TABLE" name="CONDITIONS"/>
-    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
-    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;"/>
   </connection>
   <connection connectorName="FLOW" label="Deal_with_Contact" lineStyle="0" metaname="Deal_with_Contact" offsetLabelX="0" offsetLabelY="0" source="tMap_3" target="tMap_12">
     <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
@@ -4984,6 +5122,15 @@
       <elementValue elementRef="TRACE_COLUMN" value="ReviewerEmail"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="VendorOpportunityStage"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="VendorDealOwnerName"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="DealType"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
@@ -4993,14 +5140,6 @@
     <elementParameter field="TABLE" name="THRESHLODS"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="Deal_with_Contact"/>
-    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
-    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
-    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
-    <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
-    <elementParameter field="TABLE" name="CONDITIONS"/>
-    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
-    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;"/>
   </connection>
   <connection connectorName="FLOW" label="Deal_with_UserId" lineStyle="0" metaname="Deal_with_UserId" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_4" target="tMap_14">
     <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
@@ -5155,6 +5294,15 @@
       <elementValue elementRef="TRACE_COLUMN" value="ReviewerEmail"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="VendorOpportunityStage"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="VendorDealOwnerName"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="DealType"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
@@ -5164,14 +5312,6 @@
     <elementParameter field="TABLE" name="THRESHLODS"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="Deal_with_UserId"/>
-    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
-    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
-    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
-    <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
-    <elementParameter field="TABLE" name="CONDITIONS"/>
-    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
-    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;"/>
   </connection>
   <connection connectorName="FLOW" label="ProgramID_Exception" lineStyle="0" metaname="ProgramID_Exception" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_4" target="tLogRow_5">
     <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
@@ -5197,14 +5337,6 @@
     <elementParameter field="TABLE" name="THRESHLODS"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="ProgramID_Exception"/>
-    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
-    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
-    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
-    <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
-    <elementParameter field="TABLE" name="CONDITIONS"/>
-    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
-    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;"/>
   </connection>
   <connection connectorName="FLOW" label="Customer_Lookup" lineStyle="8" metaname="Customer_Lookup" offsetLabelX="0" offsetLabelY="0" source="tMap_8" target="tMap_1">
     <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
@@ -5217,14 +5349,6 @@
     <elementParameter field="TABLE" name="THRESHLODS"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="Customer_Lookup"/>
-    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
-    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
-    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
-    <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
-    <elementParameter field="TABLE" name="CONDITIONS"/>
-    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
-    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;"/>
   </connection>
   <connection connectorName="FLOW" label="Customer_Contact_Lookup" lineStyle="8" metaname="Customer_Contact_Lookup" offsetLabelX="0" offsetLabelY="0" source="tMap_10" target="tMap_3">
     <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
@@ -5237,14 +5361,6 @@
     <elementParameter field="TABLE" name="THRESHLODS"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="Customer_Contact_Lookup"/>
-    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
-    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
-    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
-    <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
-    <elementParameter field="TABLE" name="CONDITIONS"/>
-    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
-    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;"/>
   </connection>
   <connection connectorName="FLOW" label="row10" lineStyle="8" metaname="tMSSqlInput_16" offsetLabelX="0" offsetLabelY="0" source="tMSSqlInput_16" target="tMap_4">
     <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
@@ -5330,14 +5446,6 @@
     <elementParameter field="TABLE" name="THRESHLODS"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row10"/>
-    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
-    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
-    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
-    <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
-    <elementParameter field="TABLE" name="CONDITIONS"/>
-    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
-    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;"/>
   </connection>
   <connection connectorName="FLOW" label="SubmittedbyUserName" lineStyle="0" metaname="tMSSqlInput_15" offsetLabelX="0" offsetLabelY="0" source="tMSSqlInput_15" target="tMap_17">
     <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
@@ -5366,14 +5474,6 @@
     <elementParameter field="TABLE" name="THRESHLODS"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="SubmittedbyUserName"/>
-    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
-    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
-    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
-    <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
-    <elementParameter field="TABLE" name="CONDITIONS"/>
-    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
-    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;"/>
   </connection>
   <connection connectorName="FLOW" label="Programme_Name" lineStyle="0" metaname="Programme_Name" offsetLabelX="0" offsetLabelY="0" source="tMap_12" target="tMap_4">
     <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
@@ -5399,6 +5499,15 @@
       <elementValue elementRef="TRACE_COLUMN" value="ReviewerEmail"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="VendorOpportunityStage"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="VendorDealOwnerName"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="DealType"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
@@ -5408,14 +5517,6 @@
     <elementParameter field="TABLE" name="THRESHLODS"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="Programme_Name"/>
-    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
-    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
-    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
-    <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
-    <elementParameter field="TABLE" name="CONDITIONS"/>
-    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
-    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;"/>
   </connection>
   <connection connectorName="FLOW" label="row11" lineStyle="8" metaname="tMSSqlInput_18" offsetLabelX="0" offsetLabelY="0" source="tMSSqlInput_18" target="tMap_4">
     <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
@@ -5438,14 +5539,6 @@
     <elementParameter field="TABLE" name="THRESHLODS"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row11"/>
-    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
-    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
-    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
-    <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
-    <elementParameter field="TABLE" name="CONDITIONS"/>
-    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
-    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;"/>
   </connection>
   <connection connectorName="FLOW" label="copyOfInsert_Deal" lineStyle="0" metaname="copyOfInsert_Deal" offsetLabelX="0" offsetLabelY="0" source="tMap_14" target="tMap_15">
     <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
@@ -5612,6 +5705,15 @@
       <elementValue elementRef="TRACE_COLUMN" value="ReviewerEmail"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="VendorOpportunityStage"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="VendorDealOwnerName"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="DealType"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
@@ -5621,14 +5723,6 @@
     <elementParameter field="TABLE" name="THRESHLODS"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="copyOfInsert_Deal"/>
-    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
-    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
-    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
-    <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
-    <elementParameter field="TABLE" name="CONDITIONS"/>
-    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
-    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;"/>
   </connection>
   <connection connectorName="FLOW" label="Deal_withUserId" lineStyle="0" metaname="Deal_withUserId" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_15" target="tMap_27">
     <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
@@ -5786,6 +5880,15 @@
       <elementValue elementRef="TRACE_COLUMN" value="ReviewerEmail"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="VendorOpportunityStage"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="VendorDealOwnerName"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="DealType"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
@@ -5795,14 +5898,6 @@
     <elementParameter field="TABLE" name="THRESHLODS"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="Deal_withUserId"/>
-    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
-    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
-    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
-    <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
-    <elementParameter field="TABLE" name="CONDITIONS"/>
-    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
-    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;"/>
   </connection>
   <connection connectorName="FLOW" label="MVS_SalesRepresentativeException" lineStyle="0" metaname="MVS_SalesRepresentativeException" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_15" target="tMSSqlOutput_3">
     <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
@@ -5822,14 +5917,6 @@
     <elementParameter field="TABLE" name="THRESHLODS"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="MVS_SalesRepresentativeException"/>
-    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
-    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
-    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
-    <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
-    <elementParameter field="TABLE" name="CONDITIONS"/>
-    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
-    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;"/>
   </connection>
   <connection connectorName="FLOW" label="row14" lineStyle="8" metaname="tMSSqlInput_23" offsetLabelX="0" offsetLabelY="0" source="tMSSqlInput_23" target="tMap_15">
     <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
@@ -5867,14 +5954,6 @@
     <elementParameter field="TABLE" name="THRESHLODS"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row14"/>
-    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
-    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
-    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
-    <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
-    <elementParameter field="TABLE" name="CONDITIONS"/>
-    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
-    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;"/>
   </connection>
   <connection connectorName="FLOW" label="Clean" lineStyle="8" metaname="Clean" offsetLabelX="0" offsetLabelY="0" source="tMap_17" target="tMap_4">
     <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
@@ -5887,14 +5966,6 @@
     <elementParameter field="TABLE" name="THRESHLODS"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="Clean"/>
-    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
-    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
-    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
-    <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
-    <elementParameter field="TABLE" name="CONDITIONS"/>
-    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
-    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;"/>
   </connection>
   <connection connectorName="FLOW" label="Submitted_Id_NotNull" lineStyle="8" metaname="tMSSqlInput_25" offsetLabelX="0" offsetLabelY="0" source="tMSSqlInput_25" target="tMap_4">
     <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
@@ -5923,14 +5994,6 @@
     <elementParameter field="TABLE" name="THRESHLODS"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="Submitted_Id_NotNull"/>
-    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
-    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
-    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
-    <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
-    <elementParameter field="TABLE" name="CONDITIONS"/>
-    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
-    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;"/>
   </connection>
   <connection connectorName="FLOW" label="SubmittedByUserEmail" lineStyle="8" metaname="tMSSqlInput_11" offsetLabelX="0" offsetLabelY="0" source="tMSSqlInput_11" target="tMap_4">
     <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
@@ -5959,14 +6022,6 @@
     <elementParameter field="TABLE" name="THRESHLODS"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="SubmittedByUserEmail"/>
-    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
-    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
-    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
-    <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
-    <elementParameter field="TABLE" name="CONDITIONS"/>
-    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
-    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;"/>
   </connection>
   <connection connectorName="FLOW" label="SalesRepEmail" lineStyle="8" metaname="SalesRepEmail" offsetLabelX="0" offsetLabelY="0" source="tMap_18" target="tMap_4">
     <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
@@ -5986,14 +6041,6 @@
     <elementParameter field="TABLE" name="THRESHLODS"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="SalesRepEmail"/>
-    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
-    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
-    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
-    <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
-    <elementParameter field="TABLE" name="CONDITIONS"/>
-    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
-    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;"/>
   </connection>
   <connection connectorName="FLOW" label="row15" lineStyle="0" metaname="tMSSqlInput_13" offsetLabelX="0" offsetLabelY="0" source="tMSSqlInput_13" target="tMap_18">
     <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
@@ -6013,14 +6060,6 @@
     <elementParameter field="TABLE" name="THRESHLODS"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row15"/>
-    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
-    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
-    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
-    <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
-    <elementParameter field="TABLE" name="CONDITIONS"/>
-    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
-    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;"/>
   </connection>
   <connection connectorName="FLOW" label="SalesRepName" lineStyle="8" metaname="SalesRepName" offsetLabelX="0" offsetLabelY="0" source="tMap_21" target="tMap_4">
     <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
@@ -6049,14 +6088,6 @@
     <elementParameter field="TABLE" name="THRESHLODS"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="SalesRepName"/>
-    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
-    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
-    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
-    <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
-    <elementParameter field="TABLE" name="CONDITIONS"/>
-    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
-    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;"/>
   </connection>
   <connection connectorName="FLOW" label="row16" lineStyle="0" metaname="tMSSqlInput_17" offsetLabelX="0" offsetLabelY="0" source="tMSSqlInput_17" target="tMap_21">
     <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
@@ -6085,14 +6116,6 @@
     <elementParameter field="TABLE" name="THRESHLODS"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row16"/>
-    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
-    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
-    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
-    <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
-    <elementParameter field="TABLE" name="CONDITIONS"/>
-    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
-    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;"/>
   </connection>
   <connection connectorName="FLOW" label="SalesRepMapping_Email" lineStyle="8" metaname="SalesRepMapping_Email" offsetLabelX="0" offsetLabelY="0" source="tMap_23" target="tMap_14">
     <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
@@ -6118,14 +6141,6 @@
     <elementParameter field="TABLE" name="THRESHLODS"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="SalesRepMapping_Email"/>
-    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
-    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
-    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
-    <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
-    <elementParameter field="TABLE" name="CONDITIONS"/>
-    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
-    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;"/>
   </connection>
   <connection connectorName="FLOW" label="row17" lineStyle="0" metaname="tMSSqlInput_21" offsetLabelX="0" offsetLabelY="0" source="tMSSqlInput_21" target="tMap_23">
     <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
@@ -6151,14 +6166,6 @@
     <elementParameter field="TABLE" name="THRESHLODS"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row17"/>
-    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
-    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
-    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
-    <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
-    <elementParameter field="TABLE" name="CONDITIONS"/>
-    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
-    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;"/>
   </connection>
   <connection connectorName="FLOW" label="SalesRepMapping_Name" lineStyle="8" metaname="SalesRepMapping_Name" offsetLabelX="0" offsetLabelY="0" source="tMap_25" target="tMap_14">
     <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
@@ -6184,14 +6191,6 @@
     <elementParameter field="TABLE" name="THRESHLODS"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="SalesRepMapping_Name"/>
-    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
-    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
-    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
-    <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
-    <elementParameter field="TABLE" name="CONDITIONS"/>
-    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
-    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;"/>
   </connection>
   <connection connectorName="FLOW" label="row18" lineStyle="0" metaname="tMSSqlInput_22" offsetLabelX="0" offsetLabelY="0" source="tMSSqlInput_22" target="tMap_25">
     <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
@@ -6217,14 +6216,6 @@
     <elementParameter field="TABLE" name="THRESHLODS"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row18"/>
-    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
-    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
-    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
-    <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
-    <elementParameter field="TABLE" name="CONDITIONS"/>
-    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
-    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;"/>
   </connection>
   <connection connectorName="FLOW" label="Insert_Deal" lineStyle="0" metaname="Insert_Deal" offsetLabelX="0" offsetLabelY="0" source="tMap_6" target="tMSSqlOutput_2">
     <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
@@ -6400,6 +6391,15 @@
       <elementValue elementRef="TRACE_COLUMN" value="ReviewerEmail"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="VendorOpportunityStage"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="VendorDealOwnerName"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="DealType"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
@@ -6409,14 +6409,6 @@
     <elementParameter field="TABLE" name="THRESHLODS"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="Insert_Deal"/>
-    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
-    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
-    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
-    <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
-    <elementParameter field="TABLE" name="CONDITIONS"/>
-    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
-    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;"/>
   </connection>
   <connection connectorName="FLOW" label="row6" lineStyle="8" metaname="tMSSqlInput_8" offsetLabelX="0" offsetLabelY="0" source="tMSSqlInput_8" target="tMap_6">
     <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
@@ -6436,14 +6428,6 @@
     <elementParameter field="TABLE" name="THRESHLODS"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row6"/>
-    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
-    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
-    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
-    <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
-    <elementParameter field="TABLE" name="CONDITIONS"/>
-    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
-    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;"/>
   </connection>
   <connection connectorName="FLOW" label="row4" lineStyle="0" metaname="tMSSqlOutput_2" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMSSqlOutput_2" target="tMSSqlLastInsertId_3">
     <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
@@ -6604,14 +6588,6 @@
     <elementParameter field="TABLE" name="THRESHLODS"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row4"/>
-    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
-    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
-    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
-    <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
-    <elementParameter field="TABLE" name="CONDITIONS"/>
-    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
-    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;"/>
   </connection>
   <connection connectorName="REJECT" label="row12" lineStyle="0" metaname="REJECT" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMSSqlOutput_2" target="tLogRow_2">
     <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
@@ -6775,14 +6751,6 @@
     <elementParameter field="TABLE" name="THRESHLODS"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row12"/>
-    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
-    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
-    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
-    <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
-    <elementParameter field="TABLE" name="CONDITIONS"/>
-    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
-    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;"/>
   </connection>
   <connection connectorName="FLOW" label="row5" lineStyle="0" metaname="tMSSqlLastInsertId_3" offsetLabelX="0" offsetLabelY="0" source="tMSSqlLastInsertId_3" target="tMap_7">
     <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
@@ -6946,14 +6914,6 @@
     <elementParameter field="TABLE" name="THRESHLODS"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row5"/>
-    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
-    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
-    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
-    <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
-    <elementParameter field="TABLE" name="CONDITIONS"/>
-    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
-    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;"/>
   </connection>
   <connection connectorName="FLOW" label="Insert_Deals" lineStyle="0" metaname="Insert_Deals" offsetLabelX="0" offsetLabelY="0" source="tMap_7" target="tMSSqlOutput_4">
     <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
@@ -7075,6 +7035,15 @@
       <elementValue elementRef="TRACE_COLUMN" value="ReviewerEmail"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="VendorOpportunityStage"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="VendorDealOwnerName"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="DealType"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
@@ -7084,14 +7053,6 @@
     <elementParameter field="TABLE" name="THRESHLODS"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="Insert_Deals"/>
-    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
-    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
-    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
-    <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
-    <elementParameter field="TABLE" name="CONDITIONS"/>
-    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
-    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;"/>
   </connection>
   <connection connectorName="FLOW" label="row7" lineStyle="8" metaname="tMSSqlInput_9" offsetLabelX="0" offsetLabelY="0" source="tMSSqlInput_9" target="tMap_7">
     <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
@@ -7114,14 +7075,6 @@
     <elementParameter field="TABLE" name="THRESHLODS"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row7"/>
-    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
-    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
-    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
-    <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
-    <elementParameter field="TABLE" name="CONDITIONS"/>
-    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
-    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;"/>
   </connection>
   <connection connectorName="FLOW" label="row8" lineStyle="0" metaname="tMSSqlOutput_4" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMSSqlOutput_4" target="tMSSqlLastInsertId_2">
     <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
@@ -7264,14 +7217,6 @@
     <elementParameter field="TABLE" name="THRESHLODS"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row8"/>
-    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
-    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
-    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
-    <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
-    <elementParameter field="TABLE" name="CONDITIONS"/>
-    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
-    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;"/>
   </connection>
   <connection connectorName="REJECT" label="row13" lineStyle="0" metaname="REJECT" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMSSqlOutput_4" target="tLogRow_4">
     <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
@@ -7387,14 +7332,6 @@
     <elementParameter field="TABLE" name="THRESHLODS"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row13"/>
-    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
-    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
-    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
-    <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
-    <elementParameter field="TABLE" name="CONDITIONS"/>
-    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
-    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;"/>
   </connection>
   <connection connectorName="FLOW" label="row9" lineStyle="0" metaname="tMSSqlLastInsertId_2" offsetLabelX="0" offsetLabelY="0" source="tMSSqlLastInsertId_2" target="tJavaFlex_5">
     <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
@@ -7540,14 +7477,6 @@
     <elementParameter field="TABLE" name="THRESHLODS"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row9"/>
-    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
-    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
-    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
-    <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
-    <elementParameter field="TABLE" name="CONDITIONS"/>
-    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
-    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;"/>
   </connection>
   <connection connectorName="FLOW" label="DefaultMapped" lineStyle="0" metaname="DefaultMapped" offsetLabelX="0" offsetLabelY="0" source="tMap_27" target="tMap_6">
     <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
@@ -7564,6 +7493,15 @@
       <elementValue elementRef="TRACE_COLUMN" value="ReviewerEmail"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="VendorOpportunityStage"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="VendorDealOwnerName"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="DealType"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
@@ -7573,14 +7511,6 @@
     <elementParameter field="TABLE" name="THRESHLODS"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="DefaultMapped"/>
-    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
-    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
-    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
-    <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
-    <elementParameter field="TABLE" name="CONDITIONS"/>
-    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
-    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;"/>
   </connection>
   <connection connectorName="FLOW" label="row19" lineStyle="8" metaname="tMSSqlInput_28" offsetLabelX="0" offsetLabelY="0" source="tMSSqlInput_28" target="tMap_27">
     <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
@@ -7618,14 +7548,6 @@
     <elementParameter field="TABLE" name="THRESHLODS"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row19"/>
-    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
-    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
-    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
-    <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
-    <elementParameter field="TABLE" name="CONDITIONS"/>
-    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
-    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;"/>
   </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMSSqlConnection_1"/>

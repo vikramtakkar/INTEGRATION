@@ -14,4 +14,68 @@ public class StringFunctions {
     	else if(!(from.equals(to))) return true;
     	else return false;
     }
+    
+    /*
+     *  Vikram Takkar - 20140717 - DPS Improvements
+     *  Get the value of Partner Text from the File Name (Vendor Report)
+     */
+    public static String getPartnerText(String fileName)
+    {
+      fileName=Relational. ISNULL(fileName)? null:fileName.trim();
+       try
+      {
+       if(Relational. ISNULL(fileName))
+      {
+             return null ;
+      }
+      
+      String[] splits=fileName.split( "_" );
+      
+       int length=splits. length ;
+       if(length<3)
+      {
+             return null ;
+      }
+       else
+      {
+             return splits[1];
+      }
+      } catch(Exception e)
+      {
+             return null ;
+      }
+    }
+   
+   
+    /*
+     *  Vikram Takkar - 20140717 - DPS Improvements
+     * Check if the Vendor Report file naming convension f fine.
+     */
+    public static Boolean checkReportNamingConvension(String fileName)
+    {
+      fileName=Relational. ISNULL(fileName)? null:fileName.trim();
+       try
+      {
+       if(Relational. ISNULL(fileName))
+      {
+             return false ;
+      }
+      
+      String[] splits=fileName.split( "_" );
+      
+       int length=splits. length ;
+       if(length<3)
+      {
+             return false ;
+      }
+       else
+      {
+             return true ;
+      }
+      } catch(Exception e)
+      {
+             return false ;
+      }
+    }
+
 }

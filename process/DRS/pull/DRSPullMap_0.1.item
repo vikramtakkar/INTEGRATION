@@ -11,19 +11,20 @@
     <contextParameter comment="" name="recordOrder" prompt="recordOrder?" promptNeeded="false" type="id_Integer" value="0"/>
     <contextParameter comment="" name="VendorId" prompt="VendorId?" promptNeeded="false" type="id_Integer" value="70"/>
     <contextParameter comment="" name="BatchId" prompt="BatchId?" promptNeeded="false" type="id_String" value="&quot;batch batch&quot;"/>
-    <contextParameter comment="" name="MVS_Integration_Port" prompt="MVS_Integration_Port?" promptNeeded="false" repositoryContextId="_jopyIu4UEeGYlM_5Xmy_eA" type="id_String" value="1433"/>
-    <contextParameter comment="" name="MVS_Integration_Database" prompt="MVS_Integration_Database?" promptNeeded="false" repositoryContextId="_jopyIu4UEeGYlM_5Xmy_eA" type="id_String" value="MVS_Integration"/>
-    <contextParameter comment="" name="MVS_Integration_Login" prompt="MVS_Integration_Login?" promptNeeded="false" repositoryContextId="_jopyIu4UEeGYlM_5Xmy_eA" type="id_String" value="TOS"/>
-    <contextParameter comment="" name="MVS_Integration_AdditionalParams" prompt="MVS_Integration_AdditionalParams?" promptNeeded="false" repositoryContextId="_jopyIu4UEeGYlM_5Xmy_eA" type="id_String" value=""/>
-    <contextParameter comment="" name="MVS_Integration_Schema" prompt="MVS_Integration_Schema?" promptNeeded="false" repositoryContextId="_jopyIu4UEeGYlM_5Xmy_eA" type="id_String" value="dbo"/>
-    <contextParameter comment="" name="MVS_Integration_Server" prompt="MVS_Integration_Server?" promptNeeded="false" repositoryContextId="_jopyIu4UEeGYlM_5Xmy_eA" type="id_String" value="localhost"/>
-    <contextParameter comment="" name="MVS_Integration_Password" prompt="MVS_Integration_Password?" promptNeeded="false" repositoryContextId="_jopyIu4UEeGYlM_5Xmy_eA" type="id_Password" value="KvVDkApeoab096uhdGeE6g=="/>
+    <contextParameter comment="" name="MVS_Integration_Port" prompt="MVS_Integration_Port?" promptNeeded="false" type="id_String" value="1433"/>
+    <contextParameter comment="" name="MVS_Integration_Database" prompt="MVS_Integration_Database?" promptNeeded="false" type="id_String" value="MVS_Integration"/>
+    <contextParameter comment="" name="MVS_Integration_Login" prompt="MVS_Integration_Login?" promptNeeded="false" type="id_String" value="TOS"/>
+    <contextParameter comment="" name="MVS_Integration_AdditionalParams" prompt="MVS_Integration_AdditionalParams?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="MVS_Integration_Schema" prompt="MVS_Integration_Schema?" promptNeeded="false" type="id_String" value="dbo"/>
+    <contextParameter comment="" name="MVS_Integration_Server" prompt="MVS_Integration_Server?" promptNeeded="false" type="id_String" value="&quot;192.168.1.117&quot;"/>
+    <contextParameter comment="" name="MVS_Integration_Password" prompt="MVS_Integration_Password?" promptNeeded="false" type="id_Password" value="KvVDkApeoab096uhdGeE6g=="/>
+    <contextParameter comment="" name="update_interval_hours" prompt="update_interval_hours?" promptNeeded="false" type="id_Integer" value=""/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="JOB_RUN_VM_ARGUMENTS" value=" -Xms256M -Xmx1024M"/>
     <elementParameter field="CHECK" name="JOB_RUN_VM_ARGUMENTS_OPTION" value="false"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="32"/>
-    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="224"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="256"/>
     <elementParameter field="TEXT" name="SCHEMA_OPTIONS" value="none"/>
     <elementParameter field="TEXT" name="OEM_CUSTOM_ATTRIBUTE" value=""/>
     <elementParameter field="TEXT" name="HADOOP_APP_PATH" value=""/>
@@ -100,7 +101,7 @@
     <elementParameter field="CLOSED_LIST" name="SOAP_VERSION" value="Soap11"/>
     <elementParameter field="CHECK" name="USE_MESSAGE_FROM_SCHEMA" value="false"/>
     <elementParameter field="PREV_COLUMN_LIST" name="SOAPMESSAGE_FROM_SCHEMA" value=""/>
-    <elementParameter field="MEMO" name="SOAPMESSAGE" value="&quot;&lt;soapenv:Envelope xmlns:soapenv=\&quot;http://schemas.xmlsoap.org/soap/envelope/\&quot; xmlns:pul=\&quot;http://soap.sforce.com/schemas/class/PullRegistrationUpdates\&quot;>&#xD;&#xA;   &lt;soapenv:Header>&#xD;&#xA;      &lt;pul:SessionHeader>&#xD;&#xA;         &lt;pul:sessionId>&quot;+context.SFDC_SESSION_ID+&quot;&lt;/pul:sessionId>&#xD;&#xA;      &lt;/pul:SessionHeader>&#xD;&#xA;   &lt;/soapenv:Header>&#xD;&#xA;   &lt;soapenv:Body>&#xD;&#xA;      &lt;pul:PullRegistrations>&#xD;&#xA;         &lt;pul:submissiondate>&quot;+context.submissiondate+&quot;&lt;/pul:submissiondate>&#xD;&#xA;      &lt;/pul:PullRegistrations>&#xD;&#xA;   &lt;/soapenv:Body>&#xD;&#xA;&lt;/soapenv:Envelope>&quot;"/>
+    <elementParameter field="MEMO" name="SOAPMESSAGE" value="&quot;&lt;soapenv:Envelope xmlns:soapenv=\&quot;http://schemas.xmlsoap.org/soap/envelope/\&quot; xmlns:pul=\&quot;http://soap.sforce.com/schemas/class/VartopiaDRS/PullRegistrationUpdates\&quot;>&#xD;&#xA;   &lt;soapenv:Header>&#xD;&#xA;      &lt;pul:SessionHeader>&#xD;&#xA;         &lt;pul:sessionId>&quot;+context.SFDC_SESSION_ID+&quot;&lt;/pul:sessionId>&#xD;&#xA;      &lt;/pul:SessionHeader>&#xD;&#xA;   &lt;/soapenv:Header>&#xD;&#xA;   &lt;soapenv:Body>&#xD;&#xA;      &lt;pul:PullRegistrations>&#xD;&#xA;         &lt;pul:submissiondate>&quot;+context.submissiondate+&quot;&lt;/pul:submissiondate>&#xD;&#xA;      &lt;/pul:PullRegistrations>&#xD;&#xA;   &lt;/soapenv:Body>&#xD;&#xA;&lt;/soapenv:Envelope>&quot;"/>
     <elementParameter field="CHECK" name="OUTPUT_DOCUMENT" value="false"/>
     <elementParameter field="CHECK" name="USE_KERBEROS" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="KERBEROS_CONFIGURATION" value=""/>
@@ -186,7 +187,7 @@
   </node>
   <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="352" posY="576">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_1"/>
-    <elementParameter field="MEMO_JAVA" name="CODE" value="&#xA;"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="if(true) {&#xA;&#x9;throw new Exception(&quot;DRS Pull failed with fault: &quot;+row3.faultstring);&#xA;}&#xA;"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <elementParameter field="CHECK" name="INFORMATION" value="false"/>
@@ -290,7 +291,7 @@
       <column comment="" key="false" name="message" nullable="true" pattern="" sourceType="" type="id_String"/>
     </metadata>
     <nodeData xsi:type="MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="success" expressionFilter="(row6.result != null &amp;&amp; row6.result.equalsIgnoreCase(&quot;success&quot;)) || (row6.message != null &amp;&amp; row6.message.equalsIgnoreCase(&quot;No Registration Records Found&quot;)) &amp;&amp; row6.recordCount != null &amp;&amp; row6.recordCount > 0" activateExpressionFilter="true">
         <mapperTableEntries name="message" expression="row6.message" type="id_String" nullable="true"/>
@@ -540,7 +541,7 @@
       <column comment="" key="false" name="RecordOrder" nullable="true" pattern="" sourceType="" type="id_Integer"/>
     </metadata>
     <nodeData xsi:type="MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var">
         <mapperTableEntries name="var1" expression="context.recordOrder++" type="id_Integer"/>
       </varTables>
@@ -654,6 +655,7 @@
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
     </elementParameter>
+    <elementParameter field="CHECK" name="IGNORE_DATE_OUTOF_RANGE" value="false"/>
     <elementParameter field="CHECK" name="ENABLE_DEBUG_MODE" value="false"/>
     <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false"/>
     <elementParameter field="CHECK" name="USE_BATCH_SIZE" value="false"/>
@@ -798,6 +800,7 @@
     <elementParameter field="CHECK" name="BULK_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="API_VERSION" value="&quot;19.0&quot;"/>
     <elementParameter field="CHECK" name="NEED_COMPRESSION" value="false"/>
+    <elementParameter field="CHECK" name="HTTP_TRACEMESSAGE" value="false"/>
     <elementParameter field="CHECK" name="USE_PROXY" value="false"/>
     <elementParameter field="TEXT" name="PROXY_HOST" value="&quot;61.163.92.4&quot;"/>
     <elementParameter field="TEXT" name="PROXY_PORT" value="&quot;1080&quot;"/>
@@ -850,13 +853,13 @@
     <elementParameter field="MEMO" name="COMMENT" value=""/>
     <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
     <metadata connector="FLOW" name="tMSSqlInput_1">
-      <column comment="" key="false" name="LastPullDate" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" sourceType="DATETIME" type="id_Date"/>
+      <column comment="" key="false" name="LastPullDate" nullable="true" pattern="&quot;dd-MM-yyyy HH:mm:ss&quot;" sourceType="DATETIME" type="id_Date"/>
     </metadata>
   </node>
   <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="352" posY="-96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_2"/>
-    <elementParameter field="MEMO_JAVA" name="CODE" value="context.submissiondate = TalendDate.formatDate(&quot;yyyy-MM-dd&quot;, row10.LastPullDate);&#xA;&#xA;&#xA;"/>
-    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="if(row10.LastPullDate == null) {&#xA;&#xA;} else {&#xA;Calendar c = Calendar.getInstance();&#xA;TimeZone tz = c.getTimeZone();&#xA;Long ms = row10.LastPullDate.getTime();&#xA;context.submissiondate = TalendDate.formatDate(&quot;yyyy-MM-dd&quot;, TalendDate.addDate(new Date(ms-tz.getOffset(ms)), context.update_interval_hours, &quot;HH&quot;))&#xA;+&quot;T&quot;+&#xA;TalendDate.formatDate(&quot;HH:mm:ss&quot;, TalendDate.addDate(new Date(ms-tz.getOffset(ms)), context.update_interval_hours, &quot;HH&quot;))&#xA;+&quot;Z&quot;;&#xA;System.out.println(&quot;Using date: &quot;+&#xA;context.submissiondate&#xA;);&#xA;}&#xA;&#xA;//Changed pull date formatting //context.submissiondate = TalendDate.formatDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, TalendDate.addDate(row10.LastPullDate, context.update_interval_hours, //&quot;HH&quot;));&#xA;&#xA;&#xA;"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="import java.util.Calendar;&#xA;import java.util.TimeZone;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <elementParameter field="CHECK" name="INFORMATION" value="false"/>
     <elementParameter field="MEMO" name="COMMENT" value=""/>
@@ -865,7 +868,7 @@
   </node>
   <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="192" posY="0">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_3"/>
-    <elementParameter field="MEMO_JAVA" name="CODE" value="if(context.submissiondate == null) {&#xA;System.out.println(&quot;Setting pull date to yesterday because no date was configured for Vendor &quot;+context.VendorId);&#xA;//if there's no configuration then set the pull date to yesterday&#xA;context.submissiondate = TalendDate.formatDate(&quot;yyyy-MM-dd&quot;,TalendDate.addDate(TalendDate.getCurrentDate(), -1, &quot;dd&quot;));&#xA;} else {&#xA;&#x9;System.out.println(&quot;Pull date &quot;+context.submissiondate+&quot; configured for Vendor &quot;+context.VendorId);&#xA;}&#xA;&#xA;System.out.println(&quot;Using pull date:  &quot;+context.submissiondate);"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="if(context.submissiondate == null) {&#xA;System.out.println(&quot;Setting pull date to yesterday because no update_interval_hours was configured for Vendor &quot;+context.VendorId);&#xA;//if there's no configuration then set the pull date to yesterday&#xA;context.submissiondate = TalendDate.formatDate(&quot;yyyy-MM-dd&quot;,TalendDate.addDate(TalendDate.getCurrentDate(), -1, &quot;dd&quot;));&#xA;} else {&#xA;&#x9;System.out.println(&quot;Pull datetime &quot;+context.submissiondate+&quot; configured for Vendor &quot;+context.VendorId);&#xA;}&#xA;&#xA;System.out.println(&quot;Using pull datetime:  &quot;+context.submissiondate);"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <elementParameter field="CHECK" name="INFORMATION" value="false"/>

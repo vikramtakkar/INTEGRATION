@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.talend.org/mapper" xmlns:TalendXMLMap="http://www.talend.org/xmlmap" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default">
   <context confirmationNeeded="false" name="Default">
-    <contextParameter comment="" name="MVS_Integration_Database" prompt="MVS_Integration_Database?" promptNeeded="false" repositoryContextId="_jopyIu4UEeGYlM_5Xmy_eA" type="id_String" value="MVS_Integration"/>
-    <contextParameter comment="" name="MVS_Integration_Schema" prompt="MVS_Integration_Schema?" promptNeeded="false" repositoryContextId="_jopyIu4UEeGYlM_5Xmy_eA" type="id_String" value="dbo"/>
-    <contextParameter comment="" name="MVS_Integration_AdditionalParams" prompt="MVS_Integration_AdditionalParams?" promptNeeded="false" repositoryContextId="_jopyIu4UEeGYlM_5Xmy_eA" type="id_String" value=""/>
-    <contextParameter comment="" name="MVS_Integration_Password" prompt="MVS_Integration_Password?" promptNeeded="false" repositoryContextId="_jopyIu4UEeGYlM_5Xmy_eA" type="id_Password" value="KvVDkApeoab096uhdGeE6g=="/>
-    <contextParameter comment="" name="MVS_Integration_Login" prompt="MVS_Integration_Login?" promptNeeded="false" repositoryContextId="_jopyIu4UEeGYlM_5Xmy_eA" type="id_String" value="TOS"/>
-    <contextParameter comment="" name="MVS_Integration_Server" prompt="MVS_Integration_Server?" promptNeeded="false" repositoryContextId="_jopyIu4UEeGYlM_5Xmy_eA" type="id_String" value="localhost"/>
-    <contextParameter comment="" name="MVS_Integration_Port" prompt="MVS_Integration_Port?" promptNeeded="false" repositoryContextId="_jopyIu4UEeGYlM_5Xmy_eA" type="id_String" value="1433"/>
+    <contextParameter comment="" name="MVS_Integration_Database" prompt="MVS_Integration_Database?" promptNeeded="false" type="id_String" value="MVS_Integration"/>
+    <contextParameter comment="" name="MVS_Integration_Schema" prompt="MVS_Integration_Schema?" promptNeeded="false" type="id_String" value="dbo"/>
+    <contextParameter comment="" name="MVS_Integration_AdditionalParams" prompt="MVS_Integration_AdditionalParams?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="MVS_Integration_Password" prompt="MVS_Integration_Password?" promptNeeded="false" type="id_Password" value="KvVDkApeoab096uhdGeE6g=="/>
+    <contextParameter comment="" name="MVS_Integration_Login" prompt="MVS_Integration_Login?" promptNeeded="false" type="id_String" value="TOS"/>
+    <contextParameter comment="" name="MVS_Integration_Server" prompt="MVS_Integration_Server?" promptNeeded="false" type="id_String" value="localhost"/>
+    <contextParameter comment="" name="MVS_Integration_Port" prompt="MVS_Integration_Port?" promptNeeded="false" type="id_String" value="1433"/>
     <contextParameter comment="" name="MVS_Integration_shared_connection_name" prompt="MVS_Integration_shared_connection_name?" promptNeeded="false" type="id_String" value="null"/>
     <contextParameter comment="" name="SFDC_COMMON_ENDPOINT" prompt="SFDC_COMMON_ENDPOINT?" promptNeeded="false" type="id_String" value="&quot;https://login.salesforce.com/services/Soap/u/22.0&quot;"/>
     <contextParameter comment="" name="SFDC_USERNAME" prompt="SFDC_USERNAME?" promptNeeded="false" type="id_String" value="&quot;hparekh.drs@vartopia.com&quot;"/>
@@ -28,7 +28,7 @@
   <parameters>
     <elementParameter field="TEXT" name="JOB_RUN_VM_ARGUMENTS" value=" -Xms256M -Xmx1024M"/>
     <elementParameter field="CHECK" name="JOB_RUN_VM_ARGUMENTS_OPTION" value="false"/>
-    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="32"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0"/>
     <elementParameter field="TEXT" name="SCHEMA_OPTIONS" value="none"/>
     <elementParameter field="TEXT" name="OEM_CUSTOM_ATTRIBUTE" value=""/>
@@ -136,6 +136,7 @@
     <elementParameter field="CHECK" name="BULK_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="API_VERSION" value="&quot;19.0&quot;"/>
     <elementParameter field="CHECK" name="NEED_COMPRESSION" value="false"/>
+    <elementParameter field="CHECK" name="HTTP_TRACEMESSAGE" value="false"/>
     <elementParameter field="CHECK" name="USE_PROXY" value="false"/>
     <elementParameter field="TEXT" name="PROXY_HOST" value="&quot;61.163.92.4&quot;"/>
     <elementParameter field="TEXT" name="PROXY_PORT" value="&quot;1080&quot;"/>
@@ -520,7 +521,7 @@
         <nodes name="OpportunityDescription" type="id_String" xpath="out2/OpportunityDescription"/>
         <nodes name="ExpectedRevenue" type="id_Double" outgoingConnections="//@node.7/@nodeData/@connections.2" xpath="out2/ExpectedRevenue" nullable="false"/>
         <nodes name="VartopiaTransactionId" type="id_String" outgoingConnections="//@node.7/@nodeData/@connections.3" xpath="out2/VartopiaTransactionId" nullable="false"/>
-        <nodes name="VendorDealId" type="id_String" xpath="out2/VendorDealId"/>
+        <nodes name="VendorDealId" type="id_String" outgoingConnections="//@node.7/@nodeData/@connections.28" xpath="out2/VendorDealId"/>
         <nodes name="VartopiaStatus" type="id_String" xpath="out2/VartopiaStatus" nullable="false"/>
         <nodes name="VendorStatus" type="id_String" outgoingConnections="//@node.7/@nodeData/@connections.4" xpath="out2/VendorStatus"/>
         <nodes name="SubmitDate" type="id_Date" outgoingConnections="//@node.7/@nodeData/@connections.5" xpath="out2/SubmitDate" nullable="false"/>
@@ -566,7 +567,7 @@
       <outputTrees activateCondensedTool="true" name="out1" allInOne="true" enableEmptyElement="false">
         <nodes name="submitRequest" expression="" type="id_Document" xpath="out1/submitRequest" pattern="">
           <children xsi:type="TalendXMLMap:OutputTreeNode" name="soapenv:Envelope" type="id_String" xpath="out1.submitRequest:/soapenv:Envelope" loop="true" main="true">
-            <children xsi:type="TalendXMLMap:OutputTreeNode" name="sub" type="id_String" xpath="out1.submitRequest:/soapenv:Envelope/xmlns:sub" nodeType="NAME_SPACE" defaultValue="http://soap.sforce.com/schemas/class/SubmitRegistration"/>
+            <children xsi:type="TalendXMLMap:OutputTreeNode" name="sub" type="id_String" xpath="out1.submitRequest:/soapenv:Envelope/xmlns:sub" nodeType="NAME_SPACE" defaultValue="http://soap.sforce.com/schemas/class/VartopiaDRS/SubmitRegistration"/>
             <children xsi:type="TalendXMLMap:OutputTreeNode" name="soapenv" type="id_String" xpath="out1.submitRequest:/soapenv:Envelope/xmlns:soapenv" nodeType="NAME_SPACE" defaultValue="http://schemas.xmlsoap.org/soap/envelope/"/>
             <children xsi:type="TalendXMLMap:OutputTreeNode" name="soapenv:Header" type="id_String" xpath="out1.submitRequest:/soapenv:Envelope/soapenv:Header">
               <children xsi:type="TalendXMLMap:OutputTreeNode" name="sub:SessionHeader" type="id_String" xpath="out1.submitRequest:/soapenv:Envelope/soapenv:Header/sub:SessionHeader">
@@ -574,7 +575,7 @@
               </children>
             </children>
             <children xsi:type="TalendXMLMap:OutputTreeNode" name="soapenv:Body" type="id_String" xpath="out1.submitRequest:/soapenv:Envelope/soapenv:Body">
-              <children xsi:type="TalendXMLMap:OutputTreeNode" name="sub:insertRegistration" type="id_String" xpath="out1.submitRequest:/soapenv:Envelope/soapenv:Body/sub:insertRegistration">
+              <children xsi:type="TalendXMLMap:OutputTreeNode" name="sub:insertRegistration" expression="" type="id_String" xpath="out1.submitRequest:/soapenv:Envelope/soapenv:Body/sub:insertRegistration">
                 <children xsi:type="TalendXMLMap:OutputTreeNode" name="sub:varreg" type="id_String" xpath="out1.submitRequest:/soapenv:Envelope/soapenv:Body/sub:insertRegistration/sub:varreg">
                   <children xsi:type="TalendXMLMap:OutputTreeNode" name="sub:CustomerAddressLine1" expression="out2.CustAddress1" type="id_String" incomingConnections="//@node.7/@nodeData/@connections.0" xpath="out1.submitRequest:/soapenv:Envelope/soapenv:Body/sub:insertRegistration/sub:varreg/sub:CustomerAddressLine1"/>
                   <children xsi:type="TalendXMLMap:OutputTreeNode" name="sub:CustomerAddressLine2" expression="(out2.CustAddress2 == null || out2.CustAddress2.equals(&quot;&quot;) ? (out2.CustAddress3 == null || out2.CustAddress3.equals(&quot;&quot;) ? null : out2.CustAddress3) : out2.CustAddress2+(out2.CustAddress3 == null || out2.CustAddress3.equals(&quot;&quot;) ? null : &quot; &quot;+out2.CustAddress3))     " type="id_String" incomingConnections="//@node.7/@nodeData/@connections.6 //@node.7/@nodeData/@connections.7" xpath="out1.submitRequest:/soapenv:Envelope/soapenv:Body/sub:insertRegistration/sub:varreg/sub:CustomerAddressLine2"/>
@@ -603,8 +604,9 @@
                   <children xsi:type="TalendXMLMap:OutputTreeNode" name="sub:Submittedbyphonenumber" expression="out2.SubmittedByUserPhone" type="id_String" incomingConnections="//@node.7/@nodeData/@connections.27" xpath="out1.submitRequest:/soapenv:Envelope/soapenv:Body/sub:insertRegistration/sub:varreg/sub:Submittedbyphonenumber"/>
                   <children xsi:type="TalendXMLMap:OutputTreeNode" name="sub:VARSFDCId" expression="context.VARSFDCId" type="id_String" xpath="out1.submitRequest:/soapenv:Envelope/soapenv:Body/sub:insertRegistration/sub:varreg/sub:VARSFDCId"/>
                   <children xsi:type="TalendXMLMap:OutputTreeNode" name="sub:VartopiaRegistrationId" expression="out2.VartopiaTransactionId" type="id_String" incomingConnections="//@node.7/@nodeData/@connections.3" xpath="out1.submitRequest:/soapenv:Envelope/soapenv:Body/sub:insertRegistration/sub:varreg/sub:VartopiaRegistrationId"/>
-                  <children xsi:type="TalendXMLMap:OutputTreeNode" name="sub:VendorStatus" expression="out2.VendorStatus" type="id_String" incomingConnections="//@node.7/@nodeData/@connections.4" xpath="out1.submitRequest:/soapenv:Envelope/soapenv:Body/sub:insertRegistration/sub:varreg/sub:VendorStatus"/>
+                  <children xsi:type="TalendXMLMap:OutputTreeNode" name="sub:VendorStatus" expression="(out2.VendorStatus != null &amp;&amp; out2.VendorStatus.toLowerCase().equals(&quot;returned&quot;) ? &quot;Returned&quot; : &quot;Net New&quot;)   " type="id_String" incomingConnections="//@node.7/@nodeData/@connections.4" xpath="out1.submitRequest:/soapenv:Envelope/soapenv:Body/sub:insertRegistration/sub:varreg/sub:VendorStatus"/>
                 </children>
+                <children xsi:type="TalendXMLMap:OutputTreeNode" name="sub:VendorDealId" expression="out2.VendorDealId" type="id_String" incomingConnections="//@node.7/@nodeData/@connections.28" xpath="out1.submitRequest:/soapenv:Envelope/soapenv:Body/sub:insertRegistration/sub:VendorDealId"/>
               </children>
             </children>
           </children>
@@ -639,6 +641,7 @@
       <connections xsi:type="TalendXMLMap:Connection" source="//@node.7/@nodeData/@inputTrees.0/@nodes.43" target="//@node.7/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.22"/>
       <connections xsi:type="TalendXMLMap:Connection" source="//@node.7/@nodeData/@inputTrees.0/@nodes.44" target="//@node.7/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.23"/>
       <connections xsi:type="TalendXMLMap:Connection" source="//@node.7/@nodeData/@inputTrees.0/@nodes.45" target="//@node.7/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.0/@children.24"/>
+      <connections xsi:type="TalendXMLMap:Connection" source="//@node.7/@nodeData/@inputTrees.0/@nodes.6" target="//@node.7/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.3/@children.0/@children.1"/>
     </nodeData>
   </node>
   <node componentName="tConvertType" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="928" posY="256">
@@ -960,12 +963,12 @@
     <nodeData xsi:type="MapperData">
       <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
-      <outputTables sizeState="INTERMEDIATE" name="push_success" expressionFilter="row15.ResponseMessage != null &amp;&amp; row15.ResponseMessage.equals(&quot;success&quot;)" activateExpressionFilter="true">
+      <outputTables sizeState="INTERMEDIATE" name="push_success" expressionFilter="row15.ResponseMessage != null &amp;&amp; (row15.ResponseMessage.equals(&quot;success&quot;) || row15.ResponseMessage.equals(&quot;Deal Updated&quot;))" activateExpressionFilter="true">
         <mapperTableEntries name="DealId" expression="row15.DealId " type="id_String" nullable="true"/>
         <mapperTableEntries name="VendorStatus" expression="row15.VendorStatus " type="id_String" nullable="true"/>
         <mapperTableEntries name="ExpirationDate" expression="row15.ExpirationDate " type="id_String" nullable="true"/>
       </outputTables>
-      <outputTables sizeState="INTERMEDIATE" name="push_failure" expressionFilter="row15.ResponseMessage == null || !row15.ResponseMessage.equals(&quot;success&quot;)" activateExpressionFilter="true">
+      <outputTables sizeState="INTERMEDIATE" name="push_failure" expressionFilter="row15.ResponseMessage == null || (!row15.ResponseMessage.equals(&quot;success&quot;) &amp;&amp; !row15.ResponseMessage.equals(&quot;Deal Updated&quot;))" activateExpressionFilter="true">
         <mapperTableEntries name="ResponseMessage" expression="row15.ResponseMessage " type="id_String" nullable="true"/>
         <mapperTableEntries name="errorMessage" expression="row15.Result " type="id_String" nullable="true"/>
       </outputTables>
@@ -1118,6 +1121,7 @@
       <elementValue elementRef="UPDATABLE" value="false"/>
       <elementValue elementRef="INSERTABLE" value="false"/>
     </elementParameter>
+    <elementParameter field="CHECK" name="IGNORE_DATE_OUTOF_RANGE" value="false"/>
     <elementParameter field="CHECK" name="ENABLE_DEBUG_MODE" value="false"/>
     <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false"/>
     <elementParameter field="CHECK" name="USE_BATCH_SIZE" value="false"/>
@@ -1949,6 +1953,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row9"/>
   </connection>
   <subjob>
+    <elementParameter field="CHECK" name="COLLAPSED" value="true"/>
     <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="230;100;0"/>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default">
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" screenshot="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">
   <context confirmationNeeded="false" name="Default">
-    <contextParameter comment="" name="batchID" prompt="batchID?" promptNeeded="false" type="id_String" value="&quot;batchID111111&quot;"/>
+    <contextParameter comment="" name="batchID" prompt="batchID?" promptNeeded="false" type="id_String" value="&quot;voodoo&quot;"/>
     <contextParameter comment="" name="xmlString" prompt="xmlString?" promptNeeded="false" type="id_String" value=""/>
     <contextParameter comment="" name="xmlStringBuffer" prompt="xmlStringBuffer?" promptNeeded="false" type="id_Object" value=""/>
     <contextParameter comment="" name="MVS_Integration_shared_connection_name" prompt="MVS_Integration_shared_connection_name?" promptNeeded="false" type="id_String" value="MVS_Integration"/>
@@ -13,22 +13,28 @@
     <contextParameter comment="" name="MVS_Integration_Port" prompt="MVS_Integration_Port?" promptNeeded="false" type="id_String" value="1433"/>
     <contextParameter comment="" name="MVS_Integration_Schema" prompt="MVS_Integration_Schema?" promptNeeded="false" type="id_String" value="dbo"/>
     <contextParameter comment="" name="MVS_Integration_Server" prompt="MVS_Integration_Server?" promptNeeded="false" type="id_String" value="localhost"/>
+    <contextParameter comment="" name="owner" prompt="owner?" promptNeeded="false" type="id_String" value="null"/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="JOB_RUN_VM_ARGUMENTS" value=" -Xms256M -Xmx1024M"/>
     <elementParameter field="CHECK" name="JOB_RUN_VM_ARGUMENTS_OPTION" value="false"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0"/>
-    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="32"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="64"/>
     <elementParameter field="TEXT" name="SCHEMA_OPTIONS" value="none"/>
     <elementParameter field="TEXT" name="OEM_CUSTOM_ATTRIBUTE" value=""/>
+    <elementParameter field="TEXT" name="HADOOP_APP_PATH" value=""/>
+    <elementParameter field="TEXT" name="JOBID_FOR_OOZIE" value=""/>
     <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" value="true"/>
     <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" value="true"/>
+    <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="false"/>
     <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE_IMPLICIT_CONTEXT:REPOSITORY_PROPERTY_TYPE" value=""/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" value=""/>
+    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" value=""/>
     <elementParameter field="CHECK" name="DISABLE_WARNINGS" value="false"/>
     <elementParameter field="CHECK" name="DISABLE_INFO" value="false"/>
-    <elementParameter field="DIRECTORY" name="FILE_PATH" value="&quot;C:/Users/Vikram Takkar/Google Drive/freelance_jobs/Vartopia/talend_workspace/.metadata&quot;"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_10"/>
     <elementParameter field="CHECK" name="UPDATE_COMPONENTS" value="false"/>
@@ -50,12 +56,9 @@
     <elementParameter field="CHECK" name="IMPLICT_DEFAULT_PROJECTSETTING" value="true"/>
     <elementParameter field="RADIO" name="FROM_FILE_FLAG_IMPLICIT_CONTEXT" value="false"/>
     <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" value=""/>
-    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" value=""/>
     <elementParameter field="CHECK" name="PRINT_OPERATIONS" value="false"/>
     <elementParameter field="CHECK" name="DISABLE_ERROR" value="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY_TYPE_IMPLICIT_CONTEXT:PROPERTY_TYPE" value=""/>
-    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE_IMPLICIT_CONTEXT:REPOSITORY_PROPERTY_TYPE" value=""/>
     <routinesParameter id="_G_OhAOLuEeCmRLaSPRvmXQ" name="DataOperation"/>
     <routinesParameter id="_HCAIMOLuEeCmRLaSPRvmXQ" name="Mathematical"/>
     <routinesParameter id="_HCJSIOLuEeCmRLaSPRvmXQ" name="Numeric"/>
@@ -355,7 +358,20 @@
       <column comment="" key="false" length="10" name="Quantity" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer"/>
       <column comment="" key="false" name="TotalPrice" nullable="false" pattern="" sourceType="" type="id_String"/>
       <column comment="" key="false" length="5" name="Save_End_Customer_to_my_list__c" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="5" name="Save_End_Customer_to_my_list__cNull" nullable="true" pattern="" sourceType="" type="id_Boolean"/>
       <column comment="" key="false" name="StageName" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" name="Distributor_Name__c" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" name="Distributor_Name__cNull" nullable="true" pattern="" sourceType="" type="id_Boolean"/>
+      <column comment="" key="false" name="Other_Competitor_Lost_To__c" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" name="Other_Competitor_Lost_To__cNull" nullable="true" pattern="" sourceType="" type="id_Boolean"/>
+      <column comment="" key="false" name="Marketing_Comments__c" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" name="Marketing_Comments__cNull" nullable="true" pattern="" sourceType="" type="id_Boolean"/>
+      <column comment="" key="false" name="Sales_Comments__c" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" name="Sales_Comments__cNull" nullable="true" pattern="" sourceType="" type="id_Boolean"/>
+      <column comment="" key="false" name="NextStep" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" name="NextStepNull" nullable="true" pattern="" sourceType="" type="id_Boolean"/>
+      <column comment="" key="false" name="Collaborating_with_Dell_Segment_Team__c" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" name="Collaborating_with_Dell_Segment_Team__cNull" nullable="true" pattern="" sourceType="" type="id_Boolean"/>
     </metadata>
     <nodeData xsi:type="MapperData">
       <uiProperties/>
@@ -445,8 +461,21 @@
         <mapperTableEntries name="ProductIdNull" expression="row4.ProductId == null || row4.ProductId.equals(&quot;&quot;)  " type="id_Boolean" nullable="true"/>
         <mapperTableEntries name="Quantity" expression="row4.Quantity  " type="id_Integer"/>
         <mapperTableEntries name="TotalPrice" expression="String.format(&quot;%1$.2f&quot;, row4.TotalPrice)" type="id_String"/>
-        <mapperTableEntries name="Save_End_Customer_to_my_list__c" expression="&quot;No&quot; " type="id_String" nullable="true"/>
+        <mapperTableEntries name="Save_End_Customer_to_my_list__c" expression="row5.Save_End_Customer_to_my_list__c " type="id_String" nullable="true"/>
+        <mapperTableEntries name="Save_End_Customer_to_my_list__cNull" expression="row5.Save_End_Customer_to_my_list__c == null || row5.Save_End_Customer_to_my_list__c.equals(&quot;&quot;)" type="id_Boolean" nullable="true"/>
         <mapperTableEntries name="StageName" expression="&quot;Plan - 1%&quot;" type="id_String" nullable="true"/>
+        <mapperTableEntries name="Distributor_Name__c" expression="row5.Distributor_Name__c " type="id_String" nullable="true"/>
+        <mapperTableEntries name="Distributor_Name__cNull" expression="row5.Distributor_Name__c == null || row5.Distributor_Name__c.equals(&quot;&quot;)" type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="Other_Competitor_Lost_To__c" expression="row5.Other_Competitor_Lost_To__c " type="id_String" nullable="true"/>
+        <mapperTableEntries name="Other_Competitor_Lost_To__cNull" expression="row5.Other_Competitor_Lost_To__c == null || row5.Other_Competitor_Lost_To__c.equals(&quot;&quot;)" type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="Marketing_Comments__c" expression="row5.Marketing_Comments__c " type="id_String" nullable="true"/>
+        <mapperTableEntries name="Marketing_Comments__cNull" expression="row5.Marketing_Comments__c == null || row5.Marketing_Comments__c.equals(&quot;&quot;)" type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="Sales_Comments__c" expression="row5.Sales_Comments__c " type="id_String" nullable="true"/>
+        <mapperTableEntries name="Sales_Comments__cNull" expression="row5.Sales_Comments__c == null || row5.Sales_Comments__c.equals(&quot;&quot;)" type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="NextStep" expression="row5.NextStep " type="id_String" nullable="true"/>
+        <mapperTableEntries name="NextStepNull" expression="row5.NextStep == null || row5.NextStep.equals(&quot;&quot;)" type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="Collaborating_with_Dell_Segment_Team__c" expression="row5.Collaborating_with_Dell_Segment_Team__c " type="id_String" nullable="true"/>
+        <mapperTableEntries name="Collaborating_with_Dell_Segment_Team__cNull" expression="row5.Collaborating_with_Dell_Segment_Team__c == null || row5.Collaborating_with_Dell_Segment_Team__c.equals(&quot;&quot;)" type="id_Boolean" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row2" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="Id" type="id_Integer"/>
@@ -516,6 +545,13 @@
         <mapperTableEntries name="IsMeetingWithCustomer" type="id_String" nullable="true"/>
         <mapperTableEntries name="MeetingDate" type="id_String" nullable="true"/>
         <mapperTableEntries name="CreatedOn" type="id_Date"/>
+        <mapperTableEntries name="Distributor_Name__c" type="id_String" nullable="true"/>
+        <mapperTableEntries name="Other_Competitor_Lost_To__c" type="id_String" nullable="true"/>
+        <mapperTableEntries name="Marketing_Comments__c" type="id_String" nullable="true"/>
+        <mapperTableEntries name="Sales_Comments__c" type="id_String" nullable="true"/>
+        <mapperTableEntries name="NextStep" type="id_String" nullable="true"/>
+        <mapperTableEntries name="Collaborating_with_Dell_Segment_Team__c" type="id_String" nullable="true"/>
+        <mapperTableEntries name="Save_End_Customer_to_my_list__c" type="id_String" nullable="true"/>
       </inputTables>
     </nodeData>
   </node>
@@ -793,7 +829,7 @@
       <elementValue elementRef="VALUE" value=""/>
       <elementValue elementRef="ATTRIBUTE" value="attri"/>
       <elementValue elementRef="ORDER" value="54"/>
-      <elementValue elementRef="PATH" value="/DellRegObject/Primary_Competitor__c"/>
+      <elementValue elementRef="PATH" value="/DellRegObject/Competitor_Lost_To__c"/>
       <elementValue elementRef="COLUMN" value="PrimaryCompetitorName"/>
       <elementValue elementRef="VALUE" value=""/>
       <elementValue elementRef="ATTRIBUTE" value="branch"/>
@@ -898,11 +934,76 @@
       <elementValue elementRef="VALUE" value=""/>
       <elementValue elementRef="ATTRIBUTE" value="branch"/>
       <elementValue elementRef="ORDER" value="80"/>
+      <elementValue elementRef="PATH" value="xsi:nil"/>
+      <elementValue elementRef="COLUMN" value="Save_End_Customer_to_my_list__cNull"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="attri"/>
+      <elementValue elementRef="ORDER" value="81"/>
       <elementValue elementRef="PATH" value="/DellRegObject/StageName"/>
       <elementValue elementRef="COLUMN" value="StageName"/>
       <elementValue elementRef="VALUE" value=""/>
       <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="81"/>
+      <elementValue elementRef="ORDER" value="82"/>
+      <elementValue elementRef="PATH" value="/DellRegObject/Distributor_Name__c"/>
+      <elementValue elementRef="COLUMN" value="Distributor_Name__c"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="83"/>
+      <elementValue elementRef="PATH" value="xsi:nil"/>
+      <elementValue elementRef="COLUMN" value="Distributor_Name__cNull"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="attri"/>
+      <elementValue elementRef="ORDER" value="84"/>
+      <elementValue elementRef="PATH" value="/DellRegObject/Other_Competitor_Lost_To__c"/>
+      <elementValue elementRef="COLUMN" value="Other_Competitor_Lost_To__c"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="85"/>
+      <elementValue elementRef="PATH" value="xsi:nil"/>
+      <elementValue elementRef="COLUMN" value="Other_Competitor_Lost_To__cNull"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="attri"/>
+      <elementValue elementRef="ORDER" value="86"/>
+      <elementValue elementRef="PATH" value="/DellRegObject/Marketing_Comments__c"/>
+      <elementValue elementRef="COLUMN" value="Marketing_Comments__c"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="87"/>
+      <elementValue elementRef="PATH" value="xsi:nil"/>
+      <elementValue elementRef="COLUMN" value="Marketing_Comments__cNull"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="attri"/>
+      <elementValue elementRef="ORDER" value="88"/>
+      <elementValue elementRef="PATH" value="/DellRegObject/Sales_Comments__c"/>
+      <elementValue elementRef="COLUMN" value="Sales_Comments__c"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="89"/>
+      <elementValue elementRef="PATH" value="xsi:nil"/>
+      <elementValue elementRef="COLUMN" value="Sales_Comments__cNull"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="attri"/>
+      <elementValue elementRef="ORDER" value="90"/>
+      <elementValue elementRef="PATH" value="/DellRegObject/NextStep"/>
+      <elementValue elementRef="COLUMN" value="NextStep"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="91"/>
+      <elementValue elementRef="PATH" value="xsi:nil"/>
+      <elementValue elementRef="COLUMN" value="NextStepNull"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="attri"/>
+      <elementValue elementRef="ORDER" value="92"/>
+      <elementValue elementRef="PATH" value="/DellRegObject/Collaborating_with_Dell_Segment_Team__c"/>
+      <elementValue elementRef="COLUMN" value="Collaborating_with_Dell_Segment_Team__c"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="93"/>
+      <elementValue elementRef="PATH" value="xsi:nil"/>
+      <elementValue elementRef="COLUMN" value="Collaborating_with_Dell_Segment_Team__cNull"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="attri"/>
+      <elementValue elementRef="ORDER" value="94"/>
     </elementParameter>
     <elementParameter field="TABLE" name="GROUP">
       <elementValue elementRef="PATH" value="/DellRegObject/ProductArray"/>
@@ -965,7 +1066,9 @@
     <elementParameter field="CHECK" name="INFORMATION" value="false"/>
     <elementParameter field="MEMO" name="COMMENT" value=""/>
     <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
-    <metadata connector="FLOW" name="tJavaRow_2"/>
+    <metadata connector="FLOW" name="tJavaRow_2">
+      <column comment="" key="false" name="request" nullable="true" pattern="" sourceType="" type="id_String"/>
+    </metadata>
   </node>
   <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="704" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMSSqlInput_4"/>
@@ -983,7 +1086,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT dbo.Dell_OppRegistration_Push.\&quot;Id\&quot;,&#xA;&#x9;&#x9;dbo.Dell_OppRegistration_Push.VartopiaTransactionId,&#xA;&#x9;&#x9;&quot;+&#xA;&quot; dbo.Dell_OppRegistration_Push.BookDate,&#xA;&#x9;&#x9;dbo.Dell_OppRegistration_Push.DistributorId,&#xA;&#x9;&#x9;&quot;+&#xA;&quot; dbo.Dell_OppRegistration_Push.EngagementType,&#xA;&#x9;&#x9;dbo.Dell_OppRegistration_Push.PrimaryCompetitorName,&#xA;&#x9;&#x9;&quot;+&#xA;&quot; dbo.Dell_OppRegistration_Push.OSType,&#xA;&#x9;&#x9;dbo.Dell_OppRegistration_Push.JustificationStatement,&#xA;&#x9;&#x9;&quot;+&#xA;&quot; dbo.Dell_OppRegistration_Push.PartnerOppStage,&#xA;&#x9;&#x9;dbo.Dell_OppRegistration_Push.SolutionType,&#xA;&#x9;&#x9;&quot;+&#xA;&quot; dbo.Dell_OppRegistration_Push.SolutionName,&#xA;&#x9;&#x9;dbo.Dell_OppRegistration_Push.SolutionScope,&#xA;&#x9;&#x9;&quot;+&#xA;&quot; dbo.Dell_OppRegistration_Push.ProposalDueDate,&#xA;&#x9;&#x9;dbo.Dell_OppRegistration_Push.Virtualization,&#xA;&#x9;&#x9;&quot;+&#xA;&quot; dbo.Dell_OppRegistration_Push.EndUserRegTaxCode,&#xA;&#x9;&#x9;&quot;+&#xA;&quot; dbo.Dell_OppRegistration_Push.EndUserAccountDepartment,&#xA;&#x9;&#x9;&quot;+&#xA;&quot; dbo.Dell_OppRegistration_Push.EndUserAccountIndustry,&#xA;&#x9;&#x9;dbo.Dell_OppRegistration_Push.EndUserSegment,&#xA;&#x9;&#x9;&quot;+&#xA;&quot; dbo.Dell_OppRegistration_Push.IsMeetingWithCustomer,&#xA;&#x9;&#x9;dbo.Dell_OppRegistration_Push.MeetingDate,&#xA;&#x9;&#x9;&quot;+&#xA;&quot; dbo.Dell_OppRegistration_Push.CreatedOn&#xA;FROM&#x9;dbo.Dell_OppRegistration_Push&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT dbo.Dell_OppRegistration_Push.\&quot;Id\&quot;,&#xA;&#x9;&#x9;dbo.Dell_OppRegistration_Push.VartopiaTransactionId,&#xA;&#x9;&#x9;&quot;+&#xA;&quot; dbo.Dell_OppRegistration_Push.BookDate,&#xA;&#x9;&#x9;dbo.Dell_OppRegistration_Push.DistributorId,&#xA;&#x9;&#x9;&quot;+&#xA;&quot; dbo.Dell_OppRegistration_Push.EngagementType,&#xA;&#x9;&#x9;dbo.Dell_OppRegistration_Push.PrimaryCompetitorName,&#xA;&#x9;&#x9;&quot;+&#xA;&quot; dbo.Dell_OppRegistration_Push.OSType,&#xA;&#x9;&#x9;dbo.Dell_OppRegistration_Push.JustificationStatement,&#xA;&#x9;&#x9;&quot;+&#xA;&quot; dbo.Dell_OppRegistration_Push.PartnerOppStage,&#xA;&#x9;&#x9;dbo.Dell_OppRegistration_Push.SolutionType,&#xA;&#x9;&#x9;&quot;+&#xA;&quot; dbo.Dell_OppRegistration_Push.SolutionName,&#xA;&#x9;&#x9;dbo.Dell_OppRegistration_Push.SolutionScope,&#xA;&#x9;&#x9;&quot;+&#xA;&quot; dbo.Dell_OppRegistration_Push.ProposalDueDate,&#xA;&#x9;&#x9;dbo.Dell_OppRegistration_Push.Virtualization,&#xA;&#x9;&#x9;&quot;+&#xA;&quot; dbo.Dell_OppRegistration_Push.EndUserRegTaxCode,&#xA;&#x9;&#x9;&quot;+&#xA;&quot; dbo.Dell_OppRegistration_Push.EndUserAccountDepartment,&#xA;&#x9;&#x9;&quot;+&#xA;&quot; dbo.Dell_OppRegistration_Push.EndUserAccountIndustry,&#xA;&#x9;&#x9;dbo.Dell_OppRegistration_Push.EndUserSegment,&#xA;&#x9;&#x9;&quot;+&#xA;&quot; dbo.Dell_OppRegistration_Push.IsMeetingWithCustomer,&#xA;&#x9;&#x9;dbo.Dell_OppRegistration_Push.MeetingDate,&#xA;&#x9;&#x9;&quot;+&#xA;&quot; dbo.Dell_OppRegistration_Push.CreatedOn, dbo.Dell_OppRegistration_Push.Distributor_Name__c, dbo.Dell_OppRegistration_Push.Other_Competitor_Lost_To__c, dbo.Dell_OppRegistration_Push.Marketing_Comments__c, dbo.Dell_OppRegistration_Push.Sales_Comments__c, dbo.Dell_OppRegistration_Push.NextStep, dbo.Dell_OppRegistration_Push.Collaborating_with_Dell_Segment_Team__c, dbo.Dell_OppRegistration_Push.Save_End_Customer_to_my_list__c &#xA;FROM&#x9;dbo.Dell_OppRegistration_Push&quot;"/>
     <elementParameter field="MAPPING_TYPE" name="MAPPING" value="id_MSSQL"/>
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
@@ -1032,6 +1135,20 @@
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="CreatedOn"/>
       <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Distributor_Name__c"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Other_Competitor_Lost_To__c"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Marketing_Comments__c"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Sales_Comments__c"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="NextStep"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Collaborating_with_Dell_Segment_Team__c"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Save_End_Customer_to_my_list__c"/>
+      <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="TEXT" name="LABEL" value="__TABLE__"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -1060,6 +1177,13 @@
       <column comment="" key="false" length="10" name="IsMeetingWithCustomer" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String"/>
       <column comment="" key="false" length="10" name="MeetingDate" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_String"/>
       <column comment="" defaultValue="&quot;(getdate())&quot;" key="false" length="23" name="CreatedOn" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date"/>
+      <column comment="" key="false" name="Distributor_Name__c" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" name="Other_Competitor_Lost_To__c" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" name="Marketing_Comments__c" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" name="Sales_Comments__c" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" name="NextStep" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" name="Collaborating_with_Dell_Segment_Team__c" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" name="Save_End_Customer_to_my_list__c" nullable="true" pattern="" sourceType="" type="id_String"/>
     </metadata>
   </node>
   <node componentName="tMSSqlConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="256" posY="0">
@@ -1084,6 +1208,17 @@
     <elementParameter field="CHECK" name="INFORMATION" value="false"/>
     <elementParameter field="MEMO" name="COMMENT" value=""/>
     <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+  </node>
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="704" posY="416">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_3"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="context.owner = pass_up.Owner;&#xA;"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" name="tJavaRow_3"/>
   </node>
   <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tMSSqlInput_5" offsetLabelX="0" offsetLabelY="0" source="tMSSqlInput_5" target="tMap_2">
     <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
@@ -1211,14 +1346,6 @@
     <elementParameter field="TABLE" name="THRESHLODS"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row2"/>
-    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
-    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
-    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
-    <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
-    <elementParameter field="TABLE" name="CONDITIONS"/>
-    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
-    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;"/>
   </connection>
   <connection connectorName="FLOW" label="row4" lineStyle="8" metaname="tMSSqlInput_6" offsetLabelX="0" offsetLabelY="0" source="tMSSqlInput_6" target="tMap_2">
     <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
@@ -1253,14 +1380,6 @@
     <elementParameter field="TABLE" name="THRESHLODS"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row4"/>
-    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
-    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
-    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
-    <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
-    <elementParameter field="TABLE" name="CONDITIONS"/>
-    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
-    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;"/>
   </connection>
   <connection connectorName="FLOW" label="copyOfout1" lineStyle="0" metaname="copyOfout1" offsetLabelX="0" offsetLabelY="0" source="tMap_2" target="tWriteXMLField_2">
     <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
@@ -1682,6 +1801,51 @@
       <elementValue elementRef="TRACE_COLUMN" value="TotalPrice"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NextStep"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Marketing_Comments__c"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Collaborating_with_Dell_Segment_Team__cNull"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Collaborating_with_Dell_Segment_Team__c"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Marketing_Comments__cNull"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Distributor_Name__cNull"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Save_End_Customer_to_my_list__cNull"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NextStepNull"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Region__c"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Distributor_Name__c"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Other_Competitor_Lost_To__c"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Region__cNull"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Sales_Comments__c"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Sales_Comments__cNull"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Other_Competitor_Lost_To__cNull"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
@@ -1691,14 +1855,6 @@
     <elementParameter field="TABLE" name="THRESHLODS"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="copyOfout1"/>
-    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
-    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
-    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
-    <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
-    <elementParameter field="TABLE" name="CONDITIONS"/>
-    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
-    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;"/>
   </connection>
   <connection connectorName="FLOW" label="row6" lineStyle="0" metaname="tWriteXMLField_2" offsetLabelX="0" offsetLabelY="0" source="tWriteXMLField_2" target="tJavaRow_2">
     <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
@@ -1715,14 +1871,6 @@
     <elementParameter field="TABLE" name="THRESHLODS"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row6"/>
-    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
-    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
-    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
-    <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
-    <elementParameter field="TABLE" name="CONDITIONS"/>
-    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
-    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;"/>
   </connection>
   <connection connectorName="FLOW" label="row5" lineStyle="8" metaname="tMSSqlInput_4" offsetLabelX="0" offsetLabelY="0" source="tMSSqlInput_4" target="tMap_2">
     <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
@@ -1790,6 +1938,33 @@
       <elementValue elementRef="TRACE_COLUMN" value="CreatedOn"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Owner"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Collaborating_with_Dell_Segment_Team__c"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NextStep"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Marketing_Comments__c"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Region__c"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Save_End_Customer_to_my_list__c"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Other_Competitor_Lost_To__c"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Distributor_Name__c"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Sales_Comments__c"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
@@ -1799,21 +1974,10 @@
     <elementParameter field="TABLE" name="THRESHLODS"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row5"/>
-    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
-    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
-    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
-    <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
-    <elementParameter field="TABLE" name="CONDITIONS"/>
-    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
-    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;"/>
   </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tMSSqlConnection_1" offsetLabelX="0" offsetLabelY="0" source="tMSSqlConnection_1" target="tMSSqlInput_5">
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk1"/>
-    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
-    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
-    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
   </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMSSqlInput_5"/>
@@ -1822,6 +1986,11 @@
   </subjob>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMSSqlConnection_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_3"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
   </subjob>
