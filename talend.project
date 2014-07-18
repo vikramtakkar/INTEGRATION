@@ -3439,7 +3439,7 @@
     <migrationTask xmi:id="_vtFBiwIOEeSJjbbzOE7NuQ" id="org.talend.repository.model.migration.SettingValuesIntoHadoopPropertiesFortHiveConnection" breaks="5.2.1" version="5.2.2" status="ok"/>
     <migrationTask xmi:id="_vtFBjAIOEeSJjbbzOE7NuQ" id="org.talend.repository.model.migration.ChangeHadoopVersionValue4TDQComponents" breaks="5.2.1" version="5.2.2" status="ok"/>
     <migrationTask xmi:id="_vtFBjQIOEeSJjbbzOE7NuQ" id="org.talend.repository.model.migration.ChangeSalesForceComponetsCustomerModuleName" breaks="5.2.2" version="5.2.3" status="ok"/>
-    <migrationTask xmi:id="_75tkEQ5IEeS5fOJDv7Bdkg" id="org.talend.repository.model.migration.UpdateExistentMigrationTasksToAdaptNewMigrationSystemMigrationTask" breaks="5.1.1" version="5.1.2" status="ok"/>
+    <migrationTask xmi:id="_Wr3cgQ6MEeSv7p4qdk40VQ" id="org.talend.repository.model.migration.UpdateExistentMigrationTasksToAdaptNewMigrationSystemMigrationTask" breaks="5.1.1" version="5.1.2" status="ok"/>
   </TalendProperties:Project>
   <TalendProperties:User xmi:id="_trVzIAIOEeSJjbbzOE7NuQ" login="test@talend.com" password="D41D8CD98F00B204E9800998ECF8427E"/>
   <TalendProperties:ExchangeUser xmi:id="_voSA8AIOEeSJjbbzOE7NuQ" username="" login="" password=""/>
