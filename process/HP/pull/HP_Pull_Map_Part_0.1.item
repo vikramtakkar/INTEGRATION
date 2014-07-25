@@ -3340,7 +3340,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_1"/>
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
     <elementParameter field="TEXT" name="CONTEXT_JOB" value=""/>
-    <elementParameter field="PROCESS_TYPE" name="PROCESS" value="Log_and_Move_Exception_File"/>
+    <elementParameter field="PROCESS_TYPE" name="PROCESS" value="Log_Event_and_Move_File"/>
     <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_PROCESS" value="_2w_wYAzgEeSI6dKBbO-GMg"/>
     <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_VERSION" value="Latest"/>
     <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="Default"/>
@@ -3482,7 +3482,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_2"/>
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
     <elementParameter field="TEXT" name="CONTEXT_JOB" value=""/>
-    <elementParameter field="PROCESS_TYPE" name="PROCESS" value="Log_and_Move_Exception_File"/>
+    <elementParameter field="PROCESS_TYPE" name="PROCESS" value="Log_Event_and_Move_File"/>
     <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_PROCESS" value="_2w_wYAzgEeSI6dKBbO-GMg"/>
     <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_VERSION" value="Latest"/>
     <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="Default"/>
@@ -3515,7 +3515,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_3"/>
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
     <elementParameter field="TEXT" name="CONTEXT_JOB" value=""/>
-    <elementParameter field="PROCESS_TYPE" name="PROCESS" value="Log_and_Move_Exception_File"/>
+    <elementParameter field="PROCESS_TYPE" name="PROCESS" value="Log_Event_and_Move_File"/>
     <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_PROCESS" value="_2w_wYAzgEeSI6dKBbO-GMg"/>
     <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_VERSION" value="Latest"/>
     <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="Default"/>
@@ -5751,12 +5751,12 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row16"/>
   </connection>
   <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tSetGlobalVar_1" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tSetGlobalVar_1" target="tJava_3">
-    <elementParameter field="MEMO_JAVA" name="CONDITION" value="StringHandling.UPCASE(((String)globalMap.get(&quot;partnerTextData&quot;)).toUpperCase()).contains(((String)globalMap.get(&quot;partnetTextIdentifier&quot;)))&#xA;"/>
+    <elementParameter field="MEMO_JAVA" name="CONDITION" value="StringHandling.UPCASE(((String)globalMap.get(&quot;partnerTextData&quot;))).contains(((String)globalMap.get(&quot;partnetTextIdentifier&quot;)).toUpperCase())&#xA;"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="If5"/>
   </connection>
   <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tSetGlobalVar_1" offsetLabelX="42" offsetLabelY="-1" outputId="2" source="tSetGlobalVar_1" target="tRunJob_2">
-    <elementParameter field="MEMO_JAVA" name="CONDITION" value="!StringHandling.UPCASE(((String)globalMap.get(&quot;partnerTextData&quot;)).toUpperCase()).contains(((String)globalMap.get(&quot;partnetTextIdentifier&quot;)))&#xA;"/>
+    <elementParameter field="MEMO_JAVA" name="CONDITION" value="!StringHandling.UPCASE(((String)globalMap.get(&quot;partnerTextData&quot;))).contains(((String)globalMap.get(&quot;partnetTextIdentifier&quot;)).toUpperCase())&#xA;"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="If6"/>
   </connection>
