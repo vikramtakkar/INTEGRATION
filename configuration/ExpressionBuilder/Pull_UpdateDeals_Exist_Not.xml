@@ -1,0 +1,47 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<expression:EMFExpression xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:expression="http:///expression.ecore" id="null=>Ins_Updt=>Update" expression="row2.Id != null ">
+  <variables name="EligibleDeals.Id" value="0" talendType="id_Integer"/>
+  <variables name="EligibleDeals.VendorId" value="0" talendType="id_Integer"/>
+  <variables name="EligibleDeals.DealName" value="null" talendType="id_String"/>
+  <variables name="EligibleDeals.ExpectedRevenue" value="null" talendType="id_Object" nullable="true"/>
+  <variables name="EligibleDeals.VendorDealId" value="null" talendType="id_String" nullable="true"/>
+  <variables name="EligibleDeals.ParentVendorDealId" value="null" talendType="id_String" nullable="true"/>
+  <variables name="EligibleDeals.DealKey" value="null" talendType="id_String" nullable="true"/>
+  <variables name="EligibleDeals.ApprovalId" value="null" talendType="id_String" nullable="true"/>
+  <variables name="EligibleDeals.VendorStatus" value="null" talendType="id_String" nullable="true"/>
+  <variables name="EligibleDeals.VartopiaStatus" value="null" talendType="id_String" nullable="true"/>
+  <variables name="EligibleDeals.RejectReason" value="null" talendType="id_String" nullable="true"/>
+  <variables name="EligibleDeals.SubmitDate" value="null" talendType="id_Date" nullable="true"/>
+  <variables name="EligibleDeals.ExpirationDate" value="null" talendType="id_Date" nullable="true"/>
+  <variables name="EligibleDeals.ExpectedCloseDate" value="null" talendType="id_Date" nullable="true"/>
+  <variables name="EligibleDeals.SalesRepName" value="null" talendType="id_String" nullable="true"/>
+  <variables name="EligibleDeals.SalesRepEmail" value="null" talendType="id_String" nullable="true"/>
+  <variables name="EligibleDeals.SubmittedByUserName" value="null" talendType="id_String" nullable="true"/>
+  <variables name="EligibleDeals.SubmittedByUserEmail" value="null" talendType="id_String" nullable="true"/>
+  <variables name="EligibleDeals.CustCompanyName" value="null" talendType="id_String" nullable="true"/>
+  <variables name="EligibleDeals.CustAddress1" value="null" talendType="id_String" nullable="true"/>
+  <variables name="EligibleDeals.CustAddress2" value="null" talendType="id_String" nullable="true"/>
+  <variables name="EligibleDeals.CustAddress3" value="null" talendType="id_String" nullable="true"/>
+  <variables name="EligibleDeals.CustCity" value="null" talendType="id_String" nullable="true"/>
+  <variables name="EligibleDeals.CustState" value="null" talendType="id_String" nullable="true"/>
+  <variables name="EligibleDeals.CustPostalCode" value="null" talendType="id_String" nullable="true"/>
+  <variables name="EligibleDeals.CustCountry" value="null" talendType="id_String" nullable="true"/>
+  <variables name="EligibleDeals.CustContactFirstName" value="null" talendType="id_String" nullable="true"/>
+  <variables name="EligibleDeals.CustContactLastName" value="null" talendType="id_String" nullable="true"/>
+  <variables name="EligibleDeals.CustContactEmail" value="null" talendType="id_String" nullable="true"/>
+  <variables name="EligibleDeals.CustContactTitle" value="null" talendType="id_String" nullable="true"/>
+  <variables name="EligibleDeals.CustContactPhone" value="null" talendType="id_String" nullable="true"/>
+  <variables name="EligibleDeals.CustContactFax" value="null" talendType="id_String" nullable="true"/>
+  <variables name="EligibleDeals.CustContactMobile" value="null" talendType="id_String" nullable="true"/>
+  <variables name="EligibleDeals.CustContactWebsite" value="null" talendType="id_String" nullable="true"/>
+  <variables name="EligibleDeals.CurrencyCode" value="null" talendType="id_String" nullable="true"/>
+  <variables name="EligibleDeals.PartnerId" value="null" talendType="id_String" nullable="true"/>
+  <variables name="EligibleDeals.BatchId" value="null" talendType="id_String"/>
+  <variables name="EligibleDeals.RecordOrder" value="0" talendType="id_Integer"/>
+  <variables name="EligibleDeals.LastModifiedOn" value="null" talendType="id_Date"/>
+  <variables name="EligibleDeals.OpportunityDescription" value="null" talendType="id_String" nullable="true"/>
+  <variables name="EligibleDeals.CustWebsite" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row2.Id" value="null" talendType="id_Integer" nullable="true"/>
+  <variables name="row2.VendorDealId" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row2.MVS_VARId" value="null" talendType="id_Integer" nullable="true"/>
+</expression:EMFExpression>
