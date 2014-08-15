@@ -6,9 +6,9 @@
     <contextParameter comment="" name="MVS_Integration_Port" prompt="MVS_Integration_Port?" promptNeeded="false" type="id_String" value="1433"/>
     <contextParameter comment="" name="MVS_Integration_Schema" prompt="MVS_Integration_Schema?" promptNeeded="false" type="id_String" value="dbo"/>
     <contextParameter comment="" name="MVS_Integration_Username" prompt="MVS_Integration_Username?" promptNeeded="false" type="id_String" value="TOS"/>
-    <contextParameter comment="" name="MVS_Integration_Password" prompt="MVS_Integration_Password?" promptNeeded="false" type="id_String" value="VarTos11"/>
+    <contextParameter comment="" name="MVS_Integration_Password" prompt="MVS_Integration_Password?" promptNeeded="false" type="id_String" value="Amul123@"/>
     <contextParameter comment="" name="Vartopia_MVS_Database" prompt="Vartopia_MVS_Database?" promptNeeded="false" type="id_String" value="Vartopia_MVS"/>
-    <contextParameter comment="" name="Vartopia_MVS_Password" prompt="Vartopia_MVS_Password?" promptNeeded="false" type="id_String" value="VarTos11"/>
+    <contextParameter comment="" name="Vartopia_MVS_Password" prompt="Vartopia_MVS_Password?" promptNeeded="false" type="id_String" value="Amul123@"/>
     <contextParameter comment="" name="Vartopia_MVS_Port" prompt="Vartopia_MVS_Port?" promptNeeded="false" type="id_String" value="1433"/>
     <contextParameter comment="" name="Vartopia_MVS_Schema" prompt="Vartopia_MVS_Schema?" promptNeeded="false" type="id_String" value="dbo"/>
     <contextParameter comment="" name="Vartopia_MVS_Server" prompt="Vartopia_MVS_Server?" promptNeeded="false" type="id_String" value="127.0.0.1"/>
@@ -16,11 +16,14 @@
     <contextParameter comment="" name="startTime" prompt="startTime?" promptNeeded="false" type="id_Long" value=""/>
     <contextParameter comment="" name="mapEndTime" prompt="mapEndTime?" promptNeeded="false" type="id_Long" value=""/>
     <contextParameter comment="" name="endTime" prompt="endTime?" promptNeeded="false" type="id_Long" value=""/>
-    <contextParameter comment="" name="MVS_VARId" prompt="MVS_VARId?" promptNeeded="false" type="id_String" value="1"/>
-    <contextParameter comment="" name="FilePathLocation" prompt="FilePathLocation?" promptNeeded="false" type="id_String" value="&quot;C:/etl/cisco/&quot;"/>
+    <contextParameter comment="" name="MVS_VARId" prompt="MVS_VARId?" promptNeeded="false" type="id_String" value="10001"/>
+    <contextParameter comment="" name="FilePathLocation" prompt="FilePathLocation?" promptNeeded="false" type="id_String" value="&quot;C:/Users\Vikram Takkar/Google Drive/freelance_jobs/Vartopia/5033/cisco&quot;"/>
     <contextParameter comment="" name="VENDOR_ID" prompt="VENDOR_ID?" promptNeeded="false" type="id_String" value="66"/>
     <contextParameter comment="" name="MVS_Integration_Login" prompt="MVS_Integration_Login?" promptNeeded="false" type="id_String" value="TOS"/>
     <contextParameter comment="" name="MVS_Integration_AdditionalParams" prompt="MVS_Integration_AdditionalParams?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="DRS_EMAIL_ENDPOINT" prompt="DRS_EMAIL_ENDPOINT?" promptNeeded="false" type="id_String" value="&quot;http://localhost:65422/MailSendingService.asmx?WSDL&quot;"/>
+    <contextParameter comment="" name="TO_AuditEmailAddress" prompt="TO_AuditEmailAddress?" promptNeeded="false" type="id_String" value="&quot;vikram.takkar@outlook.com&quot;"/>
+    <contextParameter comment="" name="FROM_AuditEmailAddress" prompt="FROM_AuditEmailAddress?" promptNeeded="false" type="id_String" value="&quot;vikramtakkar@gmail.com&quot;"/>
   </context>
   <context confirmationNeeded="false" name="QA">
     <contextParameter comment="" name="MVS_Integration_Database" prompt="MVS_Integration_Database?" promptNeeded="false" type="id_String" value="MVS_Integration"/>
@@ -43,6 +46,9 @@
     <contextParameter comment="" name="VENDOR_ID" prompt="VENDOR_ID?" promptNeeded="false" type="id_String" value="null"/>
     <contextParameter comment="" name="MVS_Integration_Login" prompt="MVS_Integration_Login?" promptNeeded="false" type="id_String" value="TOS"/>
     <contextParameter comment="" name="MVS_Integration_AdditionalParams" prompt="MVS_Integration_AdditionalParams?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="DRS_EMAIL_ENDPOINT" prompt="DRS_EMAIL_ENDPOINT?" promptNeeded="false" type="id_String" value="null"/>
+    <contextParameter comment="" name="TO_AuditEmailAddress" prompt="TO_AuditEmailAddress?" promptNeeded="false" type="id_String" value="null"/>
+    <contextParameter comment="" name="FROM_AuditEmailAddress" prompt="FROM_AuditEmailAddress?" promptNeeded="false" type="id_String" value="null"/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="JOB_RUN_VM_ARGUMENTS" value=" -Xms256M -Xmx1024M"/>
@@ -58,7 +64,6 @@
     <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="false"/>
     <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;&quot;"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE_IMPLICIT_CONTEXT:REPOSITORY_PROPERTY_TYPE" value=""/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" value=""/>
     <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" value=""/>
     <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" value=""/>
@@ -229,6 +234,12 @@
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.MVS_VARId"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="FilePathLocation"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.FilePathLocation"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="TO_AuditEmailAddress"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.TO_AuditEmailAddress"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="FROM_AuditEmailAddress"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.FROM_AuditEmailAddress"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="DRS_EMAIL_ENDPOINT"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.DRS_EMAIL_ENDPOINT"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PRINT_PARAMETER" value="false"/>
     <elementParameter field="CHECK" name="TRANSMIT_ORIGINAL_CONTEXT" value="true"/>
