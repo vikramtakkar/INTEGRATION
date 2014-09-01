@@ -1,0 +1,12 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<expression:EMFExpression xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:expression="http:///expression.ecore" id="null=>Var=>sequencer" expression="Numeric.sequence(context.BATCH_ID+row3.Id+&quot;&quot;,1,1)  ">
+  <variables name="row3.Id" value="0" talendType="id_Integer"/>
+  <variables name="row3.VartopiaTransactionId" value="null" talendType="id_Object"/>
+  <variables name="row3.Name" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row3.Description" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row3.Quantity" value="0" talendType="id_Integer"/>
+  <variables name="row3.Price" value="null" talendType="id_BigDecimal" nullable="true"/>
+  <variables name="Numeric.sequence(row3.Id+&quot;&quot;,1,1)  " value="0" talendType="id_Integer"/>
+  <variables name="Numeric.sequence(row3.Id+&quot;&quot;,1,1) " value="0" talendType="id_Integer"/>
+  <variables name="Numeric.sequence(row3.Id+&quot;&quot;,1,1)" value="0" talendType="id_Integer"/>
+</expression:EMFExpression>

@@ -1,0 +1,21 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:expression="http:///expression.ecore">
+  <expression:EMFExpression id="null=>row4=>Order" expression="((Integer)globalMap.get(&quot;tLoop_1_CURRENT_VALUE&quot;))">
+    <variables name="row3.VartopiaTransactionId" value="null" talendType="id_String"/>
+    <variables name="row4.VartopiaTransactionId" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row4.Order" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row4.Name" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row4.Description" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row4.Quantity" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row4.Price" value="null" talendType="id_Double" nullable="true"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>to_report=>Product" expression="(row4.Name == null ? &quot;&quot; : row4.Name)">
+    <variables name="row3.VartopiaTransactionId" value="null" talendType="id_String"/>
+    <variables name="row4.VartopiaTransactionId" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row4.Order" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row4.Name" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row4.Description" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row4.Quantity" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row4.Price" value="null" talendType="id_Double" nullable="true"/>
+  </expression:EMFExpression>
+</xmi:XMI>

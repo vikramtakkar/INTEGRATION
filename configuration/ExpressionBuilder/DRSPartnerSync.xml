@@ -1,0 +1,6 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<expression:EMFExpression xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:expression="http:///expression.ecore" id="null=>create_vendor_connection=>PartnerID" expression="((String)globalMap.get(&quot;row21.SFDCRecordID&quot;))">
+  <variables name="row13.CompanyName" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row14.Id" value="0" talendType="id_Integer"/>
+  <variables name="row14.VARName" value="null" talendType="id_String"/>
+</expression:EMFExpression>
